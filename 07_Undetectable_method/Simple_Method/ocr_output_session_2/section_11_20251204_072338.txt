@@ -1,0 +1,194 @@
+mw rr O D
+
+ER
+
+ia
+
+EXPLORER
+
+\ PROPERTY_DATA_SCRAPING
+
+> .venv
+
+Y 00_Run_Commands
+¥ Change_Monitor.md
+ Run_Commands.md
+> 01_House_Plan_Data
+
+> 01_Run_Commands
+
+v 02_
+
+Domain_Scaping
+
+> All_Properties_Data
+
+\ Sold_Properties
+> 03_Gold_Coast
+
+> 04_
+> 05_]
+> 06_]
+
+Scrape_All_Domain_Images_Only
+Property_Valuation
+Property_Georeference
+
+Y 07 _Undetectable_method
+Y 00_Production_System
+Y 02_Individual_Property_Google_Search
+
+@<“a«evweeedzdP_ @evvvyvyvvyv
+
+TTGEPTVTeDD
+
+e«w
+
+__pycache__
+multi_test_screenshots
+screenshots
+
+sikuli_clicker.sikuli
+test_simple.sikuli
+
+venv
+
+00_Run_Commands.md
+analyze_images.py
+API_CONFIGURATION_NOTES.md
+BATCH_PROCESSING_GUIDE.md
+batch_processor.py
+click_google_result.sh
+CLICLICK_GUIDE.md
+cliclick_workflow.py
+color_based_clicker.py
+complete_cliclick_workflow.py
+complete_color_workflow_fixed.py
+complete_color_workflow.py
+complete_workflow.py
+debug_click_logic.py
+debug_ocr.py
+debug_red_pixel_owner.py
+download_sikulix.py
+ENHANCED_RETRY_STRATEGY.md
+
+extract_favicon.py
+
+MARY.md
+
+Q Property_Data_Scraping
+
+® harcourts_scraper.py
+
+00_Run_Commands > ¥ Run_Commands.md > *< ## ill Quick Start
+
+77 ## WM Quick Start
+
+85 # Run complete pipeline
+86 ./process_all_sessions.sh
+87 590
+
+{} harcourts_properties.json
+
+pty
+
+¥ Run_Commands.md X
+
+88
+
+89 ## B Files Created/Modified
+
+90
+
+91 «New Files:
+
+92 - ‘remove_duplicates.py - Duplicate management
+
+93 - ‘cleanup_temp_files.py~ - Temp file cleanup
+
+94 - ‘remove_offmarket_properties.py - Off-market removal
+95 — ~PRODUCTION_WORKFLOW_GUIDE.md* - Complete guide
+
+96
+
+97 x*Modified Files :+**
+
+98 — ‘process_all_sessions.sh* — Added all new workflow steps
+99 - “batch_processor.py’ - Fixed domain.com.au URL construction (adds QLD 4226)
+100
+
+101 **ALL scripts are executable and ready to use! **
+
+102
+
+103 ## . Manual Operations Available
+
+104
+105 ~**bash
+106 # Check status
+
+107 python check_mongodb_status.py
+
+108
+
+109 # Preview what would be cleaned (dry-run)
+
+110 python cleanup_temp_files.py
+111 python remove_duplicates.py
+112 python remove_offmarket_properties. py
+
+113
+
+114 # Actually execute (with --remove flag)
+115 python cleanup_temp_files.py --remove
+116 python remove_duplicates.py —-remove
+117 python remove_offmarket_properties.py ——-remove
+
+112 ~~
+
+PROBLEMS OUTPUT
+
+DEBUG CONSOLE
+
+TERMINAL
+
+PORTS
+
+(base) projects@Williams-MacBook-Pro Simple_Method % ./process_all_sessions.sh
+
+~ Opening URL in Chrome...
+
+v Opened URL in Chrome
+
+~ Activating Chrome window...
+~ Scrolling to top of page...
+
+~ Taking 25 screenshots while scrolling down...
+
+14444499
+
+Crereasnehn+t O/DEs: eartinn AO
+
+Screenshot 1/25: section_@1_20251204_072310.
+Screenshot 2/25: section_@2_20251204_072313.
+Screenshot 3/25: section_@3_20251204_072315.
+Screenshot 4/25: section_@4_20251204_072318.
+Screenshot 5/25: section_@5_20251204_072321.
+Screenshot 6/25: section_@6_20251204_072324.
+Screenshot 7/25: section_@7_20251204_072327.
+
+7ZAXCIDAA ATI7ZIDO
+
+png
+png
+png
+png
+png
+png
+png
+
+$ process_all_sessions.sh @ batch_processor.py
+
+(_) bash - Simple_Method + v
+
+bash Simpl...

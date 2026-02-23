@@ -1,0 +1,117 @@
+{
+  "url": "https://www.domain.com.au/property-profile/77-brisbane-road-biggera-waters-qld-4216",
+  "address": "77 BRISBANE ROAD BIGGERA WATERS QLD 4216",
+  "scraped_at": "2025-11-05T20:05:26.977601",
+  "property_timeline": [
+    {
+      "date": "2014-02-24",
+      "month_year": "Feb 2014",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 375000,
+      "days_on_market": 66,
+      "is_major_event": true,
+      "agency_name": "Ray White Surfers Paradise",
+      "agency_url": "raywhitesurfersparadise-2497",
+      "is_sold": true
+    },
+    {
+      "date": "2011-10-20",
+      "month_year": "Oct 2011",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 351000,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": "Ray White - Runaway Bay",
+      "agency_url": null,
+      "is_sold": true
+    },
+    {
+      "date": "2010-08-24",
+      "month_year": "Aug 2010",
+      "category": "Rental",
+      "type": "PER WEEK",
+      "price": null,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": "Northern Performance Realty - Coombabah",
+      "agency_url": null,
+      "is_sold": null
+    },
+    {
+      "date": "2010-02-14",
+      "month_year": "Feb 2010",
+      "category": "Rental",
+      "type": "PER WEEK",
+      "price": 410,
+      "days_on_market": 14,
+      "is_major_event": true,
+      "agency_name": "Northern Performance Realty - Coombabah",
+      "agency_url": null,
+      "is_sold": null
+    },
+    {
+      "date": "2006-11-13",
+      "month_year": "Nov 2006",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 410000,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": null,
+      "agency_url": null,
+      "is_sold": true
+    },
+    {
+      "date": "2002-03-31",
+      "month_year": "Mar 2002",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 242000,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": null,
+      "agency_url": null,
+      "is_sold": true
+    },
+    {
+      "date": "1995-12-20",
+      "month_year": "Dec 1995",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 155000,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": null,
+      "agency_url": null,
+      "is_sold": true
+    },
+    {
+      "date": "1993-03-09",
+      "month_year": "Mar 1993",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 145000,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": null,
+      "agency_url": null,
+      "is_sold": true
+    },
+    {
+      "date": "1980-07-07",
+      "month_year": "Jul 1980",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 60000,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": null,
+      "agency_url": null,
+      "is_sold": true
+    }
+  ],
+  "address_pid": 1383610,
+  "suburb": "BIGGERA WATERS"
+}

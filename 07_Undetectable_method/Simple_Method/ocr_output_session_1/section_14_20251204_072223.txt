@@ -1,0 +1,138 @@
+wm 1 O
+
+fa B&B
+
+©
+
+<>
+
+CLINE sr D © B
+Yoo (32.9905 eg
+128.5 Qs 272.0k -%-
+7/11 Run targeted ingest (md/txt) for INTERNAL_PROJECTS >
+
+¢ Run targeted ingest (md/txt) for INTERNAL_PROJECTS
+
+¢ Add credentials/PII exclusion rules (and optional redaction preprocessor)
+¢ Expand ingest to docx/pdf for those roots
+
+¢ Add a test validating INTERNAL_PROJECTS override and search-by-type
+¢ Optionally schedule/automate periodic ingest for these folders
+
+V API Request (§010277) v
+
+Thinking: ...present an updated checklist now. Alright, I'll proceed with that!** >
+
+VY Task Completed
+
+| reviewed Samantha's current KB implementation, verified that external project
+folders in ingest_sources.yaml haven't been indexed yet, and added a dedicated
+INTERNAL_PROJECTS type with an ingest-time path override. Concretely, |
+updated the taxonomy in 07_Samantha/config.py, processor_lib.py, and
+samantha_processor.py, and implemented a path-based rule in processor_lib.py
+so any files from the non-Samantha include_roots are automatically classified as
+INTERNAL_PROJECTS. | validated that the KB currently has 0
+INTERNAL_PROJECTS (none of those roots have been ingested yet) and
+generated a project_file_catalog.json (757 files) so we can target ingestion
+quickly.
+
+Next step: run a targeted ingest for md/txt (fast and safe) to populate
+INTERNAL_PROJECTS. After that, we can expand to docx/pdf and add
+Pll/credentials exclusion/redaction rules. I'll then verify master_index.json shows
+INTERNAL_PROJECTS and Samantha can filter/search by this new type. p
+
+>.] Cline wants to execute this command:
+
+@ Pending cancel
+
+python local_fs_processor.py --config ingest_config_targeted.yaml
+
+--sources ingest_sources.yaml
+
+Auto-approve: Browser, Read (all), Edit (all), All Commands “~
+
+Type a message...
+
+Reject
+
+rces.yaml
+
+Q Samantha
+
+@ processor_lib.py ® config.py
+
+@ samantha_processor.py
+
+5 non
+6
+7 import json
+8 import os
+9 import sys
+1) from pathlib import Path
+1 from datetime import datetime
+2 from openai import OpenAI
+3 from typing import List, Dict, Any, Optional
+4 import tiktoken
+5
+6 # Import document parsers
+7 try:
+8 from docx import Document as DocxDocument
+9 except ImportError:
+20 DocxDocument = None
+21
+22 try:
+23 import PyPDF2
+24 except ImportError:
+25 PyPDF2 = None
+26
+27 # Configuration
+28
+29 MODEL_NAME = “gpt-5-nano"
+30 CHUNK_SIZE_TOKENS = 800
+31
+32 # Storage paths
+33 KNOWLEDGE_BASE_DIR = "@5_Knowledge_Base"
+34 MASTER_INDEX_FILE = "master_index. json"
+35
+36 # Document type taxonomy
+37 DOCUMENT_TYPES = [
+38 "BOOK", "CODE", "MARKETING", "STRATEGY", "PROJECT",
+2a "MEETING NOTFC" "ETMANCTAL "! "“ADFRATTONAI "' “TNTFRNAL DRNIFCTC"
+PROBLEMS OUTPUT DEBUG CONSOLE PORTS
+
+TERMINAL
+
+B® Scanning: AI and ML Applications/Topics and Actions
+
+i Topics and Actions Module_Working Doc
+Type: application/vnd.google-apps.document
+® Downloading...
+® Processing...
+
+Processing .docx file...
+
+&
+@ Extracted 45486 characters (10403 tokens)
+e
+
+Classifying document...
+v Type: OPERATIONAL
+
+® samantha_processor.py X
+
+OPENAI_API_KEY =-"sk-proj-61jSFgnRtZC6pDVSLpTpzpTAzytz4s1ZS7baD leDr9JQin7LgSNHebwiuL PWHntwCnDwBX7 fqGT3B LbkFJ_SHIvc3RZNHrr76YxNQGnLIM
+
+"GENERAL"
+
+Cty O8
+
+¥ SIMPLIFIED_PLAN.md ® code_tools.py ! ingest_config.yaml
+
+> summar Aa ab * ?0f1 ~*~ )Y=x
+
+ Teatarenanl winebirnn Aneiiman’® nantlaninn AT arneakhlead nemnnetiimeitine)) £nllawsoiin urnebtlas
+
+Oo oO
+
+python3.12
+zsh 07 Sa...

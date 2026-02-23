@@ -1,0 +1,48 @@
+# Configuration for Undetectable Scraping System
+
+# MongoDB Settings
+mongodb:
+  uri: "mongodb://127.0.0.1:27017/"
+  database: "property_data"
+  collection: "properties_for_sale"
+
+# Suburbs to scrape
+suburbs:
+  robina:
+    url: "https://www.realestate.com.au/buy/property-house-in-robina,+qld+4226/list-1?includeSurrounding=false&activeSort=relevance&source=refinement"
+    sessions: 3
+    properties_per_session: 3  # Number of properties to click in each recording
+  
+  mudgeeraba:
+    url: "https://www.realestate.com.au/buy/in-mudgeeraba,+qld+4213/list-1?includeSurrounding=false"
+    sessions: 3
+    properties_per_session: 3
+
+# Replay Settings
+replay:
+  timing_variation: 0.15  # ±15% variation on action timings
+  min_wait: 1.0           # Minimum wait between actions (seconds)
+  max_wait: 3.0           # Maximum wait between actions (seconds)
+  random_pauses: true     # Add occasional random pauses
+  pause_probability: 0.2  # 20% chance of extra pause
+
+# Recording Settings
+recording:
+  trace_screenshots: true
+  trace_snapshots: true
+  trace_sources: true
+
+# Data Extraction Settings
+extraction:
+  save_html: true         # Save HTML for debugging
+  save_screenshots: true  # Save screenshots of property pages
+  validate_required_fields:
+    - property_url
+    - address
+    - price
+
+# Logging
+logging:
+  level: "INFO"           # DEBUG, INFO, WARNING, ERROR
+  file: "logs/execution.log"
+  console: true

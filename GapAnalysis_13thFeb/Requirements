@@ -1,0 +1,26 @@
+- 12 months of sold data across our target market
+- We have sold properties specific scraper (i think) this may just need adjusting for target market or may exist as a single scraper already. See 00_Run_Commands for a description of such a scraper. 
+- We need the following data: 
+    - Room dimensions
+    - Lot size 
+    - Floor area
+    - Waterfront yes or no
+    - Any special views yes or no. if yes then provide a description. 
+    - Coroner lot yes or no
+    - Busy road yes or no
+    - Days on market
+    - Sale method auction or private treaty
+    - North facing yes or no
+    - Proximity to key amenities. 
+    - Approx. age of the building
+    - Condition of the building
+    - Renovation status
+    - Garage or carport, dimensions, number of car spaces. 
+    - Pool yes or no
+    - Outdoor entertainment dimensions and score. 
+    - Air condition yes or no, ducted or not ducted. 
+    - Presence of home office yes or no. 
+    - Ensuite to main bedroom yes or no
+    - Walk in wardrobe yes or no
+    - High ceilings yes or no
+    - Qualty of features. 

@@ -1,0 +1,81 @@
+{
+  "url": "https://www.domain.com.au/property-profile/11-matina-street-biggera-waters-qld-4216",
+  "address": "11 MATINA STREET BIGGERA WATERS QLD 4216",
+  "scraped_at": "2025-11-05T20:05:36.703876",
+  "property_timeline": [
+    {
+      "date": "2024-07-13",
+      "month_year": "Jul 2024",
+      "category": "Rental",
+      "type": "PER WEEK",
+      "price": 950,
+      "days_on_market": 158,
+      "is_major_event": true,
+      "agency_name": "Professionals Vertullo Real Estate",
+      "agency_url": "professionalsvertullorealestate-20230",
+      "is_sold": null
+    },
+    {
+      "date": "2024-04-05",
+      "month_year": "Apr 2024",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 1150000,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": "Image Property Gold Coast",
+      "agency_url": "imagepropertygoldcoast-36035",
+      "is_sold": true
+    },
+    {
+      "date": "2023-07-17",
+      "month_year": "Jul 2023",
+      "category": "Sale",
+      "type": "Listed - not sold",
+      "price": null,
+      "days_on_market": 43,
+      "is_major_event": false,
+      "agency_name": "COASTAL Property Agents (Paradise Point)",
+      "agency_url": "coastalpropertyagentsparadisepoint-26895",
+      "is_sold": false
+    },
+    {
+      "date": "2014-03-12",
+      "month_year": "Mar 2014",
+      "category": "Rental",
+      "type": "PER WEEK",
+      "price": 480,
+      "days_on_market": 12,
+      "is_major_event": true,
+      "agency_name": "PRDnationwide - Ashmore",
+      "agency_url": null,
+      "is_sold": null
+    },
+    {
+      "date": "2012-10-03",
+      "month_year": "Oct 2012",
+      "category": "Rental",
+      "type": "PER WEEK",
+      "price": 460,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": "PRDnationwide - Ashmore",
+      "agency_url": null,
+      "is_sold": null
+    },
+    {
+      "date": "2002-11-04",
+      "month_year": "Nov 2002",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 307000,
+      "days_on_market": 23,
+      "is_major_event": true,
+      "agency_name": null,
+      "agency_url": null,
+      "is_sold": true
+    }
+  ],
+  "address_pid": 451228,
+  "suburb": "BIGGERA WATERS"
+}

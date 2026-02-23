@@ -1,0 +1,588 @@
+{
+  "total_suburbs": 81,
+  "total_addresses": 331224,
+  "total_scraped": 7105,
+  "total_unscraped": 324119,
+  "target_percentage": 30,
+  "target_addresses": 97235,
+  "selected_suburbs": [
+    "surfers_paradise",
+    "southport",
+    "labrador",
+    "palm_beach",
+    "upper_coomera",
+    "pimpama",
+    "broadbeach"
+  ],
+  "selected_suburbs_count": 7,
+  "selected_addresses_count": 98872,
+  "all_suburbs": [
+    {
+      "suburb": "surfers_paradise",
+      "total": 25962,
+      "scraped": 0,
+      "unscraped": 25962,
+      "progress": 0.0
+    },
+    {
+      "suburb": "southport",
+      "total": 20344,
+      "scraped": 0,
+      "unscraped": 20344,
+      "progress": 0.0
+    },
+    {
+      "suburb": "labrador",
+      "total": 11684,
+      "scraped": 0,
+      "unscraped": 11684,
+      "progress": 0.0
+    },
+    {
+      "suburb": "palm_beach",
+      "total": 10706,
+      "scraped": 0,
+      "unscraped": 10706,
+      "progress": 0.0
+    },
+    {
+      "suburb": "upper_coomera",
+      "total": 10474,
+      "scraped": 0,
+      "unscraped": 10474,
+      "progress": 0.0
+    },
+    {
+      "suburb": "pimpama",
+      "total": 9868,
+      "scraped": 0,
+      "unscraped": 9868,
+      "progress": 0.0
+    },
+    {
+      "suburb": "broadbeach",
+      "total": 9834,
+      "scraped": 0,
+      "unscraped": 9834,
+      "progress": 0.0
+    },
+    {
+      "suburb": "burleigh_heads",
+      "total": 9476,
+      "scraped": 0,
+      "unscraped": 9476,
+      "progress": 0.0
+    },
+    {
+      "suburb": "hope_island",
+      "total": 8958,
+      "scraped": 0,
+      "unscraped": 8958,
+      "progress": 0.0
+    },
+    {
+      "suburb": "coomera",
+      "total": 8741,
+      "scraped": 0,
+      "unscraped": 8741,
+      "progress": 0.0
+    },
+    {
+      "suburb": "helensvale",
+      "total": 8342,
+      "scraped": 0,
+      "unscraped": 8342,
+      "progress": 0.0
+    },
+    {
+      "suburb": "nerang",
+      "total": 8001,
+      "scraped": 0,
+      "unscraped": 8001,
+      "progress": 0.0
+    },
+    {
+      "suburb": "varsity_lakes",
+      "total": 7635,
+      "scraped": 0,
+      "unscraped": 7635,
+      "progress": 0.0
+    },
+    {
+      "suburb": "burleigh_waters",
+      "total": 6885,
+      "scraped": 0,
+      "unscraped": 6885,
+      "progress": 0.0
+    },
+    {
+      "suburb": "ormeau",
+      "total": 6640,
+      "scraped": 0,
+      "unscraped": 6640,
+      "progress": 0.0
+    },
+    {
+      "suburb": "coolangatta",
+      "total": 6519,
+      "scraped": 0,
+      "unscraped": 6519,
+      "progress": 0.0
+    },
+    {
+      "suburb": "carrara",
+      "total": 6307,
+      "scraped": 0,
+      "unscraped": 6307,
+      "progress": 0.0
+    },
+    {
+      "suburb": "pacific_pines",
+      "total": 6301,
+      "scraped": 0,
+      "unscraped": 6301,
+      "progress": 0.0
+    },
+    {
+      "suburb": "mermaid_waters",
+      "total": 6169,
+      "scraped": 0,
+      "unscraped": 6169,
+      "progress": 0.0
+    },
+    {
+      "suburb": "ashmore",
+      "total": 6162,
+      "scraped": 0,
+      "unscraped": 6162,
+      "progress": 0.0
+    },
+    {
+      "suburb": "biggera_waters",
+      "total": 5963,
+      "scraped": 0,
+      "unscraped": 5963,
+      "progress": 0.0
+    },
+    {
+      "suburb": "mudgeeraba",
+      "total": 5921,
+      "scraped": 0,
+      "unscraped": 5921,
+      "progress": 0.0
+    },
+    {
+      "suburb": "oxenford",
+      "total": 5547,
+      "scraped": 0,
+      "unscraped": 5547,
+      "progress": 0.0
+    },
+    {
+      "suburb": "arundel",
+      "total": 5431,
+      "scraped": 0,
+      "unscraped": 5431,
+      "progress": 0.0
+    },
+    {
+      "suburb": "mermaid_beach",
+      "total": 5395,
+      "scraped": 0,
+      "unscraped": 5395,
+      "progress": 0.0
+    },
+    {
+      "suburb": "coombabah",
+      "total": 5352,
+      "scraped": 0,
+      "unscraped": 5352,
+      "progress": 0.0
+    },
+    {
+      "suburb": "runaway_bay",
+      "total": 5301,
+      "scraped": 0,
+      "unscraped": 5301,
+      "progress": 0.0
+    },
+    {
+      "suburb": "elanora",
+      "total": 5149,
+      "scraped": 0,
+      "unscraped": 5149,
+      "progress": 0.0
+    },
+    {
+      "suburb": "miami",
+      "total": 4783,
+      "scraped": 0,
+      "unscraped": 4783,
+      "progress": 0.0
+    },
+    {
+      "suburb": "robina",
+      "total": 11761,
+      "scraped": 7105,
+      "unscraped": 4656,
+      "progress": 60.41152963183403
+    },
+    {
+      "suburb": "currumbin_waters",
+      "total": 4629,
+      "scraped": 0,
+      "unscraped": 4629,
+      "progress": 0.0
+    },
+    {
+      "suburb": "benowa",
+      "total": 4408,
+      "scraped": 0,
+      "unscraped": 4408,
+      "progress": 0.0
+    },
+    {
+      "suburb": "paradise_point",
+      "total": 4040,
+      "scraped": 0,
+      "unscraped": 4040,
+      "progress": 0.0
+    },
+    {
+      "suburb": "broadbeach_waters",
+      "total": 4039,
+      "scraped": 0,
+      "unscraped": 4039,
+      "progress": 0.0
+    },
+    {
+      "suburb": "tugun",
+      "total": 3941,
+      "scraped": 0,
+      "unscraped": 3941,
+      "progress": 0.0
+    },
+    {
+      "suburb": "main_beach",
+      "total": 3658,
+      "scraped": 0,
+      "unscraped": 3658,
+      "progress": 0.0
+    },
+    {
+      "suburb": "molendinar",
+      "total": 3592,
+      "scraped": 0,
+      "unscraped": 3592,
+      "progress": 0.0
+    },
+    {
+      "suburb": "parkwood",
+      "total": 3370,
+      "scraped": 0,
+      "unscraped": 3370,
+      "progress": 0.0
+    },
+    {
+      "suburb": "merrimac",
+      "total": 3001,
+      "scraped": 0,
+      "unscraped": 3001,
+      "progress": 0.0
+    },
+    {
+      "suburb": "reedy_creek",
+      "total": 2780,
+      "scraped": 0,
+      "unscraped": 2780,
+      "progress": 0.0
+    },
+    {
+      "suburb": "highland_park",
+      "total": 2736,
+      "scraped": 0,
+      "unscraped": 2736,
+      "progress": 0.0
+    },
+    {
+      "suburb": "maudsland",
+      "total": 2723,
+      "scraped": 0,
+      "unscraped": 2723,
+      "progress": 0.0
+    },
+    {
+      "suburb": "bundall",
+      "total": 2693,
+      "scraped": 0,
+      "unscraped": 2693,
+      "progress": 0.0
+    },
+    {
+      "suburb": "worongary",
+      "total": 2600,
+      "scraped": 0,
+      "unscraped": 2600,
+      "progress": 0.0
+    },
+    {
+      "suburb": "currumbin",
+      "total": 2062,
+      "scraped": 0,
+      "unscraped": 2062,
+      "progress": 0.0
+    },
+    {
+      "suburb": "clear_island_waters",
+      "total": 1936,
+      "scraped": 0,
+      "unscraped": 1936,
+      "progress": 0.0
+    },
+    {
+      "suburb": "bonogin",
+      "total": 1810,
+      "scraped": 0,
+      "unscraped": 1810,
+      "progress": 0.0
+    },
+    {
+      "suburb": "ormeau_hills",
+      "total": 1737,
+      "scraped": 0,
+      "unscraped": 1737,
+      "progress": 0.0
+    },
+    {
+      "suburb": "jacobs_well",
+      "total": 1586,
+      "scraped": 0,
+      "unscraped": 1586,
+      "progress": 0.0
+    },
+    {
+      "suburb": "tallai",
+      "total": 1581,
+      "scraped": 0,
+      "unscraped": 1581,
+      "progress": 0.0
+    },
+    {
+      "suburb": "bilinga",
+      "total": 1502,
+      "scraped": 0,
+      "unscraped": 1502,
+      "progress": 0.0
+    },
+    {
+      "suburb": "hollywell",
+      "total": 1455,
+      "scraped": 0,
+      "unscraped": 1455,
+      "progress": 0.0
+    },
+    {
+      "suburb": "tallebudgera",
+      "total": 1388,
+      "scraped": 0,
+      "unscraped": 1388,
+      "progress": 0.0
+    },
+    {
+      "suburb": "yatala",
+      "total": 1296,
+      "scraped": 0,
+      "unscraped": 1296,
+      "progress": 0.0
+    },
+    {
+      "suburb": "gilston",
+      "total": 1031,
+      "scraped": 0,
+      "unscraped": 1031,
+      "progress": 0.0
+    },
+    {
+      "suburb": "willow_vale",
+      "total": 904,
+      "scraped": 0,
+      "unscraped": 904,
+      "progress": 0.0
+    },
+    {
+      "suburb": "currumbin_valley",
+      "total": 897,
+      "scraped": 0,
+      "unscraped": 897,
+      "progress": 0.0
+    },
+    {
+      "suburb": "tallebudgera_valley",
+      "total": 697,
+      "scraped": 0,
+      "unscraped": 697,
+      "progress": 0.0
+    },
+    {
+      "suburb": "gaven",
+      "total": 658,
+      "scraped": 0,
+      "unscraped": 658,
+      "progress": 0.0
+    },
+    {
+      "suburb": "springbrook",
+      "total": 657,
+      "scraped": 0,
+      "unscraped": 657,
+      "progress": 0.0
+    },
+    {
+      "suburb": "stapylton",
+      "total": 646,
+      "scraped": 0,
+      "unscraped": 646,
+      "progress": 0.0
+    },
+    {
+      "suburb": "south_stradbroke",
+      "total": 617,
+      "scraped": 0,
+      "unscraped": 617,
+      "progress": 0.0
+    },
+    {
+      "suburb": "wongawallan",
+      "total": 613,
+      "scraped": 0,
+      "unscraped": 613,
+      "progress": 0.0
+    },
+    {
+      "suburb": "mount_nathan",
+      "total": 582,
+      "scraped": 0,
+      "unscraped": 582,
+      "progress": 0.0
+    },
+    {
+      "suburb": "lower_beechmont",
+      "total": 560,
+      "scraped": 0,
+      "unscraped": 560,
+      "progress": 0.0
+    },
+    {
+      "suburb": "steiglitz",
+      "total": 379,
+      "scraped": 0,
+      "unscraped": 379,
+      "progress": 0.0
+    },
+    {
+      "suburb": "guanaba",
+      "total": 368,
+      "scraped": 0,
+      "unscraped": 368,
+      "progress": 0.0
+    },
+    {
+      "suburb": "alberton",
+      "total": 335,
+      "scraped": 0,
+      "unscraped": 335,
+      "progress": 0.0
+    },
+    {
+      "suburb": "kingsholme",
+      "total": 326,
+      "scraped": 0,
+      "unscraped": 326,
+      "progress": 0.0
+    },
+    {
+      "suburb": "clagiraba",
+      "total": 306,
+      "scraped": 0,
+      "unscraped": 306,
+      "progress": 0.0
+    },
+    {
+      "suburb": "advancetown",
+      "total": 242,
+      "scraped": 0,
+      "unscraped": 242,
+      "progress": 0.0
+    },
+    {
+      "suburb": "luscombe",
+      "total": 237,
+      "scraped": 0,
+      "unscraped": 237,
+      "progress": 0.0
+    },
+    {
+      "suburb": "woongoolba",
+      "total": 221,
+      "scraped": 0,
+      "unscraped": 221,
+      "progress": 0.0
+    },
+    {
+      "suburb": "cedar_creek_gold_coast_city",
+      "total": 199,
+      "scraped": 0,
+      "unscraped": 199,
+      "progress": 0.0
+    },
+    {
+      "suburb": "norwell",
+      "total": 156,
+      "scraped": 0,
+      "unscraped": 156,
+      "progress": 0.0
+    },
+    {
+      "suburb": "austinville",
+      "total": 134,
+      "scraped": 0,
+      "unscraped": 134,
+      "progress": 0.0
+    },
+    {
+      "suburb": "numinbah_valley",
+      "total": 89,
+      "scraped": 0,
+      "unscraped": 89,
+      "progress": 0.0
+    },
+    {
+      "suburb": "natural_bridge",
+      "total": 79,
+      "scraped": 0,
+      "unscraped": 79,
+      "progress": 0.0
+    },
+    {
+      "suburb": "neranwood",
+      "total": 53,
+      "scraped": 0,
+      "unscraped": 53,
+      "progress": 0.0
+    },
+    {
+      "suburb": "gilberton_gold_coast_city",
+      "total": 46,
+      "scraped": 0,
+      "unscraped": 46,
+      "progress": 0.0
+    },
+    {
+      "suburb": "southern_moreton_bay_islands",
+      "total": 18,
+      "scraped": 0,
+      "unscraped": 18,
+      "progress": 0.0
+    }
+  ]
+}

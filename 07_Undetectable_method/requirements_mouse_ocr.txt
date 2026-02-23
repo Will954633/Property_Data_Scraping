@@ -1,0 +1,24 @@
+# Mouse Recording & OCR System Requirements
+
+# Mouse/keyboard automation
+pyautogui>=0.9.54
+pynput>=1.7.6
+
+# Screen capture
+pillow>=10.0.0
+mss>=9.0.1
+
+# OCR for text extraction
+pytesseract>=0.3.10
+# Note: Requires Tesseract OCR binary installed separately
+# macOS: brew install tesseract
+
+# Image processing
+opencv-python>=4.8.0
+
+# MongoDB
+pymongo>=4.6.0
+
+# Utilities
+pyyaml>=6.0.0
+python-dateutil>=2.8.0

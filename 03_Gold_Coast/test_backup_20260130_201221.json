@@ -1,0 +1,2256 @@
+[
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f54659260277d",
+    "address": "58 BRADSTONE ROAD CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/58-bradstone-road-carrara-qld-4211",
+      "address": "58 BRADSTONE ROAD CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T01:08:51.507169",
+      "features": {
+        "bedrooms": null,
+        "bathrooms": null,
+        "car_spaces": null,
+        "land_size": null,
+        "property_type": "House"
+      },
+      "valuation": {
+        "low": 980000,
+        "mid": 1140000,
+        "high": 1300000,
+        "accuracy": "Low",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 1110,
+        "yield": 5.07
+      },
+      "property_timeline": [],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/uuD7sT5q-V6um6yhgwBHhcyhGhE=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/http://static.domain.com.au/hpg-unique-data/1060992/1060992-GAQLD155157296.jpg",
+          "index": 0,
+          "date": null
+        }
+      ],
+      "address_pid": 938767,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f54659260277e",
+    "address": "U 80/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/80-117-palm-meadows-drive-carrara-qld-4211",
+      "address": "U 80/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:21:02.260010",
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "car_spaces": 2,
+        "land_size": null,
+        "property_type": "Apartment"
+      },
+      "valuation": {
+        "low": 860000,
+        "mid": 1000000,
+        "high": 1140000,
+        "accuracy": "High",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 720,
+        "yield": 3.75
+      },
+      "property_timeline": [
+        {
+          "date": "2021-05-25",
+          "month_year": "May 2021",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 635000,
+          "days_on_market": 41,
+          "is_major_event": true,
+          "agency_name": "STONE REAL ESTATE CARRARA",
+          "agency_url": "stonerealestatecarrara-24890",
+          "is_sold": true
+        },
+        {
+          "date": "2016-02-25",
+          "month_year": "Feb 2016",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 526000,
+          "days_on_market": 86,
+          "is_major_event": true,
+          "agency_name": "STONE REAL ESTATE CARRARA",
+          "agency_url": "stonerealestatecarrara-24890",
+          "is_sold": true
+        },
+        {
+          "date": "2009-10-20",
+          "month_year": "Oct 2009",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 452500,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Superior Property Gold Coast  - Carrara",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2001-03-15",
+          "month_year": "Mar 2001",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 264000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/vjgzSV0-8qAXEp4vyCsmzXSTUh0=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_1_1_210414_123831-w2000-h1500",
+          "index": 0,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/-M1upPEFRYCzDQmzdkIZdGO58gE=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_3_1_210414_123831-w800-h600",
+          "index": 1,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/J8D7ERELbHmzV473wtGSPsyw-WA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_2_1_210414_123831-w2000-h1500",
+          "index": 2,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/sBgL9KY02ggrn1eQqWcZ-jkekEk=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_4_1_210414_123831-w2000-h1500",
+          "index": 3,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/rVxjZPJbh5CqXDW3RkqgFdza0Eg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_5_1_210414_123831-w2000-h1500",
+          "index": 4,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/fZCNJ8BSo3hd6xM_rpVQJUg4uHk=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_6_1_210414_123831-w2000-h1500",
+          "index": 5,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/NGyOEGGTf48FjEyxMh8QQxqNunc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_7_1_210414_123831-w2000-h1500",
+          "index": 6,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/rhs87EF5FWuOm5MaKlcT5Mby_FQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_8_1_210414_123831-w2000-h1500",
+          "index": 7,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/GsW475VIwMZKNOjaXkKPAhqv2Y4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_9_1_210414_123831-w2000-h1500",
+          "index": 8,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/c3Qs42LPMxd01xkFnilnVy7EYXE=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_10_1_210414_123831-w2000-h1500",
+          "index": 9,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/52vILjTTpeupDqdDNdJzkPpc2lY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_11_1_210414_123831-w2000-h1500",
+          "index": 10,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/EbhqzQuHwfusXWLQSDSHHp93N7Q=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_12_1_210414_123831-w800-h600",
+          "index": 11,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3ntXqwMbb_jvju5hgRhZB25C6aY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_13_1_210414_123831-w2000-h1500",
+          "index": 12,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/-7dHzo3b6OZ04jMbTDWxMkOuB0s=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_14_1_210414_123831-w2000-h1500",
+          "index": 13,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/kyuDPUldUNx1fIdaPR2NoxN6I0g=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_15_1_210414_123831-w2000-h1500",
+          "index": 14,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/ez9avBf5V53ewNLSw79NrYPd8WQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_16_1_210414_123831-w2000-h1500",
+          "index": 15,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/nMAzoCIN0zHQ7avnXPDHMkwaVVc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2016933116_18_3_210414_123831-w2000-h1500",
+          "index": 16,
+          "date": "2021-04-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/8BcBygezi5pOmgUmxWd1Db7KjBM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2012462121_1_pi_160218_023816",
+          "index": 17,
+          "date": "2015-12-01T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/j1wh4DbYpZjGulPErYmBCHCpues=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2012462121_2_pi_160218_023817",
+          "index": 18,
+          "date": "2015-12-01T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/7W52j7n2Qy8whCAuEFYKirfirr4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2012462121_3_pi_160218_023818",
+          "index": 19,
+          "date": "2015-12-01T00:00:00.000Z"
+        }
+      ],
+      "address_pid": 1839110,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f54659260277f",
+    "address": "U 81/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/81-117-palm-meadows-drive-carrara-qld-4211",
+      "address": "U 81/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:21:12.067872",
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "car_spaces": 2,
+        "land_size": null,
+        "property_type": "Apartment"
+      },
+      "valuation": {
+        "low": 930000,
+        "mid": 1080000,
+        "high": 1230000,
+        "accuracy": "High",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 755,
+        "yield": 3.66
+      },
+      "property_timeline": [
+        {
+          "date": "2020-12-11",
+          "month_year": "Dec 2020",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 630000,
+          "days_on_market": 11,
+          "is_major_event": true,
+          "agency_name": "Ray White Surfers Paradise",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2019-09-17",
+          "month_year": "Sep 2019",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 649000,
+          "days_on_market": 240,
+          "is_major_event": false,
+          "agency_name": "LJ Hooker Property Hub",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2017-11-23",
+          "month_year": "Nov 2017",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 605000,
+          "days_on_market": 7,
+          "is_major_event": true,
+          "agency_name": "Astras Prestige Property",
+          "agency_url": "astrasprestigeproperty-7053",
+          "is_sold": true
+        },
+        {
+          "date": "2008-11-14",
+          "month_year": "Nov 2008",
+          "category": "Sale",
+          "type": "AUCTION",
+          "price": 462000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "RW Commercial Robina",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2005-02-02",
+          "month_year": "Feb 2005",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 320000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2001-03-22",
+          "month_year": "Mar 2001",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 259000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/G9B_JqhhQvoRT8oOcuDSgRYXj4Y=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_11_1_191212_045705-w4000-h2667",
+          "index": 0,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/IdhLE0B4J8p-5YeY7kSeybragQU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_5_1_191212_030719-w1198-h798",
+          "index": 1,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/w88Q3Tw0BLpc2MvLTP8hyRKS-R8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_6_1_191212_045705-w5760-h3840",
+          "index": 2,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/evTVDAe2HPUGj7uXluf_Hcuku4M=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_3_1_191212_045705-w5760-h3840",
+          "index": 3,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/LpQ-db-cVtGfMkiyNsZ4lJVBZRE=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_1_1_191212_045705-w800-h600",
+          "index": 4,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/JtL3llIOHu4WzLp17mcfcuDhY9c=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_3_1_191212_030719-w3200-h2400",
+          "index": 5,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/oe03Pyfn_lOBRQpqLPwK53fbuZU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_8_1_191212_045705-w5760-h3840",
+          "index": 6,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/QyA0sT1yeP44OFUYqMDpwnlK-Mk=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_9_1_191212_045705-w5760-h3840",
+          "index": 7,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/SwIijdoUo-D67kb8h0iHGMKnLcQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_10_1_191212_045705-w5760-h3840",
+          "index": 8,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/nJCyI1wP90HFTaFRJB97cZm2LCM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_5_1_191212_045705-w3000-h2248",
+          "index": 9,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/f7RUxozYIErSMm0hJK167JIjeSo=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_1_1_191212_030719-w3200-h2400",
+          "index": 10,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/_R14h7X2v4qatLtmJNJx2YYwGos=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_12_1_191212_045705-w4000-h2667",
+          "index": 11,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/QWARtQJQnPjtEMmcady6XvOPfTc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_13_1_191212_045705-w4000-h2667",
+          "index": 12,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/z8kzW0MxpPfqe-IOyyp9UP3WL40=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_14_1_191212_045705-w4000-h2667",
+          "index": 13,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/LIiHqzRhKUJRBvcga9K6QOnqx7o=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2015960509_15_3_191212_045705-w2480-h1753",
+          "index": 14,
+          "date": "2019-12-12T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/5CCfqmNpRWpZWewt9NsPjjBWoTM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2014009624_2_pi_171115_120550-w3200-h2400",
+          "index": 15,
+          "date": "2017-11-15T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/HmnExxn2gi2gNWIr-1KljsKslYw=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2014009624_1_pi_171115_120538-w3200-h2400",
+          "index": 16,
+          "date": "2017-11-15T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/YjUl72lw2rhz1kNcox_6FtmWhBU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2014009624_3_pi_171115_120603-w3200-h2400",
+          "index": 17,
+          "date": "2017-11-15T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/lFCEiC66IxiRhRZujLow6AiCXUw=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2014009624_4_pi_171115_120618-w3200-h2400",
+          "index": 18,
+          "date": "2017-11-15T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/qNB1v_1Owuo5jm7c6gQGfzN5UJw=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2014009624_5_pi_171115_120538-w3200-h2400",
+          "index": 19,
+          "date": "2017-11-15T00:00:00.000Z"
+        }
+      ],
+      "address_pid": 1839111,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f546592602780",
+    "address": "U 82/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/82-117-palm-meadows-drive-carrara-qld-4211",
+      "address": "U 82/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:21:21.803552",
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "car_spaces": 2,
+        "land_size": null,
+        "property_type": "Townhouse"
+      },
+      "valuation": {
+        "low": 1020000,
+        "mid": 1180000,
+        "high": 1340000,
+        "accuracy": "High",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 955,
+        "yield": 4.26
+      },
+      "property_timeline": [
+        {
+          "date": "2010-08-12",
+          "month_year": "Aug 2010",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 473000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "_Ray White Varsity Lakes",
+          "agency_url": "raywhitevarsitylakes-16390",
+          "is_sold": true
+        },
+        {
+          "date": "2009-05-21",
+          "month_year": "May 2009",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 427000,
+          "days_on_market": 39,
+          "is_major_event": true,
+          "agency_name": "Ray White - Robina",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2006-08-28",
+          "month_year": "Aug 2006",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 418000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2005-05-04",
+          "month_year": "May 2005",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 330000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2001-02-19",
+          "month_year": "Feb 2001",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 259000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/mhc134Gb9Xer1BJcxIEwkcjxbjw=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2008556923_1_pi_150228_123233",
+          "index": 0,
+          "date": "2010-10-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/-O8Jc7Yb_TkAWYhS3QzsL-gj4m0=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2008556923_2_pi_150228_123233",
+          "index": 1,
+          "date": "2010-10-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/8UwhQrTTK2LmMFCf2LpQvf4kpHc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2008556923_3_pi_150228_123233",
+          "index": 2,
+          "date": "2010-10-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/l_BYovoI8fv1_DOXAvEffx0d5LQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2008556923_4_pi_150228_123233",
+          "index": 3,
+          "date": "2010-10-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/8YbifONJshIVwgVvYYUTHImIoMY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2008556923_5_pi_150228_123233",
+          "index": 4,
+          "date": "2010-10-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/zSbl3MPN-wLvG_2DLDEbAgdJFnQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2008556923_6_pi_150228_123233",
+          "index": 5,
+          "date": "2010-10-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/DVWzqgXpERpINM4f09yU5BmC520=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2008556923_7_pi_150228_123234",
+          "index": 6,
+          "date": "2010-10-14T00:00:00.000Z"
+        }
+      ],
+      "address_pid": 1839112,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f546592602781",
+    "address": "U 86/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/86-117-palm-meadows-drive-carrara-qld-4211",
+      "address": "U 86/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:21:40.961921",
+      "features": {
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "car_spaces": 2,
+        "land_size": null,
+        "property_type": "House"
+      },
+      "valuation": {
+        "low": 1100000,
+        "mid": 1280000,
+        "high": 1460000,
+        "accuracy": "High",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 1110,
+        "yield": 4.53
+      },
+      "property_timeline": [
+        {
+          "date": "2015-04-09",
+          "month_year": "Apr 2015",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 515000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Ray White - Robina",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2010-03-05",
+          "month_year": "Mar 2010",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 515000,
+          "days_on_market": 43,
+          "is_major_event": true,
+          "agency_name": "Ray White - Robina",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2007-11-02",
+          "month_year": "Nov 2007",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 518000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "HAR Robina",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2005-09-19",
+          "month_year": "Sep 2005",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 373000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2003-04-04",
+          "month_year": "Apr 2003",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 306000,
+          "days_on_market": 6,
+          "is_major_event": true,
+          "agency_name": "PRDNW Robina",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2001-02-19",
+          "month_year": "Feb 2001",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 269000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/IC5hecyZS7CJsNWUuvCum4vYt_8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_3_pi_150115_020734",
+          "index": 0,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/ULypaqeuCXrhc6TncGEI3QUAlZ0=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_2_pi_150115_020733",
+          "index": 1,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/z7MyZzPd31hOnAI6ASt8KD5hJak=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_5_pi_150115_020732",
+          "index": 2,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/dlNsV7Q8fLkq1BuQHsEFQmjM0nc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_1_pi_150115_020732",
+          "index": 3,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/SGgO8h3U6Wf8tWJthPAiuIa97fg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_6_pi_150115_020733",
+          "index": 4,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/fPd4u7euiO57oE5SV7dAXMwj0l0=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_4_pi_150115_020736",
+          "index": 5,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Zks5p60gj20lxqbm6aFAEtJwHgA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_7_pi_150115_020734",
+          "index": 6,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/E47VLtDxjIWTGlXrZe0L4cVGue8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_8_pi_150115_020736",
+          "index": 7,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/HgbJhp64e5Nc_htzfmL6zVooopM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_9_pi_150115_020732",
+          "index": 8,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/pDGNuvTgE6eSnOeBAUuq0xM1tak=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_10_pi_150115_020733",
+          "index": 9,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/cI1IGxEM9f09Fr445SH9KWFoUxQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_11_pi_150115_020735",
+          "index": 10,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/7Jte8tOOUmDvZJaJGwFxsBsmIPw=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_12_pi_150115_020736",
+          "index": 11,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/91HoIfRkJr49qijhO9NV7MoZloQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_13_pi_150115_020732",
+          "index": 12,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Qnmk28xkDZMY_VEmpkiw_wTXffE=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_14_pi_150115_020734",
+          "index": 13,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/IN1QQQyZ6S-QfIiOnrIZ9nn38Fo=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_15_pi_150115_020735",
+          "index": 14,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/UPmdknMXPe4c7hgc7xwEAo_s2oA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2011160973_16_pi_150115_020737",
+          "index": 15,
+          "date": "2014-05-02T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/07WcUWgNBvM7wfhSyxXucPnzVjQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h533-2011075092_1_pi_150322_092511",
+          "index": 16,
+          "date": "2014-03-21T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/87NKBOWYaL1dpfZeU7mAUj6Yg5c=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h533-2011075092_2_pi_150322_092511",
+          "index": 17,
+          "date": "2014-03-21T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/KUBgYg1bQHnlknFns9rsG9sgr2c=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h533-2011075092_3_pi_150322_092511",
+          "index": 18,
+          "date": "2014-03-21T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/BPa54WCeODGFaRNfddoD8mkdHkI=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h533-2011075092_4_pi_150322_092511",
+          "index": 19,
+          "date": "2014-03-21T00:00:00.000Z"
+        }
+      ],
+      "address_pid": 1839114,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f546592602782",
+    "address": "U 52/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/52-117-palm-meadows-drive-carrara-qld-4211",
+      "address": "U 52/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:32:18.128675",
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "car_spaces": 2,
+        "land_size": null,
+        "property_type": "House"
+      },
+      "valuation": {
+        "low": 1910000,
+        "mid": 2210000,
+        "high": 2510000,
+        "accuracy": "Medium",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 1210,
+        "yield": 2.85
+      },
+      "property_timeline": [
+        {
+          "date": "2023-08-29",
+          "month_year": "Aug 2023",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 1360000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Renee Morgan Realty - Gold Coast - Brisbane",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2016-05-17",
+          "month_year": "May 2016",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 735000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2005-06-25",
+          "month_year": "Jun 2005",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 700000,
+          "days_on_market": 21,
+          "is_major_event": true,
+          "agency_name": "Har Southport",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2000-06-20",
+          "month_year": "Jun 2000",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 414000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [],
+      "address_pid": 1845306,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f546592602783",
+    "address": "U 57/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/57-117-palm-meadows-drive-carrara-qld-4211",
+      "address": "U 57/117 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:34:26.069707",
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "car_spaces": 2,
+        "land_size": null,
+        "property_type": "House"
+      },
+      "valuation": {
+        "low": 1590000,
+        "mid": 1840000,
+        "high": 2090000,
+        "accuracy": "Medium",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 1030,
+        "yield": 2.93
+      },
+      "property_timeline": [
+        {
+          "date": "2014-06-18",
+          "month_year": "Jun 2014",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 620,
+          "days_on_market": 189,
+          "is_major_event": true,
+          "agency_name": "Astras Prestige Property Pty Ltd - Robina",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2013-08-23",
+          "month_year": "Aug 2013",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 670000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Astras Prestige Property Pty Ltd - Robina",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2007-05-21",
+          "month_year": "May 2007",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 532500,
+          "days_on_market": 33,
+          "is_major_event": true,
+          "agency_name": "RW Surfers Paradise",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2001-09-14",
+          "month_year": "Sep 2001",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 380000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/jNdzw_jdDoARtz_Y9aF8hQsYNEY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_1_pi_150314_021342",
+          "index": 0,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/cXH33XHBQDdbj0_Fv9qwNstO-9U=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_2_pi_150314_021342",
+          "index": 1,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/F2aqjPiSYfdVjV-tweZOMF0YI2o=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_3_pi_150314_021342",
+          "index": 2,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/6Lku3kUf_77ApfOpBVWQS4e6CSo=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_4_pi_150314_021342",
+          "index": 3,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/YK2kmiOYADQ77HAd-5jw_d9L8CA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_5_pi_150314_021342",
+          "index": 4,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/4IRd26LM-GJk3dn7kKKT3kLA2lU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_6_pi_150314_021343",
+          "index": 5,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/tfX7t_hsyo1k-ugy11X51bN4ZDg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_7_pi_150314_021343",
+          "index": 6,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Be_oV0ACZKNeTSJs6BO_7Fmo5kI=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_8_pi_150314_021343",
+          "index": 7,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/DFkmCgc19ct8JEEFfCSvgx5I6B4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_9_pi_150314_021343",
+          "index": 8,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/mpbn3znUuHx0xFIp41spI7f9wdg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_10_pi_150314_021343",
+          "index": 9,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Cymasl-3ylM5DtXJU-bba7eFY94=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_11_pi_150314_021343",
+          "index": 10,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/rJcjb4IUDKCzTXrJJG6jtnyw55o=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_12_pi_150314_021343",
+          "index": 11,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/i2bl8HUvxtbXo4puNwh_-1YmwMI=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_13_pi_150314_021343",
+          "index": 12,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/E-wHHX8UcgXU7y8bIK18_UAqM9k=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_14_pi_150314_021343",
+          "index": 13,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/v6eXVcpHsAEnsXgOhFZRGzuwiKE=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_15_pi_150314_021343",
+          "index": 14,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/SPo5kfL6_5Sv4lpCtf-6iKK9NBE=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_16_pi_150314_021343",
+          "index": 15,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/DslvSFN3q4BS3tqpiYZNECQHPEQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_17_pi_150314_021343",
+          "index": 16,
+          "date": "2013-04-03T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/X4Ll2AVBZrV7jGVcCeORKlsu9-4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h600-2010379463_18_pi_150314_021343",
+          "index": 17,
+          "date": "2013-04-03T00:00:00.000Z"
+        }
+      ],
+      "address_pid": 1845341,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f546592602784",
+    "address": "136 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/136-palm-meadows-drive-carrara-qld-4211",
+      "address": "136 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:45:41.846645",
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "car_spaces": 1,
+        "land_size": null,
+        "property_type": "Townhouse"
+      },
+      "valuation": {
+        "low": 750000,
+        "mid": 870000,
+        "high": 990000,
+        "accuracy": "High",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 955,
+        "yield": 5.73
+      },
+      "property_timeline": [
+        {
+          "date": "2024-10-07",
+          "month_year": "Oct 2024",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 950,
+          "days_on_market": 15,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2023-06-02",
+          "month_year": "Jun 2023",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 850,
+          "days_on_market": 47,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2023-03-24",
+          "month_year": "Mar 2023",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 670000,
+          "days_on_market": 54,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2022-01-11",
+          "month_year": "Jan 2022",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 700000,
+          "days_on_market": 65,
+          "is_major_event": true,
+          "agency_name": "COASTAL \u00b0 Robina",
+          "agency_url": "coastalrobina-31247",
+          "is_sold": true
+        },
+        {
+          "date": "2020-10-08",
+          "month_year": "Oct 2020",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "COASTAL \u00b0",
+          "agency_url": "coastal-16179",
+          "is_sold": false
+        },
+        {
+          "date": "2017-05-21",
+          "month_year": "May 2017",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 550,
+          "days_on_market": 1669,
+          "is_major_event": true,
+          "agency_name": "Alert Property Group",
+          "agency_url": "alertpropertygroup-24730",
+          "is_sold": null
+        },
+        {
+          "date": "2015-12-08",
+          "month_year": "Dec 2015",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 28,
+          "is_major_event": false,
+          "agency_name": "REMAX Regency - Gold Coast",
+          "agency_url": "remaxregencygoldcoast-17747",
+          "is_sold": false
+        },
+        {
+          "date": "2015-04-20",
+          "month_year": "Apr 2015",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 433000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Astras Prestige Property",
+          "agency_url": "astrasprestigeproperty-7053",
+          "is_sold": true
+        },
+        {
+          "date": "2014-04-30",
+          "month_year": "Apr 2014",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 479000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Robina Realty",
+          "agency_url": "robinarealty-12148",
+          "is_sold": true
+        },
+        {
+          "date": "2012-02-07",
+          "month_year": "Feb 2012",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 450,
+          "days_on_market": 249,
+          "is_major_event": true,
+          "agency_name": "Easy Agent",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2011-11-01",
+          "month_year": "Nov 2011",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 35,
+          "is_major_event": false,
+          "agency_name": "Professionals Broadbeach Mike Carter Real Estate",
+          "agency_url": "archivedprofessionalsbroadbeachmikecarterrealestate-11644",
+          "is_sold": false
+        },
+        {
+          "date": "2010-09-13",
+          "month_year": "Sep 2010",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 440,
+          "days_on_market": 790,
+          "is_major_event": true,
+          "agency_name": "Rod Falcke Realty - Robina",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2010-09-03",
+          "month_year": "Sep 2010",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 8,
+          "is_major_event": false,
+          "agency_name": "Professionals Broadbeach Mike Carter Real Estate",
+          "agency_url": "archivedprofessionalsbroadbeachmikecarterrealestate-11644",
+          "is_sold": false
+        },
+        {
+          "date": "2009-06-10",
+          "month_year": "Jun 2009",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": null,
+          "days_on_market": 461,
+          "is_major_event": true,
+          "agency_name": "Professionals - John Henderson",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2007-08-14",
+          "month_year": "Aug 2007",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 410000,
+          "days_on_market": 83,
+          "is_major_event": false,
+          "agency_name": "_U-Sell Real Estate",
+          "agency_url": "usellrealestate-8277",
+          "is_sold": false
+        },
+        {
+          "date": "2007-03-09",
+          "month_year": "Mar 2007",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 410000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "U-Sell Real Estate",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2006-08-05",
+          "month_year": "Aug 2006",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 395000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Capri Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2006-01-21",
+          "month_year": "Jan 2006",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 389000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "A.F.G. Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2005-07-30",
+          "month_year": "Jul 2005",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 425000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Private",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2004-01-17",
+          "month_year": "Jan 2004",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 385000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Five Star Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2003-09-04",
+          "month_year": "Sep 2003",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 335000,
+          "days_on_market": 117,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2002-08-28",
+          "month_year": "Aug 2002",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 265000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "1996-10-25",
+          "month_year": "Oct 1996",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 170900,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/SqDywf_gK3olVBdTtUG40__pHmY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_9_1_211107_121009-w4032-h3024",
+          "index": 0,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/lvB5khB7XPwyIBEd4IaQB6lZszc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_2_1_211107_121009-w4032-h3024",
+          "index": 1,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/bzwyCNWudCgMWZpRd760ItZbhZ8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_1_1_211107_121009-w1020-h680",
+          "index": 2,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3BgmyTSBZ6N5sg1jBPpT4XqExgg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_3_1_211107_121009-w4032-h3024",
+          "index": 3,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/8OjMtZRXPwJTs4B3cgQx6w0bFDk=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_4_1_211107_121009-w4032-h3024",
+          "index": 4,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/JGbN8bfXlbnWBRzTWNAgRwpbuN8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_5_1_211107_121009-w4032-h3024",
+          "index": 5,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/S44Mc14o1gVhJzzdBSe0_DvMm7Q=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_6_1_211107_121009-w4032-h3024",
+          "index": 6,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Bz1bR8HBdqgpew9siMxtU01mmXU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_7_1_211107_121009-w4032-h3024",
+          "index": 7,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/n8UGAYuLpVHVSTXbXc8V8mp_dgM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_8_1_211107_121009-w4032-h3024",
+          "index": 8,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/0U5rDpVclUXw7XVcen0VaXMM3F0=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_10_1_211107_121009-w4032-h3024",
+          "index": 9,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3ivN1QbzjPsaR5-F0IKMERmTaLs=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_11_1_211107_121009-w4032-h3024",
+          "index": 10,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/RoQBSm_H5z_hFFsSnky6qoAVodo=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_12_1_211107_121009-w4032-h3024",
+          "index": 11,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/aRTQ923SSdM40bYC_d7q7lprJxM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_14_1_211107_121009-w4032-h3024",
+          "index": 12,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/ZgVD6vM443S2lTlIDOi2CM95Ocg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_13_1_211107_121009-w4032-h3024",
+          "index": 13,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/2G0mM6inOD8lsyA0jJT1t4aokeA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_15_1_211107_121009-w4032-h3024",
+          "index": 14,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Td9jx2wisbyCQRokXgaKKWSWj8U=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_17_1_211107_121009-w4032-h3024",
+          "index": 15,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/SEKXgwYMvM5DdDZJvlmss9Mg-hA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_16_1_211107_121009-w4032-h3024",
+          "index": 16,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/kvCXT6ofX-ARAQolTnRcSU1i__c=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_18_1_211107_121009-w4032-h3024",
+          "index": 17,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3SbscXG2qMrrFQOEBEygZy2PSPA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_19_1_211107_121009-w4032-h3024",
+          "index": 18,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/gUKGiDSITLZhOFAFi_PmuEXFSZU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_20_1_211107_121009-w4032-h3024",
+          "index": 19,
+          "date": "2021-11-07T00:00:00.000Z"
+        }
+      ],
+      "address_pid": 1853789,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f546592602785",
+    "address": "136 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/136-palm-meadows-drive-carrara-qld-4211",
+      "address": "136 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:46:44.335963",
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "car_spaces": 1,
+        "land_size": null,
+        "property_type": "Townhouse"
+      },
+      "valuation": {
+        "low": 750000,
+        "mid": 870000,
+        "high": 990000,
+        "accuracy": "High",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 955,
+        "yield": 5.73
+      },
+      "property_timeline": [
+        {
+          "date": "2024-10-07",
+          "month_year": "Oct 2024",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 950,
+          "days_on_market": 15,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2023-06-02",
+          "month_year": "Jun 2023",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 850,
+          "days_on_market": 47,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2023-03-24",
+          "month_year": "Mar 2023",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 670000,
+          "days_on_market": 54,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2022-01-11",
+          "month_year": "Jan 2022",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 700000,
+          "days_on_market": 65,
+          "is_major_event": true,
+          "agency_name": "COASTAL \u00b0 Robina",
+          "agency_url": "coastalrobina-31247",
+          "is_sold": true
+        },
+        {
+          "date": "2020-10-08",
+          "month_year": "Oct 2020",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "COASTAL \u00b0",
+          "agency_url": "coastal-16179",
+          "is_sold": false
+        },
+        {
+          "date": "2017-05-21",
+          "month_year": "May 2017",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 550,
+          "days_on_market": 1669,
+          "is_major_event": true,
+          "agency_name": "Alert Property Group",
+          "agency_url": "alertpropertygroup-24730",
+          "is_sold": null
+        },
+        {
+          "date": "2015-12-08",
+          "month_year": "Dec 2015",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 28,
+          "is_major_event": false,
+          "agency_name": "REMAX Regency - Gold Coast",
+          "agency_url": "remaxregencygoldcoast-17747",
+          "is_sold": false
+        },
+        {
+          "date": "2015-04-20",
+          "month_year": "Apr 2015",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 433000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Astras Prestige Property",
+          "agency_url": "astrasprestigeproperty-7053",
+          "is_sold": true
+        },
+        {
+          "date": "2014-04-30",
+          "month_year": "Apr 2014",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 479000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Robina Realty",
+          "agency_url": "robinarealty-12148",
+          "is_sold": true
+        },
+        {
+          "date": "2012-02-07",
+          "month_year": "Feb 2012",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 450,
+          "days_on_market": 249,
+          "is_major_event": true,
+          "agency_name": "Easy Agent",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2011-11-01",
+          "month_year": "Nov 2011",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 35,
+          "is_major_event": false,
+          "agency_name": "Professionals Broadbeach Mike Carter Real Estate",
+          "agency_url": "archivedprofessionalsbroadbeachmikecarterrealestate-11644",
+          "is_sold": false
+        },
+        {
+          "date": "2010-09-13",
+          "month_year": "Sep 2010",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 440,
+          "days_on_market": 790,
+          "is_major_event": true,
+          "agency_name": "Rod Falcke Realty - Robina",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2010-09-03",
+          "month_year": "Sep 2010",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 8,
+          "is_major_event": false,
+          "agency_name": "Professionals Broadbeach Mike Carter Real Estate",
+          "agency_url": "archivedprofessionalsbroadbeachmikecarterrealestate-11644",
+          "is_sold": false
+        },
+        {
+          "date": "2009-06-10",
+          "month_year": "Jun 2009",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": null,
+          "days_on_market": 461,
+          "is_major_event": true,
+          "agency_name": "Professionals - John Henderson",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2007-08-14",
+          "month_year": "Aug 2007",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 410000,
+          "days_on_market": 83,
+          "is_major_event": false,
+          "agency_name": "_U-Sell Real Estate",
+          "agency_url": "usellrealestate-8277",
+          "is_sold": false
+        },
+        {
+          "date": "2007-03-09",
+          "month_year": "Mar 2007",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 410000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "U-Sell Real Estate",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2006-08-05",
+          "month_year": "Aug 2006",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 395000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Capri Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2006-01-21",
+          "month_year": "Jan 2006",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 389000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "A.F.G. Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2005-07-30",
+          "month_year": "Jul 2005",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 425000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Private",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2004-01-17",
+          "month_year": "Jan 2004",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 385000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Five Star Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2003-09-04",
+          "month_year": "Sep 2003",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 335000,
+          "days_on_market": 117,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2002-08-28",
+          "month_year": "Aug 2002",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 265000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "1996-10-25",
+          "month_year": "Oct 1996",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 170900,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/SqDywf_gK3olVBdTtUG40__pHmY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_9_1_211107_121009-w4032-h3024",
+          "index": 0,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/lvB5khB7XPwyIBEd4IaQB6lZszc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_2_1_211107_121009-w4032-h3024",
+          "index": 1,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/bzwyCNWudCgMWZpRd760ItZbhZ8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_1_1_211107_121009-w1020-h680",
+          "index": 2,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3BgmyTSBZ6N5sg1jBPpT4XqExgg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_3_1_211107_121009-w4032-h3024",
+          "index": 3,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/8OjMtZRXPwJTs4B3cgQx6w0bFDk=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_4_1_211107_121009-w4032-h3024",
+          "index": 4,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/JGbN8bfXlbnWBRzTWNAgRwpbuN8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_5_1_211107_121009-w4032-h3024",
+          "index": 5,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/S44Mc14o1gVhJzzdBSe0_DvMm7Q=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_6_1_211107_121009-w4032-h3024",
+          "index": 6,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Bz1bR8HBdqgpew9siMxtU01mmXU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_7_1_211107_121009-w4032-h3024",
+          "index": 7,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/n8UGAYuLpVHVSTXbXc8V8mp_dgM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_8_1_211107_121009-w4032-h3024",
+          "index": 8,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/0U5rDpVclUXw7XVcen0VaXMM3F0=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_10_1_211107_121009-w4032-h3024",
+          "index": 9,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3ivN1QbzjPsaR5-F0IKMERmTaLs=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_11_1_211107_121009-w4032-h3024",
+          "index": 10,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/RoQBSm_H5z_hFFsSnky6qoAVodo=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_12_1_211107_121009-w4032-h3024",
+          "index": 11,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/aRTQ923SSdM40bYC_d7q7lprJxM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_14_1_211107_121009-w4032-h3024",
+          "index": 12,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/ZgVD6vM443S2lTlIDOi2CM95Ocg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_13_1_211107_121009-w4032-h3024",
+          "index": 13,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/2G0mM6inOD8lsyA0jJT1t4aokeA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_15_1_211107_121009-w4032-h3024",
+          "index": 14,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Td9jx2wisbyCQRokXgaKKWSWj8U=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_17_1_211107_121009-w4032-h3024",
+          "index": 15,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/SEKXgwYMvM5DdDZJvlmss9Mg-hA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_16_1_211107_121009-w4032-h3024",
+          "index": 16,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/kvCXT6ofX-ARAQolTnRcSU1i__c=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_18_1_211107_121009-w4032-h3024",
+          "index": 17,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3SbscXG2qMrrFQOEBEygZy2PSPA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_19_1_211107_121009-w4032-h3024",
+          "index": 18,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/gUKGiDSITLZhOFAFi_PmuEXFSZU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_20_1_211107_121009-w4032-h3024",
+          "index": 19,
+          "date": "2021-11-07T00:00:00.000Z"
+        }
+      ],
+      "address_pid": 1853795,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  },
+  {
+    "collection": "carrara",
+    "mongo_id": "690bd7da8b8f546592602786",
+    "address": "136 PALM MEADOWS DRIVE CARRARA QLD 4211",
+    "before": {
+      "url": "https://www.domain.com.au/property-profile/136-palm-meadows-drive-carrara-qld-4211",
+      "address": "136 PALM MEADOWS DRIVE CARRARA QLD 4211",
+      "scraped_at": "2025-11-08T03:47:55.443495",
+      "features": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "car_spaces": 1,
+        "land_size": null,
+        "property_type": "Townhouse"
+      },
+      "valuation": {
+        "low": 750000,
+        "mid": 870000,
+        "high": 990000,
+        "accuracy": "High",
+        "date": "2025-11-03T01:32:10.000Z"
+      },
+      "rental_estimate": {
+        "weekly_rent": 955,
+        "yield": 5.73
+      },
+      "property_timeline": [
+        {
+          "date": "2024-10-07",
+          "month_year": "Oct 2024",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 950,
+          "days_on_market": 15,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2023-06-02",
+          "month_year": "Jun 2023",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 850,
+          "days_on_market": 47,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2023-03-24",
+          "month_year": "Mar 2023",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 670000,
+          "days_on_market": 54,
+          "is_major_event": true,
+          "agency_name": "Neil Robert Harley",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2022-01-11",
+          "month_year": "Jan 2022",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 700000,
+          "days_on_market": 65,
+          "is_major_event": true,
+          "agency_name": "COASTAL \u00b0 Robina",
+          "agency_url": "coastalrobina-31247",
+          "is_sold": true
+        },
+        {
+          "date": "2020-10-08",
+          "month_year": "Oct 2020",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "COASTAL \u00b0",
+          "agency_url": "coastal-16179",
+          "is_sold": false
+        },
+        {
+          "date": "2017-05-21",
+          "month_year": "May 2017",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 550,
+          "days_on_market": 1669,
+          "is_major_event": true,
+          "agency_name": "Alert Property Group",
+          "agency_url": "alertpropertygroup-24730",
+          "is_sold": null
+        },
+        {
+          "date": "2015-12-08",
+          "month_year": "Dec 2015",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 28,
+          "is_major_event": false,
+          "agency_name": "REMAX Regency - Gold Coast",
+          "agency_url": "remaxregencygoldcoast-17747",
+          "is_sold": false
+        },
+        {
+          "date": "2015-04-20",
+          "month_year": "Apr 2015",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 433000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Astras Prestige Property",
+          "agency_url": "astrasprestigeproperty-7053",
+          "is_sold": true
+        },
+        {
+          "date": "2014-04-30",
+          "month_year": "Apr 2014",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 479000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": "Robina Realty",
+          "agency_url": "robinarealty-12148",
+          "is_sold": true
+        },
+        {
+          "date": "2012-02-07",
+          "month_year": "Feb 2012",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 450,
+          "days_on_market": 249,
+          "is_major_event": true,
+          "agency_name": "Easy Agent",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2011-11-01",
+          "month_year": "Nov 2011",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 35,
+          "is_major_event": false,
+          "agency_name": "Professionals Broadbeach Mike Carter Real Estate",
+          "agency_url": "archivedprofessionalsbroadbeachmikecarterrealestate-11644",
+          "is_sold": false
+        },
+        {
+          "date": "2010-09-13",
+          "month_year": "Sep 2010",
+          "category": "Rental",
+          "type": "PER WEEK",
+          "price": 440,
+          "days_on_market": 790,
+          "is_major_event": true,
+          "agency_name": "Rod Falcke Realty - Robina",
+          "agency_url": null,
+          "is_sold": null
+        },
+        {
+          "date": "2010-09-03",
+          "month_year": "Sep 2010",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": null,
+          "days_on_market": 8,
+          "is_major_event": false,
+          "agency_name": "Professionals Broadbeach Mike Carter Real Estate",
+          "agency_url": "archivedprofessionalsbroadbeachmikecarterrealestate-11644",
+          "is_sold": false
+        },
+        {
+          "date": "2009-06-10",
+          "month_year": "Jun 2009",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": null,
+          "days_on_market": 461,
+          "is_major_event": true,
+          "agency_name": "Professionals - John Henderson",
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2007-08-14",
+          "month_year": "Aug 2007",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 410000,
+          "days_on_market": 83,
+          "is_major_event": false,
+          "agency_name": "_U-Sell Real Estate",
+          "agency_url": "usellrealestate-8277",
+          "is_sold": false
+        },
+        {
+          "date": "2007-03-09",
+          "month_year": "Mar 2007",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 410000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "U-Sell Real Estate",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2006-08-05",
+          "month_year": "Aug 2006",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 395000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Capri Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2006-01-21",
+          "month_year": "Jan 2006",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 389000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "A.F.G. Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2005-07-30",
+          "month_year": "Jul 2005",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 425000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Private",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2004-01-17",
+          "month_year": "Jan 2004",
+          "category": "Sale",
+          "type": "Listed - not sold",
+          "price": 385000,
+          "days_on_market": null,
+          "is_major_event": false,
+          "agency_name": "Five Star Realty",
+          "agency_url": null,
+          "is_sold": false
+        },
+        {
+          "date": "2003-09-04",
+          "month_year": "Sep 2003",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 335000,
+          "days_on_market": 117,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "2002-08-28",
+          "month_year": "Aug 2002",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 265000,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        },
+        {
+          "date": "1996-10-25",
+          "month_year": "Oct 1996",
+          "category": "Sale",
+          "type": "PRIVATE TREATY",
+          "price": 170900,
+          "days_on_market": null,
+          "is_major_event": true,
+          "agency_name": null,
+          "agency_url": null,
+          "is_sold": true
+        }
+      ],
+      "images": [
+        {
+          "url": "https://rimh2.domainstatic.com.au/SqDywf_gK3olVBdTtUG40__pHmY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_9_1_211107_121009-w4032-h3024",
+          "index": 0,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/lvB5khB7XPwyIBEd4IaQB6lZszc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_2_1_211107_121009-w4032-h3024",
+          "index": 1,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/bzwyCNWudCgMWZpRd760ItZbhZ8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_1_1_211107_121009-w1020-h680",
+          "index": 2,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3BgmyTSBZ6N5sg1jBPpT4XqExgg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_3_1_211107_121009-w4032-h3024",
+          "index": 3,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/8OjMtZRXPwJTs4B3cgQx6w0bFDk=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_4_1_211107_121009-w4032-h3024",
+          "index": 4,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/JGbN8bfXlbnWBRzTWNAgRwpbuN8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_5_1_211107_121009-w4032-h3024",
+          "index": 5,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/S44Mc14o1gVhJzzdBSe0_DvMm7Q=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_6_1_211107_121009-w4032-h3024",
+          "index": 6,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Bz1bR8HBdqgpew9siMxtU01mmXU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_7_1_211107_121009-w4032-h3024",
+          "index": 7,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/n8UGAYuLpVHVSTXbXc8V8mp_dgM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_8_1_211107_121009-w4032-h3024",
+          "index": 8,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/0U5rDpVclUXw7XVcen0VaXMM3F0=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_10_1_211107_121009-w4032-h3024",
+          "index": 9,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3ivN1QbzjPsaR5-F0IKMERmTaLs=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_11_1_211107_121009-w4032-h3024",
+          "index": 10,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/RoQBSm_H5z_hFFsSnky6qoAVodo=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_12_1_211107_121009-w4032-h3024",
+          "index": 11,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/aRTQ923SSdM40bYC_d7q7lprJxM=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_14_1_211107_121009-w4032-h3024",
+          "index": 12,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/ZgVD6vM443S2lTlIDOi2CM95Ocg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_13_1_211107_121009-w4032-h3024",
+          "index": 13,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/2G0mM6inOD8lsyA0jJT1t4aokeA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_15_1_211107_121009-w4032-h3024",
+          "index": 14,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/Td9jx2wisbyCQRokXgaKKWSWj8U=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_17_1_211107_121009-w4032-h3024",
+          "index": 15,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/SEKXgwYMvM5DdDZJvlmss9Mg-hA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_16_1_211107_121009-w4032-h3024",
+          "index": 16,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/kvCXT6ofX-ARAQolTnRcSU1i__c=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_18_1_211107_121009-w4032-h3024",
+          "index": 17,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/3SbscXG2qMrrFQOEBEygZy2PSPA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_19_1_211107_121009-w4032-h3024",
+          "index": 18,
+          "date": "2021-11-07T00:00:00.000Z"
+        },
+        {
+          "url": "https://rimh2.domainstatic.com.au/gUKGiDSITLZhOFAFi_PmuEXFSZU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017389607_20_1_211107_121009-w4032-h3024",
+          "index": 19,
+          "date": "2021-11-07T00:00:00.000Z"
+        }
+      ],
+      "address_pid": 1853802,
+      "suburb": "carrara",
+      "worker_id": 10
+    }
+  }
+]

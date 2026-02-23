@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "last_updated": "18/02/2026, 08:50 am (Brisbane Time)",
+    "description": "TESTING MODE: Only Robina for rapid feedback",
+    "total_suburbs": 1,
+    "note": "This is a temporary testing file. Restore from gold_coast_suburbs.json for production."
+  },
+  "suburbs": [
+    {
+      "name": "Robina",
+      "postcode": "4226",
+      "slug": "robina-qld-4226"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "extraction_date": "2025-12-04T07:26:37.598657",
+  "source": "domain.com.au - Robina QLD 4226 houses",
+  "search_url": "Multiple sessions",
+  "total_properties": 1,
+  "properties": [
+    {
+      "address": "3 from typing import List",
+      "agent": "Samantha & Optional",
+      "under_offer": false,
+      "selling_method": "Unknown",
+      "selling_description": "Unknown"
+    }
+  ],
+  "statistics": {
+    "total": 1,
+    "with_price": 0,
+    "with_bedrooms": 0,
+    "with_bathrooms": 0,
+    "with_parking": 0,
+    "with_land_size": 0,
+    "with_property_type": 0,
+    "with_agent": 1,
+    "with_agency": 0,
+    "with_url": 0,
+    "with_inspection": 0,
+    "with_auction_date": 0,
+    "with_added": 0,
+    "price_types": {
+      "none": 1
+    }
+  }
+}

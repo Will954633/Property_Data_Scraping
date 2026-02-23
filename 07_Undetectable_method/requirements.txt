@@ -1,0 +1,15 @@
+# Playwright for session recording and replay
+playwright>=1.40.0
+
+# Web scraping and parsing
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# MongoDB driver
+pymongo>=4.6.0
+
+# Data handling
+pyyaml>=6.0.0
+
+# Utilities
+python-dateutil>=2.8.0

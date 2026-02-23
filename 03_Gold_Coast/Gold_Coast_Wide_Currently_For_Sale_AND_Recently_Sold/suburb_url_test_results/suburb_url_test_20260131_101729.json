@@ -1,0 +1,73 @@
+{
+  "test_info": {
+    "timestamp": "2026-01-31T10:17:29.548731",
+    "test_name": "Gold Coast Suburb URL Validation Test",
+    "total_suburbs_tested": 5,
+    "successful_urls": 5,
+    "urls_with_property_count": 5,
+    "total_properties_found": 146
+  },
+  "url_format": "https://www.domain.com.au/sale/{suburb-slug}/?excludeunderoffer=1&ssubs=0",
+  "suburbs_tested": [
+    {
+      "suburb_name": "Robina",
+      "postcode": "4226",
+      "slug": "robina-qld-4226",
+      "url": "https://www.domain.com.au/sale/robina-qld-4226/?excludeunderoffer=1&ssubs=0",
+      "success": true,
+      "property_count": 51,
+      "property_count_text": "51 Properties for sale in Robina, QLD",
+      "error": null,
+      "timestamp": "2026-01-31T10:15:28.324895",
+      "extraction_method": "text_search"
+    },
+    {
+      "suburb_name": "Varsity Lakes",
+      "postcode": "4227",
+      "slug": "varsity-lakes-qld-4227",
+      "url": "https://www.domain.com.au/sale/varsity-lakes-qld-4227/?excludeunderoffer=1&ssubs=0",
+      "success": true,
+      "property_count": 18,
+      "property_count_text": "18 Properties for sale in Varsity Lakes, QLD",
+      "error": null,
+      "timestamp": "2026-01-31T10:15:41.436998",
+      "extraction_method": "text_search"
+    },
+    {
+      "suburb_name": "Mudgeeraba",
+      "postcode": "4213",
+      "slug": "mudgeeraba-qld-4213",
+      "url": "https://www.domain.com.au/sale/mudgeeraba-qld-4213/?excludeunderoffer=1&ssubs=0",
+      "success": true,
+      "property_count": 25,
+      "property_count_text": "25 Properties for sale in Mudgeeraba, QLD",
+      "error": null,
+      "timestamp": "2026-01-31T10:15:53.114644",
+      "extraction_method": "text_search"
+    },
+    {
+      "suburb_name": "Reedy Creek",
+      "postcode": "4227",
+      "slug": "reedy-creek-qld-4227",
+      "url": "https://www.domain.com.au/sale/reedy-creek-qld-4227/?excludeunderoffer=1&ssubs=0",
+      "success": true,
+      "property_count": 19,
+      "property_count_text": "19 Properties for sale in Reedy Creek, QLD",
+      "error": null,
+      "timestamp": "2026-01-31T10:17:11.127267",
+      "extraction_method": "text_search"
+    },
+    {
+      "suburb_name": "Burleigh Waters",
+      "postcode": "4220",
+      "slug": "burleigh-waters-qld-4220",
+      "url": "https://www.domain.com.au/sale/burleigh-waters-qld-4220/?excludeunderoffer=1&ssubs=0",
+      "success": true,
+      "property_count": 33,
+      "property_count_text": "33 Properties for sale in Burleigh Waters, QLD",
+      "error": null,
+      "timestamp": "2026-01-31T10:17:21.976685",
+      "extraction_method": "text_search"
+    }
+  ]
+}

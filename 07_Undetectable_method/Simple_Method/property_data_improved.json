@@ -1,0 +1,264 @@
+{
+  "extraction_date": "2025-11-12T20:51:34.575962",
+  "source": "realestate.com.au - Robina, QLD 4226",
+  "total_properties": 29,
+  "properties": [
+    {
+      "address": "22 Homebush Drive, Robina",
+      "price": "$3",
+      "price_type": "exact",
+      "inspection": "Inspection Sat 15 Nov",
+      "raw_context": "\nSKYLINE VIEWS.\n\nInspection Sat 15 Nov\n\n22 Homebush Drive, Robina\n5 $3 @4 10 886m? + House\n\nView Property 4 4\n\nNicole Carter\n\nWhat's your property worth?\nGet a guide to the market.\n"
+    },
+    {
+      "address": "18 Mornington Terrace, Robina",
+      "price": "$2,399,000",
+      "price_type": "exact",
+      "raw_context": "\nNicole Carter\n\nUNDER OFFER @ $2,399,000+ LY\n\n18 Mornington Terrace, Robina What's your property worth? y\n\nGet a guide to the market.\nA4 42 &2 (934m? - House\n\nBALONG rab\n\nNicole Carter 4\n\nready to fire on"
+    },
+    {
+      "address": "1 Maidstone Place, Robina",
+      "price": "$1,369,000",
+      "price_type": "exact",
+      "agency": "REMAX",
+      "agent": "Wayne Holmes\neo",
+      "raw_context": "\nRa\n\n$1,369,000 Ww\n\n1 Maidstone Place, Robina\n\nA3 42 @2 16 448m? - House\n\nnspection Sat 15 Nov 10:00 am\n\n“REMAX Wayne Holmes\neo i\n\n"
+    },
+    {
+      "address": "6 Macedon Close, Robina",
+      "bedrooms": 3,
+      "bathrooms": 42,
+      "parking": 2,
+      "land_size_sqm": 506,
+      "property_type": "House",
+      "price": "$1.3m",
+      "price_type": "exact",
+      "inspection": "Inspection Sat 15 Nov 9:30 am",
+      "raw_context": "\n@ Added 9 hours ago\n\nOffers over $1.3m Ly\n\n6 Macedon Close, Robina\nA3 42 &2 506m? - House\n\nInspection Sat 15 Nov 9:30 am\n\nRaineSHorne. Richard Bird\n\n\n======================================================================\nFILE: section_04_20251112_200756.png"
+    },
+    {
+      "address": "33 Manly Drive, Robina",
+      "bedrooms": 4,
+      "bathrooms": 42,
+      "parking": 5,
+      "property_type": "House",
+      "price": "Auction",
+      "price_type": "auction",
+      "raw_context": "ELGAS\n131 161\n\nAuction Coming Soon\n\n33 Manly Drive, Robina\nA4& 42 @5- House\n\nnspection Sat 15 Nov 10:30 am\n\nFeatured news, tips and guides\n\n======================================================================\nFILE: section_05_20251112_203145.png\n======================================================================"
+    },
+    {
+      "address": "149448204 anly Drive, Robina",
+      "price": "Auction",
+      "price_type": "auction",
+      "listing_url": "https://www.realestate.com.au/property-house-qld-robina-149448204",
+      "raw_context": "\n* Trustpilot\n\nAuction Coming Soon Ly\n\nhttps://www.realestate.com.au/property-house-qld-robina-149448204 anly Drive, Robina\n\n======================================================================\nFILE: section_05_20251112_203559.png\n======================================================================\nQ Robina, QLD 4226 Price Bed @ Fitters ) © Map\n\nintel you need.\n\nWhat's your property worth? 5"
+    },
+    {
+      "address": "23 Applegum Court, Robina",
+      "price": "MUST BE SOLD",
+      "price_type": "must_sell",
+      "inspection": "Inspection Sat 15 Nov 11:00 am",
+      "raw_context": "ELGAS\n131 161\n\nMUST BE SOLD PRESENT OFFERS Ww\n\n23 Applegum Court, Robina\n\nAé6 33 @2 16 818m? - House\n\nInspection Sat 15 Nov 11:00 am\n\n\n======================================================================\nFILE: section_06_20251112_203148.png\n======================================================================"
+    },
+    {
+      "address": "13 Woody Views Way, Robina",
+      "price": "Contact Agent",
+      "price_type": "contact",
+      "agency": "McGrath",
+      "agent": "Contact Agent LY",
+      "raw_context": "McGrath\n\nContact Agent LY ;\nResearching?\n\n13 Woody Views Way, Robina\n\nB3 42 2 15 408m? - Duplex/semi-detached\n\nMcGrath\n\nMCGRATH - SOUTHPORT\n\n\n======================================================================"
+    },
+    {
+      "address": "3 Beaumaris Court, Robina",
+      "price": "Contact Agent",
+      "price_type": "contact",
+      "inspection": "Inspection Sat 15 Nov 10:00 am",
+      "raw_context": "\nCOASTAL®\n\nContact Agent For Price Guide\n\n3 Beaumaris Court, Robina\nA3 42 82 15 45lm? - House\nInspection Sat 15 Nov 10:00 am\n\nADVERTISEMENT\n\nPrice Bed 1) Filters (J Map\n\nWhat's your property worth?\nGet a guide to the market."
+    },
+    {
+      "address": "148884344 eldaarelaty Court, Robina",
+      "price": "$2,200,000",
+      "price_type": "exact",
+      "listing_url": "https://www.realestate.com.au/property-house-qld-robina-148884344",
+      "raw_context": "\nMCGRATH - SOUTHPORT\n\nContact Agent For Price Guide Lv\n\nhttps://www.realestate.com.au/property-house-qld-robina-148884344 eldaarelaty Court, Robina\n\n======================================================================\nFILE: section_08_20251112_203607.png\n======================================================================\nQ Robina, QLD 4226\n\nq © Added yesterday ) Ges, PE,\n$2,200,000 - $2,400,000\n"
+    },
+    {
+      "address": "81 Cheltenham Drive, Robina",
+      "price": "$1,249,000",
+      "price_type": "exact",
+      "raw_context": "\nMCGRATH - SOUTHPORT\n\n$1,249,000 ied\n\n81 Cheltenham Drive, Robina\nAz $2 &4 10 480m? - House\n\n\n======================================================================\nFILE: section_09_20251112_203157.png\n======================================================================\nQ Robina, QLD 4226 Price Bed @ Fitters ) © Map\n\nWhat's your property worth?"
+    },
+    {
+      "address": "36 Florabella Drive, Robina",
+      "price": "$965,000",
+      "price_type": "exact",
+      "agency": "REMAX",
+      "agent": "Brian Dobson",
+      "raw_context": "Get a guide to the market.\ni INVEST &.\n\ne Sold 17 Oct 2025 = ; © Sold 03h >\n$965,000 $1,950,000 $1,273,000\n36 Florabella Drive, Robina, 903 Medinah Avenue, Robina, 10 Birkdale Street, R\nQld 4226 Qld 4226 4226\nA3m& 3281 A3m 3284 A33282\nMcGrath\n~REMAX Brian Dobson 4 omy\ngy Researching?\nGet a guide to\nthe market\n| Get the guide |\n"
+    },
+    {
+      "address": "1 Vaucluse Place, Robina",
+      "price": "$1,405,000",
+      "price_type": "exact",
+      "agency": "REMAX",
+      "agent": "Brian Dobson oP th ema rket",
+      "raw_context": "\n@ Sold210 >\n\n$1,405,000 $1,915,000 $1,670,000 McGrath\n\n11 Ron Penhaligon Way, 1 Vaucluse Place, Robina, Qld __ 11 Parkdale Court, R:\n\nRobina, Qld 4226 4226 4226\n\nB382@2 6443 @5 64.82 @2 Researching?\nGet a guide to\n\n*REMAX Brian Dobson oP th ema rket\n\n| Get the guide |"
+    },
+    {
+      "address": "20 Belmore Close, Robina",
+      "price": "$1,350,000",
+      "price_type": "exact",
+      "agency": "REMAX",
+      "agent": "Brian Dobson",
+      "raw_context": "\n© Sold23¢ >\n\n=\n$1,350,000 $1,442,500 $1,300,000\n20 Belmore Close, Robina, 7 Grassmere Court, Robina, 18 Montreal Crescer\nQld 4226 Qld 4226 Qld 4226\nA33282 A432 82 A33282\nMcGrath\n~REMAX Brian Dobson , 4 omy\ngy Researching?\nGet a guide to\nthe market\n| Get the guide |\n"
+    },
+    {
+      "address": "60 Easthill Drive, Robina",
+      "price": "$1,210,000",
+      "price_type": "exact",
+      "agency": "REMAX",
+      "agent": "Brian Dobson",
+      "raw_context": "the market\n\nait\n\n$1,210,000 $1,495,000 $1,915,000\n60 Easthill Drive, Robina, Qld 260 Ron Penhaligon Way, 1 Vaucluse Place, Rc | Get the guide |\n4226 Robina, Qld 4226 4226\nA332 82 A442 82 844385 MCGRATH - SOUTHPORT\ne\n\n>)\n\n*REMAX Brian Dobson ,\n\\ ”\n"
+    },
+    {
+      "address": "1 Elfin Street, Robina",
+      "price": "$1,455,000",
+      "price_type": "exact",
+      "agency": "REMAX",
+      "agent": "Brian Dobson",
+      "raw_context": "\nResearching?\nLl @ Sold13 Oct 2025 | = Get a guide to\nthe market\n$1,455,000 $1,565,000 $1,835,000\n4/22 Andromeda Parade, 1 Elfin Street, Robina, Qld 4] Kirralee Drive, Ro | Get the guide |\nRobina, Qld 4226 4226 4226\nA3& 32 82 B84 3262 843283 MCGRATH - SOUTHPORT\n~REMAX Brian Dobson , 4 €\n\n======================================================================\nFILE: section_11_20251112_201114.png\n======================================================================\nQ Robina, QLD 4226 Price Bed @ Fitters ) © Map\n"
+    },
+    {
+      "address": "76 Woody Views Way, Robina",
+      "price": "Contact Agent",
+      "price_type": "contact",
+      "inspection": "Inspection Sat 15 Nov 11:00 am",
+      "raw_context": "the market\n\n| Get the guide |\nOwner Has Bought Must Sell - Contact Agent LY\n\n76 Woody Views Way, Robina MCGRATH ~ SOUTHPORT\n\nA3 42 @2 105 508m? - House\n\nInspection Sat 15 Nov 11:00 am\n\nSurfers Paradise\n\nThe Colonial Golf Course\n"
+    },
+    {
+      "address": "7 Tiffany Close, Robina",
+      "bedrooms": 3,
+      "bathrooms": 42,
+      "parking": 1,
+      "property_type": "House",
+      "price": "Expressions Of Interest",
+      "price_type": "eoi",
+      "agency": "Astras",
+      "agent": "Norman Tang",
+      "raw_context": "\nEEE ee I I\n\nExpressions Of Interest LY What's your property worth?\nGet a guide to the market.\n7 Tiffany Close, Robina\n\nA3 42 &1- House\n\nInspection tomorrow 2:00 pm\n\nAstras. Norman Tang Q\n\n&\n"
+    },
+    {
+      "address": "11 Cedarwood Crescent, Robina",
+      "bedrooms": 4,
+      "bathrooms": 432,
+      "parking": 4,
+      "land_size_sqm": 461,
+      "property_type": "House",
+      "price": "Auction",
+      "price_type": "auction",
+      "raw_context": "What's your property worth?\nGet a guide to the market.\n\nAuction Ly\n\n11 Cedarwood Crescent, Robina\nA4 432 &4 10 461m? - House\n\nAuction tomorrow 5:00 pm\n\nWELCOME CHANGE Robyn Wigmore\n\n%\n\nFLY, MAINTAIN"
+    },
+    {
+      "address": "25 Promenade Avenue, Robina",
+      "inspection": "Inspection Sun 16 Nov 10:30 am",
+      "raw_context": "======================================================================\nFILE: section_13_20251112_201120.png\n======================================================================\nQ Robina, QLD 4226 Price Bed (J Map\n\n25 Promenade Avenue, Robina\n\nB4 432 @4 16 459m? - House What's your property worth?\nGet a guide to the market.\n\nInspection Sun 16 Nov 10:30 am\n\nADVERTISEMENT\n\nResearch any"
+    },
+    {
+      "address": "61 Riverwalk Avenue, Robina",
+      "bedrooms": 3,
+      "bathrooms": 42,
+      "parking": 4,
+      "land_size_sqm": 138,
+      "property_type": "House",
+      "agency": "Crasto",
+      "agent": "Collective Ly",
+      "raw_context": "What's your property worth?\n\n. Get a guide to the market.\nContact Crasto Collective Ly\n\n61 Riverwalk Avenue, Robina\n\nA3 42 &4 10 138m? - House\n\nAstra S. John Whiteway\n\nCa\n\n'ORLD'S\n"
+    },
+    {
+      "address": "10/24 Ron Penhaligon Way, Robina",
+      "price": "Contact Agent",
+      "price_type": "contact",
+      "raw_context": "ADF\nCAREERS\n\nContact Agent Ly\n\n10/24 Ron Penhaligon Way, Robina\nB3 A 433 @2 18236m? - Duplex/semi-detached\n\n\n======================================================================\nFILE: section_14_20251112_203211.png\n======================================================================\nQ Robina, QLD 4226 Price Bed @ Fitters Map\n\nWhat's your property worth?"
+    },
+    {
+      "address": "13-15 Hindmarsh Court, Robina",
+      "price": "Contact Agent",
+      "price_type": "contact",
+      "agency": "marsh",
+      "agent": "Court",
+      "raw_context": "What's your property worth?\nGet a guide to the market.\n\nContact Agent Ly\n\n13-15 Hindmarsh Court, Robina\n\nA4 42 &3 106 904m? - House\n\nAVIATION\nCAREERS\nUNLIKE ANY\nOTHER\n\nMARSH fic Andrew Marsh"
+    },
+    {
+      "address": "16 Bentleigh Court, Robina",
+      "bedrooms": 5,
+      "bathrooms": 33,
+      "parking": 2,
+      "land_size_sqm": 842,
+      "property_type": "House",
+      "price": "$2,695,000",
+      "price_type": "exact",
+      "agency": "Harcourts",
+      "agent": "Aaron Smith\n\nADF\nCAREERS\n\nOffers Over",
+      "raw_context": "Q Robina, QLD 4226 Price Bed @ Fitters ) © Map\n\nWhat's your property worth? 5\nJust Listed Ww Get a guide to the market.\n\n16 Bentleigh Court, Robina\nBA5 33 @2 10 842m? - House\n\nHarcourts Aaron Smith\n\nADF\nCAREERS\n\nOffers Over $2,695,000 WwW\n"
+    },
+    {
+      "address": "60-62 Newport Drive, Robina",
+      "bedrooms": 48,
+      "bathrooms": 42,
+      "parking": 6,
+      "land_size_sqm": 1641,
+      "property_type": "House",
+      "price": "$2,695,000",
+      "price_type": "exact",
+      "inspection": "Inspection Sat 15 Nov 11:00 am",
+      "raw_context": "ADF\nCAREERS\n\nOffers Over $2,695,000 WwW\n\n60-62 Newport Drive, Robina\nB48 42 @6 11,641m? - House\n\nInspection Sat 15 Nov 11:00 am\n\nADVERTISEMENT\n\n\n======================================================================\nFILE: section_16_20251112_203217.png"
+    },
+    {
+      "address": "74 Woody Views Way, Robina",
+      "price": "Contact Agent",
+      "price_type": "contact",
+      "raw_context": "ADF»>\nCAREERS\n\nContact Agent Lv\n\n74 Woody Views Way, Robina\nB3 42 4 106354m? - House\n\n\n======================================================================\nFILE: section_17_20251112_203219.png\n======================================================================\nQ Robina, QLD 4226 Price Bed (J Map\n\nWhat's your property worth?"
+    },
+    {
+      "address": "19 Frankston Court, Robina",
+      "price": "CONTACT AGENT",
+      "price_type": "contact",
+      "raw_context": "\nWhat's your property worth?\nGet a guide to the market.\n\nCONTACT AGENT Ly\n19 Frankston Court, Robina\n\nARE FOR THE\nA4 42 82: House IELLBEING OF\n\n'UR PEOPLE\n\nnspection Sat 15 Nov 9:15 am\n\nCOASTAL® Joel Madam CAREERS"
+    },
+    {
+      "address": "48 Peach Drive, Robina",
+      "bedrooms": 5,
+      "bathrooms": 34,
+      "parking": 2,
+      "land_size_sqm": 859,
+      "property_type": "House",
+      "price": "Auction",
+      "price_type": "auction",
+      "raw_context": "What's your property worth?\nGet a guide to the market.\n\nAuction Ly\n\n48 Peach Drive, Robina\n\nBA5 & 34 @2 10 859m? - House\n\nnspection Sat 15 Nov 11:45 am Auction Sat 15 Nov 3:00 pm\n\nIN CHALLENGING\n& REWARDING\nROLES\n"
+    },
+    {
+      "address": "3/88 Glades Drive, Robina",
+      "bedrooms": 4,
+      "bathrooms": 432,
+      "parking": 2,
+      "land_size_sqm": 6212,
+      "property_type": "House",
+      "price": "Auction",
+      "price_type": "auction",
+      "raw_context": "ADF\nCAREERS\n\nAuction Ly\n\n3/88 Glades Drive, Robina\nA4 432 @2 16212m? - House\n\nAuction tomorrow 11:00 am\n\n\n======================================================================\nFILE: section_19_20251112_203225.png\n======================================================================\nQ Robina, QLD 4226 Price Bed (J Map"
+    }
+  ],
+  "statistics": {
+    "total": 29,
+    "with_price": 27,
+    "with_bedrooms": 9,
+    "with_bathrooms": 9,
+    "with_parking": 9,
+    "with_land_size": 7,
+    "with_property_type": 9,
+    "with_agent": 11,
+    "with_agency": 11,
+    "with_url": 2,
+    "with_inspection": 7
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "internal_floor_area": {
+    "value": null,
+    "unit": "sqm",
+    "confidence": "low",
+    "notes": "Internal living area only - excludes garage, porches, external storage"
+  },
+  "total_floor_area": {
+    "value": null,
+    "unit": "sqm",
+    "confidence": "low",
+    "notes": "Total building footprint including garage, porches, covered areas"
+  },
+  "total_land_area": {
+    "value": null,
+    "unit": "sqm",
+    "confidence": "low",
+    "notes": "Land area not labeled on plan"
+  },
+  "levels": {
+    "total_levels": 1,
+    "level_details": [
+      {
+        "level_name": "Ground Floor",
+        "floor_area": {
+          "value": null,
+          "unit": "sqm"
+        }
+      }
+    ]
+  },
+  "rooms": [
+    {
+      "room_type": "living_room",
+      "room_name": "Lounge Room",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 5.0,
+        "width": 4.0,
+        "unit": "m",
+        "area": 20.0,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "dining_area",
+      "room_name": "Dining Area",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.0,
+        "width": 2.8,
+        "unit": "m",
+        "area": 8.4,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "adjacent to lounge & kitchen"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "kitchen",
+      "room_name": "Kitchen",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": "Dimension not legible on plan"
+    },
+    {
+      "room_type": "laundry",
+      "room_name": "L'dry",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": "Dimension not legible"
+    },
+    {
+      "room_type": "family_room",
+      "room_name": "Family Room",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 8.2,
+        "width": 4.0,
+        "unit": "m",
+        "area": 32.8,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 1",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.0,
+        "width": 2.6,
+        "unit": "m",
+        "area": 7.8,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "wardrobe"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 2",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.0,
+        "width": 2.7,
+        "unit": "m",
+        "area": 8.1,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "wardrobe"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 3",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.0,
+        "width": 2.7,
+        "unit": "m",
+        "area": 8.1,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "wardrobe"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Main Bedroom",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 4.0,
+        "width": 3.5,
+        "unit": "m",
+        "area": 14.0,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "Ensuite",
+        "Walk-in Robe"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bed/Study",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.3,
+        "width": 3.0,
+        "unit": "m",
+        "area": 9.9,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "Study/Night use possible"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "bathroom",
+      "room_name": "Main Bath",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "ensuite",
+      "room_name": "Ensuite (Main Bedroom)",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "walk_in_robe",
+      "room_name": "Walk-in Robe (Main Bedroom)",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": ""
+    }
+  ],
+  "bedrooms": {
+    "total_count": 5,
+    "details": "Main Bedroom + Bedroom 1 + Bedroom 2 + Bedroom 3 + Bed/Study"
+  },
+  "bathrooms": {
+    "total_count": 2,
+    "full_bathrooms": 1,
+    "powder_rooms": 0,
+    "ensuites": 1,
+    "details": "Main Bath + Ensuite"
+  },
+  "parking": {
+    "garage_spaces": 0,
+    "carport_spaces": 2,
+    "total_spaces": 2,
+    "garage_type": "tandem",
+    "notes": "Carport likely accommodates two vehicles in tandem"
+  },
+  "outdoor_spaces": [
+    {
+      "type": "pool",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "area": null,
+        "unit": "sqm"
+      },
+      "features": [
+        "Swimming Pool"
+      ]
+    },
+    {
+      "type": "covered_porch",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 8.0,
+        "width": 4.2,
+        "unit": "m",
+        "area": 33.6,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "attached to living areas",
+        "access from family room"
+      ]
+    },
+    {
+      "type": "porch",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "area": null,
+        "unit": "sqm"
+      },
+      "features": [
+        "entry porch"
+      ]
+    }
+  ],
+  "layout_features": {
+    "open_plan": true,
+    "split_level": false,
+    "flow_description": "Central family room connects to meals, dining, and lounge; kitchen adjacent to meals; separate bedrooms cluster to one side; outdoor pool and covered porch accessible from family room",
+    "highlights": [
+      "Large family living area",
+      "Pool and covered porch for outdoor living",
+      "Main bedroom with ensuite and WIR",
+      "Multiple bedrooms suitable for a family"
+    ]
+  },
+  "additional_features": [
+    "Butler's pantry? Not clearly labeled",
+    "Possible study/bed option in Bed/Study",
+    "L-shaped pool deck"
+  ],
+  "buyer_insights": {
+    "ideal_for": [
+      "families",
+      "outdoor living enthusiasts"
+    ],
+    "key_benefits": [
+      "Single-story layout with expansive family area",
+      "Pool and outdoor entertaining space",
+      "Main suite with ensuite and walk-in robe",
+      "Multiple bedrooms suitable for children or guests"
+    ],
+    "considerations": [
+      "Internal area not clearly labeled; exact square footage uncertain",
+      "Carport type and space arrangement in tandem",
+      "Kitchen, laundry, bath dimensions not legible"
+    ],
+    "lifestyle_suitability": "Great for families who value indoor-outdoor living with a central family hub."
+  },
+  "data_quality": {
+    "floor_plan_clarity": "good",
+    "measurements_available": true,
+    "missing_information": [
+      "Exact internal floor area",
+      "Total floor area",
+      "Kitchen, Laundry, Bath dimensions",
+      "Porch/Porch area details",
+      "Carport dimensions and spaces confirmation",
+      "Pool dimensions"
+    ],
+    "confidence_overall": "medium"
+  },
+  "analysis_metadata": {
+    "model_used": "gpt-5-nano-2025-08-07",
+    "analyzed_at": 1765846382.3368351,
+    "analysis_duration_seconds": 115.52264380455017,
+    "floor_plan_count": 1,
+    "floor_plan_urls": [
+      "https://rimh2.domainstatic.com.au/VuVeNEqYOYCWCrBKP8KcBLe2MXk=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020487354_2_3_251215_031325-w1200-h1200"
+    ],
+    "finish_reason": "stop",
+    "attempt_label": "primary"
+  }
+}

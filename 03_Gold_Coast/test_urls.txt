@@ -1,0 +1,19 @@
+# Domain URLs for Testing
+# Generated from Gold_Coast database
+# Date: 2025-06-11
+
+# Property 1: 1199 STAPYLTON JACOBS WELL ROAD WOONGOOLBA QLD 4207
+https://www.domain.com.au/property-profile/1199-stapylton-jacobs-well-road-woongoolba-qld-4207
+
+# Property 2: 41 NEW NORWELL ROAD WOONGOOLBA QLD 4207
+https://www.domain.com.au/property-profile/41-new-norwell-road-woongoolba-qld-4207
+
+# Property 3: 179 FINGLAS ROAD WOONGOOLBA QLD 4208
+https://www.domain.com.au/property-profile/179-finglas-road-woongoolba-qld-4208
+
+# Property 4: U 3018/2633 GOLD COAST HIGHWAY BROADBEACH QLD 4218
+https://www.domain.com.au/property-profile/u-3018-2633-gold-coast-highway-broadbeach-qld-4218
+
+# Property 5: U 3023/2633 GOLD COAST HIGHWAY BROADBEACH QLD 4218
+https://www.domain.com.au/property-profile/u-3023-2633-gold-coast-highway-broadbeach-qld-4218
+

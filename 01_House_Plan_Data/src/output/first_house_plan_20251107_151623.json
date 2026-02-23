@@ -1,0 +1,112 @@
+{
+  "address": "9 GLENFERRIE DRIVE ROBINA QLD 4226",
+  "document_id": "690bd7da8b8f54659260298f",
+  "images_count": 20,
+  "house_plans_detected": true,
+  "processing_time_seconds": 60.3,
+  "processed_at": "2025-11-07T05:16:23.263531",
+  "floor_plans_count": 1,
+  "floor_area_sqm": 176.54,
+  "house_plan_data": {
+    "urls": [
+      "https://rimh2.domainstatic.com.au/j2Y7wOsW6MG400ISTIw2JnzTAcA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2018772921_12_1_230915_044324-w1920-h1280"
+    ],
+    "floor_area_sqm": 176.54,
+    "floor_area_source": "total",
+    "number_of_levels": 1,
+    "confidence_score": 0.9,
+    "plans_details": [
+      {
+        "image_index": 11,
+        "is_floor_plan": true,
+        "floor_area_sqm": 176.54,
+        "floor_area_source": "total",
+        "dimensions": null,
+        "confidence_score": 0.9
+      }
+    ]
+  },
+  "property_data": {
+    "structural": {
+      "number_of_stories": 1,
+      "building_type": "house",
+      "roof_type": "tile",
+      "roof_condition_score": 6,
+      "architectural_style": "Single-story suburban Australian home with gabled tile roof; rendered walls, attached double garage."
+    },
+    "exterior": {
+      "overall_exterior_condition_score": 6,
+      "cladding_material": "render",
+      "cladding_condition_score": 6,
+      "paint_quality_score": 6,
+      "paint_condition": "good",
+      "window_type": "aluminium",
+      "window_condition_score": 6,
+      "door_quality_score": 6,
+      "garage_type": "double",
+      "garage_condition_score": 6
+    },
+    "interior": {
+      "overall_interior_condition_score": 6,
+      "flooring_type": "carpet",
+      "flooring_quality_score": 6,
+      "flooring_condition_score": 6,
+      "kitchen_quality_score": 5,
+      "kitchen_condition": "dated",
+      "bathroom_quality_score": 5,
+      "bathroom_condition": "dated",
+      "appliances_quality_score": 7,
+      "fixtures_quality_score": 6,
+      "ceiling_height": "high",
+      "natural_light_score": 8
+    },
+    "renovation": {
+      "renovation_level": "original",
+      "renovation_recency": "20+_years",
+      "modern_features_score": 4
+    },
+    "outdoor": {
+      "landscaping_quality_score": 6,
+      "pool_present": false,
+      "pool_type": "none",
+      "pool_condition_score": null,
+      "outdoor_entertainment_score": 6,
+      "fence_type": "colorbond",
+      "fence_condition_score": 6,
+      "driveway_type": "paver",
+      "driveway_condition_score": 6
+    },
+    "layout": {
+      "floor_area_sqm": 176.54,
+      "number_of_bedrooms": 3,
+      "number_of_bathrooms": 2,
+      "number_of_living_areas": 2,
+      "open_plan_layout": true,
+      "study_present": false,
+      "layout_efficiency_score": 6
+    },
+    "overall": {
+      "property_presentation_score": 6,
+      "maintenance_level": "average",
+      "market_appeal_score": 6,
+      "unique_features": [
+        "Vaulted beam ceiling in living room",
+        "Garden outlook",
+        "Attached double garage"
+      ],
+      "negative_features": [
+        "dated kitchen and bathrooms",
+        "older roof/exterior finishes",
+        "vegetation close to dwelling"
+      ]
+    },
+    "metadata": {
+      "total_images_analyzed": 18,
+      "image_quality": "professional",
+      "has_professional_photography": true,
+      "model_used": "gpt-5-nano-2025-08-07",
+      "extracted_at": 1762492583.262896
+    }
+  },
+  "is_first_house_plan": true
+}

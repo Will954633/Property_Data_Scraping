@@ -1,0 +1,74 @@
+{
+  "property_address": "38 Nardoo Street, Robina, QLD 4226",
+  "tests": {
+    "building_condition": {
+      "error": "Error code: 400 - {'error': {'message': 'Timeout while downloading https://bucket-api.domain.com.au/v1/bucket/image/2020534101_1_1_260116_055755-w3000-h2000.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_image_url'}}"
+    },
+    "building_age": {
+      "year_built": 2010,
+      "year_range": "2008-2012",
+      "confidence": "medium",
+      "evidence": [
+        "Modern tray ceiling and recessed lighting in living areas",
+        "Contemporary white high-gloss kitchen cabinetry with quartz countertops and integrated appliances",
+        "Stucco exterior with tile roof and black-framed windows",
+        "Sliding glass doors with security screens leading to covered outdoor entertaining area",
+        "In-ground pool with modern metal fence and manicured low-maintenance landscaping"
+      ],
+      "era": "modern"
+    },
+    "corner_block": {
+      "is_corner": false,
+      "confidence": "low",
+      "evidence": [
+        "Address lists a single street (Nardoo Street) with no indication of a corner location or dual frontage.",
+        "Property description contains no keywords referencing corner blocks or dual street frontage (e.g., 'corner', 'dual frontage', 'corner block').",
+        "Photos show the frontage facing one street with a single driveway; no visible second street frontage or driveway from a side street is evident.",
+        "Fencing and yard layout in the photos appear typical for a single-frontage lot, not arranged for a corner lot."
+      ],
+      "street_names": null
+    },
+    "busy_road": {
+      "is_busy": false,
+      "confidence": "high",
+      "road_type": "residential",
+      "evidence": [
+        "Address uses 'Nardoo Street' (Street name) without 'Road', 'Boulevard', 'Main Road' or 'Highway', suggesting a standard residential street rather than a major arterial.",
+        "Front exterior photo shows a calm, low-traffic residential street with typical two-lane layout and no visible traffic signals or heavy signage.",
+        "No visible traffic noise mitigation features (e.g., sound barriers or tall acoustic fencing) along the street frontage in photos.",
+        "Property listing description does not mention a busy street or main road; no 'no through road' or 'quiet street' descriptor is provided."
+      ]
+    },
+    "garage_carport": {
+      "parking_type": "garage",
+      "garage_spaces": 2,
+      "carport_spaces": 0,
+      "garage_type": "double",
+      "confidence": "high",
+      "evidence": "Image shows an attached two-car garage with a wide double door and a driveway; no covered carport visible."
+    },
+    "outdoor_entertainment": {
+      "score": 8,
+      "size": "medium",
+      "features": [
+        "deck",
+        "covered patio",
+        "alfresco dining area",
+        "pool"
+      ],
+      "quality": "premium",
+      "confidence": "high"
+    },
+    "renovation_status": {
+      "status": "fully-renovated",
+      "renovated_areas": [
+        "kitchen",
+        "bathrooms",
+        "flooring"
+      ],
+      "quality": "high-end",
+      "age": "recent",
+      "confidence": "high"
+    }
+  }
+}

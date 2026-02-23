@@ -1,0 +1,38 @@
+{
+  "extraction_date": "2025-11-12T20:47:11.465925",
+  "total_properties": 4,
+  "properties": [
+    {
+      "property_type": "House",
+      "price": "$3",
+      "address": "17 Oct 2025",
+      "raw_text": "e Sold 17 Oct 2025 = ; © Sold 03h >"
+    },
+    {
+      "address": "16 Oct 2025",
+      "raw_text": "® Sold 16 Oct 2025",
+      "price": "$1,405,000"
+    },
+    {
+      "address": "28 Oct 2025",
+      "raw_text": "® Sold 28 Oct 2025",
+      "price": "$1,350,000",
+      "property_type": "House"
+    },
+    {
+      "address": "13 Oct 2025",
+      "raw_text": "Ll @ Sold13 Oct 2025 | = Get a guide to",
+      "price": "$1,455,000",
+      "property_type": "House",
+      "bathrooms": 0,
+      "bedrooms": 2
+    }
+  ],
+  "statistics": {
+    "with_price": 4,
+    "with_bedrooms": 1,
+    "with_bathrooms": 0,
+    "with_parking": 0,
+    "with_type": 3
+  }
+}

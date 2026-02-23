@@ -1,0 +1,110 @@
+{
+  "address": "4 CHANTILLY PLACE ROBINA QLD 4226",
+  "document_id": "690bd7da8b8f54659260299b",
+  "images_count": 20,
+  "house_plans_detected": true,
+  "processing_time_seconds": 50.9,
+  "processed_at": "2025-11-07T02:19:04.878117",
+  "floor_plans_count": 1,
+  "floor_area_sqm": 276,
+  "house_plan_data": {
+    "urls": [
+      "https://rimh2.domainstatic.com.au/hkKkpdwmWF5dvgVi8fGKz9_52C4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2017359698_17_1_211027_120035-w900-h600"
+    ],
+    "floor_area_sqm": 276,
+    "floor_area_source": "main_plan",
+    "number_of_levels": 1,
+    "confidence_score": 0.8,
+    "plans_details": [
+      {
+        "image_index": 16,
+        "is_floor_plan": true,
+        "floor_area_sqm": 276,
+        "floor_area_source": "main_plan",
+        "dimensions": null,
+        "confidence_score": 0.8
+      }
+    ]
+  },
+  "property_data": {
+    "structural": {
+      "number_of_stories": 1,
+      "building_type": "house",
+      "roof_type": "tile",
+      "roof_condition_score": 8,
+      "architectural_style": "Single-story contemporary suburban with open-plan living and stone feature walls"
+    },
+    "exterior": {
+      "overall_exterior_condition_score": 8,
+      "cladding_material": "render",
+      "cladding_condition_score": 8,
+      "paint_quality_score": 8,
+      "paint_condition": "new",
+      "window_type": "aluminium",
+      "window_condition_score": 8,
+      "door_quality_score": 8,
+      "garage_type": "double",
+      "garage_condition_score": 8
+    },
+    "interior": {
+      "overall_interior_condition_score": 8,
+      "flooring_type": "tiles",
+      "flooring_quality_score": 8,
+      "flooring_condition_score": 8,
+      "kitchen_quality_score": 7,
+      "kitchen_condition": "original",
+      "bathroom_quality_score": 8,
+      "bathroom_condition": "renovated",
+      "appliances_quality_score": 8,
+      "fixtures_quality_score": 8,
+      "ceiling_height": "high",
+      "natural_light_score": 8
+    },
+    "renovation": {
+      "renovation_level": "partial_renovation",
+      "renovation_recency": "5-10_years",
+      "modern_features_score": 7
+    },
+    "outdoor": {
+      "landscaping_quality_score": 7,
+      "pool_present": true,
+      "pool_type": "inground",
+      "pool_condition_score": 8,
+      "outdoor_entertainment_score": 8,
+      "fence_type": "brick",
+      "fence_condition_score": 8,
+      "driveway_type": "paver",
+      "driveway_condition_score": 8
+    },
+    "layout": {
+      "floor_area_sqm": 276,
+      "number_of_bedrooms": 4,
+      "number_of_bathrooms": 2,
+      "number_of_living_areas": 2,
+      "open_plan_layout": true,
+      "study_present": true,
+      "layout_efficiency_score": 7
+    },
+    "overall": {
+      "property_presentation_score": 8,
+      "maintenance_level": "well_maintained",
+      "market_appeal_score": 8,
+      "unique_features": [
+        "Solar panels on roof",
+        "Pool & large covered entertaining areas",
+        "High vaulted ceilings in living area"
+      ],
+      "negative_features": [
+        "Mature vegetation surrounding boundaries may limit view"
+      ]
+    },
+    "metadata": {
+      "total_images_analyzed": null,
+      "image_quality": "professional",
+      "has_professional_photography": true,
+      "model_used": "gpt-5-nano-2025-08-07",
+      "extracted_at": 1762481944.8764238
+    }
+  },
+  "is_first_house_plan": true
+}

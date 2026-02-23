@@ -1,0 +1,2062 @@
+{
+  "start_time": "2025-11-07T05:03:29.300535",
+  "end_time": "2025-11-07T05:16:23.263633",
+  "total_documents_queried": 11761,
+  "documents_with_images": 6230,
+  "documents_processed": 21,
+  "house_plans_found": 3,
+  "first_house_plan_address": "9 GLENFERRIE DRIVE ROBINA QLD 4226",
+  "first_house_plan_document": {
+    "address": "9 GLENFERRIE DRIVE ROBINA QLD 4226",
+    "document_id": "690bd7da8b8f54659260298f",
+    "images_count": 20,
+    "house_plans_detected": true,
+    "processing_time_seconds": 60.3,
+    "processed_at": "2025-11-07T05:16:23.263531",
+    "floor_plans_count": 1,
+    "floor_area_sqm": 176.54,
+    "house_plan_data": {
+      "urls": [
+        "https://rimh2.domainstatic.com.au/j2Y7wOsW6MG400ISTIw2JnzTAcA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2018772921_12_1_230915_044324-w1920-h1280"
+      ],
+      "floor_area_sqm": 176.54,
+      "floor_area_source": "total",
+      "number_of_levels": 1,
+      "confidence_score": 0.9,
+      "plans_details": [
+        {
+          "image_index": 11,
+          "is_floor_plan": true,
+          "floor_area_sqm": 176.54,
+          "floor_area_source": "total",
+          "dimensions": null,
+          "confidence_score": 0.9
+        }
+      ]
+    },
+    "property_data": {
+      "structural": {
+        "number_of_stories": 1,
+        "building_type": "house",
+        "roof_type": "tile",
+        "roof_condition_score": 6,
+        "architectural_style": "Single-story suburban Australian home with gabled tile roof; rendered walls, attached double garage."
+      },
+      "exterior": {
+        "overall_exterior_condition_score": 6,
+        "cladding_material": "render",
+        "cladding_condition_score": 6,
+        "paint_quality_score": 6,
+        "paint_condition": "good",
+        "window_type": "aluminium",
+        "window_condition_score": 6,
+        "door_quality_score": 6,
+        "garage_type": "double",
+        "garage_condition_score": 6
+      },
+      "interior": {
+        "overall_interior_condition_score": 6,
+        "flooring_type": "carpet",
+        "flooring_quality_score": 6,
+        "flooring_condition_score": 6,
+        "kitchen_quality_score": 5,
+        "kitchen_condition": "dated",
+        "bathroom_quality_score": 5,
+        "bathroom_condition": "dated",
+        "appliances_quality_score": 7,
+        "fixtures_quality_score": 6,
+        "ceiling_height": "high",
+        "natural_light_score": 8
+      },
+      "renovation": {
+        "renovation_level": "original",
+        "renovation_recency": "20+_years",
+        "modern_features_score": 4
+      },
+      "outdoor": {
+        "landscaping_quality_score": 6,
+        "pool_present": false,
+        "pool_type": "none",
+        "pool_condition_score": null,
+        "outdoor_entertainment_score": 6,
+        "fence_type": "colorbond",
+        "fence_condition_score": 6,
+        "driveway_type": "paver",
+        "driveway_condition_score": 6
+      },
+      "layout": {
+        "floor_area_sqm": 176.54,
+        "number_of_bedrooms": 3,
+        "number_of_bathrooms": 2,
+        "number_of_living_areas": 2,
+        "open_plan_layout": true,
+        "study_present": false,
+        "layout_efficiency_score": 6
+      },
+      "overall": {
+        "property_presentation_score": 6,
+        "maintenance_level": "average",
+        "market_appeal_score": 6,
+        "unique_features": [
+          "Vaulted beam ceiling in living room",
+          "Garden outlook",
+          "Attached double garage"
+        ],
+        "negative_features": [
+          "dated kitchen and bathrooms",
+          "older roof/exterior finishes",
+          "vegetation close to dwelling"
+        ]
+      },
+      "metadata": {
+        "total_images_analyzed": 18,
+        "image_quality": "professional",
+        "has_professional_photography": true,
+        "model_used": "gpt-5-nano-2025-08-07",
+        "extracted_at": 1762492583.262896
+      }
+    },
+    "is_first_house_plan": true
+  },
+  "processed_documents": [
+    {
+      "address": "5 CHANTILLY PLACE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602972",
+      "images_count": 1,
+      "house_plans_detected": false,
+      "processing_time_seconds": 33.4,
+      "processed_at": "2025-11-07T05:04:02.769336",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "colorbond",
+          "roof_condition_score": 7,
+          "architectural_style": "modern suburban single-story residence with mixed roof types (tile accents on secondary structure) and brick exterior"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "brick",
+          "cladding_condition_score": 7,
+          "paint_quality_score": 6,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 7,
+          "door_quality_score": 7,
+          "garage_type": "none",
+          "garage_condition_score": null
+        },
+        "interior": {
+          "overall_interior_condition_score": null,
+          "flooring_type": null,
+          "flooring_quality_score": null,
+          "flooring_condition_score": null,
+          "kitchen_quality_score": null,
+          "kitchen_condition": null,
+          "bathroom_quality_score": null,
+          "bathroom_condition": null,
+          "appliances_quality_score": null,
+          "fixtures_quality_score": null,
+          "ceiling_height": null,
+          "natural_light_score": null
+        },
+        "renovation": {
+          "renovation_level": "original",
+          "renovation_recency": "unknown",
+          "modern_features_score": null
+        },
+        "outdoor": {
+          "landscaping_quality_score": 6,
+          "pool_present": true,
+          "pool_type": "inground",
+          "pool_condition_score": 7,
+          "outdoor_entertainment_score": 6,
+          "fence_type": "none",
+          "fence_condition_score": null,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 7,
+          "unique_features": [
+            "inground pool",
+            "palm trees",
+            "large yard",
+            "quiet suburban setting"
+          ],
+          "negative_features": [
+            "none notable"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 1,
+          "image_quality": "good",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762491842.7625952
+        }
+      }
+    },
+    {
+      "address": "16 CHELTENHAM DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602973",
+      "images_count": 20,
+      "house_plans_detected": false,
+      "processing_time_seconds": 50.4,
+      "processed_at": "2025-11-07T05:04:53.137901",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "Single-story brick-veneer house with pitched tile roof and timber vaulted living area ceiling"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 8,
+          "cladding_material": "brick",
+          "cladding_condition_score": 8,
+          "paint_quality_score": 7,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 7,
+          "door_quality_score": 7,
+          "garage_type": "double",
+          "garage_condition_score": 7
+        },
+        "interior": {
+          "overall_interior_condition_score": 8,
+          "flooring_type": "carpet",
+          "flooring_quality_score": 7,
+          "flooring_condition_score": 7,
+          "kitchen_quality_score": 8,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 8,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 8,
+          "fixtures_quality_score": 8,
+          "ceiling_height": "very_high",
+          "natural_light_score": 9
+        },
+        "renovation": {
+          "renovation_level": "partial_renovation",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 8
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 8,
+          "fence_type": "colorbond",
+          "fence_condition_score": 7,
+          "driveway_type": "paver",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": 3,
+          "number_of_bathrooms": 2,
+          "number_of_living_areas": 1,
+          "open_plan_layout": true,
+          "study_present": false,
+          "layout_efficiency_score": 7
+        },
+        "overall": {
+          "property_presentation_score": 8,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "vaulted timber-beamed ceiling in living space",
+            "double garage",
+            "covered outdoor dining area"
+          ],
+          "negative_features": [
+            "sliding security screens on some windows may limit view",
+            "landscaping limited in some areas"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 20,
+          "image_quality": "professional",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762491893.136801
+        }
+      }
+    },
+    {
+      "address": "3 SPRINGVALE STREET ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602974",
+      "images_count": 4,
+      "house_plans_detected": false,
+      "processing_time_seconds": 27.7,
+      "processed_at": "2025-11-07T05:05:20.869609",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "colorbond",
+          "roof_condition_score": 6,
+          "architectural_style": "Single-story suburban weatherboard with metal roof"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 6,
+          "cladding_material": "weatherboard",
+          "cladding_condition_score": 6,
+          "paint_quality_score": 6,
+          "paint_condition": "good",
+          "window_type": "timber",
+          "window_condition_score": 6,
+          "door_quality_score": 6,
+          "garage_type": "none",
+          "garage_condition_score": null
+        },
+        "interior": {
+          "overall_interior_condition_score": null,
+          "flooring_type": null,
+          "flooring_quality_score": null,
+          "flooring_condition_score": null,
+          "kitchen_quality_score": null,
+          "kitchen_condition": null,
+          "bathroom_quality_score": null,
+          "bathroom_condition": null,
+          "appliances_quality_score": null,
+          "fixtures_quality_score": null,
+          "ceiling_height": null,
+          "natural_light_score": null
+        },
+        "renovation": {
+          "renovation_level": null,
+          "renovation_recency": null,
+          "modern_features_score": null
+        },
+        "outdoor": {
+          "landscaping_quality_score": 6,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 6,
+          "fence_type": "timber",
+          "fence_condition_score": 5,
+          "driveway_type": null,
+          "driveway_condition_score": null
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 6,
+          "maintenance_level": "average",
+          "market_appeal_score": 7,
+          "unique_features": [
+            "decked veranda",
+            "large backyard with mature trees"
+          ],
+          "negative_features": [
+            "overgrown vegetation in some areas",
+            "visible wear on exterior cladding"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 4,
+          "image_quality": "good",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762491920.868521
+        }
+      }
+    },
+    {
+      "address": "13 CHANTILLY PLACE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602975",
+      "images_count": 20,
+      "house_plans_detected": true,
+      "processing_time_seconds": 43.7,
+      "processed_at": "2025-11-07T05:06:04.557105",
+      "floor_plans_count": 1,
+      "floor_area_sqm": null,
+      "house_plan_data": {
+        "urls": [
+          "https://rimh2.domainstatic.com.au/LuWNWLfGavlKygzIRh4wRr8nQm4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2019523954_5_1_240927_063105-w1734-h1187"
+        ],
+        "floor_area_sqm": null,
+        "floor_area_source": "total",
+        "number_of_levels": 1,
+        "confidence_score": 0.6,
+        "plans_details": [
+          {
+            "image_index": 2,
+            "is_floor_plan": true,
+            "floor_area_sqm": null,
+            "floor_area_source": "total",
+            "dimensions": null,
+            "confidence_score": 0.6
+          }
+        ]
+      },
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 8,
+          "architectural_style": "modern contemporary with open-plan, single-story"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 9,
+          "cladding_material": "render",
+          "cladding_condition_score": 9,
+          "paint_quality_score": 9,
+          "paint_condition": "new",
+          "window_type": "aluminium",
+          "window_condition_score": 9,
+          "door_quality_score": 9,
+          "garage_type": "double",
+          "garage_condition_score": 9
+        },
+        "interior": {
+          "overall_interior_condition_score": 9,
+          "flooring_type": "timber",
+          "flooring_quality_score": 9,
+          "flooring_condition_score": 9,
+          "kitchen_quality_score": 9,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 9,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 9,
+          "fixtures_quality_score": 9,
+          "ceiling_height": "very_high",
+          "natural_light_score": 9
+        },
+        "renovation": {
+          "renovation_level": "fully_renovated",
+          "renovation_recency": "unknown",
+          "modern_features_score": 9
+        },
+        "outdoor": {
+          "landscaping_quality_score": 9,
+          "pool_present": true,
+          "pool_type": "inground",
+          "pool_condition_score": 9,
+          "outdoor_entertainment_score": 9,
+          "fence_type": "pool_fence",
+          "fence_condition_score": 9,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 9
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": true,
+          "study_present": false,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 9,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 9,
+          "unique_features": [
+            "in-ground pool",
+            "glass pool fencing",
+            "open-plan living with high vaulted ceilings",
+            "decked outdoor entertaining area",
+            "extensive sliding glass doors"
+          ],
+          "negative_features": []
+        },
+        "metadata": {
+          "total_images_analyzed": 20,
+          "image_quality": "professional",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762491964.555171
+        }
+      }
+    },
+    {
+      "address": "11 DONCASTER COURT ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602976",
+      "images_count": 1,
+      "house_plans_detected": false,
+      "processing_time_seconds": 21.5,
+      "processed_at": "2025-11-07T05:06:26.048726",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 8,
+          "architectural_style": "contemporary suburban with pitched tile roof and complex footprint"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": null,
+          "cladding_condition_score": null,
+          "paint_quality_score": null,
+          "paint_condition": null,
+          "window_type": null,
+          "window_condition_score": null,
+          "door_quality_score": null,
+          "garage_type": "double",
+          "garage_condition_score": 7
+        },
+        "interior": {
+          "overall_interior_condition_score": null,
+          "flooring_type": null,
+          "flooring_quality_score": null,
+          "flooring_condition_score": null,
+          "kitchen_quality_score": null,
+          "kitchen_condition": null,
+          "bathroom_quality_score": null,
+          "bathroom_condition": null,
+          "appliances_quality_score": null,
+          "fixtures_quality_score": null,
+          "ceiling_height": null,
+          "natural_light_score": null
+        },
+        "renovation": {
+          "renovation_level": "original",
+          "renovation_recency": "unknown",
+          "modern_features_score": null
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 6,
+          "fence_type": null,
+          "fence_condition_score": null,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 7,
+          "unique_features": [
+            "curved garden beds",
+            "multiple rooflines",
+            "large lawn",
+            "two-car garage"
+          ],
+          "negative_features": []
+        },
+        "metadata": {
+          "total_images_analyzed": 1,
+          "image_quality": "average",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762491986.047362
+        }
+      }
+    },
+    {
+      "address": "12 CHELTENHAM DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602978",
+      "images_count": 1,
+      "house_plans_detected": false,
+      "processing_time_seconds": 16.5,
+      "processed_at": "2025-11-07T05:06:42.585372",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 6,
+          "architectural_style": null
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 6,
+          "cladding_material": null,
+          "cladding_condition_score": null,
+          "paint_quality_score": null,
+          "paint_condition": null,
+          "window_type": null,
+          "window_condition_score": null,
+          "door_quality_score": null,
+          "garage_type": null,
+          "garage_condition_score": null
+        },
+        "interior": {
+          "overall_interior_condition_score": null,
+          "flooring_type": null,
+          "flooring_quality_score": null,
+          "flooring_condition_score": null,
+          "kitchen_quality_score": null,
+          "kitchen_condition": null,
+          "bathroom_quality_score": null,
+          "bathroom_condition": null,
+          "appliances_quality_score": null,
+          "fixtures_quality_score": null,
+          "ceiling_height": null,
+          "natural_light_score": null
+        },
+        "renovation": {
+          "renovation_level": null,
+          "renovation_recency": null,
+          "modern_features_score": null
+        },
+        "outdoor": {
+          "landscaping_quality_score": null,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": null,
+          "fence_type": null,
+          "fence_condition_score": null,
+          "driveway_type": null,
+          "driveway_condition_score": null
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 6,
+          "maintenance_level": "average",
+          "market_appeal_score": 6,
+          "unique_features": [],
+          "negative_features": []
+        },
+        "metadata": {
+          "total_images_analyzed": 1,
+          "image_quality": "good",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492002.584737
+        }
+      }
+    },
+    {
+      "address": "5 GLENFERRIE DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f54659260297a",
+      "images_count": 14,
+      "house_plans_detected": false,
+      "processing_time_seconds": 42.3,
+      "processed_at": "2025-11-07T05:07:24.870194",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "Single-story brick suburban house with double garage and arched brick detail"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "brick",
+          "cladding_condition_score": 7,
+          "paint_quality_score": null,
+          "paint_condition": null,
+          "window_type": null,
+          "window_condition_score": null,
+          "door_quality_score": null,
+          "garage_type": "double",
+          "garage_condition_score": 7
+        },
+        "interior": {
+          "overall_interior_condition_score": 6,
+          "flooring_type": "carpet",
+          "flooring_quality_score": 6,
+          "flooring_condition_score": 6,
+          "kitchen_quality_score": 6,
+          "kitchen_condition": "dated",
+          "bathroom_quality_score": 6,
+          "bathroom_condition": "dated",
+          "appliances_quality_score": 6,
+          "fixtures_quality_score": 6,
+          "ceiling_height": "high",
+          "natural_light_score": 7
+        },
+        "renovation": {
+          "renovation_level": "original",
+          "renovation_recency": "20+_years",
+          "modern_features_score": 3
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 7,
+          "fence_type": "timber",
+          "fence_condition_score": 6,
+          "driveway_type": "paver",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "average",
+          "market_appeal_score": 7,
+          "unique_features": [
+            "arched brick double-garage openings",
+            "covered outdoor entertaining area with brick columns and clear roof"
+          ],
+          "negative_features": [
+            "dated interior finishes",
+            "wood paneling and carpet wear in some areas",
+            "potential updates needed"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 13,
+          "image_quality": "good",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492044.869596
+        }
+      }
+    },
+    {
+      "address": "8 CHANTILLY PLACE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f54659260297d",
+      "images_count": 20,
+      "house_plans_detected": true,
+      "processing_time_seconds": 36.1,
+      "processed_at": "2025-11-07T05:08:01.001039",
+      "floor_plans_count": 1,
+      "floor_area_sqm": null,
+      "house_plan_data": {
+        "urls": [
+          "https://rimh2.domainstatic.com.au/PkJtlFcgztKqnv50BlVjxnz5oNI=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/w800-h533-2012235546_10_pi_150903_081017"
+        ],
+        "floor_area_sqm": null,
+        "floor_area_source": "main_plan",
+        "number_of_levels": 1,
+        "confidence_score": 0.6,
+        "plans_details": [
+          {
+            "image_index": 8,
+            "is_floor_plan": true,
+            "floor_area_sqm": null,
+            "floor_area_source": "main_plan",
+            "dimensions": null,
+            "confidence_score": 0.6
+          }
+        ]
+      },
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "single-storey suburban brick home with tiled roof; low-profile ranch-like layout"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "brick",
+          "cladding_condition_score": 7,
+          "paint_quality_score": 7,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 7,
+          "door_quality_score": 7,
+          "garage_type": "double",
+          "garage_condition_score": 7
+        },
+        "interior": {
+          "overall_interior_condition_score": 7,
+          " flooring_type": "hybrid",
+          "flooring_quality_score": 7,
+          "flooring_condition_score": 7,
+          "kitchen_quality_score": 8,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 8,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 7,
+          "fixtures_quality_score": 8,
+          "ceiling_height": "standard",
+          "natural_light_score": 8
+        },
+        "renovation": {
+          "renovation_level": "partial_renovation",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 7
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": true,
+          "pool_type": "in-ground",
+          "pool_condition_score": 7,
+          "outdoor_entertainment_score": 7,
+          "fence_type": "pool_fence",
+          "fence_condition_score": 7,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": 4,
+          "number_of_bathrooms": 2.5,
+          "number_of_living_areas": 1,
+          "open_plan_layout": false,
+          "study_present": true,
+          "layout_efficiency_score": 6
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "Pool in landscaped yard",
+            "Decked alfresco area",
+            "Security screens"
+          ],
+          "negative_features": [
+            "Older carpet in some bedrooms",
+            "Pool area requires routine maintenance"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 18,
+          "image_quality": "good",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492081.000436
+        }
+      }
+    },
+    {
+      "address": "18 CHANTILLY PLACE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f54659260297f",
+      "images_count": 20,
+      "house_plans_detected": false,
+      "processing_time_seconds": 52.4,
+      "processed_at": "2025-11-07T05:08:53.419647",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 8,
+          "architectural_style": "Contemporary single-story suburban home with open-plan living"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 8,
+          "cladding_material": "render",
+          "cladding_condition_score": 8,
+          "paint_quality_score": 8,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 8,
+          "door_quality_score": 8,
+          "garage_type": "double",
+          "garage_condition_score": 8
+        },
+        "interior": {
+          "overall_interior_condition_score": 8,
+          "flooring_type": "hybrid",
+          "flooring_quality_score": 8,
+          "flooring_condition_score": 8,
+          "kitchen_quality_score": 8,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 8,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 8,
+          "fixtures_quality_score": 8,
+          "ceiling_height": "standard",
+          "natural_light_score": 9
+        },
+        "renovation": {
+          "renovation_level": "partially_renovated",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 8
+        },
+        "outdoor": {
+          "landscaping_quality_score": 8,
+          "pool_present": true,
+          "pool_type": "in-ground",
+          "pool_condition_score": 8,
+          "outdoor_entertainment_score": 8,
+          "fence_type": "pool_fence",
+          "fence_condition_score": 8,
+          "driveway_type": "paver",
+          "driveway_condition_score": 8
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": 3,
+          "number_of_bathrooms": 2,
+          "number_of_living_areas": 2,
+          "open_plan_layout": true,
+          "study_present": false,
+          "layout_efficiency_score": 7
+        },
+        "overall": {
+          "property_presentation_score": 8,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "swimming pool",
+            "open-plan living/kitchen",
+            "glass pool fence"
+          ],
+          "negative_features": [
+            "some areas show wear on carpeted living spaces"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 20,
+          "image_quality": "good",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492133.419054
+        }
+      }
+    },
+    {
+      "address": "17 DONCASTER COURT ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602980",
+      "images_count": 1,
+      "house_plans_detected": false,
+      "processing_time_seconds": 18.8,
+      "processed_at": "2025-11-07T05:09:12.260164",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 2,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "two-story suburban house with complex multi-gable roof, tile roofing"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "brick",
+          "cladding_condition_score": 7,
+          "paint_quality_score": 7,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 6,
+          "door_quality_score": 7,
+          "garage_type": "double",
+          "garage_condition_score": 7
+        },
+        "interior": {
+          "overall_interior_condition_score": null,
+          "flooring_type": null,
+          "flooring_quality_score": null,
+          "flooring_condition_score": null,
+          "kitchen_quality_score": null,
+          "kitchen_condition": null,
+          "bathroom_quality_score": null,
+          "bathroom_condition": null,
+          "appliances_quality_score": null,
+          "fixtures_quality_score": null,
+          "ceiling_height": null,
+          "natural_light_score": null
+        },
+        "renovation": {
+          "renovation_level": null,
+          "renovation_recency": null,
+          "modern_features_score": null
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": true,
+          "pool_type": "inground",
+          "pool_condition_score": 7,
+          "outdoor_entertainment_score": 7,
+          "fence_type": "timber",
+          "fence_condition_score": 7,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "pool",
+            "cul-de-sac location"
+          ],
+          "negative_features": [
+            "none"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 1,
+          "image_quality": "good",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492152.259636
+        }
+      }
+    },
+    {
+      "address": "26 CHELTENHAM DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602981",
+      "images_count": 20,
+      "house_plans_detected": false,
+      "processing_time_seconds": 34.7,
+      "processed_at": "2025-11-07T05:09:46.969963",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "single-story contemporary ranch with a low-profile tiled roof"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 6,
+          "cladding_material": "render",
+          "cladding_condition_score": 6,
+          "paint_quality_score": 6,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 6,
+          "door_quality_score": 6,
+          "garage_type": "carport",
+          "garage_condition_score": 5
+        },
+        "interior": {
+          "overall_interior_condition_score": 6,
+          "flooring_type": "hybrid",
+          "flooring_quality_score": 6,
+          "flooring_condition_score": 6,
+          "kitchen_quality_score": 7,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 7,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 7,
+          "fixtures_quality_score": 7,
+          "ceiling_height": "standard",
+          "natural_light_score": 8
+        },
+        "renovation": {
+          "renovation_level": "partial_renovation",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 7
+        },
+        "outdoor": {
+          "landscaping_quality_score": 5,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 6,
+          "fence_type": "timber",
+          "fence_condition_score": 5,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 6
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": 3,
+          "number_of_bathrooms": 1,
+          "number_of_living_areas": 1,
+          "open_plan_layout": true,
+          "study_present": false,
+          "layout_efficiency_score": 6
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "average",
+          "market_appeal_score": 7,
+          "unique_features": [
+            "covered outdoor entertaining area",
+            "privacy wood divider",
+            "security screens",
+            "air conditioning"
+          ],
+          "negative_features": [
+            "overgrown front yard",
+            "interior appears dated in some areas"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 21,
+          "image_quality": "professional",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492186.969237
+        }
+      }
+    },
+    {
+      "address": "2 GLENFERRIE DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602982",
+      "images_count": 1,
+      "house_plans_detected": false,
+      "processing_time_seconds": 25.0,
+      "processed_at": "2025-11-07T05:10:11.987111",
+      "property_data": {
+        "structural": {
+          "number_of_stories": null,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "Modern suburban with multi-hip roof planes"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "render",
+          "cladding_condition_score": 7,
+          "paint_quality_score": 7,
+          "paint_condition": "good",
+          "window_type": "double_glazed",
+          "window_condition_score": 7,
+          "door_quality_score": 7,
+          "garage_type": "carport",
+          "garage_condition_score": 6
+        },
+        "interior": {
+          "overall_interior_condition_score": null,
+          "flooring_type": null,
+          "flooring_quality_score": null,
+          "flooring_condition_score": null,
+          "kitchen_quality_score": null,
+          "kitchen_condition": null,
+          "bathroom_quality_score": null,
+          "bathroom_condition": null,
+          "appliances_quality_score": null,
+          "fixtures_quality_score": null,
+          "ceiling_height": null,
+          "natural_light_score": null
+        },
+        "renovation": {
+          "renovation_level": null,
+          "renovation_recency": null,
+          "modern_features_score": null
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 6,
+          "fence_type": "none",
+          "fence_condition_score": null,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 7,
+          "unique_features": [
+            "solar panels on roof"
+          ],
+          "negative_features": []
+        },
+        "metadata": {
+          "total_images_analyzed": 1,
+          "image_quality": "good",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492211.986518
+        }
+      }
+    },
+    {
+      "address": "22 SPRINGVALE STREET ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602984",
+      "images_count": 20,
+      "house_plans_detected": false,
+      "processing_time_seconds": 38.0,
+      "processed_at": "2025-11-07T05:10:49.998240",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "colorbond",
+          "roof_condition_score": 7,
+          "architectural_style": "single-story brick ranch with attached two-bay garage, tropical landscaping"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "brick",
+          "cladding_condition_score": 7,
+          "paint_quality_score": 8,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 7,
+          "door_quality_score": 7,
+          "garage_type": "double",
+          "garage_condition_score": 7
+        },
+        "interior": {
+          "overall_interior_condition_score": 7,
+          "flooring_type": "laminate",
+          "flooring_quality_score": 7,
+          "flooring_condition_score": 7,
+          "kitchen_quality_score": 6,
+          "kitchen_condition": "dated",
+          "bathroom_quality_score": 7,
+          "bathroom_condition": "dated",
+          "appliances_quality_score": 7,
+          "fixtures_quality_score": 7,
+          "ceiling_height": "standard",
+          "natural_light_score": 8
+        },
+        "renovation": {
+          "renovation_level": "original",
+          "renovation_recency": "20+_years",
+          "modern_features_score": 5
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 6,
+          "fence_type": "colorbond",
+          "fence_condition_score": 7,
+          "driveway_type": "paver",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 8,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "double garage",
+            "lush tropical landscaping",
+            "open-plan living",
+            "sliding glass doors to garden"
+          ],
+          "negative_features": [
+            "dated kitchen cabinetry",
+            "older interior finishes relative to modern buyers"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 24,
+          "image_quality": "professional",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492249.997621
+        }
+      }
+    },
+    {
+      "address": "29 CHELTENHAM DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602985",
+      "images_count": 20,
+      "house_plans_detected": false,
+      "processing_time_seconds": 42.3,
+      "processed_at": "2025-11-07T05:11:32.265364",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "contemporary ranch-style single-story brick house"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "brick",
+          "cladding_condition_score": 8,
+          "paint_quality_score": 7,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 7,
+          "door_quality_score": 7,
+          "garage_type": "double",
+          "garage_condition_score": 7
+        },
+        "interior": {
+          "overall_interior_condition_score": 7,
+          "flooring_type": "tiles",
+          "flooring_quality_score": 8,
+          "flooring_condition_score": 8,
+          "kitchen_quality_score": 8,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 9,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 7,
+          "fixtures_quality_score": 7,
+          "ceiling_height": "standard",
+          "natural_light_score": 8
+        },
+        "renovation": {
+          "renovation_level": "fully_renovated",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 8
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 8,
+          "fence_type": "colorbond",
+          "fence_condition_score": 7,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 7
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": 3,
+          "number_of_bathrooms": 2,
+          "number_of_living_areas": 1,
+          "open_plan_layout": true,
+          "study_present": false,
+          "layout_efficiency_score": 7
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "covered outdoor entertaining area",
+            "open plan living",
+            "double garage"
+          ],
+          "negative_features": [
+            "none major; minor wear on window frames"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 20,
+          "image_quality": "good",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492292.26444
+        }
+      }
+    },
+    {
+      "address": "13 DONCASTER COURT ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602986",
+      "images_count": 20,
+      "house_plans_detected": false,
+      "processing_time_seconds": 54.1,
+      "processed_at": "2025-11-07T05:12:26.409970",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 8,
+          "architectural_style": "Single-story rendered villa/house with tiled roof, contemporary aesthetic"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 8,
+          "cladding_material": "render",
+          "cladding_condition_score": 8,
+          "paint_quality_score": 8,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 8,
+          "door_quality_score": 8,
+          "garage_type": "double",
+          "garage_condition_score": 8
+        },
+        "interior": {
+          "overall_interior_condition_score": 8,
+          " flooring_type": "hybrid",
+          "flooring_quality_score": 8,
+          "flooring_condition_score": 8,
+          "kitchen_quality_score": 8,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 8,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 8,
+          "fixtures_quality_score": 8,
+          "ceiling_height": "high",
+          "natural_light_score": 9
+        },
+        "renovation": {
+          "renovation_level": "partial_renovation",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 7
+        },
+        "outdoor": {
+          "landscaping_quality_score": 8,
+          "pool_present": true,
+          "pool_type": "inground",
+          "pool_condition_score": 8,
+          "outdoor_entertainment_score": 8,
+          "fence_type": "pool_fence",
+          "fence_condition_score": 8,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 8
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 8,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "pool",
+            "outdoor entertaining area",
+            "high ceilings",
+            "double garage"
+          ],
+          "negative_features": [
+            "no floor plan available",
+            "partial interior renovations in some areas"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 22,
+          "image_quality": "professional",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492346.4093702
+        }
+      }
+    },
+    {
+      "address": "50 ST IVES DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602987",
+      "images_count": 13,
+      "house_plans_detected": false,
+      "processing_time_seconds": 34.4,
+      "processed_at": "2025-11-07T05:13:00.840960",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 2,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "Two-story contemporary suburban house with tile roof and rendered walls"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 8,
+          "cladding_material": "render",
+          "cladding_condition_score": 7,
+          "paint_quality_score": 7,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 7,
+          "door_quality_score": 7,
+          "garage_type": "double",
+          "garage_condition_score": 7
+        },
+        "interior": {
+          "overall_interior_condition_score": 7,
+          "flooring_type": "hybrid",
+          "flooring_quality_score": 7,
+          "flooring_condition_score": 7,
+          "kitchen_quality_score": 7,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 7,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 7,
+          "fixtures_quality_score": 7,
+          "ceiling_height": "standard",
+          "natural_light_score": 8
+        },
+        "renovation": {
+          "renovation_level": "partial_renovation",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 6
+        },
+        "outdoor": {
+          "landscaping_quality_score": 8,
+          "pool_present": true,
+          "pool_type": "aboveground",
+          "pool_condition_score": 6,
+          "outdoor_entertainment_score": 8,
+          "fence_type": "none",
+          "fence_condition_score": 7,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 8
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": 4,
+          "number_of_bathrooms": 2.5,
+          "number_of_living_areas": 2,
+          "open_plan_layout": true,
+          "study_present": true,
+          "layout_efficiency_score": 7
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "lakefront view",
+            "private terrace with hot tub",
+            "spacious open-plan living",
+            "large balcony"
+          ],
+          "negative_features": [
+            "dated decor in some rooms"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 18,
+          "image_quality": "good",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492380.840323
+        }
+      }
+    },
+    {
+      "address": "20 SPRINGVALE STREET ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602988",
+      "images_count": 20,
+      "house_plans_detected": false,
+      "processing_time_seconds": 35.3,
+      "processed_at": "2025-11-07T05:13:36.129208",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 6,
+          "architectural_style": "single-story ranch-style suburban"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "render",
+          "cladding_condition_score": 6,
+          "paint_quality_score": 6,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 6,
+          "door_quality_score": 6,
+          "garage_type": "double",
+          "garage_condition_score": 6
+        },
+        "interior": {
+          "overall_interior_condition_score": 5,
+          "flooring_type": "carpet",
+          "flooring_quality_score": 5,
+          "flooring_condition_score": 5,
+          "kitchen_quality_score": 5,
+          "kitchen_condition": "original",
+          "bathroom_quality_score": 4,
+          "bathroom_condition": "dated",
+          "appliances_quality_score": 4,
+          "fixtures_quality_score": 4,
+          "ceiling_height": "standard",
+          "natural_light_score": 6
+        },
+        "renovation": {
+          "renovation_level": "original",
+          "renovation_recency": "unknown",
+          "modern_features_score": 3
+        },
+        "outdoor": {
+          "landscaping_quality_score": 6,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 5,
+          "fence_type": "timber",
+          "fence_condition_score": 6,
+          "driveway_type": "concrete",
+          "driveway_condition_score": 6
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": 3,
+          "number_of_bathrooms": 1,
+          "number_of_living_areas": 1,
+          "open_plan_layout": true,
+          "study_present": false,
+          "layout_efficiency_score": 7
+        },
+        "overall": {
+          "property_presentation_score": 6,
+          "maintenance_level": "average",
+          "market_appeal_score": 6,
+          "unique_features": [
+            "large backyard",
+            "mature trees",
+            "double garage",
+            "fenced yard"
+          ],
+          "negative_features": [
+            "dated interiors",
+            "aged bathroom"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 20,
+          "image_quality": "good",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492416.128632
+        }
+      }
+    },
+    {
+      "address": "19 CHELTENHAM DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f546592602989",
+      "images_count": 1,
+      "house_plans_detected": false,
+      "processing_time_seconds": 20.5,
+      "processed_at": "2025-11-07T05:13:56.622494",
+      "property_data": {
+        "structural": {
+          "number_of_stories": null,
+          "building_type": null,
+          "roof_type": null,
+          "roof_condition_score": null,
+          "architectural_style": null
+        },
+        "exterior": {
+          "overall_exterior_condition_score": null,
+          "cladding_material": null,
+          "cladding_condition_score": null,
+          "paint_quality_score": null,
+          "paint_condition": null,
+          "window_type": null,
+          "window_condition_score": null,
+          "door_quality_score": null,
+          "garage_type": null,
+          "garage_condition_score": null
+        },
+        "interior": {
+          "overall_interior_condition_score": null,
+          "flooring_type": null,
+          "flooring_quality_score": null,
+          "flooring_condition_score": null,
+          "kitchen_quality_score": null,
+          "kitchen_condition": null,
+          "bathroom_quality_score": null,
+          "bathroom_condition": null,
+          "appliances_quality_score": null,
+          "fixtures_quality_score": null,
+          "ceiling_height": null,
+          "natural_light_score": null
+        },
+        "renovation": {
+          "renovation_level": null,
+          "renovation_recency": null,
+          "modern_features_score": null
+        },
+        "outdoor": {
+          "landscaping_quality_score": null,
+          "pool_present": null,
+          "pool_type": null,
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": null,
+          "fence_type": null,
+          "fence_condition_score": null,
+          "driveway_type": null,
+          "driveway_condition_score": null
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": null,
+          "maintenance_level": null,
+          "market_appeal_score": null,
+          "unique_features": [],
+          "negative_features": []
+        },
+        "metadata": {
+          "total_images_analyzed": 1,
+          "image_quality": "average",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492436.621967
+        }
+      }
+    },
+    {
+      "address": "4 SPRINGVALE STREET ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f54659260298a",
+      "images_count": 20,
+      "house_plans_detected": false,
+      "processing_time_seconds": 63.7,
+      "processed_at": "2025-11-07T05:15:00.307052",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 2,
+          "number_of_stories_confidence": 0.85,
+          "building_type": "duplex",
+          "building_type_confidence": 0.8,
+          "roof_type": "tile",
+          "roof_type_confidence": 0.9,
+          "roof_condition_score": 8,
+          "roof_condition_score_confidence": 0.7,
+          "architectural_style": "two-story suburban brick duplex with balcony and external stairs"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 8,
+          "overall_exterior_condition_score_confidence": 0.8,
+          "cladding_material": "brick",
+          "cladding_condition_score": 8,
+          "cladding_condition_score_confidence": 0.75,
+          "paint_quality_score": 7,
+          "paint_quality_score_confidence": 0.75,
+          "paint_condition": "good",
+          "paint_condition_confidence": 0.8,
+          "window_type": "aluminium",
+          "window_condition_score": 7,
+          "window_condition_score_confidence": 0.7,
+          "door_quality_score": 7,
+          "door_quality_score_confidence": 0.7,
+          "garage_type": "double",
+          "garage_condition_score": 8,
+          "garage_condition_score_confidence": 0.8,
+          "driveway_type": "exposed_aggregate",
+          "driveway_condition_score": 8,
+          "driveway_condition_score_confidence": 0.8
+        },
+        "interior": {
+          "overall_interior_condition_score": 7,
+          "overall_interior_condition_score_confidence": 0.8,
+          "flooring_type": "hybrid",
+          "flooring_quality_score": 7,
+          "flooring_quality_score_confidence": 0.75,
+          "flooring_condition_score": 7,
+          "flooring_condition_score_confidence": 0.75,
+          "kitchen_quality_score": 8,
+          "kitchen_condition": "renovated",
+          "kitchen_condition_confidence": 0.75,
+          "bathroom_quality_score": 7,
+          "bathroom_condition": "dated",
+          "bathroom_condition_confidence": 0.6,
+          "appliances_quality_score": 8,
+          "fixtures_quality_score": 7,
+          "ceiling_height": "high",
+          "ceiling_height_confidence": 0.8,
+          "natural_light_score": 9,
+          "natural_light_score_confidence": 0.85
+        },
+        "renovation": {
+          "renovation_level": "partial_renovation",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 8,
+          "renovation_level_confidence": 0.7,
+          "renovation_recency_confidence": 0.7,
+          "modern_features_score_confidence": 0.8
+        },
+        "outdoor": {
+          "landscaping_quality_score": 8,
+          "landscaping_quality_score_confidence": 0.8,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 7,
+          "outdoor_entertainment_score_confidence": 0.75,
+          "fence_type": "colorbond",
+          "fence_condition_score": 7,
+          "fence_condition_score_confidence": 0.7,
+          "driveway_type": "exposed_aggregate",
+          "driveway_condition_score": 8,
+          "driveway_condition_score_confidence": 0.8
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": 3,
+          "number_of_bathrooms": 2,
+          "number_of_living_areas": 2,
+          "open_plan_layout": true,
+          "study_present": false,
+          "layout_efficiency_score": 7,
+          "layout_efficiency_score_confidence": 0.75
+        },
+        "overall": {
+          "property_presentation_score": 8,
+          "presentation_score_confidence": 0.8,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "two-level duplex with upstairs balcony",
+            "modern white kitchen",
+            "deck and landscaped garden"
+          ],
+          "negative_features": [
+            "some bathrooms dated",
+            "mixed flooring in bedrooms (carpet) and other areas"
+          ],
+          "overall_confidence": 0.75
+        },
+        "metadata": {
+          "total_images_analyzed": 18,
+          "image_quality": "professional",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492500.3063738
+        }
+      }
+    },
+    {
+      "address": "12 CHANTILLY PLACE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f54659260298e",
+      "images_count": 6,
+      "house_plans_detected": false,
+      "processing_time_seconds": 22.6,
+      "processed_at": "2025-11-07T05:15:22.936042",
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 7,
+          "architectural_style": "modern suburban single-family"
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 7,
+          "cladding_material": "render",
+          "cladding_condition_score": 7,
+          "paint_quality_score": 7,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 7,
+          "door_quality_score": 7,
+          "garage_type": "none",
+          "garage_condition_score": null
+        },
+        "interior": {
+          "overall_interior_condition_score": 7,
+          "flooring_type": "hybrid",
+          "flooring_quality_score": 7,
+          "flooring_condition_score": 7,
+          "kitchen_quality_score": 8,
+          "kitchen_condition": "renovated",
+          "bathroom_quality_score": 8,
+          "bathroom_condition": "renovated",
+          "appliances_quality_score": 8,
+          "fixtures_quality_score": 8,
+          "ceiling_height": "standard",
+          "natural_light_score": 8
+        },
+        "renovation": {
+          "renovation_level": "partial_renovation",
+          "renovation_recency": "5-10_years",
+          "modern_features_score": 7
+        },
+        "outdoor": {
+          "landscaping_quality_score": 7,
+          "pool_present": true,
+          "pool_type": "inground",
+          "pool_condition_score": 7,
+          "outdoor_entertainment_score": 7,
+          "fence_type": "none",
+          "fence_condition_score": null,
+          "driveway_type": null,
+          "driveway_condition_score": null
+        },
+        "layout": {
+          "floor_area_sqm": null,
+          "number_of_bedrooms": null,
+          "number_of_bathrooms": null,
+          "number_of_living_areas": null,
+          "open_plan_layout": null,
+          "study_present": null,
+          "layout_efficiency_score": null
+        },
+        "overall": {
+          "property_presentation_score": 7,
+          "maintenance_level": "well_maintained",
+          "market_appeal_score": 8,
+          "unique_features": [
+            "In-ground pool with brick deck",
+            "Large glass doors/sliding doors to pool area"
+          ],
+          "negative_features": []
+        },
+        "metadata": {
+          "total_images_analyzed": 7,
+          "image_quality": "good",
+          "has_professional_photography": false,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492522.9353018
+        }
+      }
+    },
+    {
+      "address": "9 GLENFERRIE DRIVE ROBINA QLD 4226",
+      "document_id": "690bd7da8b8f54659260298f",
+      "images_count": 20,
+      "house_plans_detected": true,
+      "processing_time_seconds": 60.3,
+      "processed_at": "2025-11-07T05:16:23.263531",
+      "floor_plans_count": 1,
+      "floor_area_sqm": 176.54,
+      "house_plan_data": {
+        "urls": [
+          "https://rimh2.domainstatic.com.au/j2Y7wOsW6MG400ISTIw2JnzTAcA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/2018772921_12_1_230915_044324-w1920-h1280"
+        ],
+        "floor_area_sqm": 176.54,
+        "floor_area_source": "total",
+        "number_of_levels": 1,
+        "confidence_score": 0.9,
+        "plans_details": [
+          {
+            "image_index": 11,
+            "is_floor_plan": true,
+            "floor_area_sqm": 176.54,
+            "floor_area_source": "total",
+            "dimensions": null,
+            "confidence_score": 0.9
+          }
+        ]
+      },
+      "property_data": {
+        "structural": {
+          "number_of_stories": 1,
+          "building_type": "house",
+          "roof_type": "tile",
+          "roof_condition_score": 6,
+          "architectural_style": "Single-story suburban Australian home with gabled tile roof; rendered walls, attached double garage."
+        },
+        "exterior": {
+          "overall_exterior_condition_score": 6,
+          "cladding_material": "render",
+          "cladding_condition_score": 6,
+          "paint_quality_score": 6,
+          "paint_condition": "good",
+          "window_type": "aluminium",
+          "window_condition_score": 6,
+          "door_quality_score": 6,
+          "garage_type": "double",
+          "garage_condition_score": 6
+        },
+        "interior": {
+          "overall_interior_condition_score": 6,
+          "flooring_type": "carpet",
+          "flooring_quality_score": 6,
+          "flooring_condition_score": 6,
+          "kitchen_quality_score": 5,
+          "kitchen_condition": "dated",
+          "bathroom_quality_score": 5,
+          "bathroom_condition": "dated",
+          "appliances_quality_score": 7,
+          "fixtures_quality_score": 6,
+          "ceiling_height": "high",
+          "natural_light_score": 8
+        },
+        "renovation": {
+          "renovation_level": "original",
+          "renovation_recency": "20+_years",
+          "modern_features_score": 4
+        },
+        "outdoor": {
+          "landscaping_quality_score": 6,
+          "pool_present": false,
+          "pool_type": "none",
+          "pool_condition_score": null,
+          "outdoor_entertainment_score": 6,
+          "fence_type": "colorbond",
+          "fence_condition_score": 6,
+          "driveway_type": "paver",
+          "driveway_condition_score": 6
+        },
+        "layout": {
+          "floor_area_sqm": 176.54,
+          "number_of_bedrooms": 3,
+          "number_of_bathrooms": 2,
+          "number_of_living_areas": 2,
+          "open_plan_layout": true,
+          "study_present": false,
+          "layout_efficiency_score": 6
+        },
+        "overall": {
+          "property_presentation_score": 6,
+          "maintenance_level": "average",
+          "market_appeal_score": 6,
+          "unique_features": [
+            "Vaulted beam ceiling in living room",
+            "Garden outlook",
+            "Attached double garage"
+          ],
+          "negative_features": [
+            "dated kitchen and bathrooms",
+            "older roof/exterior finishes",
+            "vegetation close to dwelling"
+          ]
+        },
+        "metadata": {
+          "total_images_analyzed": 18,
+          "image_quality": "professional",
+          "has_professional_photography": true,
+          "model_used": "gpt-5-nano-2025-08-07",
+          "extracted_at": 1762492583.262896
+        }
+      },
+      "is_first_house_plan": true
+    }
+  ],
+  "first_house_plan_with_area_found": true
+}

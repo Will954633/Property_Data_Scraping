@@ -1,0 +1,39 @@
+[
+  {
+    "address_pid": 1389886,
+    "address": "1199 STAPYLTON JACOBS WELL ROAD WOONGOOLBA QLD 4207",
+    "suburb": "WOONGOOLBA",
+    "doc_id": "690bd8b58b8f54659265304d",
+    "collection": "woongoolba"
+  },
+  {
+    "address_pid": 441615,
+    "address": "41 NEW NORWELL ROAD WOONGOOLBA QLD 4207",
+    "suburb": "WOONGOOLBA",
+    "doc_id": "690bd8b58b8f546592653050",
+    "collection": "woongoolba"
+  },
+  {
+    "address_pid": 926018,
+    "address": "179 FINGLAS ROAD WOONGOOLBA QLD 4208",
+    "suburb": "WOONGOOLBA",
+    "doc_id": "690bd8b58b8f546592653052",
+    "collection": "woongoolba"
+  },
+  {
+    "address_pid": 1844889,
+    "address": "U 3018/2633 GOLD COAST HIGHWAY BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd7da8b8f546592602877",
+    "collection": "broadbeach",
+    "unit_type": "U"
+  },
+  {
+    "address_pid": 1844892,
+    "address": "U 3023/2633 GOLD COAST HIGHWAY BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd7da8b8f546592602878",
+    "collection": "broadbeach",
+    "unit_type": "U"
+  }
+]

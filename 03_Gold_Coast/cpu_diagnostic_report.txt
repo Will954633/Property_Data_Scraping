@@ -1,0 +1,2223 @@
+============================================
+CPU Usage Diagnostic Report
+============================================
+Generated at: Fri Nov  7 12:50:52 AEST 2025
+
+1. OVERALL CPU USAGE
+--------------------------------------------
+CPU usage: 44.85% user, 44.75% sys, 10.38% idle 
+
+2. TOP 20 PROCESSES BY CPU USAGE
+--------------------------------------------
+root               345  69.1  0.1 426990288  41264   ??  Rs   Wed08AM  53:13.07 /usr/libexec/sysmond
+projects         95502  47.2  0.7 417539248 472928 s046  R+    8:28AM 201:49.15 python run_full_dataset.py
+projects         20801  40.0  0.3 1865719360 208336 s089  S    12:19PM   1:05.59 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.WgCXFu --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539364588 --launch-time-ticks=185447912247 --shared-files --field-trial-handle=1718379636,r,4232077934924705020,8135853349388559411,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         21995  30.1  0.3 1865695136 172592 s089  S    12:20PM   1:04.16 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.BkkarV --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539365744 --launch-time-ticks=185499290665 --shared-files --field-trial-handle=1718379636,r,11926003307713595456,12971728767881959639,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects          3103  27.1  0.2 413698256 118400   ??  S    Wed08AM  77:05.15 /System/Applications/Utilities/Activity Monitor.app/Contents/MacOS/Activity Monitor
+projects         89134  24.3  0.3 1865706848 210160 s017  S    12:00PM   1:34.55 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.0bSFL2 --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539337467 --launch-time-ticks=184303657928 --shared-files --field-trial-handle=1718379636,r,7816595252161821114,15891884098499974690,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         88888  23.7  0.3 1865708112 178432 s017  S    12:00PM   1:35.58 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.8M9WFr --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539337334 --launch-time-ticks=184297994445 --shared-files --field-trial-handle=1718379636,r,9512905271490616537,3530277219904042272,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+_windowserver      153  23.4  0.2 415419248 107808   ??  Ss   Wed08AM 257:37.28 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer -daemon
+projects         88553  17.3  0.4 1865641984 300928 s017  S    12:00PM   2:50.63 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.TFWcXI --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539337125 --launch-time-ticks=184289212636 --shared-files --field-trial-handle=1718379636,r,7762099655472283665,6135554264067145537,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         21102  16.1  0.5 1865757856 332128 s089  S    12:19PM   1:15.88 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.VNY6ob --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539364782 --launch-time-ticks=185456776921 --shared-files --field-trial-handle=1718379636,r,18291208138549084264,16770960513051298142,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         36864  15.6  1.2 1865578000 826656   ??  S    Wed02PM 326:46.19 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer) --type=renderer --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/Applications/Visual Studio Code.app/Contents/Resources/app --enable-sandbox --enable-blink-features=HighlightAPI --disable-blink-features=FontMatchingCTMigration,StandardizedBrowserZoom, --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=15 --time-ticks-at-unix-epoch=-1762296535440035 --launch-time-ticks=20160309917 --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version --vscode-window-config=vscode:d2b92cca-20da-4c78-8832-425a0fb187ef --seatbelt-client=156
+projects         32991  11.8  0.1 446095232  87696   ??  S    Wed02PM  58:29.55 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (GPU).app/Contents/MacOS/Code Helper (GPU) --type=gpu-process --user-data-dir=/Users/projects/Library/Application Support/Code --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAMAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version --seatbelt-client=36
+projects         20653   9.1  0.4 1865724352 242768 s089  S    12:19PM   1:11.76 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.O55lWL --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539364427 --launch-time-ticks=185441817640 --shared-files --field-trial-handle=1718379636,r,17762427729189395336,6113239521899281720,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         82524   9.0  0.1 1865506016  91200 s017  S    12:51PM   0:00.04 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.tjry8t --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=435 --time-ticks-at-unix-epoch=-1762296539337276 --launch-time-ticks=187336297574 --shared-files --field-trial-handle=1718379636,r,5968459788953268192,17087926974755813077,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190709393925075809 --enable-logging=stderr --log-level=0
+projects         88470   7.1  0.1 444425552  90768 s017  S    12:00PM   0:32.20 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) --type=gpu-process --no-sandbox --headless --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.tCNerf --gpu-preferences=SAAAAAAAAAAgAAAEAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=1718379636,r,3586442069941627800,4914170754582882181,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708988185955192 --enable-logging=stderr --log-level=0
+projects         89907   6.4  0.4 1865744624 236544 s017  S    12:01PM   2:57.39 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.4jVsX9 --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=13 --time-ticks-at-unix-epoch=-1762296539337115 --launch-time-ticks=184351989820 --shared-files --field-trial-handle=1718379636,r,10118885453408159320,8069744858500993432,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708998493415531 --enable-logging=stderr --log-level=0
+_driverkit         271   5.4  0.1 426919664  38176   ??  Ss   Wed08AM  81:59.56 /System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN com.apple.bcmwlan 0x100000d3c com.apple.DriverKit-AppleBCMWLAN
+projects         95787   4.6  0.2 1865607200 147360   ??  S    Thu10AM  68:30.27 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/puppeteer_dev_chrome_profile-VKamqR --disable-background-timer-throttling --disable-breakpad --enable-automation --force-color-profile=srgb --remote-debugging-port=0 --allow-pre-commit-input --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=7 --time-ticks-at-unix-epoch=-1762296537130093 --launch-time-ticks=91335091482 --shared-files --field-trial-handle=1718379636,r,4911411581249333465,9290146543147976691,262144 --enable-features=PdfOopif --disable-features=AcceptCHFrame,IsolateSandboxedIframes,MediaRouter,OptimizationHints,PaintHolding,ProcessPerSiteUpToMainFrameThreshold,Translate --variations-seed-version --trace-process-track-uuid=3190708992871164437 --seatbelt-client=84
+projects         88774   4.6  0.3 478400672 173152 s017  S    12:00PM   1:00.60 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --allow-pre-commit-input --disable-background-networking --disable-blink-features=AutomationControlled --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-features=IgnoreDuplicateNavs,Prewarm --disable-gpu --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging=stderr --headless --log-level=0 --no-first-run --no-sandbox --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.tjry8t --window-size=1920,1080 data:,
+projects         35509   4.5  0.2 1865744336 142032 s017  S    12:33PM   0:32.34 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.tjry8t --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=309 --time-ticks-at-unix-epoch=-1762296539337276 --launch-time-ticks=186247831270 --shared-files --field-trial-handle=1718379636,r,5968459788953268192,17087926974755813077,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190709275857802835 --enable-logging=stderr --log-level=0
+
+3. ALL PYTHON PROCESSES
+--------------------------------------------
+projects         95502  56.2  0.7 417539248 444096 s046  R+    8:28AM 201:50.79 python run_full_dataset.py
+projects         20457   2.1  0.0 412353904  22160 s089  S    12:19PM   0:04.94 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21241   1.8  0.0 412358000  23824 s089  S    12:20PM   0:05.01 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20300   1.4  0.0 412354928  28032 s089  S    12:19PM   0:04.97 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20551   1.3  0.0 412356976  28304 s089  S    12:19PM   0:05.41 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20757   0.5  0.0 412352880  27952 s089  S    12:19PM   0:05.01 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20420   0.5  0.0 412354928  24288 s089  S    12:19PM   0:05.17 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88734   0.4  0.0 412354928  21792 s017  S    12:00PM   0:05.31 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20575   0.3  0.0 412355952  19792 s089  S    12:19PM   0:05.01 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20230   0.3  0.0 412356976  24528 s089  S    12:19PM   0:05.01 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20216   0.2  0.0 412355952  22128 s089  S    12:19PM   0:05.09 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21147   0.2  0.0 412358000  20544 s089  S    12:19PM   0:04.59 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20743   0.1  0.0 412355952  24224 s089  S    12:19PM   0:04.86 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21044   0.1  0.0 412360048  19136 s089  S    12:19PM   0:04.67 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89175   0.1  0.0 412353904  21552 s017  S    12:00PM   0:05.34 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21061   0.1  0.0 412362096  20416 s089  S    12:19PM   0:04.75 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects          7228   0.1  0.0 412376432  18000   ??  S    11:47PM   0:47.07 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects         20387   0.1  0.0 412356976  21792 s089  S    12:19PM   0:05.13 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20369   0.1  0.0 412353904  28032 s089  S    12:19PM   0:04.63 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20342   0.1  0.0 412354928  28048 s089  S    12:19PM   0:04.64 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20523   0.1  0.0 412353904  20512 s089  S    12:19PM   0:04.82 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20813   0.1  0.0 412358000  15536 s089  S    12:19PM   0:04.90 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20248   0.1  0.0 412356976  21344 s089  S    12:19PM   0:05.00 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88378   0.1  0.0 412358000  20064 s017  S    12:00PM   0:05.12 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20803   0.1  0.0 412359024  23984 s089  S    12:19PM   0:04.98 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20986   0.0  0.0 412365168  18992 s089  S    12:19PM   0:04.88 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20972   0.0  0.0 412356976  20496 s089  S    12:19PM   0:04.61 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20952   0.0  0.0 412356976  20528 s089  S    12:19PM   0:04.63 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20879   0.0  0.0 412356976  12896 s089  S    12:19PM   0:04.74 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20839   0.0  0.0 412359024  18160 s089  S    12:19PM   0:04.67 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20827   0.0  0.0 412358000  11840 s089  S    12:19PM   0:04.86 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20794   0.0  0.0 412354928  15328 s089  S    12:19PM   0:05.00 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20765   0.0  0.0 412354928  11872 s089  S    12:19PM   0:04.83 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20718   0.0  0.0 412356976  21856 s089  S    12:19PM   0:04.54 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20699   0.0  0.0 412355952  15344 s089  S    12:19PM   0:05.08 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20656   0.0  0.0 412358000  20144 s089  S    12:19PM   0:04.47 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20627   0.0  0.0 412356976  17872 s089  S    12:19PM   0:04.43 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20614   0.0  0.0 412356976  24640 s089  S    12:19PM   0:04.63 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20510   0.0  0.0 412354928  18112 s089  S    12:19PM   0:04.98 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20491   0.0  0.0 412354928  21904 s089  S    12:19PM   0:05.06 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20474   0.0  0.0 412354928  21616 s089  S    12:19PM   0:04.85 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20450   0.0  0.0 412355952  17728 s089  S    12:19PM   0:04.97 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20436   0.0  0.0 412354928  11840 s089  S    12:19PM   0:04.43 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20326   0.0  0.0 412355952  19664 s089  S    12:19PM   0:04.97 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20273   0.0  0.0 412355952  11824 s089  S    12:19PM   0:04.94 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20239   0.0  0.0 412356976  22336 s089  S    12:19PM   0:04.89 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89156   0.0  0.0 412353904  11840 s017  S    12:00PM   0:05.37 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89138   0.0  0.0 412356976  11696 s017  S    12:00PM   0:05.24 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89119   0.0  0.0 412354928  17856 s017  S    12:00PM   0:05.41 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89106   0.0  0.0 412359024  19472 s017  S    12:00PM   0:05.32 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89086   0.0  0.0 412358000  20368 s017  S    12:00PM   0:05.33 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89068   0.0  0.0 412360048  23712 s017  S    12:00PM   0:05.26 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89050   0.0  0.0 412356976  11840 s017  S    12:00PM   0:05.34 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89028   0.0  0.0 412358000  17968 s017  S    12:00PM   0:05.25 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88993   0.0  0.0 412360048  12784 s017  S    12:00PM   0:05.35 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88956   0.0  0.0 412361072  21632 s017  S    12:00PM   0:05.34 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88933   0.0  0.0 412359024  18624 s017  S    12:00PM   0:05.33 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88916   0.0  0.0 412363120  16000 s017  S    12:00PM   0:04.66 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88894   0.0  0.0 412361072  14096 s017  S    12:00PM   0:05.36 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88877   0.0  0.0 412354928  15184 s017  S    12:00PM   0:04.04 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88855   0.0  0.0 412355952  14864 s017  S    12:00PM   0:05.19 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88839   0.0  0.0 412355952  14464 s017  S    12:00PM   0:05.19 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88815   0.0  0.0 412358000  17920 s017  S    12:00PM   0:05.42 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88795   0.0  0.0 412356976  12272 s017  S    12:00PM   0:04.63 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88775   0.0  0.0 412356976  11760 s017  S    12:00PM   0:05.28 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88758   0.0  0.0 412360048  16432 s017  S    12:00PM   0:05.32 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88710   0.0  0.0 412353904  19984 s017  S    12:00PM   0:05.48 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88687   0.0  0.0 412354928  18064 s017  S    12:00PM   0:05.13 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88672   0.0  0.0 412359024  18112 s017  S    12:00PM   0:05.53 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88646   0.0  0.0 412359024  11824 s017  S    12:00PM   0:05.30 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88631   0.0  0.0 412355952  11856 s017  S    12:00PM   0:05.36 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88611   0.0  0.0 412360048  19872 s017  S    12:00PM   0:05.64 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88594   0.0  0.0 412359024  11776 s017  S    12:00PM   0:05.33 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88577   0.0  0.0 412359024  15312 s017  S    12:00PM   0:05.36 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88561   0.0  0.0 412358000  17808 s017  S    12:00PM   0:05.39 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88545   0.0  0.0 412354928  27776 s017  S    12:00PM   0:06.15 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88525   0.0  0.0 412354928  18144 s017  S    12:00PM   0:05.64 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88508   0.0  0.0 412353904  17920 s017  S    12:00PM   0:06.18 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88487   0.0  0.0 412354928  17888 s017  S    12:00PM   0:05.43 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88468   0.0  0.0 412355952  11744 s017  S    12:00PM   0:05.56 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88447   0.0  0.0 412353904  17808 s017  S    12:00PM   0:05.24 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88432   0.0  0.0 412355952  12896 s017  S    12:00PM   0:05.47 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88412   0.0  0.0 412355952  17808 s017  S    12:00PM   0:05.29 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88398   0.0  0.0 412354928  17936 s017  S    12:00PM   0:05.27 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88364   0.0  0.0 412353904  15264 s017  S    12:00PM   0:04.58 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88346   0.0  0.0 412355952  18016 s017  S    12:00PM   0:04.34 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88328   0.0  0.0 412354928  20064 s017  S    12:00PM   0:05.42 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88310   0.0  0.0 412354928  18160 s017  S    12:00PM   0:05.62 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88287   0.0  0.0 412356976  17296 s017  S    12:00PM   0:04.98 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88268   0.0  0.0 412355952  11824 s017  S    12:00PM   0:05.31 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88253   0.0  0.0 412356976  20160 s017  S    12:00PM   0:05.18 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88228   0.0  0.0 412356976  19216 s017  S    12:00PM   0:05.34 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88221   0.0  0.0 412354928  11744 s017  S    12:00PM   0:05.35 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects          7681   0.0  0.0 412382576  26832   ??  S    11:47PM   0:42.29 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7629   0.0  0.0 412369264  18240   ??  S    11:47PM   0:37.57 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7541   0.0  0.0 412386672  17936   ??  S    11:47PM   0:44.24 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7474   0.0  0.0 412370288  15360   ??  S    11:47PM   0:30.00 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7390   0.0  0.0 412380528  17936   ??  S    11:47PM   0:41.82 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7340   0.0  0.0 412378480  20720   ??  S    11:47PM   0:43.42 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7308   0.0  0.0 412381552  17728   ??  S    11:47PM   0:38.92 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7261   0.0  0.0 412373360  19328   ??  S    11:47PM   0:42.17 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7247   0.0  0.0 412374384  14896   ??  S    11:47PM   0:43.89 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects         89826   0.0  0.0 412508944  26816 s009  SN    9:17PM   1:20.25 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=10, pipe_handle=29) --multiprocessing-fork
+projects         89825   0.0  0.0 412497680  28912 s009  SN    9:17PM   1:19.53 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=10, pipe_handle=27) --multiprocessing-fork
+projects         89824   0.0  0.0 412502784  29024 s009  SN    9:17PM   1:19.02 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=10, pipe_handle=25) --multiprocessing-fork
+projects         89823   0.0  0.0 412508928  27232 s009  SN    9:17PM   1:19.06 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=10, pipe_handle=23) --multiprocessing-fork
+projects         89822   0.0  0.0 412503808  26848 s009  SN    9:17PM   1:18.42 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=10, pipe_handle=21) --multiprocessing-fork
+projects         89821   0.0  0.0 412536592  26768 s009  SN    9:17PM   1:20.31 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=10, pipe_handle=19) --multiprocessing-fork
+projects         89820   0.0  0.0 410744304   5472 s009  SN    9:17PM   0:00.02 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -c from multiprocessing.resource_tracker import main;main(9)
+projects         89749   0.0  0.0 412361568  12064 s009  SN    9:17PM   0:26.73 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python enrich_nsw_cadastre_parallel.py
+projects         58435   0.0  0.0 412366192  15424 s111  S+   12:42PM   0:01.99 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21262   0.0  0.0 412354928  20208 s089  S    12:20PM   0:04.64 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21253   0.0  0.0 412355952  11776 s089  S    12:20PM   0:04.55 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21218   0.0  0.0 412358000  19072 s089  S    12:20PM   0:04.67 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21183   0.0  0.0 412361072  11856 s089  S    12:20PM   0:05.14 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21168   0.0  0.0 412358000  20368 s089  S    12:19PM   0:04.48 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21132   0.0  0.0 412364144  20368 s089  S    12:19PM   0:04.62 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21119   0.0  0.0 412359024  17920 s089  S    12:19PM   0:04.66 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21085   0.0  0.0 412362096  11792 s089  S    12:19PM   0:04.81 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21019   0.0  0.0 412360048  17776 s089  S    12:19PM   0:04.65 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+
+4. ALL DOMAIN SCRAPER PROCESSES
+--------------------------------------------
+110
+289
+1121
+1152
+1338
+1535
+1579
+1631
+1686
+1738
+1764
+1939
+1991
+1992
+2084
+2639
+3918
+3970
+4218
+4222
+4226
+4265
+4266
+4279
+4382
+4967
+5010
+5106
+5108
+5109
+5120
+5128
+5132
+5143
+5150
+5156
+5162
+5163
+5165
+5169
+5171
+5172
+5174
+5176
+5182
+5183
+5184
+5187
+5190
+5192
+5194
+5196
+5198
+5203
+5205
+5208
+5209
+5210
+5211
+5213
+5214
+5219
+5220
+5221
+5222
+5223
+5225
+5227
+5233
+5234
+5235
+5238
+5240
+5241
+5243
+5248
+5250
+5252
+5253
+5254
+5255
+5261
+5268
+5332
+5697
+5698
+5727
+5734
+5735
+5737
+5772
+5783
+5800
+5801
+5805
+5806
+5809
+5811
+5813
+5821
+5824
+5825
+5826
+5827
+5828
+5829
+5831
+5832
+5837
+5838
+5839
+5841
+5842
+5843
+5846
+5847
+5849
+6291
+6293
+6300
+6301
+6302
+6305
+6429
+6608
+6632
+7228
+7247
+7250
+7252
+7254
+7255
+7256
+7259
+7261
+7264
+7266
+7270
+7271
+7272
+7281
+7283
+7285
+7286
+7287
+7290
+7308
+7326
+7328
+7332
+7333
+7335
+7339
+7340
+7361
+7365
+7367
+7368
+7369
+7390
+7412
+7415
+7418
+7419
+7420
+7474
+7494
+7496
+7500
+7501
+7502
+7541
+7567
+7569
+7574
+7575
+7576
+7629
+7652
+7654
+7658
+7659
+7660
+7665
+7666
+7681
+7707
+7709
+7714
+7715
+7716
+12229
+20132
+20216
+20230
+20239
+20248
+20251
+20252
+20254
+20261
+20262
+20263
+20273
+20281
+20282
+20283
+20287
+20288
+20289
+20290
+20294
+20295
+20300
+20324
+20325
+20326
+20330
+20333
+20334
+20336
+20341
+20342
+20347
+20355
+20359
+20362
+20363
+20369
+20373
+20377
+20378
+20379
+20383
+20386
+20387
+20388
+20389
+20390
+20414
+20415
+20416
+20420
+20424
+20426
+20427
+20429
+20430
+20431
+20432
+20433
+20436
+20438
+20448
+20450
+20457
+20468
+20472
+20474
+20478
+20482
+20483
+20484
+20485
+20491
+20496
+20500
+20501
+20502
+20508
+20510
+20514
+20523
+20528
+20529
+20530
+20533
+20537
+20538
+20541
+20543
+20551
+20567
+20570
+20572
+20575
+20576
+20577
+20578
+20579
+20580
+20581
+20582
+20584
+20585
+20602
+20611
+20614
+20619
+20620
+20622
+20627
+20628
+20629
+20630
+20653
+20656
+20668
+20681
+20684
+20690
+20693
+20695
+20699
+20707
+20709
+20715
+20718
+20724
+20725
+20728
+20731
+20736
+20737
+20739
+20743
+20757
+20765
+20768
+20769
+20770
+20778
+20779
+20792
+20793
+20794
+20796
+20801
+20803
+20810
+20813
+20827
+20839
+20844
+20845
+20846
+20847
+20848
+20849
+20850
+20851
+20856
+20863
+20864
+20865
+20866
+20867
+20868
+20869
+20871
+20872
+20879
+20885
+20896
+20897
+20898
+20899
+20900
+20901
+20902
+20903
+20904
+20905
+20907
+20909
+20910
+20911
+20913
+20915
+20916
+20918
+20925
+20926
+20927
+20928
+20929
+20931
+20935
+20936
+20937
+20944
+20952
+20957
+20967
+20968
+20970
+20972
+20983
+20984
+20985
+20986
+21004
+21011
+21012
+21013
+21019
+21044
+21055
+21061
+21072
+21073
+21085
+21086
+21087
+21092
+21097
+21098
+21099
+21100
+21102
+21104
+21107
+21119
+21125
+21132
+21138
+21147
+21149
+21155
+21156
+21168
+21183
+21208
+21209
+21210
+21218
+21235
+21237
+21238
+21241
+21253
+21262
+21263
+21283
+21304
+21350
+21369
+21430
+21472
+21473
+21474
+21485
+21489
+21773
+21774
+21775
+21776
+21777
+21778
+21779
+21780
+21781
+21783
+21784
+21786
+21787
+21788
+21789
+21790
+21793
+21794
+21797
+21798
+21804
+21806
+21808
+21809
+21810
+21811
+21814
+21818
+21819
+21821
+21822
+21824
+21826
+21827
+21829
+21831
+21853
+21854
+21855
+21856
+21857
+21858
+21859
+21860
+21861
+21862
+21863
+21866
+21867
+21870
+21874
+21875
+21876
+21877
+21878
+21879
+21880
+21881
+21884
+21885
+21889
+21891
+21893
+21895
+21897
+21898
+21899
+21901
+21902
+21903
+21904
+21906
+21907
+21908
+21910
+21911
+21913
+21914
+21915
+21916
+21919
+21927
+21929
+21932
+21934
+21935
+21937
+21957
+21958
+21959
+21992
+21995
+21999
+22002
+22004
+22005
+22006
+22007
+22009
+22010
+22011
+22012
+22013
+22014
+22016
+22017
+22018
+22019
+24173
+26694
+26870
+26956
+27280
+27659
+27972
+28843
+28943
+29089
+29245
+29407
+29752
+30231
+31510
+31608
+32990
+32993
+32994
+32995
+33296
+33407
+33487
+33841
+35373
+35475
+35509
+35664
+35742
+35826
+36467
+36864
+37301
+38354
+38772
+38932
+39078
+39365
+39412
+39461
+40101
+40271
+41556
+41651
+41902
+42002
+42652
+43133
+43200
+44341
+44558
+46776
+48830
+50534
+50767
+53647
+55979
+56141
+57566
+57649
+58435
+58726
+58792
+58794
+58843
+58873
+60295
+60996
+61159
+62272
+62347
+62692
+62694
+62701
+62702
+62706
+62723
+62724
+62755
+62759
+62761
+62762
+62763
+62768
+62769
+62830
+62835
+62840
+62841
+62842
+62845
+62846
+62889
+62891
+62895
+62896
+62897
+62903
+62904
+62948
+62950
+62952
+62953
+62954
+62957
+62959
+63009
+63011
+63013
+63014
+63015
+63018
+63019
+63068
+63073
+63076
+63077
+63078
+63084
+63085
+63136
+63138
+63140
+63141
+63142
+63145
+63149
+63203
+63205
+63277
+63278
+63280
+63293
+63294
+63348
+63350
+63353
+63354
+63356
+63359
+63360
+63820
+64957
+65643
+65681
+65883
+66105
+66106
+66107
+66302
+66415
+66793
+69042
+70151
+70386
+70470
+72401
+72826
+72885
+72963
+72969
+73034
+73168
+73975
+73993
+76382
+76445
+76476
+76714
+77696
+77725
+77743
+77753
+77754
+77767
+77769
+77794
+77797
+77801
+77805
+77822
+77850
+77860
+77863
+78026
+78029
+78030
+78031
+78058
+78059
+78083
+78091
+78100
+78124
+78136
+78137
+78176
+78195
+78199
+78204
+78207
+78211
+78213
+78223
+78226
+78238
+78600
+79013
+79654
+79807
+79947
+80112
+81142
+81196
+81203
+81584
+82230
+82272
+82301
+82370
+82371
+82384
+82386
+82391
+82404
+82497
+82499
+82505
+82510
+82512
+82518
+82559
+82563
+82565
+82578
+82579
+82582
+82585
+82592
+82598
+82599
+82603
+82604
+82609
+82612
+82618
+82620
+82625
+82636
+82649
+82694
+82700
+82726
+82741
+82748
+82751
+82752
+82756
+82757
+82758
+82759
+82760
+82765
+82766
+82768
+82770
+82773
+82776
+82779
+82780
+82782
+82784
+82785
+82786
+82787
+82790
+82791
+82792
+82794
+82795
+82796
+82798
+82799
+82800
+82803
+82805
+82806
+82808
+82809
+82810
+82811
+82812
+82813
+82814
+82816
+82817
+82818
+82819
+82820
+82822
+82823
+82825
+82827
+82828
+82829
+82830
+82831
+82832
+82834
+82835
+82836
+82837
+82838
+82841
+82844
+82845
+82847
+82848
+82849
+82850
+82851
+82852
+82853
+82854
+82855
+82856
+82857
+82858
+82861
+82862
+82864
+82867
+82868
+82869
+82870
+82871
+82873
+82874
+82875
+82878
+82880
+82883
+82885
+82886
+82889
+82892
+82894
+82899
+82902
+82904
+82905
+82906
+82907
+82908
+82909
+82910
+82911
+82913
+82914
+82915
+82916
+82918
+82920
+82921
+82922
+82924
+82928
+82932
+82935
+82939
+82940
+82941
+82943
+82945
+82946
+82947
+82948
+82949
+82950
+82953
+82954
+82955
+82957
+82958
+82959
+82960
+82961
+82962
+82963
+85829
+86611
+88221
+88224
+88227
+88228
+88236
+88237
+88238
+88242
+88245
+88248
+88252
+88253
+88255
+88256
+88260
+88263
+88265
+88268
+88270
+88271
+88272
+88281
+88285
+88287
+88292
+88293
+88294
+88297
+88305
+88309
+88310
+88314
+88315
+88316
+88320
+88324
+88326
+88328
+88330
+88331
+88332
+88335
+88340
+88344
+88346
+88348
+88349
+88350
+88359
+88361
+88364
+88366
+88367
+88368
+88372
+88375
+88377
+88378
+88382
+88383
+88384
+88388
+88394
+88396
+88398
+88402
+88403
+88404
+88411
+88412
+88415
+88418
+88419
+88420
+88428
+88430
+88432
+88435
+88436
+88437
+88441
+88446
+88447
+88450
+88452
+88453
+88454
+88458
+88462
+88466
+88468
+88470
+88471
+88472
+88477
+88484
+88486
+88487
+88491
+88492
+88493
+88503
+88507
+88508
+88511
+88512
+88513
+88516
+88521
+88524
+88525
+88529
+88530
+88531
+88537
+88539
+88541
+88545
+88548
+88549
+88550
+88553
+88557
+88560
+88561
+88564
+88565
+88566
+88573
+88575
+88577
+88582
+88583
+88584
+88587
+88592
+88594
+88598
+88603
+88604
+88605
+88608
+88611
+88615
+88617
+88619
+88620
+88621
+88625
+88630
+88631
+88635
+88637
+88638
+88639
+88645
+88646
+88651
+88654
+88655
+88656
+88659
+88667
+88670
+88672
+88674
+88675
+88676
+88684
+88686
+88687
+88694
+88695
+88696
+88703
+88708
+88710
+88713
+88720
+88721
+88722
+88729
+88734
+88738
+88742
+88744
+88745
+88747
+88751
+88755
+88756
+88758
+88762
+88763
+88764
+88767
+88774
+88775
+88778
+88784
+88785
+88786
+88795
+88804
+88806
+88809
+88810
+88811
+88815
+88818
+88819
+88822
+88827
+88828
+88829
+88833
+88836
+88838
+88839
+88843
+88844
+88845
+88852
+88854
+88855
+88858
+88859
+88860
+88866
+88874
+88876
+88877
+88881
+88882
+88883
+88888
+88889
+88894
+88897
+88899
+88906
+88907
+88908
+88916
+88922
+88924
+88927
+88928
+88929
+88933
+88935
+88938
+88941
+88946
+88947
+88948
+88954
+88955
+88956
+88963
+88975
+88976
+88979
+88991
+88993
+88997
+88999
+89007
+89009
+89014
+89022
+89025
+89027
+89028
+89031
+89032
+89033
+89036
+89049
+89050
+89053
+89058
+89059
+89061
+89066
+89068
+89071
+89073
+89075
+89076
+89077
+89081
+89085
+89086
+89089
+89090
+89091
+89094
+89103
+89105
+89106
+89109
+89110
+89111
+89115
+89118
+89119
+89122
+89128
+89129
+89130
+89134
+89138
+89141
+89143
+89147
+89148
+89149
+89153
+89156
+89159
+89161
+89164
+89165
+89166
+89170
+89175
+89178
+89181
+89183
+89184
+89185
+89188
+89259
+89261
+89263
+89264
+89265
+89268
+89907
+93207
+95174
+95178
+95184
+95185
+95186
+95189
+95190
+95199
+95201
+95203
+95204
+95205
+95209
+95210
+95214
+95216
+95220
+95221
+95222
+95227
+95229
+95234
+95236
+95240
+95241
+95242
+95245
+95246
+95250
+95253
+95258
+95259
+95260
+95264
+95265
+95270
+95272
+95274
+95275
+95276
+95279
+95280
+95284
+95286
+95289
+95291
+95292
+95296
+95297
+95301
+95303
+95306
+95307
+95308
+95313
+95314
+95318
+95320
+95322
+95323
+95325
+95329
+95330
+95335
+95337
+95339
+95340
+95341
+95344
+95345
+95351
+95353
+95355
+95356
+95357
+95362
+95363
+95373
+95375
+95377
+95378
+95379
+95382
+95383
+95390
+95393
+95395
+95396
+95397
+95403
+95404
+95408
+95410
+95412
+95413
+95414
+95423
+95426
+95428
+95429
+95430
+95434
+95436
+95445
+95447
+95450
+95451
+95453
+95457
+95459
+95463
+95465
+95467
+95468
+95470
+95475
+95476
+95480
+95482
+95484
+95485
+95486
+95490
+95491
+95493
+95499
+95501
+95504
+95505
+95507
+95511
+95512
+95518
+95520
+95522
+95523
+95524
+95529
+95530
+95535
+95537
+95541
+95542
+95544
+95547
+95549
+95558
+95560
+95562
+95563
+95564
+95568
+95569
+95574
+95576
+95579
+95580
+95582
+95586
+95588
+95595
+95597
+95599
+95600
+95602
+95606
+95607
+95613
+95615
+95619
+95620
+95621
+95624
+95625
+95631
+95633
+95636
+95637
+95638
+95641
+95642
+95647
+95649
+95653
+95654
+95655
+95658
+95659
+95665
+95668
+95670
+95671
+95672
+95676
+95677
+95681
+95684
+95687
+95688
+95689
+95693
+95694
+95701
+95704
+95706
+95707
+95708
+95712
+95713
+95717
+95719
+95722
+95723
+95724
+95729
+95732
+95741
+95743
+95747
+95748
+95749
+95752
+95753
+95758
+95760
+95763
+95764
+95765
+95769
+95772
+95775
+95777
+95781
+95782
+95784
+95785
+95787
+95788
+95789
+95790
+95793
+95794
+95795
+95800
+95801
+95802
+95803
+95806
+95808
+95810
+95811
+95812
+95818
+95819
+95824
+95826
+95829
+95830
+95832
+95837
+95838
+95840
+95842
+95847
+95848
+95849
+95856
+95857
+95860
+95862
+95872
+95873
+95874
+95887
+95888
+95890
+95893
+95900
+95902
+95904
+95912
+95913
+95919
+95923
+95930
+95931
+95934
+95943
+95944
+95947
+95949
+95953
+95954
+95955
+95963
+95965
+95970
+95972
+95977
+95978
+95979
+95984
+95985
+95988
+95990
+95997
+95998
+95999
+96004
+96006
+96011
+96014
+96017
+96018
+96019
+96023
+96025
+96026
+96030
+96032
+96033
+96034
+96039
+96040
+96042
+96044
+96048
+96049
+96050
+96053
+96054
+96056
+96058
+96060
+96061
+96062
+96068
+96069
+96073
+96075
+96078
+96079
+96082
+96086
+96087
+96089
+96091
+96097
+96100
+96115
+96166
+96177
+96192
+96194
+96196
+96197
+96198
+96202
+96203
+96444
+96811
+97294
+97335
+98726
+99327
+99519
+99697
+99701
+99847
+
+5. CHROME/BROWSER PROCESSES (can consume high CPU)
+--------------------------------------------
+projects         88756  43.3  0.4 1865707760 260960 s017  R    12:00PM   1:37.90 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.CtFnT4 --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539337253 --launch-time-ticks=184294616851 --shared-files --field-trial-handle=1718379636,r,18414062562352465827,8235731959668795342,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         35509  26.9  0.4 1865746624 261584 s017  R    12:33PM   0:33.14 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.tjry8t --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=309 --time-ticks-at-unix-epoch=-1762296539337276 --launch-time-ticks=186247831270 --shared-files --field-trial-handle=1718379636,r,5968459788953268192,17087926974755813077,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190709275857802835 --enable-logging=stderr --log-level=0
+projects         21999  26.5  0.3 1865717376 208336 s089  R    12:20PM   1:04.76 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.1HQalN --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539365746 --launch-time-ticks=185499561259 --shared-files --field-trial-handle=1718379636,r,8864376458617599473,15713222827076243644,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         26956  22.1  0.3 1865680816 214144 s017  R    12:26PM   0:45.12 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.CNjyTL --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=278 --time-ticks-at-unix-epoch=-1762296539337434 --launch-time-ticks=185843594183 --shared-files --field-trial-handle=1718379636,r,17801775911043103857,7757216585966331903,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190709246809505516 --enable-logging=stderr --log-level=0
+projects         22007  22.0  0.3 1865717344 184144 s089  R    12:20PM   0:51.85 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.yASlxd --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539365736 --launch-time-ticks=185500158456 --shared-files --field-trial-handle=1718379636,r,12713550906466079459,125192554041084793,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         88587  20.2  0.3 1865669888 224288 s017  R    12:00PM   2:21.27 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.p8Lc4K --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539337149 --launch-time-ticks=184290243724 --shared-files --field-trial-handle=1718379636,r,14699939803957799360,13847196377843909292,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         20514  10.3  0.6 1865734640 397760 s089  U    12:19PM   1:40.47 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/142.0.7444.60/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --noerrdialogs --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.NOUUHM --no-sandbox --enable-automation --remote-debugging-port=0 --test-type=webdriver --allow-pre-commit-input --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-GB --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=8 --time-ticks-at-unix-epoch=-1762296539364374 --launch-time-ticks=185437141313 --shared-files --field-trial-handle=1718379636,r,4383780666486866987,4480318801182413722,262144 --disable-features=IgnoreDuplicateNavs,PaintHolding,Prewarm --variations-seed-version --trace-process-track-uuid=3190708993808206286 --enable-logging=stderr --log-level=0
+projects         88521   9.8  0.3 478412000 190352 s017  S    12:00PM   1:04.67 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --allow-pre-commit-input --disable-background-networking --disable-blink-features=AutomationControlled --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-features=IgnoreDuplicateNavs,Prewarm --disable-gpu --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging=stderr --headless --log-level=0 --no-first-run --no-sandbox --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 --user-data-dir=/var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/.org.chromium.Chromium.scoped_dir.4jVsX9 --window-size=1920,1080 data:,
+projects         82918   8.8  0.1 1865573760  98128 s017  R    12:51PM   0:00.08 (Google Chrome He)
+projects         82913   8.7  0.1 1865564864  97872 s017  R    12:51PM   0:00.09 (Google Chrome He)
+
+6. NODE PROCESSES
+--------------------------------------------
+projects         33944   1.2  0.1 1866917536  65072   ??  R    Wed02PM  14:50.49 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         83547   0.7  0.1 1866967888  78192   ??  S    11:49AM   1:03.05 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         60347   0.4  0.3 1866929856 198896   ??  R    Wed09PM  31:18.82 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         33941   0.4  0.1 1866910400  73552   ??  R    Wed02PM 175:38.22 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         47093   0.2  0.1 1865153872  62000   ??  R    Wed02PM   1:30.33 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=33943
+projects         33943   0.2  0.2 1866928832 118464   ??  R    Wed02PM  38:18.66 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         88918   0.1  0.1 431260416  46800 s034  S+   11:34PM   2:49.66 node /Users/projects/Documents/Fetcha_Addresses/frontend/node_modules/.bin/vite
+projects         33009   0.1  0.1 1866931440  57888   ??  S    Wed02PM   0:44.62 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         50943   0.1  0.1 1865123680  57280   ??  R    Wed02PM   0:14.85 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=33943
+projects         36503   0.1  0.1 1866892224  80864   ??  R    Wed08PM  19:24.44 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         53652   0.1  0.1 1865120096  56896   ??  S    Wed09PM   0:07.55 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=36503
+projects         88596   0.0  0.1 1865150368  55280   ??  S    12:00PM   0:01.22 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=83547
+projects         86374   0.0  0.1 1865152928  51136   ??  S    11:57AM   0:00.93 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=83547
+projects         83692   0.0  0.0 412882592  28288   ??  S    11:49AM   0:00.12 node /Users/projects/Desktop/Task_Completion_MCP/task-logger/build/index.js
+projects         83684   0.0  0.0 412094864  24800   ??  S    11:49AM   0:00.07 node /Users/projects/.npm/_npx/15b07286cbcc3329/node_modules/.bin/mcp-server-memory
+projects         83649   0.0  0.0 421011552  30624   ??  S    11:49AM   0:00.17 node /Users/projects/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/.bin/mcp-server-github
+projects         83553   0.0  0.1 1865217680  64448   ??  S    11:49AM   0:04.47 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=83547
+projects         83548   0.0  0.1 1866962160  54032   ??  S    11:49AM   0:02.75 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects          2735   0.0  0.1 1865182624  57616   ??  S    11:43PM   0:05.81 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/css-language-features/server/dist/node/cssServerMain --node-ipc --clientProcessId=33943
+projects         99707   0.0  0.1 1865179040  52816   ??  S    11:41PM   0:00.35 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/projects/Library/Caches/typescript/5.8 --enableTelemetry --typesMapLocation /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+projects         99701   0.0  0.1 1865215104  57968   ??  S    11:41PM   0:33.04 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --max-old-space-size=3072 /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/vscode-typescript501/b4261ea7b8710e8d1af2/tscancellation-a9156d9773113943343a.tmp* --locale en --noGetErrOnBackgroundUpdate --validateDefaultNpmLocation --useNodeIpc
+projects         99700   0.0  0.1 1865147552  56144   ??  S    11:41PM   0:00.90 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --max-old-space-size=3072 /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /var/folders/t6/rnm9m1ds6qxg8t7224_j12j80000gn/T/vscode-typescript501/b4261ea7b8710e8d1af2/tscancellation-bb4451aa76eb7dc67a18.tmp* --locale en --noGetErrOnBackgroundUpdate --validateDefaultNpmLocation --useNodeIpc
+projects         87682   0.0  0.0 411534128  22832 s034  S+   11:33PM   0:00.06 node /Users/projects/.npm/_npx/1415fee72ff6294b/node_modules/.bin/create-vite frontend --template react
+projects         31632   0.0  0.1 1865121168  56128   ??  S    Thu09AM   0:05.28 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=60347
+projects          6282   0.0  0.1 1865157984  54048   ??  S    Thu08AM   0:06.63 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=33941
+projects         63236   0.0  0.1 1865130336  56896   ??  S    Wed09PM   0:07.60 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=60347
+projects         60478   0.0  0.0 412349824  25264   ??  S    Wed09PM   0:00.07 node /Users/projects/Desktop/Task_Completion_MCP/task-logger/build/index.js
+projects         60471   0.0  0.0 411795568  21776   ??  S    Wed09PM   0:00.04 node /Users/projects/.npm/_npx/15b07286cbcc3329/node_modules/.bin/mcp-server-memory
+projects         60448   0.0  0.0 420714560  27584   ??  S    Wed09PM   0:00.09 node /Users/projects/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/.bin/mcp-server-github
+projects         60346   0.0  0.1 1866907888  56384   ??  R    Wed09PM   0:27.14 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         36789   0.0  0.1 1865155152  60304   ??  R    Wed08PM   1:08.38 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=36503
+projects         36594   0.0  0.0 411647360  25264   ??  S    Wed08PM   0:00.08 node /Users/projects/Desktop/Task_Completion_MCP/task-logger/build/index.js
+projects         36585   0.0  0.0 411646064  21776   ??  S    Wed08PM   0:00.08 node /Users/projects/.npm/_npx/15b07286cbcc3329/node_modules/.bin/mcp-server-memory
+projects         36562   0.0  0.0 420057152  27584   ??  S    Wed08PM   0:00.10 node /Users/projects/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/.bin/mcp-server-github
+projects         36502   0.0  0.1 1866902768  53168   ??  R    Wed08PM   0:27.68 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         77565   0.0  0.1 1865153616  60400   ??  S    Wed07PM   1:14.76 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=37304
+projects         47214   0.0  0.1 1865111392  55584   ??  S    Wed02PM   0:09.72 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=33943
+projects         39489   0.0  0.0 411824512  25264   ??  S    Wed02PM   0:00.07 node /Users/projects/Desktop/Task_Completion_MCP/task-logger/build/index.js
+projects         39482   0.0  0.0 411822192  21776   ??  S    Wed02PM   0:00.04 node /Users/projects/.npm/_npx/15b07286cbcc3329/node_modules/.bin/mcp-server-memory
+projects         39460   0.0  0.0 420225344  27584   ??  S    Wed02PM   0:00.09 node /Users/projects/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/.bin/mcp-server-github
+projects         37304   0.0  0.1 1866902208  83264   ??  R    Wed02PM   3:55.99 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         37303   0.0  0.1 1866900624  54992   ??  S    Wed02PM   0:37.47 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         37048   0.0  0.0 411965056  25264   ??  S    Wed02PM   0:00.07 node /Users/projects/Desktop/Task_Completion_MCP/task-logger/build/index.js
+projects         37041   0.0  0.0 411806064  21776   ??  S    Wed02PM   0:00.05 node /Users/projects/.npm/_npx/15b07286cbcc3329/node_modules/.bin/mcp-server-memory
+projects         37020   0.0  0.0 412358016  25264   ??  S    Wed02PM   0:00.08 node /Users/projects/Desktop/Task_Completion_MCP/task-logger/build/index.js
+projects         36999   0.0  0.0 411672944  21776   ??  S    Wed02PM   0:00.05 node /Users/projects/.npm/_npx/15b07286cbcc3329/node_modules/.bin/mcp-server-memory
+projects         36979   0.0  0.0 420599104  27584   ??  S    Wed02PM   0:00.08 node /Users/projects/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/.bin/mcp-server-github
+projects         36951   0.0  0.0 420618304  27584   ??  S    Wed02PM   0:00.10 node /Users/projects/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/.bin/mcp-server-github
+projects         34654   0.0  0.1 1865186640  62544   ??  S    Wed02PM   1:06.11 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=33941
+projects         34649   0.0  0.1 1865123936  57056   ??  S    Wed02PM   0:10.04 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=33941
+projects         33010   0.0  0.1 1866942704  56240   ??  S    Wed02PM   0:46.46 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+projects         33008   0.0  0.1 1866950064  61424   ??  S    Wed02PM   0:30.74 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-GB --service-sandbox-type=none --user-data-dir=/Users/projects/Library/Application Support/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,17000104311743453540,4100736640268033696,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,MacWebContentsOcclusion,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+
+7. PROCESS COUNT BY NAME
+--------------------------------------------
+1436 /Applications/Google
+ 172 /opt/homebrew/bin/chromedriver
+ 149 (Google
+ 119 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python
+ 101 /System/Library/PrivateFrameworks/SiriTTSService.framework/Versions/A/XPCServices/com.apple.SiriTTSService.TrialProxy.xpc/Contents/MacOS/com.apple.SiriTTSService.TrialProxy
+ 101 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService
+  61 /bin/zsh
+  44 /Applications/Visual
+  20 node
+  17 /usr/sbin/distnoted
+  14 npm
+  11 /usr/sbin/cfprefsd
+   7 postgres:
+   4 /bin/bash
+   4 (ps)
+   3 /usr/libexec/trustd
+   3 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+   3 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice
+   2 sort
+   2 ps
+
+8. MEMORY USAGE
+--------------------------------------------
+PhysMem: 63G used (6042M wired, 32G compressor), 93M unused.
+
+9. LOAD AVERAGE
+--------------------------------------------
+12:56  up 2 days,  4:07, 1 user, load averages: 308.03 422.59 497.07
+
+10. CHECK FOR RUNAWAY PROCESSES
+--------------------------------------------
+Processes using > 50% CPU:
+
+11. CHECK FOR SELENIUM/CHROMEDRIVER
+--------------------------------------------
+projects         20600   0.2  0.0 443875360  11728 s089  S    12:19PM   0:01.83 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56132
+projects         20247   0.1  0.0 443865120  11168 s089  S    12:19PM   0:01.46 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=54952
+projects         21034   0.0  0.0 443884576  10432 s089  S    12:19PM   0:01.32 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57575
+projects         20893   0.0  0.0 443886624  11232 s089  S    12:19PM   0:01.44 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57190
+projects         20889   0.0  0.0 443876384  11248 s089  S    12:19PM   0:01.38 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57187
+projects         20870   0.0  0.0 443870240  11952 s089  S    12:19PM   0:01.52 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57161
+projects         20853   0.0  0.0 443836448  11424 s089  S    12:19PM   0:01.39 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57149
+projects         20852   0.0  0.0 443879456  11760 s089  S    12:19PM   0:01.66 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57148
+projects         20843   0.0  0.0 443890720  11536 s089  S    12:19PM   0:01.02 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57132
+projects         20842   0.0  0.0 443877408  11632 s089  S    12:19PM   0:01.52 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57120
+projects         20841   0.0  0.0 443854880  11584 s089  S    12:19PM   0:01.92 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57111
+projects         20838   0.0  0.0 443883552  11376 s089  S    12:19PM   0:01.43 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57108
+projects         20836   0.0  0.0 443885600  11376 s089  S    12:19PM   0:01.04 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57105
+projects         20837   0.0  0.0 443876384  11232 s089  S    12:19PM   0:01.05 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57106
+projects         20834   0.0  0.0 443857952  11216 s089  S    12:19PM   0:01.40 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57102
+projects         20835   0.0  0.0 443868192  11184 s089  S    12:19PM   0:01.04 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57103
+projects         20568   0.0  0.0 443861024  11488 s089  S    12:19PM   0:01.45 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56053
+projects         20548   0.0  0.0 443898912  11568 s089  S    12:19PM   0:01.35 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55942
+projects         20536   0.0  0.0 443877408  10144 s089  S    12:19PM   0:01.39 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55881
+projects         20531   0.0  0.0 443836448  11728 s089  S    12:19PM   0:01.39 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55879
+projects         20526   0.0  0.0 443856928  11312 s089  S    12:19PM   0:01.40 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55856
+projects         20527   0.0  0.0 443879456  11216 s089  S    12:19PM   0:01.38 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55857
+projects         20525   0.0  0.0 443872288  11392 s089  S    12:19PM   0:01.16 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55852
+projects         20476   0.0  0.0 443874336  11856 s089  S    12:19PM   0:01.45 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55661
+projects         20465   0.0  0.0 443885600  11680 s089  S    12:19PM   0:01.39 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55623
+projects         20384   0.0  0.0 443856928  11296 s089  S    12:19PM   0:01.42 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55309
+projects         20375   0.0  0.0 443889696  11584 s089  S    12:19PM   0:01.51 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55269
+projects         20352   0.0  0.0 443877408  11520 s089  S    12:19PM   0:01.37 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55218
+projects         20340   0.0  0.0 443836448  11248 s089  S    12:19PM   0:01.40 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55174
+projects         20250   0.0  0.0 443883552  11536 s089  S    12:19PM   0:01.34 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=54958
+projects         20246   0.0  0.0 443865120  11280 s089  S    12:19PM   0:01.44 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=54951
+projects         89193   0.0  0.0 443889696  11344 s017  S    12:00PM   0:01.78 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62559
+projects         89174   0.0  0.0 443857952  11280 s017  S    12:00PM   0:01.79 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62511
+projects         89158   0.0  0.0 443854880  11280 s017  S    12:00PM   0:01.76 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62468
+projects         89140   0.0  0.0 443848736  11296 s017  S    12:00PM   0:01.78 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62437
+projects         89117   0.0  0.0 443873312  11424 s017  S    12:00PM   0:01.74 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62402
+projects         89102   0.0  0.0 443851808  11296 s017  S    12:00PM   0:01.75 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62358
+projects         89080   0.0  0.0 443845664  11296 s017  S    12:00PM   0:01.70 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62301
+projects         89070   0.0  0.0 443845664  11408 s017  S    12:00PM   0:01.76 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62264
+projects         89048   0.0  0.0 443847712  11296 s017  S    12:00PM   0:01.67 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62229
+projects         89023   0.0  0.0 443836448  11248 s017  S    12:00PM   0:01.74 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62179
+projects         88995   0.0  0.0 443873312  11296 s017  S    12:00PM   0:01.77 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62139
+projects         88952   0.0  0.0 443838464  11536 s017  S    12:00PM   0:01.75 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62089
+projects         88937   0.0  0.0 443836448  11280 s017  S    12:00PM   0:01.23 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62061
+projects         88919   0.0  0.0 443836448  11248 s017  S    12:00PM   0:01.76 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=62013
+projects         88896   0.0  0.0 443836448  11216 s017  S    12:00PM   0:01.74 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61973
+projects         88873   0.0  0.0 443836448  11264 s017  S    12:00PM   0:01.77 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61922
+projects         88851   0.0  0.0 443836448  10160 s017  S    12:00PM   0:01.74 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61881
+projects         88835   0.0  0.0 443856928  11488 s017  S    12:00PM   0:01.75 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61838
+projects         88814   0.0  0.0 443845664  11600 s017  S    12:00PM   0:01.61 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61807
+projects         88802   0.0  0.0 443873312  11616 s017  S    12:00PM   0:01.81 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61769
+projects         88772   0.0  0.0 443874336  10144 s017  S    12:00PM   0:01.71 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61717
+projects         88749   0.0  0.0 443878432  11296 s017  S    12:00PM   0:01.78 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61677
+projects         88736   0.0  0.0 443883552  11296 s017  S    12:00PM   0:01.77 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61652
+projects         88706   0.0  0.0 443870240  11520 s017  S    12:00PM   0:01.90 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61586
+projects         88683   0.0  0.0 443862048  11264 s017  S    12:00PM   0:01.76 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61547
+projects         88663   0.0  0.0 443870240  11264 s017  S    12:00PM   0:01.70 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61502
+projects         88644   0.0  0.0 443845664  10144 s017  S    12:00PM   0:01.78 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61470
+projects         88624   0.0  0.0 443880480  11664 s017  S    12:00PM   0:02.18 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61403
+projects         88613   0.0  0.0 443848736  11280 s017  S    12:00PM   0:01.82 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61366
+projects         88590   0.0  0.0 443882528  11216 s017  S    12:00PM   0:01.77 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61302
+projects         88572   0.0  0.0 443836448  11568 s017  S    12:00PM   0:02.03 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61276
+projects         88556   0.0  0.0 443836448  11680 s017  S    12:00PM   0:02.71 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61245
+projects         88536   0.0  0.0 443836448  11696 s017  S    12:00PM   0:02.13 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61216
+projects         88520   0.0  0.0 443836448  11680 s017  S    12:00PM   0:02.63 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61174
+projects         88501   0.0  0.0 443846688  11328 s017  S    12:00PM   0:01.78 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61138
+projects         88483   0.0  0.0 443836448  11680 s017  S    12:00PM   0:02.22 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61087
+projects         88460   0.0  0.0 443892768  11504 s017  S    12:00PM   0:01.79 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=61024
+projects         88445   0.0  0.0 443836448  11264 s017  S    12:00PM   0:01.80 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60994
+projects         88427   0.0  0.0 443836448  11280 s017  S    12:00PM   0:01.77 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60936
+projects         88410   0.0  0.0 443837472  11520 s017  S    12:00PM   0:01.70 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60903
+projects         88393   0.0  0.0 443845664  11552 s017  S    12:00PM   0:01.50 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60867
+projects         88374   0.0  0.0 443836448  11616 s017  S    12:00PM   0:01.55 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60836
+projects         88358   0.0  0.0 443836448  11552 s017  S    12:00PM   0:01.33 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60798
+projects         88337   0.0  0.0 443855904  11584 s017  S    12:00PM   0:02.18 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60756
+projects         88323   0.0  0.0 443836448  11632 s017  S    12:00PM   0:02.19 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60726
+projects         88303   0.0  0.0 443836448  11600 s017  S    12:00PM   0:01.79 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60673
+projects         88280   0.0  0.0 443836448  11520 s017  S    12:00PM   0:01.74 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60642
+projects         88262   0.0  0.0 443854880  11280 s017  S    12:00PM   0:01.71 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60611
+projects         88241   0.0  0.0 443855904  11248 s017  S    12:00PM   0:01.80 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60568
+projects         88223   0.0  0.0 443845664  10144 s017  S    12:00PM   0:01.80 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60552
+projects          7706   0.0  0.0 443836448  11312   ??  S    11:47PM   0:24.90 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56829
+projects          7651   0.0  0.0 443845664  11600   ??  S    11:47PM   0:19.99 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56716
+projects          7566   0.0  0.0 443845664  11664   ??  S    11:47PM   0:27.66 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56550
+projects          7493   0.0  0.0 443845664  10448   ??  S    11:47PM   0:03.35 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56410
+projects          7411   0.0  0.0 443836448  11680   ??  S    11:47PM   0:26.59 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56242
+projects          7360   0.0  0.0 443845664  11648   ??  S    11:47PM   0:25.59 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56141
+projects          7325   0.0  0.0 443851808  10448   ??  S    11:47PM   0:20.38 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=56087
+projects          7280   0.0  0.0 443836448  11600   ??  S    11:47PM   0:24.43 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55999
+projects          7263   0.0  0.0 443836448  11648   ??  S    11:47PM   0:29.19 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55977
+projects          7249   0.0  0.0 443849760  10448   ??  S    11:47PM   0:28.82 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55953
+projects          6290   0.0  0.0 443856928  10160   ??  SN   11:46PM   0:00.07 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=55629
+projects         96191   0.0  0.0 443854880  10448   ??  S    11:39PM   0:00.32 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59565
+projects         96088   0.0  0.0 443864096  10448   ??  S    11:39PM   0:00.30 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59514
+projects         96071   0.0  0.0 443828224  10448   ??  S    11:39PM   0:00.34 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59469
+projects         96055   0.0  0.0 443844640  10448   ??  S    11:39PM   0:00.29 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59410
+projects         96041   0.0  0.0 443854880  10464   ??  S    11:39PM   0:00.25 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59376
+projects         96022   0.0  0.0 443905056  10160   ??  S    11:39PM   0:00.23 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59342
+projects         96008   0.0  0.0 443845664  10160   ??  S    11:39PM   0:00.24 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59294
+projects         95987   0.0  0.0 443848704  10448   ??  S    11:39PM   0:00.28 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59247
+projects         95969   0.0  0.0 443836704  10464   ??  S    11:39PM   0:00.33 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59214
+projects         95946   0.0  0.0 443863072  10448   ??  S    11:39PM   0:00.21 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59159
+projects         95917   0.0  0.0 443854880  10448   ??  S    11:39PM   0:00.40 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59108
+projects         95889   0.0  0.0 443844640  10160   ??  S    11:39PM   0:00.23 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59078
+projects         95859   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.32 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=59040
+projects         95839   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.27 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58999
+projects         95823   0.0  0.0 443848736  10448   ??  S    11:39PM   0:00.27 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58927
+projects         95805   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.20 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58871
+projects         95783   0.0  0.0 443847712  10448   ??  S    11:39PM   0:00.31 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58827
+projects         95757   0.0  0.0 443836448  10160   ??  S    11:39PM   0:00.24 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58768
+projects         95740   0.0  0.0 443836448  10464   ??  S    11:39PM   0:00.35 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58726
+projects         95716   0.0  0.0 443866144  10448   ??  S    11:39PM   0:00.24 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58692
+projects         95700   0.0  0.0 443836448  10464   ??  S    11:39PM   0:00.24 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58635
+projects         95680   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.19 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58576
+projects         95664   0.0  0.0 443854880  10448   ??  S    11:39PM   0:00.26 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58542
+projects         95646   0.0  0.0 443846656  10448   ??  S    11:39PM   0:00.34 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58504
+projects         95630   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.29 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58473
+projects         95612   0.0  0.0 443845664  10448   ??  S    11:39PM   0:00.30 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58412
+projects         95594   0.0  0.0 443836448  10160   ??  S    11:39PM   0:00.23 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58371
+projects         95573   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.29 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58329
+projects         95557   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.31 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58298
+projects         95534   0.0  0.0 443854880  10448   ??  S    11:39PM   0:00.35 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58249
+projects         95517   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.25 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58197
+projects         95498   0.0  0.0 443858976  10464   ??  S    11:39PM   0:00.34 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58163
+projects         95479   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.34 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58134
+projects         95462   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.35 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58109
+projects         95444   0.0  0.0 443844640  10448   ??  S    11:39PM   0:00.33 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58071
+projects         95422   0.0  0.0 443845664  10448   ??  S    11:39PM   0:00.30 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58016
+projects         95407   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.26 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57986
+projects         95389   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.33 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57946
+projects         95369   0.0  0.0 443845664  10448   ??  S    11:39PM   0:00.20 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57906
+projects         95350   0.0  0.0 443845664  10448   ??  S    11:39PM   0:00.30 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57869
+projects         95334   0.0  0.0 443845664  10448   ??  S    11:39PM   0:00.35 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57828
+projects         95317   0.0  0.0 443873312  10448   ??  S    11:39PM   0:00.37 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57795
+projects         95300   0.0  0.0 443844640  10448   ??  S    11:39PM   0:00.24 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57757
+projects         95283   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.29 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57712
+projects         95269   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.28 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57678
+projects         95249   0.0  0.0 443857952  10448   ??  S    11:39PM   0:00.34 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57627
+projects         95233   0.0  0.0 443854880  10448   ??  S    11:39PM   0:00.37 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57599
+projects         95213   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.39 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57565
+projects         95198   0.0  0.0 443836448  10448   ??  S    11:39PM   0:00.34 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57545
+projects         95173   0.0  0.0 443865120  10448   ??  S    11:39PM   0:00.27 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=57527
+projects         63331   0.0  0.0 443865120  10160   ??  S     1:06PM   0:03.43 /opt/homebrew/bin/chromedriver --port=53956
+projects         63202   0.0  0.0 443846688  10160   ??  S     1:06PM   0:03.82 /opt/homebrew/bin/chromedriver --port=53881
+projects         63129   0.0  0.0 443863072  10160   ??  S     1:06PM   0:01.74 /opt/homebrew/bin/chromedriver --port=53817
+projects         63066   0.0  0.0 443836448  10160   ??  S     1:06PM   0:05.27 /opt/homebrew/bin/chromedriver --port=53762
+projects         63007   0.0  0.0 443836448  10160   ??  S     1:06PM   0:03.75 /opt/homebrew/bin/chromedriver --port=53711
+projects         62945   0.0  0.0 443855904  10160   ??  S     1:06PM   0:03.40 /opt/homebrew/bin/chromedriver --port=53643
+projects         62887   0.0  0.0 443836448  10160   ??  S     1:06PM   0:04.42 /opt/homebrew/bin/chromedriver --port=53588
+projects         62824   0.0  0.0 443836448  10160   ??  S     1:06PM   0:05.29 /opt/homebrew/bin/chromedriver --port=53532
+projects         62751   0.0  0.0 443845664  10160   ??  S     1:06PM   0:04.29 /opt/homebrew/bin/chromedriver --port=53475
+projects         62689   0.0  0.0 443836448  10160   ??  S     1:06PM   0:04.07 /opt/homebrew/bin/chromedriver --port=53442
+projects         65607   0.0  0.0 443887632  12704 s111  S+   12:44PM   0:00.46 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=51186
+projects         21817   0.0  0.0 443857952  11200 s089  S    12:20PM   0:01.02 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60692
+projects         21799   0.0  0.0 443877408  11184 s089  S    12:20PM   0:01.35 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60690
+projects         21785   0.0  0.0 443872288  11296 s089  S    12:20PM   0:00.99 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60668
+projects         21782   0.0  0.0 443862048  11248 s089  S    12:20PM   0:01.36 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60665
+projects         21769   0.0  0.0 443856928  11328 s089  S    12:20PM   0:01.00 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60623
+projects         21772   0.0  0.0 443867168  11312 s089  S    12:20PM   0:00.99 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60630
+projects         21767   0.0  0.0 443866144  11232 s089  S    12:20PM   0:01.01 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60622
+projects         21771   0.0  0.0 443857952  11328 s089  S    12:20PM   0:01.02 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60627
+projects         21766   0.0  0.0 443848736  11248 s089  S    12:20PM   0:01.02 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60620
+projects         21768   0.0  0.0 443860000  11280 s089  S    12:20PM   0:01.06 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60621
+projects         21770   0.0  0.0 443854880  10144 s089  S    12:20PM   0:01.01 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60625
+projects         21765   0.0  0.0 443866144  11360 s089  S    12:20PM   0:01.32 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60619
+projects         21761   0.0  0.0 443865120  10144 s089  S    12:20PM   0:00.97 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60614
+projects         21764   0.0  0.0 443856928  11424 s089  S    12:20PM   0:01.01 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60618
+projects         21763   0.0  0.0 443865120  10144 s089  S    12:20PM   0:01.00 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60617
+projects         21762   0.0  0.0 443845664  11248 s089  S    12:20PM   0:01.03 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60616
+projects         21760   0.0  0.0 443877408  11312 s089  S    12:20PM   0:01.05 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60613
+projects         21759   0.0  0.0 443856928  11248 s089  S    12:20PM   0:01.03 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=60615
+projects         21338   0.0  0.0 443886624  11216 s089  S    12:20PM   0:01.37 /opt/homebrew/bin/chromedriver --enable-chrome-logs --port=58940
+
+12. CHECK FOR MONGODB PROCESSES
+--------------------------------------------
+projects          8975   0.5  0.3 417752848 186000   ??  RN   Thu08AM  39:42.75 mongod --config /Users/projects/mongodb/config/mongod.conf
+projects         88815   0.3  0.0 412358000  23680 s017  S    12:00PM   0:05.97 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20839   0.2  0.0 412359024  15376 s089  S    12:19PM   0:05.22 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89068   0.1  0.0 412360048  20016 s017  S    12:00PM   0:05.77 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20986   0.1  0.0 412365168  16464 s089  S    12:19PM   0:05.50 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects          7681   0.1  0.0 412382576  26528   ??  S    11:47PM   0:42.89 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects         21241   0.1  0.0 412358000  15488 s089  S    12:20PM   0:05.66 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21044   0.0  0.0 412360048  16608 s089  S    12:19PM   0:05.21 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21019   0.0  0.0 412360048  11808 s089  S    12:19PM   0:05.20 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20972   0.0  0.0 412356976  15392 s089  S    12:19PM   0:05.19 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20952   0.0  0.0 412356976  16672 s089  S    12:19PM   0:05.18 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20879   0.0  0.0 412356976  13168 s089  S    12:19PM   0:05.26 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20827   0.0  0.0 412358000  15456 s089  S    12:19PM   0:05.46 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20813   0.0  0.0 412358000  12960 s089  S    12:19PM   0:05.34 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20803   0.0  0.0 412359024  13200 s089  S    12:19PM   0:05.60 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20794   0.0  0.0 412354928  16592 s089  S    12:19PM   0:05.62 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20757   0.0  0.0 412352880  20080 s089  S    12:19PM   0:05.69 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20765   0.0  0.0 412354928  15200 s089  S    12:19PM   0:05.52 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20743   0.0  0.0 412355952  13040 s089  S    12:19PM   0:05.45 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20718   0.0  0.0 412356976  16496 s089  S    12:19PM   0:05.10 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20699   0.0  0.0 412355952  16672 s089  S    12:19PM   0:05.71 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20656   0.0  0.0 412358000  16544 s089  S    12:19PM   0:05.01 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20627   0.0  0.0 412356976  15312 s089  S    12:19PM   0:04.99 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20614   0.0  0.0 412356976  16448 s089  S    12:19PM   0:05.18 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20575   0.0  0.0 412355952  16704 s089  S    12:19PM   0:05.65 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20551   0.0  0.0 412356976  12800 s089  S    12:19PM   0:06.08 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20523   0.0  0.0 412353904  12896 s089  S    12:19PM   0:05.44 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20510   0.0  0.0 412354928  16560 s089  S    12:19PM   0:05.61 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20491   0.0  0.0 412354928  16688 s089  S    12:19PM   0:05.70 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20474   0.0  0.0 412354928  12832 s089  S    12:19PM   0:05.47 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20457   0.0  0.0 412353904  13008 s089  S    12:19PM   0:05.51 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20450   0.0  0.0 412355952  11744 s089  S    12:19PM   0:05.49 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20436   0.0  0.0 412354928  15312 s089  S    12:19PM   0:04.96 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20420   0.0  0.0 412354928  18816 s089  S    12:19PM   0:05.83 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20387   0.0  0.0 412356976  16608 s089  S    12:19PM   0:05.76 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20369   0.0  0.0 412353904  20128 s089  S    12:19PM   0:05.31 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20342   0.0  0.0 412354928  15280 s089  S    12:19PM   0:05.31 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20326   0.0  0.0 412355952  16464 s089  S    12:19PM   0:05.59 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20300   0.0  0.0 412354928  15296 s089  S    12:19PM   0:05.48 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20273   0.0  0.0 412355952  16528 s089  S    12:19PM   0:05.45 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20248   0.0  0.0 412356976  15424 s089  S    12:19PM   0:05.63 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20239   0.0  0.0 412356976  16416 s089  S    12:19PM   0:05.40 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20230   0.0  0.0 412356976  11776 s089  S    12:19PM   0:05.62 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         20216   0.0  0.0 412355952  15440 s089  S    12:19PM   0:05.72 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89175   0.0  0.0 412353904  16640 s017  S    12:00PM   0:05.89 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89156   0.0  0.0 412353904  13120 s017  S    12:00PM   0:05.89 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89138   0.0  0.0 412356976  16416 s017  S    12:00PM   0:05.76 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89119   0.0  0.0 412354928  15152 s017  S    12:00PM   0:05.97 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89106   0.0  0.0 412359024  11760 s017  S    12:00PM   0:05.88 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89086   0.0  0.0 412358000  11824 s017  S    12:00PM   0:05.88 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89050   0.0  0.0 412356976  16544 s017  S    12:00PM   0:05.91 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         89028   0.0  0.0 412358000  15200 s017  S    12:00PM   0:05.78 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88993   0.0  0.0 412360048  13088 s017  S    12:00PM   0:05.86 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88956   0.0  0.0 412361072  15312 s017  S    12:00PM   0:05.88 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88933   0.0  0.0 412359024  16448 s017  S    12:00PM   0:05.87 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88916   0.0  0.0 412363120  11744 s017  S    12:00PM   0:05.15 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88894   0.0  0.0 412361072  12880 s017  S    12:00PM   0:05.92 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88877   0.0  0.0 412354928  15184 s017  S    12:00PM   0:04.33 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88855   0.0  0.0 412355952  16608 s017  S    12:00PM   0:05.69 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88839   0.0  0.0 412355952  12928 s017  S    12:00PM   0:05.69 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88795   0.0  0.0 412356976  11856 s017  S    12:00PM   0:05.04 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88775   0.0  0.0 412356976  15536 s017  S    12:00PM   0:05.82 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88758   0.0  0.0 412360048  16352 s017  S    12:00PM   0:05.86 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88734   0.0  0.0 412354928  16384 s017  S    12:00PM   0:05.84 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88710   0.0  0.0 412353904  16592 s017  S    12:00PM   0:06.03 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88687   0.0  0.0 412354928  15136 s017  S    12:00PM   0:05.75 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88672   0.0  0.0 412359024  15232 s017  S    12:00PM   0:06.06 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88646   0.0  0.0 412359024  12864 s017  S    12:00PM   0:05.82 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88631   0.0  0.0 412355952  16576 s017  S    12:00PM   0:05.91 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88611   0.0  0.0 412360048  15424 s017  S    12:00PM   0:06.26 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88594   0.0  0.0 412359024  15248 s017  S    12:00PM   0:05.86 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88577   0.0  0.0 412359024  16496 s017  S    12:00PM   0:05.92 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88561   0.0  0.0 412358000  15104 s017  S    12:00PM   0:05.93 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88545   0.0  0.0 412354928  15280 s017  S    12:00PM   0:06.74 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88525   0.0  0.0 412354928  15168 s017  S    12:00PM   0:06.10 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88508   0.0  0.0 412353904  15264 s017  S    12:00PM   0:06.85 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88487   0.0  0.0 412354928  11792 s017  S    12:00PM   0:05.98 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88468   0.0  0.0 412355952  15264 s017  S    12:00PM   0:06.08 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88447   0.0  0.0 412353904  15232 s017  S    12:00PM   0:05.78 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88432   0.0  0.0 412355952  12976 s017  S    12:00PM   0:06.02 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88412   0.0  0.0 412355952  11760 s017  S    12:00PM   0:05.82 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88398   0.0  0.0 412354928  16464 s017  S    12:00PM   0:05.81 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88378   0.0  0.0 412358000  16432 s017  S    12:00PM   0:05.69 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88364   0.0  0.0 412353904  11776 s017  S    12:00PM   0:05.03 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88346   0.0  0.0 412355952  15184 s017  S    12:00PM   0:04.79 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88328   0.0  0.0 412354928  15104 s017  S    12:00PM   0:05.94 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88310   0.0  0.0 412354928  11760 s017  S    12:00PM   0:06.14 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88287   0.0  0.0 412356976  16400 s017  S    12:00PM   0:05.49 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88268   0.0  0.0 412355952  11792 s017  S    12:00PM   0:05.77 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88253   0.0  0.0 412356976  16560 s017  S    12:00PM   0:05.75 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88228   0.0  0.0 412356976  11792 s017  S    12:00PM   0:05.91 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         88221   0.0  0.0 412354928  15184 s017  S    12:00PM   0:05.90 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         83553   0.0  0.1 1865217680  60944   ??  S    11:49AM   0:04.77 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=83547
+projects          7629   0.0  0.0 412369264  16528   ??  S    11:47PM   0:38.19 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7541   0.0  0.0 412386672  16704   ??  S    11:47PM   0:44.72 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7474   0.0  0.0 412370288  12976   ??  S    11:47PM   0:30.33 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7390   0.0  0.0 412380528  15120   ??  S    11:47PM   0:42.45 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7340   0.0  0.0 412378480  19248   ??  S    11:47PM   0:43.71 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7308   0.0  0.0 412381552  15440   ??  S    11:47PM   0:39.34 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7261   0.0  0.0 412373360  16432   ??  S    11:47PM   0:42.75 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7247   0.0  0.0 412374384  16464   ??  S    11:47PM   0:44.31 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects          7228   0.0  0.0 412376432  12864   ??  S    11:47PM   0:47.51 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -u domain_scraper_multi_suburb_mongodb.py
+projects         51744   0.0  0.0 411938240  11584 s009  S+   10:06PM   0:00.70 /Users/projects/.rbenv/versions/3.2.2/bin/ruby bin/rails generate mongoid:config
+projects         31632   0.0  0.1 1865121168  56144   ??  S    Thu09AM   0:05.33 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=60347
+projects         36789   0.0  0.1 1865155152  63520   ??  S    Wed08PM   1:08.60 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=36503
+projects         77565   0.0  0.1 1865153616  63728   ??  S    Wed07PM   1:14.98 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=37304
+projects         47093   0.0  0.1 1865153872  63488   ??  S    Wed02PM   1:30.54 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=33943
+projects         34654   0.0  0.1 1865186640  64896   ??  S    Wed02PM   1:06.35 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) /Users/projects/.vscode/extensions/mongodb.mongodb-vscode-1.14.2/dist/languageServer.js --node-ipc --clientProcessId=33941
+projects         58435   0.0  0.0 412366192  21744 s111  S+   12:42PM   0:02.62 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21262   0.0  0.0 412354928  16768 s089  S    12:20PM   0:05.17 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21253   0.0  0.0 412355952  16576 s089  S    12:20PM   0:05.09 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21218   0.0  0.0 412358000  12944 s089  S    12:20PM   0:05.24 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21183   0.0  0.0 412361072  13200 s089  S    12:20PM   0:05.80 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21168   0.0  0.0 412358000  13072 s089  S    12:19PM   0:05.04 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21147   0.0  0.0 412358000  12912 s089  S    12:19PM   0:05.16 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21132   0.0  0.0 412364144  11792 s089  S    12:19PM   0:05.18 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21119   0.0  0.0 412359024  16512 s089  S    12:19PM   0:05.22 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21085   0.0  0.0 412362096  15376 s089  S    12:19PM   0:05.37 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+projects         21061   0.0  0.0 412362096  12992 s089  S    12:19PM   0:05.32 /opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python domain_scraper_multi_suburb_mongodb.py
+
+============================================
+Diagnostic Complete
+============================================

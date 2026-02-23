@@ -1,0 +1,204 @@
+mw rr O D
+
+ER
+
+ia
+
+EXPLORER
+
+\ PROPERTY_DATA_SCRAPING
+
+> .venv
+
+Y 00_Run_Commands
+¥ Change_Monitor.md
+ Run_Commands.md
+> 01_House_Plan_Data
+
+> 01_Run_Commands
+
+v 02_
+
+Domain_Scaping
+
+> All_Properties_Data
+
+\ Sold_Properties
+> 03_Gold_Coast
+
+> 04_
+> 05_]
+> 06_]
+
+Scrape_All_Domain_Images_Only
+Property_Valuation
+Property_Georeference
+
+Y 07 _Undetectable_method
+Y 00_Production_System
+Y 02_Individual_Property_Google_Search
+
+@<“a«evweeedzdP_ @evvvyvyvvyv
+
+TTGEPTVTeDD
+
+e«w
+
+__pycache__
+multi_test_screenshots
+screenshots
+
+sikuli_clicker.sikuli
+test_simple.sikuli
+
+venv
+
+00_Run_Commands.md
+analyze_images.py
+API_CONFIGURATION_NOTES.md
+BATCH_PROCESSING_GUIDE.md
+batch_processor.py
+click_google_result.sh
+CLICLICK_GUIDE.md
+cliclick_workflow.py
+color_based_clicker.py
+complete_cliclick_workflow.py
+complete_color_workflow_fixed.py
+complete_color_workflow.py
+complete_workflow.py
+debug_click_logic.py
+debug_ocr.py
+debug_red_pixel_owner.py
+download_sikulix.py
+ENHANCED_RETRY_STRATEGY.md
+
+extract_favicon.py
+
+MARY.md
+
+00_Run_Commands > ¥ Run_Commands.md > *< ## ill Quick Start
+Successfully implemented production-ready MongoDB integration with automatic data quality management!
+
+SomnrtouhRUWune
+
+Q1
+
+an
+
+O©OANODUBWHN
+
+WWWWNNNNNNNNNN
+WNPSODINHKRUABRWNES
+
+34
+35
+
+PROBLEMS
+
+® harcourts_scraper.py
+
+Q Property_Data_Scraping
+
+## WM Quick Start
+
+~**bash
+
+cd @7_Undetectable_method/Simple_Method
+
+# One-time setup (if needed)
+python fix_mongodb_indexes.py
+
+# Run complete pipeline
+./process_all_sessions.sh
+
+## @ What Was Implemented
+
+### 1. **Deduplication System** (* remove_duplicates.py~ )
+Scans MongoDB for duplicate addresses
+Keeps most recently updated version
+Removes all other duplicates
+
+Dry-run mode available
+
+Reports what was removed
+
+### 2. **Temporary File Cleanup** (*cleanup_temp_files.py~ )
+- Removes screenshots, OCR data, session JSON files
+
+— Prevents disk space accumulation
+
+— Runs automatically at pipeline start
+— Dry-run mode available
+
+— Shows space freed
+
+{} harcourts_properties.json
+
+pty
+
+¥ Run_Commands.md X
+
+### 3. **0ff-Market Property Removal+* (*remove_offmarket_properties.py  )
+— Identifies properties without listing URLs
+
+— Removes them from MongoDB automatically
+
+OUTPUT
+
+DEBUG CONSOLE TERMINAL
+
+PORTS
+
+(base) projects@Williams-MacBook-Pro Simple_Method % ./process_all_sessions.sh
+Screenshot directory: screenshots_session_1
+
+4 binge
+
+1aG4499
+
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+
+Cereanchn+t
+
+1/25:
+2/25:
+3/25:
+4/25:
+5/25:
+6/25:
+
+7y/7e.
+
+Opening URL in Chrome...
+Opened URL in Chrome
+Activating Chrome window...
+Scrolling to top of page...
+
+Taking 25 screenshots while scrolling down...
+
+section_@1_20251204_072146.
+section_@2_20251204_072149.
+section_@3_20251204_072152.
+section_04_20251204_072155.
+section_@5_20251204_072158.
+section_@6_20251204_072201.
+
+pmartinn AT IAXOIIMBA AWMIAD
+
+png
+png
+png
+png
+png
+png
+
+$ process_all_sessions.sh @ batch_processor.py
+
+(_) bash - Simple_Method + v
+
+bash Simpl...

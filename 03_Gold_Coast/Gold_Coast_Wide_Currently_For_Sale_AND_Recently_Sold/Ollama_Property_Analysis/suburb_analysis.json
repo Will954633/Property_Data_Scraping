@@ -1,0 +1,41 @@
+{
+  "all_suburbs": [],
+  "multi_word_suburbs": [],
+  "target_suburbs_status": {
+    "robina": {
+      "found": false,
+      "actual_name": null,
+      "count": 0
+    },
+    "mudgeeraba": {
+      "found": false,
+      "actual_name": null,
+      "count": 0
+    },
+    "varsity lakes": {
+      "found": false,
+      "actual_name": null,
+      "count": 0
+    },
+    "reedy creek": {
+      "found": false,
+      "actual_name": null,
+      "count": 0
+    },
+    "burleigh waters": {
+      "found": false,
+      "actual_name": null,
+      "count": 0
+    },
+    "merimac": {
+      "found": false,
+      "actual_name": null,
+      "count": 0
+    },
+    "warongary": {
+      "found": false,
+      "actual_name": null,
+      "count": 0
+    }
+  }
+}

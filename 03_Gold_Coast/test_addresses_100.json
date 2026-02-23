@@ -1,0 +1,902 @@
+[
+  {
+    "address_pid": 3144762,
+    "address": "U 507/28 DALPURA STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a27",
+    "collection": "surfers_paradise",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 3144760,
+    "address": "U 505/28 DALPURA STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a28",
+    "collection": "surfers_paradise",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 349804,
+    "address": "11 HANLAN STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a29",
+    "collection": "surfers_paradise",
+    "unit_type": null,
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 349813,
+    "address": "11 HANLAN STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a2a",
+    "collection": "surfers_paradise",
+    "unit_type": null,
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 3144794,
+    "address": "U 907/28 DALPURA STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a2b",
+    "collection": "surfers_paradise",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 3144750,
+    "address": "U 403/28 DALPURA STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a2c",
+    "collection": "surfers_paradise",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 3144795,
+    "address": "U 908/28 DALPURA STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a2d",
+    "collection": "surfers_paradise",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 3144784,
+    "address": "U 805/28 DALPURA STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a2e",
+    "collection": "surfers_paradise",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 3144793,
+    "address": "U 906/28 DALPURA STREET SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a2f",
+    "collection": "surfers_paradise",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 1743129,
+    "address": "15 RIVER TERRACE SURFERS PARADISE QLD 4217",
+    "suburb": "SURFERS PARADISE",
+    "doc_id": "690bd8918b8f546592643a30",
+    "collection": "surfers_paradise",
+    "unit_type": null,
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 1585922,
+    "address": "3 SUSANNE STREET SOUTHPORT QLD 4215",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b5fb",
+    "collection": "southport",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1585936,
+    "address": "20 SUSANNE STREET SOUTHPORT QLD 4215",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b5fc",
+    "collection": "southport",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 2990158,
+    "address": "U 2/20 MASON STREET SOUTHPORT QLD 4217",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b5fd",
+    "collection": "southport",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 2526852,
+    "address": "U 2/75 STEVENS STREET SOUTHPORT QLD 4215",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b5fe",
+    "collection": "southport",
+    "unit_type": "U",
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1162455,
+    "address": "13 LIND AVENUE SOUTHPORT QLD 4215",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b5ff",
+    "collection": "southport",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 2990157,
+    "address": "U 1/20 MASON STREET SOUTHPORT QLD 4217",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b600",
+    "collection": "southport",
+    "unit_type": "U",
+    "postcode": "4217"
+  },
+  {
+    "address_pid": 1585934,
+    "address": "16 SUSANNE STREET SOUTHPORT QLD 4215",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b601",
+    "collection": "southport",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1148805,
+    "address": "31 KERR AVENUE SOUTHPORT QLD 4215",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b602",
+    "collection": "southport",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1148823,
+    "address": "55 BROOKE AVENUE SOUTHPORT QLD 4215",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b603",
+    "collection": "southport",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1162461,
+    "address": "2 LIND AVENUE SOUTHPORT QLD 4215",
+    "suburb": "SOUTHPORT",
+    "doc_id": "690bd84b8b8f54659262b604",
+    "collection": "southport",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1853522,
+    "address": "28 WOODY VIEWS WAY ROBINA QLD 4226",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606950",
+    "collection": "robina",
+    "unit_type": null,
+    "postcode": "4226"
+  },
+  {
+    "address_pid": 1853674,
+    "address": "U 5/4 UNIVERSITY DRIVE ROBINA QLD 4220",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606951",
+    "collection": "robina",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 1374725,
+    "address": "18 BEN LEXCEN PLACE ROBINA QLD 4220",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606952",
+    "collection": "robina",
+    "unit_type": null,
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 1853670,
+    "address": "U 1/4 UNIVERSITY DRIVE ROBINA QLD 4226",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606953",
+    "collection": "robina",
+    "unit_type": "U",
+    "postcode": "4226"
+  },
+  {
+    "address_pid": 929130,
+    "address": "28 BIRKDALE STREET ROBINA QLD 4226",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606954",
+    "collection": "robina",
+    "unit_type": null,
+    "postcode": "4226"
+  },
+  {
+    "address_pid": 929120,
+    "address": "5 PRESTWICK COURT ROBINA QLD 4226",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606955",
+    "collection": "robina",
+    "unit_type": null,
+    "postcode": "4226"
+  },
+  {
+    "address_pid": 929124,
+    "address": "15 BIRKDALE STREET ROBINA QLD 4226",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606956",
+    "collection": "robina",
+    "unit_type": null,
+    "postcode": "4226"
+  },
+  {
+    "address_pid": 929169,
+    "address": "3 HINDMARSH COURT ROBINA QLD 4226",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606957",
+    "collection": "robina",
+    "unit_type": null,
+    "postcode": "4226"
+  },
+  {
+    "address_pid": 1847006,
+    "address": "87 OLYMPUS DRIVE ROBINA QLD 4226",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606958",
+    "collection": "robina",
+    "unit_type": null,
+    "postcode": "4226"
+  },
+  {
+    "address_pid": 1381491,
+    "address": "4 OAKLEIGH CIRCUIT ROBINA QLD 4226",
+    "suburb": "ROBINA",
+    "doc_id": "690bd7eb8b8f546592606959",
+    "collection": "robina",
+    "unit_type": null,
+    "postcode": "4226"
+  },
+  {
+    "address_pid": 2078371,
+    "address": "U 9/99 MUIR STREET LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e4f",
+    "collection": "labrador",
+    "unit_type": "U",
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1645110,
+    "address": "110 MUIR STREET LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e50",
+    "collection": "labrador",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 2094887,
+    "address": "U 1/100 KUMBARI AVENUE LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e51",
+    "collection": "labrador",
+    "unit_type": "U",
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 2078367,
+    "address": "U 5/99 MUIR STREET LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e52",
+    "collection": "labrador",
+    "unit_type": "U",
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1624748,
+    "address": "19 HEYDON AVENUE LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e53",
+    "collection": "labrador",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 2542850,
+    "address": "U 1/9 MIDDLE STREET LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e54",
+    "collection": "labrador",
+    "unit_type": "U",
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 2542853,
+    "address": "U 4/9 MIDDLE STREET LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e55",
+    "collection": "labrador",
+    "unit_type": "U",
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 2078369,
+    "address": "U 7/99 MUIR STREET LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e56",
+    "collection": "labrador",
+    "unit_type": "U",
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 2078368,
+    "address": "U 6/99 MUIR STREET LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e57",
+    "collection": "labrador",
+    "unit_type": "U",
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 1167285,
+    "address": "12 MIDDLE STREET LABRADOR QLD 4215",
+    "suburb": "LABRADOR",
+    "doc_id": "690bd85f8b8f546592631e58",
+    "collection": "labrador",
+    "unit_type": null,
+    "postcode": "4215"
+  },
+  {
+    "address_pid": 693191,
+    "address": "5 MAHOGANY DRIVE PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319cb",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 693198,
+    "address": "8 CEDAR COURT PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319cc",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 698346,
+    "address": "16 DOGWOOD DRIVE PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319cd",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 693195,
+    "address": "11 CEDAR COURT PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319ce",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 693199,
+    "address": "6 CEDAR COURT PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319cf",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 698345,
+    "address": "18 DOGWOOD DRIVE PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319d0",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 2078847,
+    "address": "U 1/24 SARAWAK AVENUE PALM BEACH QLD 4223",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319d1",
+    "collection": "palm_beach",
+    "unit_type": "U",
+    "postcode": "4223"
+  },
+  {
+    "address_pid": 1650437,
+    "address": "19 MOKERA AVENUE PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319d2",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 1650336,
+    "address": "9 MOKERA AVENUE PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319d3",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 1650444,
+    "address": "20 MOKERA AVENUE PALM BEACH QLD 4221",
+    "suburb": "PALM BEACH",
+    "doc_id": "690bd85d8b8f5465926319d4",
+    "collection": "palm_beach",
+    "unit_type": null,
+    "postcode": "4221"
+  },
+  {
+    "address_pid": 2031201,
+    "address": "8 HANS STREET UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8348b8f546592622e07",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2947948,
+    "address": "21 ERSKINE STREET UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8348b8f546592622e08",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2035465,
+    "address": "42 PECAN DRIVE UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8348b8f546592622e09",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2020644,
+    "address": "26 SUNDEW CRESCENT UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8348b8f546592622e0a",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2020500,
+    "address": "24 HANS STREET UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8358b8f54659262428d",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2026378,
+    "address": "8 ERSKINE STREET UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8358b8f54659262428e",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2036220,
+    "address": "15 JENLEY COURT UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8358b8f54659262428f",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2020641,
+    "address": "32 SUNDEW CRESCENT UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8358b8f546592624290",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2035469,
+    "address": "34 PECAN DRIVE UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8358b8f546592624291",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2020643,
+    "address": "28 SUNDEW CRESCENT UPPER COOMERA QLD 4209",
+    "suburb": "UPPER COOMERA",
+    "doc_id": "690bd8358b8f546592624292",
+    "collection": "upper_coomera",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2882468,
+    "address": "17 CHISOLM WAY PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cb8",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2875093,
+    "address": "94 WILLIAM BOULEVARD PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cb9",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2875087,
+    "address": "106 WILLIAM BOULEVARD PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cba",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2873112,
+    "address": "111 WILLIAM BOULEVARD PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cbb",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2856492,
+    "address": "26 LAUENSTEIN CRESCENT PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cbc",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2875084,
+    "address": "112 WILLIAM BOULEVARD PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cbd",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2891353,
+    "address": "1 LAUENSTEIN CRESCENT PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cbe",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2892469,
+    "address": "1 BARRON COURT PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cbf",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2856325,
+    "address": "6 BARAKEE STREET PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cc0",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 2882467,
+    "address": "19 CHISOLM WAY PIMPAMA QLD 4209",
+    "suburb": "PIMPAMA",
+    "doc_id": "690bd8208b8f546592618cc1",
+    "collection": "pimpama",
+    "unit_type": null,
+    "postcode": "4209"
+  },
+  {
+    "address_pid": 68863,
+    "address": "U 2916/24 QUEENSLAND AVENUE BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a2a",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 64502,
+    "address": "U 1809/24 QUEENSLAND AVENUE BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a2b",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 105268,
+    "address": "U 5/142 SURF PARADE BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a2c",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 123658,
+    "address": "U 9/141 SURF PARADE BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a2d",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 102521,
+    "address": "U 28/136 OLD BURLEIGH ROAD BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a2e",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 2873183,
+    "address": "U 304/95 OLD BURLEIGH ROAD BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a2f",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 2882843,
+    "address": "2725 GOLD COAST HIGHWAY BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a30",
+    "collection": "broadbeach",
+    "unit_type": null,
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 2873166,
+    "address": "U 101/95 OLD BURLEIGH ROAD BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a31",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 2873182,
+    "address": "U 303/95 OLD BURLEIGH ROAD BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a32",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 2873168,
+    "address": "U 103/95 OLD BURLEIGH ROAD BROADBEACH QLD 4218",
+    "suburb": "BROADBEACH",
+    "doc_id": "690bd8108b8f546592615a33",
+    "collection": "broadbeach",
+    "unit_type": "U",
+    "postcode": "4218"
+  },
+  {
+    "address_pid": 1946224,
+    "address": "U 1146/1 OCEAN STREET BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141ab",
+    "collection": "burleigh_heads",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 99614,
+    "address": "1865 GOLD COAST HIGHWAY BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141ac",
+    "collection": "burleigh_heads",
+    "unit_type": null,
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 101642,
+    "address": "U 20/12 GOODWIN TERRACE BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141ad",
+    "collection": "burleigh_heads",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 1946153,
+    "address": "U 1075/1 OCEAN STREET BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141ae",
+    "collection": "burleigh_heads",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 1946305,
+    "address": "U 2078/1 OCEAN STREET BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141af",
+    "collection": "burleigh_heads",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 99626,
+    "address": "1865 GOLD COAST HIGHWAY BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141b0",
+    "collection": "burleigh_heads",
+    "unit_type": null,
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 105021,
+    "address": "U 2/10 STANLEY STREET BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141b1",
+    "collection": "burleigh_heads",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 1946140,
+    "address": "U 1062/1 OCEAN STREET BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141b2",
+    "collection": "burleigh_heads",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 1946201,
+    "address": "U 1123/1 OCEAN STREET BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141b3",
+    "collection": "burleigh_heads",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 1946283,
+    "address": "U 2056/1 OCEAN STREET BURLEIGH HEADS QLD 4220",
+    "suburb": "BURLEIGH HEADS",
+    "doc_id": "690bd80f8b8f5465926141b4",
+    "collection": "burleigh_heads",
+    "unit_type": "U",
+    "postcode": "4220"
+  },
+  {
+    "address_pid": 294206,
+    "address": "8881 MAGNOLIA DRIVE HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a880",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294208,
+    "address": "8879 MAGNOLIA DRIVE HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a881",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294304,
+    "address": "8010 KEY WATERS XXX HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a882",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294315,
+    "address": "8021 KEY WATERS XXX HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a883",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294327,
+    "address": "8033 KEY WATERS XXX HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a884",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294524,
+    "address": "8103 THE CIRCLE XXX HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a885",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294742,
+    "address": "2552 BELMONT COURT HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a886",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294768,
+    "address": "8442 MAGNOLIA DRIVE HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a887",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294809,
+    "address": "2134 THE CIRCLE XXX HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a888",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  },
+  {
+    "address_pid": 294813,
+    "address": "2126 THE CIRCLE XXX HOPE ISLAND QLD 4212",
+    "suburb": "HOPE ISLAND",
+    "doc_id": "690bd87a8b8f54659263a889",
+    "collection": "hope_island",
+    "unit_type": null,
+    "postcode": "4212"
+  }
+]

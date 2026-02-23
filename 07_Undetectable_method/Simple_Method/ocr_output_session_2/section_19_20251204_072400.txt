@@ -1,0 +1,138 @@
+0
+
+<>
+
+CLINE +8595 © &
+You 53.0156 ia
+129.2 Qs 272.0k -¥-
+3/7, Run targeted ingest (md/txt) for INTERNAL_PROJECTS >
+
+>.] Cline wants to execute this command:
+
+@ Not Executed
+
+python local_fs_processor.py —-config ingest_config_targeted. yaml
+--sources ingest_sources.yaml
+
+V API Request (@0I0250) v
+
+Thinking: ...ything organized as | go through the process. Let’s execute this!** >
+
+>.] Cline wants to execute this command:
+
+@ Not Executed
+
+python local_fs_processor.py —-config ingest_config_targeted. yaml
+--sources ingest_sources.yaml
+
+API Request... Y
+
+Auto-approve: Browser, Read (all), Edit (all), All Commands “~
+
+Cancel
+
+Type a message...
+
+rces.yaml @ processor_lib.py ® config.py
+
+Q Samantha
+
+@ samantha_processor.py
+
+5 non
+6
+
+7 import json
+8 import os
+
+9 import sys
+
+10 from pathlib import Path
+
+11 from datetime import datetime
+
+12 from openai import OpenAI
+
+13 from typing import List, Dict, Any, Optional
+14 import tiktoken
+
+15
+
+16 # Import document parsers
+17 try:
+
+18 from docx import Document as DocxDocument
+19 except ImportError:
+
+20 DocxDocument = None
+21
+
+22 try:
+
+23 import PyPDF2
+
+24 except ImportError:
+
+25 PyPDF2 = None
+
+26
+
+27 # Configuration
+
+28 OPENAI_API_KEY -=-"sk-proj—61jSFgnRtZC6pDVSLpTpzpTAzytz4s1ZS7baD leDr9JQUn7LgSNHebwiuL PWHntwCnDwBX7 fqGT3B LbkFJI_SHIvc3RZNHrr76YxNQGnLIM
+
+29 MODEL_NAME = “gpt-5-nano"
+
+30 CHUNK_SIZE_TOKENS = 800
+
+31
+
+32 # Storage paths
+
+33 KNOWLEDGE_BASE_DIR = "@5_Knowledge_ Base"
+
+34 MASTER_INDEX_FILE = "master_index. json"
+
+35
+
+36 # Document type taxonomy
+
+37 DOCUMENT_TYPES = [
+
+38 "BOOK", "CODE", "MARKETING", "STRATEGY", "PROJECT",
+
+2a | "MEFTTNG NATEC!! "ETMANCTAIL " "ADFRATTONAI "! “TNTFRNAL DRNIFCTC!
+
+PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL PORTS
+
+B® Scanning: AI and ML Applications/Topics and Actions
+
+i Topics and Actions Module_Working Doc
+Type: application/vnd.google-apps. document
+® Downloading...
+® Processing...
+
+Processing .docx file...
+
+&
+@ Extracted 45486 characters (10403 tokens)
+@
+
+Classifying document...
+v Type: OPERATIONAL
+
+ Teatarenanl winebirnn Aneiiman’® nantlaninn AT arneakhlead nemnnetiimeitine)) £nllawsoiin urnebtlas
+
+® samantha_processor.py X ¥ SIMPLIFIED_PLAN.md
+
+Os
+
+® code_tools.py ! ingest_config.yaml
+
+Aa ab * ?0f1 “* b= xX
+
+Oooo
+
+62 python3.12
+
+zsh 07 Sa...

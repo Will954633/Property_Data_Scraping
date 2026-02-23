@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-01-31T00:56:30.003967",
+  "total_uploaded": 0,
+  "total_updated": 10,
+  "suburbs": [
+    {
+      "suburb": "robina",
+      "uploaded": 0,
+      "updated": 2,
+      "total_processed": 2,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 20 Tuggerah Close, Robina, QLD 4226)"
+    },
+    {
+      "suburb": "mudgeeraba",
+      "uploaded": 0,
+      "updated": 2,
+      "total_processed": 2,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 100 Lambor Drive, Mudgeeraba, QLD 4213)"
+    },
+    {
+      "suburb": "varsity-lakes",
+      "uploaded": 0,
+      "updated": 2,
+      "total_processed": 2,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 49 Lantau Crescent Varsity, Lakes, QLD 4227)"
+    },
+    {
+      "suburb": "reedy-creek",
+      "uploaded": 0,
+      "updated": 2,
+      "total_processed": 2,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 1 6 Encamp Street Reedy, Creek, QLD 4227)"
+    },
+    {
+      "suburb": "burleigh-waters",
+      "uploaded": 0,
+      "updated": 2,
+      "total_processed": 2,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 11 Warrina Crescent Burleigh, Waters, QLD 4220)"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "url": "https://www.domain.com.au/property-profile/8-matina-street-biggera-waters-qld-4216",
+  "address": "8 MATINA STREET BIGGERA WATERS QLD 4216",
+  "scraped_at": "2025-11-05T20:05:17.352991",
+  "property_timeline": [
+    {
+      "date": "1988-10-27",
+      "month_year": "Oct 1988",
+      "category": "Sale",
+      "type": "PRIVATE TREATY",
+      "price": 121500,
+      "days_on_market": null,
+      "is_major_event": true,
+      "agency_name": null,
+      "agency_url": null,
+      "is_sold": true
+    }
+  ],
+  "address_pid": 451212,
+  "suburb": "BIGGERA WATERS"
+}

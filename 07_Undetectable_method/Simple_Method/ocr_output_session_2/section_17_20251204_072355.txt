@@ -1,0 +1,251 @@
+mw rr O D
+
+ER
+
+ia
+
+EXPLORER
+
+\ PROPERTY_DATA_SCRAPING
+
+> .venv
+
+Y 00_Run_Commands
+
+¥ Change_Monitor.md
+ Run_Commands.md
+> 01_House_Plan_Data
+> 01_Run_Commands
+
+v 02_
+
+Domain_Scaping
+
+> All_Properties_Data
+
+\ Sold_Properties
+> 03_Gold_Coast
+
+> 04_
+> 05_]
+> 06_]
+
+Scrape_All_Domain_Images_Only
+Property_Valuation
+Property_Georeference
+
+Y 07 _Undetectable_method
+Y 00_Production_System
+
+Y 02_Individual_Property_Google_Search
+
+@<“a«evweeedzdP_ @evvvyvyvvyv
+
+TTGEPTVTeDD
+
+e«w
+
+__pycache__
+multi_test_screenshots
+screenshots
+
+sikuli_clicker.sikuli
+test_simple.sikuli
+
+venv
+
+00_Run_Commands.md
+analyze_images.py
+API_CONFIGURATION_NOTES.md
+BATCH_PROCESSING_GUIDE.md
+batch_processor.py
+click_google_result.sh
+CLICLICK_GUIDE.md
+cliclick_workflow.py
+color_based_clicker.py
+complete_cliclick_workflow.py
+complete_color_workflow_fixed.py
+complete_color_workflow.py
+complete_workflow.py
+debug_click_logic.py
+debug_ocr.py
+debug_red_pixel_owner.py
+download_sikulix.py
+ENHANCED_RETRY_STRATEGY.md
+
+extract_favicon.py
+
+MARY.md
+
+00_Run_Commands > ¥ Run_Commands.md > *< ## ill Quick Start
+
+17
+
+19
+20
+
+21
+22
+23
+24
+23)
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+
+PROBLEMS
+
+® harcourts_scraper.py
+
+Q Property_Data_Scraping
+
+## @ What Was Implemented
+
+### 1. **Deduplication System** (* remove_duplicates.py~ )
+
+= scans Mongovb Tor duplicate addresses
+— Keeps most recently updated version
+— Removes all other duplicates
+
+### 2. **Temporary File Cleanup** (*cleanup_temp_files.py~ )
+Removes screenshots, OCR data, session JSON files
+Prevents disk space accumulation
+Runs automatically at pipeline start
+Dry-run mode available
+
+Shows space freed
+
+Dry-run mode available
+Reports what was removed
+
+pty
+
+{} harcourts_properties.json
+
+¥ Run_Commands.md X
+
+### 3. **0ff-Market Property Removal+* (*remove_offmarket_properties.py  )
+
+### 4. **Updated Pipelinex* (*process_all_sessions.sh* )
+
+Identifies properties without listing URLs
+Removes them from MongoDB automatically
+Properties without listings = not for sale
+Dry-run mode available
+
+Reports what was removed
+
+x*New 8-step workflow: **
+
+Ont oauhWNFe S&S
+
+### 5. **Documentation** (*PRODUCTION_WORKFLOW_GUIDE.md* )
+
+OUTPUT
+
+. Cleanup temporary files
+Capture screenshots
+
+OCR extraction
+
+. Parse property data
+
+. Upload to MongoDB
+
+. Remove duplicates
+
+Enrich properties
+
+Remove off-market properties
+Display final status
+
+DEBUG CONSOLE TERMINAL PORTS
+
+(base) projects@Williams-MacBook-Pro Simple_Method % ./process_all_sessions.sh
+
+4
+
+>
+
+1444490444994 4
+
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+
+Cereanchn+t
+
+1/25:
+2/25:
+3/25:
+4/25:
+5/25:
+6/25:
+7/25:
+8/25:
+9/25:
+
+10/25:
+11/25:
+12/25:
+13/25:
+
+AAS ICs
+
+aking 25 screenshots while scrolling down...
+
+section_01_20251204_072310.png
+section_02_20251204_072313.png
+section_03_20251204_072315.png
+section_04_20251204_072318. png
+section_@5_20251204_072321.png
+section_06_20251204_072324. png
+section_07_20251204_072327.png
+section_08_20251204_072329. png
+section_09_20251204_072332.png
+section_10_20251204_072335.png
+section_11_20251204_072338.png
+section_12_20251204_072340. png
+section_13_20251204_072343.png
+
+eacektinn 1A JRDOI1IAA ATFIDAC nnn
+
+$ process_all_sessions.sh @ batch_processor.py
+
+(_) bash - Simple_Method + v
+
+bash Simpl...

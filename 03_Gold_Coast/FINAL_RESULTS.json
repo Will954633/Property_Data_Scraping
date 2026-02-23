@@ -1,0 +1,130 @@
+{
+  "url": "https://www.domain.com.au/property-profile/11-matina-street-biggera-waters-qld-4216",
+  "address": "11 MATINA STREET BIGGERA WATERS QLD 4216",
+  "scraped_at": "2025-11-05T09:35:59.613616",
+  "features": {
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "car_spaces": 3,
+    "land_size": null,
+    "property_type": "House"
+  },
+  "valuation": {
+    "low": 1140000,
+    "mid": 1320000,
+    "high": 1500000,
+    "accuracy": "High",
+    "date": "2025-11-03T01:32:10.000Z"
+  },
+  "rental_estimate": {
+    "weekly_rent": 950,
+    "yield": 3.73
+  },
+  "property_timeline": [],
+  "images": [
+    {
+      "url": "https://rimh2.domainstatic.com.au/SLue7StNb_5hZswJo0jlE2BGsgU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_1_1_240628_042427-w1273-h848",
+      "index": 0,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/8l75V8sQmROS0Gc1sv9awPz_qlU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_2_1_240628_042427-w1274-h853",
+      "index": 1,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/tasDOskmKpYNlje6bc8kZAVuhYU=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_3_1_240628_042427-w1276-h844",
+      "index": 2,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/p9Ht9Vgzt5BKuYpq47lLhcmnqws=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_4_1_240628_042427-w1270-h843",
+      "index": 3,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/Nu5Ja6KWAsZ0CVE7jYUXyCB_I7o=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_5_1_240628_042427-w1273-h850",
+      "index": 4,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/0eFMHwk-4tSybm6hxaFrkoLR9t0=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_6_1_240628_042427-w1271-h847",
+      "index": 5,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/iG67uBJ3yujnThptUg0ubaUynCg=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_7_1_240628_042427-w1266-h841",
+      "index": 6,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/6U0x4_AD2prcodfmAIOJ5mWJink=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_8_1_240628_042427-w1275-h846",
+      "index": 7,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/dwKNudFRCDSzoEhMzEevjzYyPDY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_9_1_240628_042427-w1268-h843",
+      "index": 8,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/Sd3AKviUry-_u8z98KiPvydYtt8=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_10_1_240628_042427-w1270-h850",
+      "index": 9,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/fS8_9M_peiNC8TuGBOGKLiXveE4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_11_1_240628_042427-w1271-h844",
+      "index": 10,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/pzpSzE7-VhgDfqVYt94obsH4IQE=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_12_1_240628_042427-w1269-h843",
+      "index": 11,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/UCV_FSl3msztaifSkhQlDmk18iQ=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_13_1_240628_042427-w1279-h850",
+      "index": 12,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/w2yEQUnD6p0dUIyHAg4Qe3pIS6o=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_14_1_240628_042427-w1272-h850",
+      "index": 13,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/W5nsqyD50DIA5zWrT9PYiz59PL4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_15_1_240628_042427-w1270-h850",
+      "index": 14,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/wxr6oouWtMWkmHeW_MFbWx7igZY=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/17087033_16_3_240628_050628-w3000-h2121",
+      "index": 15,
+      "date": "2024-06-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/gcqervPARJOn9xXnV8zG1mgE-E4=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/16866195_1_1_240206_013424-w1280-h855",
+      "index": 16,
+      "date": "2024-02-06T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/-j64nZSIJpy17wH6yMFKurtwqsA=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/16866195_2_1_240206_013424-w1280-h855",
+      "index": 17,
+      "date": "2024-02-06T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/CurdLy2c7wgOouZi33S6TsM01fc=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/16866195_3_1_240206_013424-w1280-h855",
+      "index": 18,
+      "date": "2024-02-06T00:00:00.000Z"
+    },
+    {
+      "url": "https://rimh2.domainstatic.com.au/IQivLo5wmZ2NhDzFThbI2wYBego=/fit-in/5760x3240/filters:format(webp):quality(80):no_upscale()/16866195_4_1_240206_013424-w1280-h855",
+      "index": 19,
+      "date": "2024-02-06T00:00:00.000Z"
+    }
+  ],
+  "address_pid": 451228,
+  "suburb": "BIGGERA WATERS",
+  "collection": "biggera_waters",
+  "doc_id": "690ade8f5d08ff980273424d"
+}

@@ -1,0 +1,24 @@
+{
+  "test_date": "2026-02-04 07:20:21",
+  "test_address": "11 South Bay Drive Varsity Lakes, QLD 4227",
+  "expected_agency": "Ray White Malan + Co - Broadbeach",
+  "search_results": [
+    {
+      "title": "11 South Bay Drive, Varsity Lakes, QLD - Home For Sale \u2022 Ray White",
+      "url": "https://www.raywhite.com/qld/varsity-lakes/3344866"
+    },
+    {
+      "title": "Sold Townhouse - 11 South Bay Drive, Varsity Lakes, QLD 4227",
+      "url": "https://raywhitemalanandco.com.au/properties/sold-residential/qld/varsity-lakes-4227/townhouse/3344866"
+    },
+    {
+      "title": "11 South Bay Drive, Varsity Lakes QLD 4227 | Ray White Broadbeach | Leased",
+      "url": "https://www.homehound.com.au/listing/leased/qld/south-east/gold-coast-south-east/varsity-lakes-gold-coast-south-east/11-south-bay-drive-varsity-lakes-qld-4227/"
+    }
+  ],
+  "search_query": "11 South Bay Drive Varsity Lakes, QLD 4227 Ray White",
+  "total_results": 12,
+  "ray_white_results": 3,
+  "success": true,
+  "found_expected_agency": true
+}

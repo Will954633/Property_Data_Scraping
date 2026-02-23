@@ -1,0 +1,62 @@
+<> Q SSD_DRIVE Civ co&OoOod
+
+OG EXPLORER s-  f"}json ®@ mongodb_client_multi_collection.py ¥% Run_Commands.md X  ® config.py ¥ MULTI_COLLECTION_SETUP.md ®@ verify_setup.py rol]
+\Y SSD_DRIVE 00_Run_Commands > ¥ Run_Commands.md > #« # Start the backup service ***New version
+Y 00_Run_Commands 1 @ MongoDB Continuous Backup Script Created Successfully!
+ Run_Commands.md Z . .
+3 I've created a comprehensive backup script at:
+go ¥ Run_Mongodb.md 4 */Users/projects/Documents/SSD_DRIVE/scripts/continuous_mongodb_backup.sh*
+Y 01_House_Plan_Data 5
+> logs 6 «Key Features :**
+P > output 7 - @ Backs up MongoDB every 3@ minutes automatically
+v 8 - @ Stores backups in ~/Volumes/T7/MongdbBackups~
+=" elke 9 - @ Uses date/timestamp format (e.g., ~mongodb_backup_20250107_134500° )
+> __pycache__ () - @ Maintains exactly 10 backups (automatically deletes oldest when limit exceeded)
+> 00_Run_Commands.md 1 - @ Uses compressed backups with ‘--gzip* flag
+Cc v logs 2 - @ Colored console output with timestamps
+> run_20251107.154403 3 - @ Connection weitere before starting
+4 - @ Graceful shutdown with Ctrl+C
+> run_20251107.173015 5
+> run_20251107_202830 6 **To Run the Script:**
+) > run_20251107_211039 7
+> run_20251109_ 174933 8 # Start the backup see teen version
+9 ./scripts/continuous_mongo ackup.s
+> run_20251109_180055 - (BERD! STAY
+> run_20251110_114751 21 ***bash
+> run_20251110_115005 22 /Users/projects/Documents/SSD_DRIVE/scripts/continuous_mongodb_backup.sh
+> run_20251110_115441 2300 **
+vy run_20251110_120140 “4 n
+_ . 25 *To Stop the Script: +*
+= coordinator.log 26 Press “Ctrl+C> in the terminal
+= progress.log 27
+= worker_01.log 28 x*#What It Does: +**
+= worker_02.log 29 1. Verifies MongoDB connection at startup
+= ker_03.1 30 2. Creates the backup directory if it doesn't exist
+_ DUET AOA) 31 3. Performs an immediate first backup
+= worker_04.log 32 4. Waits 30 minutes, then performs the next backup
+= worker_05.log 33 5. After the 1@th backup, automatically removes the oldest backup before creating a new one
+= worker_06.log 34 6. Continues running until you stop it with Ctrl+C
+= worker_07.log Ba
+= worker_08.log PROBLEMS OUTPUT DEBUGCONSOLE TERMINAL PORTS bj} zsh + v We | tx
+= worker_09.log POINT_PROGRESS", "category_id":7,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 7018335, snapshot max: 7 | eS zsh
+= worker_10.log @18335 snapshot count: @, oldest timestamp: (@, ®@) , meta checkpoint timestamp: (@, ®) base write gen: 380971"}}}
+a fia {"t":{"$date":"2025-12-03T21: 23: 03.387+10:00"},"s":"I", "c":"WICHKPT", "id":22430, "ctx": "Checkpointer","msg":"WiredTiger message","attr":
+& [ies Sellake Bley {"message": {"ts_sec": 1764760983, "ts_usec": 387003, "thread" :"24282:0x1787a3000", "session_name":"WT_SESSION. checkpoint", "category": "WT_VERB_CHECK
+> output POINT_PROGRESS", "category_id":7,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 7018336, snapshot max: 7
+@18336 snapshot count: @, oldest timestamp: (@, ®@) , meta checkpoint timestamp: (@, 0) base write gen: 380971"}}}
+> temp {"t":{"$date":"2025-12-03T21:24:03.451+10:00"},"s ") "c":"WICHKPT", "“id'':22430, "ctx": "Checkpointer","msg":"WiredTiger message","attr":
+
+{"message": {"ts_sec":1764761043,"ts_usec": 451310, "thread" :"24282:0x1787a3000", "session_name":"WT_SESSION. checkpoint", "category": "WT_VERB_CHECK
+POINT_PROGRESS", "category_id":7,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 7018337, snapshot max: 7
+® config.py @18337 snapshot count: @, oldest timestamp: (@, @) , meta checkpoint timestamp: (@, @) base write gen: 380971"}}}
+® apt client {"t": {"$date":"2025-12-03T21:25:03.519+10:00"},"s":"I", "c":"WICHKPT", "id":22430, "ctx": "Checkpointer","msg":"WiredTiger message","attr":
+gpt_elient.py {"message":{"ts_sec"':1764761103, "ts_usec":51902 24282: @x1787a3000" ,, "session_name":"WT_SESSION. checkpoint", "category": "WT_VERB_CHECK
+® logger.py POINT_PROGRESS",""category_id":7,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 7018338, snapshot max: 7
+e : llel @18338 snapshot count: @, oldest timestamp: (@, ®) , meta checkpoint timestamp: (@, ®@) base write gen: 380971"}}}
+Inne TIn)_[S¥eLfeSL 997 {"t":{"$date":"2025-12-03T21: 26: 03.578+10:00"},"s":"I", "c":"WICHKPT", "id":22430, "ctx": "Checkpointer","msg":"WiredTiger message","attr":
+(Q) ® main.py {"message": {"ts_sec":1764761163, "ts_usec":578838, "thread" :"24282:0x1787a3000", "session_name":"WT_SESSION. checkpoint", "category": "WT_VERB_CHECK
+
+DNATAIT DDNroOccC! Hentaneam, thaw Iarkner TeavaltstnNepoiic 4! tlvarknen Deval ¢dit)ed Hmenltlallanueann eharebrnint eranechn} mins FJAIOCIION eneanekhrn} mvs 7
+
+® batch_manager.py
+

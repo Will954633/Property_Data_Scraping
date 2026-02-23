@@ -1,0 +1,187 @@
+mw rr O D
+
+ER
+
+ia
+
+EXPLORER
+
+\ PROPERTY_DATA_SCRAPING
+
+> .venv
+
+Y 00_Run_Commands
+¥ Change_Monitor.md
+ Run_Commands.md
+> 01_House_Plan_Data
+
+> 01_Run_Commands
+
+v 02_
+
+Domain_Scaping
+
+> All_Properties_Data
+
+\ Sold_Properties
+> 03_Gold_Coast
+
+> 04_
+> 05_]
+> 06_]
+
+Scrape_All_Domain_Images_Only
+Property_Valuation
+Property_Georeference
+
+Y 07 _Undetectable_method
+Y 00_Production_System
+
+Y 02_Individual_Property_Google_Search
+
+@<“a«evweeedzdP_ @evvvyvyvvyv
+
+TTGEPTVTeDD
+
+e«w
+
+__pycache__
+multi_test_screenshots
+screenshots
+
+sikuli_clicker.sikuli
+test_simple.sikuli
+
+venv
+
+00_Run_Commands.md
+analyze_images.py
+API_CONFIGURATION_NOTES.md
+BATCH_PROCESSING_GUIDE.md
+batch_processor.py
+click_google_result.sh
+CLICLICK_GUIDE.md
+cliclick_workflow.py
+color_based_clicker.py
+complete_cliclick_workflow.py
+complete_color_workflow_fixed.py
+complete_color_workflow.py
+complete_workflow.py
+debug_click_logic.py
+debug_ocr.py
+debug_red_pixel_owner.py
+download_sikulix.py
+ENHANCED_RETRY_STRATEGY.md
+
+extract_favicon.py
+
+MARY.md
+
+00_Run_Commands > ¥ Run_Commands.md > *< ## ill Quick Start
+
+® harcourts_scraper.py
+
+Q Property_Data_Scraping
+
+### 1. **Deduplication System** (* remove_duplicates.py~ )
+
+for duplicate addresses
+
+### 2. **Temporary File Cleanup** (*cleanup_temp_files.py~ )
+Removes screenshots, OCR data, session JSON files
+
+space accumulation
+cally at pipeline start
+
+operties without listing URLs
+from MongoDB automatically
+thout listings = not for sale
+
+2 ## WM Quick Start
+6
+7 # One-time setup (if needed)
+8 python fix_mongodb_indexes.py
+9
+(1) # Run complete pipeline
+Q 11 ./process_all_sessions.sh
+3
+4
+5
+6
+7 ## @ What Was Implemented
+8
+i)
+20 — Scans MongoDB
+21 — Keeps most recently updated version
+22 — Removes all other duplicates
+23 — Dry-run mode available
+24 — Reports what was removed
+25
+26
+27 =
+28 — Prevents disk
+29 — Runs automatii
+30 — Dry-run mode available
+31 — Shows space freed
+32
+33
+34 — Identifies pri
+35 — Removes them
+36 — Properties wi
+37 — Dry-run mode available
+38 — Reports what was removed
+PROBLEMS OUTPUT DEBUG CONSOLE
+
+TERMINAL PORTS
+
+pty
+
+{} harcourts_properties.json
+
+¥ Run_Commands.md X
+
+### 3. **0ff-Market Property Removal+* (*remove_offmarket_properties.py  )
+
+(base) projects@Williams-MacBook-Pro Simple_Method % ./process_all_sessions.sh
+
+SESSION 2: STARTING
+URL: https: //wMl. domain. com.au/sale/ robina-qld-4226/house/?exc ludeunde roffer=1&ssubs=0&page=2
+
+hot d to
+
+en
+
+3
+
+~ Opening URL in Chrom
+vy Opened URL in Chrome
+~ Activating Chrome wii
+~ Scrolling to top of
+
+~ Taking 25 screenshot
+* Screenshot 1/25:
+* Screenshot 2/25:
+“ Screenshot 3/25:
+
+ite Cereananehnt AsDEe
+
+shot 2
+
+S
+
+ndow. . «
+page...
+
+s while scrolling down...
+
+section_01_20251204_072310.png
+section_02_20251204_072313.png
+section_03_20251204_072315.png
+
+emactinn AA IAVOI1IDAA ATFIIBN0 nnn
+
+$ process_all_sessions.sh @ batch_processor.py
+
+(_) bash - Simple_Method + v
+
+bash Simpl...

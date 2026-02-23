@@ -1,0 +1,17 @@
+# GPT Enrichment Pipeline - Python Dependencies
+# Last Edit: 13/02/2026, 3:46 PM (Thursday) — Brisbane Time
+
+# Core Dependencies
+openai>=1.0.0
+pymongo>=4.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Optional: Google Maps (for corner block detection)
+googlemaps>=4.10.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Note: OpenStreetMap integration uses free APIs (no additional packages needed)

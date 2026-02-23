@@ -1,0 +1,88 @@
+================================================================================
+Domain URL Test Results - CORRECTED UNIT FORMAT
+================================================================================
+
+[1] HOUSE - BIGGERA WATERS
+    Address: 414 MARINE PARADE BIGGERA WATERS QLD 4215
+    URL:     https://www.domain.com.au/property-profile/414-marine-parade-biggera-waters-qld-4215
+
+[2] UNIT - BIGGERA WATERS
+    Address: U 12/414 MARINE PARADE BIGGERA WATERS QLD 4215
+    URL:     https://www.domain.com.au/property-profile/12-414-marine-parade-biggera-waters-qld-4215
+    NOTE: Unit prefix (U/V) removed from URL per Domain.com.au format
+
+[3] HOUSE - GILSTON
+    Address: 4 SITTELLA LANE GILSTON QLD 4211
+    URL:     https://www.domain.com.au/property-profile/4-sittella-lane-gilston-qld-4211
+
+[4] UNIT - GILSTON
+    Address: U 27/364 GILSTON ROAD GILSTON QLD 4211
+    URL:     https://www.domain.com.au/property-profile/27-364-gilston-road-gilston-qld-4211
+    NOTE: Unit prefix (U/V) removed from URL per Domain.com.au format
+
+[5] HOUSE - STAPYLTON
+    Address: 2 PENNY LANE STAPYLTON QLD 4207
+    URL:     https://www.domain.com.au/property-profile/2-penny-lane-stapylton-qld-4207
+
+[6] UNIT - STAPYLTON
+    Address: U 4/55 CHRISTENSEN ROAD STAPYLTON QLD 4207
+    URL:     https://www.domain.com.au/property-profile/4-55-christensen-road-stapylton-qld-4207
+    NOTE: Unit prefix (U/V) removed from URL per Domain.com.au format
+
+[7] HOUSE - OXENFORD
+    Address: 8 CENTRE COURT OXENFORD QLD 4210
+    URL:     https://www.domain.com.au/property-profile/8-centre-court-oxenford-qld-4210
+
+[8] UNIT - OXENFORD
+    Address: U 6/3 MICHIGAN DRIVE OXENFORD QLD 4210
+    URL:     https://www.domain.com.au/property-profile/6-3-michigan-drive-oxenford-qld-4210
+    NOTE: Unit prefix (U/V) removed from URL per Domain.com.au format
+
+[9] HOUSE - MERRIMAC
+    Address: 25 TERRACE COURT MERRIMAC QLD 4226
+    URL:     https://www.domain.com.au/property-profile/25-terrace-court-merrimac-qld-4226
+
+[10] UNIT - MERRIMAC
+    Address: U 2/48 INWOOD CIRCUIT MERRIMAC QLD 4226
+    URL:     https://www.domain.com.au/property-profile/2-48-inwood-circuit-merrimac-qld-4226
+    NOTE: Unit prefix (U/V) removed from URL per Domain.com.au format
+
+[11] HOUSE - SPRINGBROOK
+    Address: 3 CARRICKS ROAD SPRINGBROOK QLD 4213
+    URL:     https://www.domain.com.au/property-profile/3-carricks-road-springbrook-qld-4213
+
+[12] HOUSE - LUSCOMBE
+    Address: 563 STANMORE ROAD LUSCOMBE QLD 4207
+    URL:     https://www.domain.com.au/property-profile/563-stanmore-road-luscombe-qld-4207
+
+[13] UNIT - LUSCOMBE
+    Address: U 2/18 TONKA STREET LUSCOMBE QLD 4207
+    URL:     https://www.domain.com.au/property-profile/2-18-tonka-street-luscombe-qld-4207
+    NOTE: Unit prefix (U/V) removed from URL per Domain.com.au format
+
+[14] HOUSE - LOWER BEECHMONT
+    Address: 13 GRETTY LANE LOWER BEECHMONT QLD 4211
+    URL:     https://www.domain.com.au/property-profile/13-gretty-lane-lower-beechmont-qld-4211
+
+[15] HOUSE - RUNAWAY BAY
+    Address: 89 BAYVIEW STREET RUNAWAY BAY QLD 4216
+    URL:     https://www.domain.com.au/property-profile/89-bayview-street-runaway-bay-qld-4216
+
+[16] UNIT - RUNAWAY BAY
+    Address: U 86/76 BAYVIEW STREET RUNAWAY BAY QLD 4216
+    URL:     https://www.domain.com.au/property-profile/86-76-bayview-street-runaway-bay-qld-4216
+    NOTE: Unit prefix (U/V) removed from URL per Domain.com.au format
+
+[17] HOUSE - ELANORA
+    Address: 15 JARRAHDALE DRIVE ELANORA QLD 4221
+    URL:     https://www.domain.com.au/property-profile/15-jarrahdale-drive-elanora-qld-4221
+
+[18] UNIT - ELANORA
+    Address: U 2/16 WURUMA COURT ELANORA QLD 4221
+    URL:     https://www.domain.com.au/property-profile/2-16-wuruma-court-elanora-qld-4221
+    NOTE: Unit prefix (U/V) removed from URL per Domain.com.au format
+
+================================================================================
+Total test URLs: 18
+Unit URLs now correctly exclude U/V prefix!
+================================================================================

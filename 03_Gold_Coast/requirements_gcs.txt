@@ -1,0 +1,17 @@
+# Requirements for Google Cloud Storage Domain Scraper
+# Install with: pip install -r requirements_gcs.txt
+
+# Web scraping
+selenium==4.15.2
+webdriver-manager==4.0.1
+requests==2.31.0
+
+# MongoDB
+pymongo==4.6.1
+
+# Google Cloud Storage
+google-cloud-storage==2.14.0
+
+# Additional dependencies
+certifi==2023.11.17
+urllib3==2.1.0

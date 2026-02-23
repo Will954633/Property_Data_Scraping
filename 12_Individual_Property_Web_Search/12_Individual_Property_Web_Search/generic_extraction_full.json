@@ -1,0 +1,1577 @@
+{
+  "test_date": "2026-02-04 07:53:03",
+  "target_url": "https://raywhitemalanandco.com.au/properties/sold-residential/qld/varsity-lakes-4227/townhouse/3344866",
+  "extraction_method": "GENERIC - No site-specific selectors",
+  "data": {
+    "metadata": {},
+    "images": [
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?maxheight=2841&maxwidth=2841&quality=90&scale=down&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?maxheight=2841&maxwidth=2841&quality=90&scale=down&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=jpg",
+        "alt": "11 South Bay Drive, Varsity Lakes, QLD 4227",
+        "title": "",
+        "width": 1032,
+        "height": 688,
+        "source_type": "img_tag"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/menu_dark.ff8e5d961d2e9e9385aa80e877ce4bc1.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/menu_dark.ff8e5d961d2e9e9385aa80e877ce4bc1.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/rw_logo.1aa3b259a8068a6243f5bf61394db9ec.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/rw_logo.1aa3b259a8068a6243f5bf61394db9ec.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/close_white.7b9fbba8e93026c20916da5dac5a08e0.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/close_white.7b9fbba8e93026c20916da5dac5a08e0.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/button_loading_dark.b7d0ae7702759912b8ed5638f4e5d129.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/button_loading_dark.b7d0ae7702759912b8ed5638f4e5d129.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/86e1-H3344866-156496100__1753240867-61701-DJI0603-WEB.jpg?quality=90&width=1600",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/86e1-H3344866-156496100__1753240867-61701-DJI0603-WEB.jpg?quality=90&width=1600",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://raywhitemalanandco.com.au/__resources/img/default_listing_image.9b0b236f59f65c2fb6b2ba80b0237b52.svg",
+        "original_src": "https://raywhitemalanandco.com.au/__resources/img/default_listing_image.9b0b236f59f65c2fb6b2ba80b0237b52.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/external_link_dark.0e2d73edc7352992f421598f73c8d496.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/external_link_dark.0e2d73edc7352992f421598f73c8d496.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/facebook_grey_2.3d72e3926059338ceacbef60d7af8807.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/facebook_grey_2.3d72e3926059338ceacbef60d7af8807.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/twitter_grey_2.96f2e9d0b399a863ba16130d57444a34.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/twitter_grey_2.96f2e9d0b399a863ba16130d57444a34.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/email_grey_2.153162ebd7cb96194ec76b0680b894df.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/email_grey_2.153162ebd7cb96194ec76b0680b894df.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn5.ep.dynamics.net/__resources/img/arrow_up.2550b46666a0ceeca3695827e1c6de47.svg",
+        "original_src": "https://cdn5.ep.dynamics.net/__resources/img/arrow_up.2550b46666a0ceeca3695827e1c6de47.svg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "css_background"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=250&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=260&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=276&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=287&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=500&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=520&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=552&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=573&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=780&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=828&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1242&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=856&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1284&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=860&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1290&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=913&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1370&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg?height=1096&maxheight=2841&maxwidth=2841&quality=90&scale=down&width=1644&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=375&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=390&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=414&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=430&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=750&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=780&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=828&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=860&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=860&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg?anchor=middlecenter&height=1170&maxheight=2841&maxwidth=2841&mode=crop&quality=75&scale=down&width=1170&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=211&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=211&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=219&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=219&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=233&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=233&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=242&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=242&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=422&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=422&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=439&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=439&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=466&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg?anchor=middlecenter&height=466&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=211&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=211&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=219&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=219&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=233&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=233&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=242&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=242&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=422&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=422&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=439&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=439&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=466&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg?anchor=middlecenter&height=466&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=211&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=211&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=219&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=219&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=233&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=233&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=242&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=242&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=422&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=422&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=439&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=439&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=466&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg?anchor=middlecenter&height=466&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=211&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=375&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=211&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=375&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=219&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=390&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=219&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=390&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=233&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=414&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=233&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=414&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=242&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=430&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=242&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=430&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=422&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=750&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=422&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=750&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=439&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=780&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=439&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=780&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=466&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=828&format=webp",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg?anchor=middlecenter&height=466&maxheight=2841&maxwidth=2841&mode=crop&quality=90&scale=both&width=828&format=webp",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "picture_source"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/86e1-H3344866-156496100__1753240867-61701-DJI0603-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/86e1-H3344866-156496100__1753240867-61701-DJI0603-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/86e1-H3344866-156496100__1753240867-61701-DJI0603-WEB.jpg?bgcolor=595959&amp;height=943&amp;mode=crop&amp;quality=90&amp;scale=both&amp;width=1800&amp;_ext=.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/86e1-H3344866-156496100__1753240867-61701-DJI0603-WEB.jpg?bgcolor=595959&amp;height=943&amp;mode=crop&amp;quality=90&amp;scale=both&amp;width=1800&amp;_ext=.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://www.raywhite.com/apple-touch-icon.png",
+        "original_src": "https://www.raywhite.com/apple-touch-icon.png",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://www.raywhite.com/favicon-32x32.png",
+        "original_src": "https://www.raywhite.com/favicon-32x32.png",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://www.raywhite.com/favicon-16x16.png",
+        "original_src": "https://www.raywhite.com/favicon-16x16.png",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/75eb-H3344866-158225909__1754353442-39417-130A3419BD-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/fafe-H3344866-156496045__1753240853-61609-130A3422rt-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7497-H3344866-156496047__1753240855-61710-130A3425RT-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/349c-H3344866-156496040__1753240849-52761-130A3416RT-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7cbe-H3344866-156496000__1753240843-61603-130A3407RT-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3926-H3344866-156496003__1753240845-61660-130A3410rt-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9456-H3344866-156496005__1753240847-61502-130A3413RT-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab3a-H3344866-156495985__1753240836-52854-130A3398RT-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/657d-H3344866-156495998__1753240841-61807-130A3404RT-WEB.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/747e-H3435159-182406961__1768348162-41946-yuli-56v2.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6ad8-H3430156-180004885__1765766582-59592-19374OldBurleighRd06.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b7bf-H3381478-166833534__1759808184-72723-DJI0240.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      },
+      {
+        "url": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg",
+        "original_src": "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/977c-H3429464-180768251__1766106168-38512-250122-Surf-Parade-55.jpg",
+        "alt": "",
+        "title": "",
+        "width": null,
+        "height": null,
+        "source_type": "javascript"
+      }
+    ],
+    "text": {}
+  },
+  "statistics": {
+    "total_images": 173,
+    "total_text_length": 0,
+    "total_headings": 0,
+    "total_paragraphs": 0,
+    "total_links": 0,
+    "total_list_items": 0,
+    "extraction_success": true
+  }
+}

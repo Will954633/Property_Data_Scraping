@@ -1,0 +1,50 @@
+{
+  "test_date": "2025-06-11",
+  "database": "Gold_Coast",
+  "total_collections": 81,
+  "test_collection": "woongoolba",
+  "properties_tested": 5,
+  "all_urls_valid": true,
+  "results": [
+    {
+      "test_number": 1,
+      "address_pid": 1389886,
+      "address": "1199 STAPYLTON JACOBS WELL ROAD WOONGOOLBA QLD 4207",
+      "suburb": "WOONGOOLBA",
+      "domain_url": "https://www.domain.com.au/property-profile/1199-stapylton-jacobs-well-road-woongoolba-qld-4207",
+      "collection": "woongoolba"
+    },
+    {
+      "test_number": 2,
+      "address_pid": 441615,
+      "address": "41 NEW NORWELL ROAD WOONGOOLBA QLD 4207",
+      "suburb": "WOONGOOLBA",
+      "domain_url": "https://www.domain.com.au/property-profile/41-new-norwell-road-woongoolba-qld-4207",
+      "collection": "woongoolba"
+    },
+    {
+      "test_number": 3,
+      "address_pid": 926018,
+      "address": "179 FINGLAS ROAD WOONGOOLBA QLD 4208",
+      "suburb": "WOONGOOLBA",
+      "domain_url": "https://www.domain.com.au/property-profile/179-finglas-road-woongoolba-qld-4208",
+      "collection": "woongoolba"
+    },
+    {
+      "test_number": 4,
+      "address_pid": 1844889,
+      "address": "U 3018/2633 GOLD COAST HIGHWAY BROADBEACH QLD 4218",
+      "suburb": "BROADBEACH",
+      "domain_url": "https://www.domain.com.au/property-profile/u-3018-2633-gold-coast-highway-broadbeach-qld-4218",
+      "collection": "broadbeach"
+    },
+    {
+      "test_number": 5,
+      "address_pid": 1844892,
+      "address": "U 3023/2633 GOLD COAST HIGHWAY BROADBEACH QLD 4218",
+      "suburb": "BROADBEACH",
+      "domain_url": "https://www.domain.com.au/property-profile/u-3023-2633-gold-coast-highway-broadbeach-qld-4218",
+      "collection": "broadbeach"
+    }
+  ]
+}

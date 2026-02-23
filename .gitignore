@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+
+# Logs and runtime data
+*.log
+*.pid
+*.lock
+logs/
+worker_logs/
+local_worker_logs*/
+batch_results/
+
+# Large data/output directories
+07_Undetectable_method/Simple_Method/screenshots/
+07_Undetectable_method/Simple_Method/screenshots_session*/
+07_Undetectable_method/Simple_Method/property_data/
+07_Undetectable_method/00_Production_System/02_Individual_Property_Google_Search/batch_results/
+07_Undetectable_method/4_data/
+07_Undetectable_method/2_recordings/
+03_Gold_Coast/mongodb_backup*/
+03_Gold_Coast/local_worker_logs*/
+03_Gold_Coast/worker_logs/
+03_Gold_Coast/venv/
+03_Gold_Coast/test_results*/
+GapAnalysis_13thFeb/analyze_database_output*/
+listing_results/
+01_House_Plan_Data/output/
+.tmp.driveupload/
+
+# Binary/data files
+*.png
+*.zip
+*.html
+*.DS_Store
+temp_*.json
+temp_*.html
+
+# Credential files
+*.json.key
+aws-gcs-key.json
+*.backup_*
+
+# Large binaries
+*.jar
+
+# Backup files with credentials
+03_Gold_Coast/Gold_Coast_Wide_Currently_For_Sale_AND_Recently_Sold/*.backup_*
+*.bak
+*.broken

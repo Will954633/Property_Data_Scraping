@@ -1,0 +1,353 @@
+{
+  "internal_floor_area": {
+    "value": 195,
+    "unit": "sqm",
+    "confidence": "high",
+    "notes": "Internal living area only - excludes garage, porches, external storage"
+  },
+  "total_floor_area": {
+    "value": 240,
+    "unit": "sqm",
+    "confidence": "high",
+    "notes": "Total building footprint including garage, porches, covered areas"
+  },
+  "total_land_area": {
+    "value": 452,
+    "unit": "sqm",
+    "confidence": "high",
+    "notes": "Block size"
+  },
+  "levels": {
+    "total_levels": 1,
+    "level_details": [
+      {
+        "level_name": "Ground Floor",
+        "floor_area": {
+          "value": 195,
+          "unit": "sqm"
+        }
+      }
+    ]
+  },
+  "rooms": [
+    {
+      "room_type": "garage",
+      "room_name": "Garage",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 6.0,
+        "width": 5.8,
+        "unit": "m",
+        "area": 34.8,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "2-car capacity",
+        "Adjacent to entry"
+      ],
+      "notes": null
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 1",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.6,
+        "width": 3.0,
+        "unit": "m",
+        "area": 10.8,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 2",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.0,
+        "width": 3.0,
+        "unit": "m",
+        "area": 9.0,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 3",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.1,
+        "width": 3.0,
+        "unit": "m",
+        "area": 9.3,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Master Bedroom",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 4.0,
+        "width": 3.6,
+        "unit": "m",
+        "area": 14.4,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "ensuite"
+      ],
+      "notes": null
+    },
+    {
+      "room_type": "study",
+      "room_name": "Study",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.0,
+        "width": 2.4,
+        "unit": "m",
+        "area": 7.2,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "living_room",
+      "room_name": "Living",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 5.9,
+        "width": 4.7,
+        "unit": "m",
+        "area": 27.73,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "open plan to dining"
+      ],
+      "notes": null
+    },
+    {
+      "room_type": "dining_room",
+      "room_name": "Dining",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 4.8,
+        "width": 4.2,
+        "unit": "m",
+        "area": 20.16,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "kitchen",
+      "room_name": "Kitchen",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [
+        "kitchen island"
+      ],
+      "notes": null
+    },
+    {
+      "room_type": "laundry",
+      "room_name": "Laundry",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "bathroom",
+      "room_name": "Bathroom",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "ensuite",
+      "room_name": "Ensuite",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "patio",
+      "room_name": "Enclosed Patio",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 8.6,
+        "width": 4.7,
+        "unit": "m",
+        "area": 40.42,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "enclosed",
+        "outdoor living"
+      ],
+      "notes": null
+    },
+    {
+      "room_type": "patio",
+      "room_name": "Patio",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null
+      },
+      "features": [],
+      "notes": null
+    },
+    {
+      "room_type": "entry",
+      "room_name": "Entry",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null
+      },
+      "features": [],
+      "notes": null
+    }
+  ],
+  "bedrooms": {
+    "total_count": 4,
+    "details": "Master Bedroom; Bedroom 1; Bedroom 2; Bedroom 3"
+  },
+  "bathrooms": {
+    "total_count": 2,
+    "full_bathrooms": 2,
+    "powder_rooms": 0,
+    "ensuites": 1,
+    "details": "Bathroom + Ensuite"
+  },
+  "parking": {
+    "garage_spaces": 2,
+    "carport_spaces": 0,
+    "total_spaces": 2,
+    "garage_type": "double",
+    "notes": "Attached double garage"
+  },
+  "outdoor_spaces": [
+    {
+      "type": "patio",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 8.6,
+        "width": 4.7,
+        "unit": "m",
+        "area": 40.42,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "enclosed"
+      ]
+    },
+    {
+      "type": "patio",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null
+      },
+      "features": []
+    }
+  ],
+  "layout_features": {
+    "open_plan": true,
+    "split_level": false,
+    "flow_description": "Open plan kitchen-dining-living forming the central hub; Master suite located on the opposite wing with ensuite; Secondary bedrooms cluster near utility spaces; Access to enclosed patio from living area",
+    "highlights": [
+      "Open plan living/dining/kitchen",
+      "Enclosed patio for outdoor living",
+      "Two-car garage",
+      "Master bedroom with ensuite"
+    ]
+  },
+  "additional_features": [
+    "Kitchen island",
+    "Study near entry",
+    "Enclosed patio"
+  ],
+  "buyer_insights": {
+    "ideal_for": [
+      "families",
+      "couples",
+      "investors seeking rental potential"
+    ],
+    "key_benefits": [
+      "4 bedrooms including a master with ensuite",
+      "Large enclosed patio for entertaining",
+      "Two-car attached garage",
+      "Central open-plan living area"
+    ],
+    "considerations": [
+      "Kitchen dimensions not specified",
+      "Patio dimensions not listed for the smaller patio",
+      "Some secondary bathrooms have no shown dimensions"
+    ],
+    "lifestyle_suitability": "Family-friendly layout with strong indoor-outdoor flow, ample living spaces, and a generous garage for practical storage and parking."
+  },
+  "data_quality": {
+    "floor_plan_clarity": "excellent",
+    "measurements_available": true,
+    "missing_information": [
+      "Exact dimensions for Kitchen length/width",
+      "Laundry area dimensions",
+      "Bathroom dimensions (Bath and Ensuite)",
+      "Patio (smaller) dimensions"
+    ],
+    "confidence_overall": "high"
+  },
+  "analysis_metadata": {
+    "model_used": "gpt-5-nano-2025-08-07",
+    "analyzed_at": 1765846855.4357069,
+    "analysis_duration_seconds": 74.99159908294678,
+    "floor_plan_count": 1,
+    "floor_plan_urls": [
+      "https://rimh2.domainstatic.com.au/4lexLBAg4D77jSJwZ3KbzS-ujc0=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020397929_13_3_251105_021407-w3508-h2480"
+    ],
+    "finish_reason": "stop",
+    "attempt_label": "primary"
+  }
+}

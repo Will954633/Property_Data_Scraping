@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-01-27T04:14:15.166489",
+  "total_uploaded": 43,
+  "total_updated": 15,
+  "suburbs": [
+    {
+      "suburb": "robina",
+      "uploaded": 9,
+      "updated": 3,
+      "total_processed": 12,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 74 Woody Views Way, Robina, QLD 4226)"
+    },
+    {
+      "suburb": "mudgeeraba",
+      "uploaded": 11,
+      "updated": 2,
+      "total_processed": 13,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 12 Ilminster Crescent, Mudgeeraba, QLD 4213)"
+    },
+    {
+      "suburb": "varsity-lakes",
+      "uploaded": 9,
+      "updated": 5,
+      "total_processed": 14,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 34 Gerona Circuit Varsity, Lakes, QLD 4227)"
+    },
+    {
+      "suburb": "reedy-creek",
+      "uploaded": 8,
+      "updated": 2,
+      "total_processed": 10,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 58 Cordyline Drive Reedy, Creek, QLD 4227)"
+    },
+    {
+      "suburb": "burleigh-waters",
+      "uploaded": 6,
+      "updated": 3,
+      "total_processed": 9,
+      "stop_reason": "STOP_B: 3 consecutive duplicate properties (last: 15 Cuckoo Crescent Burleigh, Waters, QLD 4220)"
+    }
+  ]
+}

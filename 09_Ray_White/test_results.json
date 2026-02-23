@@ -1,0 +1,60 @@
+{
+  "scraped_at": "2025-11-25T09:35:57.304965",
+  "total_properties": 1,
+  "source_url": "https://raywhiterobina.com.au/properties/residential-for-sale?category=&keywords=&maxFloor=0&maxLand=0&minBaths=0&minBeds=0&minCars=0&minFloor=0&minLand=0&price=&sort=creationTime+desc&suburbPostCode=Robina+4226",
+  "properties": [
+    {
+      "url": "https://raywhiterobina.com.au/properties/residential-for-sale/qld/robina-4226/house/3409824",
+      "scraped_at": "2025-11-25T09:35:57.167125",
+      "title": "14 Huntingdale CrescentRobina, QLD 4226",
+      "features": {
+        "bedrooms": "Land:800m² / 0.2 acresParking:2 garage spacesBedrooms:4Bathrooms:2"
+      },
+      "image_urls": [
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b0a0-H3409824-137622673__1740715179-159397-14HuntingdaleCrescentRobina25.jpg?maxheight=2560&maxwidth=2560&quality=90&scale=down&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/2b41-H3409824-137623071__1740715297-171079-14HuntingdaleCrescentRobina39.jpg?maxheight=2560&maxwidth=2560&quality=90&scale=down&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/d01a-H3409824-137622675__1740715180-159268-14HuntingdaleCrescentRobina26.jpg?maxheight=2560&maxwidth=2560&quality=90&scale=down&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9290-H3409824-137622713__1740715184-159370-14HuntingdaleCrescentRobina27.jpg?maxheight=2560&maxwidth=2560&quality=90&scale=down&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/415e-H3409824-137623002__1740715259-171402-14HuntingdaleCrescentRobina32.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ad27-H3409824-137622996__1740715255-171061-14HuntingdaleCrescentRobina30.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b3a7-H3409824-137623065__1740715288-171539-14HuntingdaleCrescentRobina37.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/66e4-H3409824-137623063__1740715285-171101-14HuntingdaleCrescentRobina36.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/218d-H3409824-137623073__1740715299-171090-14HuntingdaleCrescentRobina40.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/804e-H3409824-137623012__1740715281-159515-14HuntingdaleCrescentRobina35.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/23ce-H3409824-137623004__1740715261-159644-14HuntingdaleCrescentRobina33.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/4dd9-H3409824-137622650__1740715169-170731-14HuntingdaleCrescentRobina21.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/3bc2-H3409824-137622621__1740715167-159312-14HuntingdaleCrescentRobina20.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/5620-H3409824-137622453__1740715139-159272-14HuntingdaleCrescentRobina9.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/7dee-H3409824-137622457__1740715141-159234-14HuntingdaleCrescentRobina10.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/4fb6-H3409824-137622449__1740715137-170770-14HuntingdaleCrescentRobina8.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/a922-H3409824-137622460__1740715144-170490-14HuntingdaleCrescentRobina11.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/9465-H3409824-137622464__1740715147-170754-14HuntingdaleCrescentRobina12.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/8ca9-H3409824-137622503__1740715150-158861-14HuntingdaleCrescentRobina13.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/4ca8-H3409824-137622583__1740715164-159150-14HuntingdaleCrescentRobina19.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/19e5-H3409824-137622506__1740715151-170746-14HuntingdaleCrescentRobina14.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ae09-H3409824-137622544__1740715154-170652-14HuntingdaleCrescentRobina15.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/93e5-H3409824-137622549__1740715159-170607-14HuntingdaleCrescentRobina17.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b237-H3409824-137622547__1740715157-158870-14HuntingdaleCrescentRobina16.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/e296-H3409824-137622565__1740715162-170737-14HuntingdaleCrescentRobina18.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/6a48-H3409824-137622993__1740715253-159164-14HuntingdaleCrescentRobina29.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/f715-H3409824-137623008__1740715275-159508-14HuntingdaleCrescentRobina34.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ab11-H3409824-137623068__1740715292-159651-14HuntingdaleCrescentRobina38.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/8b03-H3409824-137622438__1740715128-170702-14HuntingdaleCrescentRobina5.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/ee02-H3409824-137622443__1740715132-158677-14HuntingdaleCrescentRobina6.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/819f-H3409824-137622447__1740715135-336378-14HuntingdaleCrescentRobina7.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/8c27-H3409824-137623093__1740715302-171101-14HuntingdaleCrescentRobina41.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/de17-H3409824-137622428__1740715116-159200-14HuntingdaleCrescentRobina2.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/29a1-H3409824-137623096__1740715306-159289-14HuntingdaleCrescentRobina1.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg",
+        "https://cdn6.ep.dynamics.net/s3/rw-propertyimages/c878-H3409824-137622430__1740715120-170403-14HuntingdaleCrescentRobina3.jpg?anchor=middlecenter&height=640&maxheight=2560&maxwidth=2560&mode=crop&quality=75&scale=down&width=640&format=jpg"
+      ],
+      "additional_details": {
+        "Inspection": "Sunday30November10:00am-10:30am"
+      },
+      "inspection_times": [
+        "Inspection:Thursday27November11:00am-11:30amInspection:Saturday29November11:45am-12:15pmInspection:Sunday30November10:00am-10:30am+1 more inspections",
+        "Inspection:Sunday30November10:00am-10:30am",
+        "+1 more inspections"
+      ]
+    }
+  ]
+}

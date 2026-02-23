@@ -1,0 +1,358 @@
+{
+  "internal_floor_area": {
+    "value": 168,
+    "unit": "sqm",
+    "confidence": "high",
+    "notes": "Internal living area only - excludes garage, porches, external storage"
+  },
+  "total_floor_area": {
+    "value": 222,
+    "unit": "sqm",
+    "confidence": "high",
+    "notes": "Total building footprint including garage, porches, covered areas"
+  },
+  "total_land_area": {
+    "value": null,
+    "unit": "sqm",
+    "confidence": "low",
+    "notes": "Site plan does not provide explicit land area"
+  },
+  "levels": {
+    "total_levels": 1,
+    "level_details": [
+      {
+        "level_name": "Ground Floor",
+        "floor_area": {
+          "value": 168,
+          "unit": "sqm"
+        }
+      }
+    ]
+  },
+  "rooms": [
+    {
+      "room_type": "bedroom",
+      "room_name": "Master Bed",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 4.2,
+        "width": 4.3,
+        "unit": "m",
+        "area": 18.06,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "Robe",
+        "Ensuite access (via Master Bed)"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 2",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.6,
+        "width": 3.0,
+        "unit": "m",
+        "area": 10.8,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "Robe"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 3",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.1,
+        "width": 3.0,
+        "unit": "m",
+        "area": 9.3,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "Robe"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "bedroom",
+      "room_name": "Bedroom 4",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 3.0,
+        "width": 3.8,
+        "unit": "m",
+        "area": 11.4,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "Robe"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "living_room",
+      "room_name": "Living",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 4.8,
+        "width": 4.1,
+        "unit": "m",
+        "area": 19.68,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "dining_room",
+      "room_name": "Dining",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 4.4,
+        "width": 3.4,
+        "unit": "m",
+        "area": 14.96,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "kitchen",
+      "room_name": "Kitchen",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 4.9,
+        "width": 4.5,
+        "unit": "m",
+        "area": 22.05,
+        "area_unit": "sqm"
+      },
+      "features": [
+        "Islander",
+        "Pantry"
+      ],
+      "notes": ""
+    },
+    {
+      "room_type": "study",
+      "room_name": "Study Nook",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 4.4,
+        "width": 2.4,
+        "unit": "m",
+        "area": 10.56,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "garage",
+      "room_name": "Garage",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": 5.6,
+        "width": 2.8,
+        "unit": "m",
+        "area": 15.68,
+        "area_unit": "sqm"
+      },
+      "features": [],
+      "notes": "Single car garage"
+    },
+    {
+      "room_type": "bathroom",
+      "room_name": "Main Bath",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": "Full bathroom"
+    },
+    {
+      "room_type": "ensuite",
+      "room_name": "Ensuite",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": "Attached to Master Bed"
+    },
+    {
+      "room_type": "powder_room",
+      "room_name": "Powder Room",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "laundry",
+      "room_name": "L'dry",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "storage",
+      "room_name": "Storage",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": ""
+    },
+    {
+      "room_type": "entry",
+      "room_name": "Entry",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "unit": null,
+        "area": null,
+        "area_unit": null
+      },
+      "features": [],
+      "notes": ""
+    }
+  ],
+  "bedrooms": {
+    "total_count": 4,
+    "details": "Master Bed; Bedroom 2; Bedroom 3; Bedroom 4"
+  },
+  "bathrooms": {
+    "total_count": 3,
+    "full_bathrooms": 2,
+    "powder_rooms": 1,
+    "ensuites": 1,
+    "details": "Main Bath; Ensuite; Powder Room"
+  },
+  "parking": {
+    "garage_spaces": 1,
+    "carport_spaces": 1,
+    "total_spaces": 2,
+    "garage_type": "single",
+    "notes": "Single garage; external carport not shown as part of internal plan"
+  },
+  "outdoor_spaces": [
+    {
+      "type": "pool",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "area": null,
+        "unit": "sqm"
+      },
+      "features": [
+        "adjacent to living area"
+      ]
+    },
+    {
+      "type": "alfresco",
+      "level": "Ground Floor",
+      "dimensions": {
+        "length": null,
+        "width": null,
+        "area": null,
+        "unit": "sqm"
+      },
+      "features": [
+        "covered entertaining area"
+      ]
+    }
+  ],
+  "layout_features": {
+    "open_plan": true,
+    "split_level": false,
+    "flow_description": "Open plan kitchen-dining-living with central island; bedrooms cluster in one wing; master suite separated from common areas",
+    "highlights": [
+      "4-bedroom single-storey family layout",
+      "Master bedroom with ensuite",
+      "Large open-plan living spaces",
+      "Pool and covered entertaining area",
+      "Integrated pantry and study nook"
+    ]
+  },
+  "additional_features": [
+    "Pantry",
+    "Study Nook",
+    "Foyer/Entry separation",
+    "Walk-in robes indicated in bedrooms"
+  ],
+  "buyer_insights": {
+    "ideal_for": [
+      "Families"
+    ],
+    "key_benefits": [
+      "Single-storey layout with four bedrooms",
+      "Open-plan living area with kitchen island",
+      "Master suite with private ensuite",
+      "Outdoor pool and covered entertaining area",
+      "Secure parking with internal garage"
+    ],
+    "considerations": [
+      "No explicit land area provided in detail; site plan measurements not shown",
+      "Some bathroom and outdoor area dimensions are not disclosed"
+    ],
+    "lifestyle_suitability": "Well-suited for families seeking a spacious, single-level home with ample living and entertaining spaces, plus a private master suite and pool."
+  },
+  "data_quality": {
+    "floor_plan_clarity": "excellent",
+    "measurements_available": true,
+    "missing_information": [
+      "Bathroom dimensions for Bath, Ensuite, and Powder Room",
+      "Laundry dimensions",
+      "Storage dimensions",
+      "Entry/Foyer dimensions",
+      "Outdoor area dimensions (pool, alfresco) and land area details"
+    ],
+    "confidence_overall": "high"
+  },
+  "analysis_metadata": {
+    "model_used": "gpt-5-nano-2025-08-07",
+    "analyzed_at": 1765786923.195321,
+    "analysis_duration_seconds": 738.7069749832153,
+    "floor_plan_count": 1,
+    "floor_plan_urls": [
+      "https://rimh2.domainstatic.com.au/c2pDTjc3OY1vrqDkgyi_l930bA0=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020401305_50_3_251105_115749-w3508-h2480"
+    ]
+  }
+}

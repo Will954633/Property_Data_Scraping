@@ -37,14 +37,26 @@ for suburb in "${TARGET_SUBURBS[@]}"; do
     echo "=========================================="
     echo "Processing: $suburb"
     echo "=========================================="
-    
+
     # Run photo analysis with 4 workers
     python3 run_production.py --collection "$suburb" --workers 4
-    
+
     if [ $? -eq 0 ]; then
-        echo "✅ $suburb completed successfully"
+        echo "✅ $suburb photo analysis completed successfully"
     else
-        echo "❌ $suburb failed"
+        echo "❌ $suburb photo analysis failed"
+        exit 1
+    fi
+
+    # Run photo reorder (creates photo_tour_order from ollama_image_analysis)
+    echo ""
+    echo "Running photo reorder for: $suburb"
+    python3 run_photo_reorder.py --collection "$suburb"
+
+    if [ $? -eq 0 ]; then
+        echo "✅ $suburb photo reorder completed successfully"
+    else
+        echo "❌ $suburb photo reorder failed"
         exit 1
     fi
 done

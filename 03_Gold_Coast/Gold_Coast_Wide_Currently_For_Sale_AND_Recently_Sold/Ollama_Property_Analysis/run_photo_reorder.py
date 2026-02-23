@@ -76,8 +76,19 @@ def process_collection(collection_name: str, workers: int = 2):
                 errors += 1
                 continue
 
+            # Build index map so we can replace any placeholder URLs GPT may return
+            real_url_by_index = {
+                img.get('image_index', i): img.get('url', '')
+                for i, img in enumerate(image_analysis)
+            }
+
             tour_metadata = gpt.get_tour_metadata(reorder_result)
             for photo in photo_tour_order:
+                # Replace placeholder/hallucinated URLs with the real URL from image_analysis
+                idx = photo.get('image_index')
+                real_url = real_url_by_index.get(idx, '')
+                if real_url:
+                    photo['url'] = real_url
                 photo['tour_metadata'] = tour_metadata
 
             col.update_one(

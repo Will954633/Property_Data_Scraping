@@ -539,7 +539,27 @@ class SoldPropertyMonitor:
             original_price = property_doc.get('price')
             if original_price:
                 property_doc['listing_price'] = original_price
-            
+
+            # CALCULATE DAYS ON MARKET
+            # Use first_listed_timestamp and sold_date for accurate calculation
+            days_on_market = None
+            try:
+                listing_ts = property_doc.get('first_listed_timestamp')
+                sold_date_str = property_doc.get('sold_date')
+                if listing_ts and sold_date_str:
+                    if isinstance(listing_ts, str):
+                        listing_ts = listing_ts.split('T')[0]
+                        listing_dt = datetime.strptime(listing_ts, '%Y-%m-%d')
+                    else:
+                        listing_dt = listing_ts
+                    sold_dt = datetime.strptime(sold_date_str, '%Y-%m-%d')
+                    days_on_market = (sold_dt - listing_dt).days
+                    if days_on_market < 0:
+                        days_on_market = None
+            except Exception:
+                pass
+            property_doc['days_on_market'] = days_on_market
+
             # Add migration metadata
             property_doc['moved_to_sold_date'] = datetime.now()
             property_doc['original_collection'] = self.collection_name

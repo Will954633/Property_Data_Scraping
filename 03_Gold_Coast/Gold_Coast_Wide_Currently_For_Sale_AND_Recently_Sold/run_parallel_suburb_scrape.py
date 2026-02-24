@@ -632,7 +632,16 @@ class ParallelSuburbScraper:
                 property_data['first_listed_timestamp'] = listing_date_info['first_listed_timestamp']
                 property_data['days_on_domain'] = listing_date_info['days_on_domain']
                 property_data['last_updated_date'] = listing_date_info['last_updated_date']
-                
+
+                # Detect sold status from Domain's embedded JSON (saleMode field)
+                # "buy" = active for-sale listing; "sold" = already sold
+                sale_mode_match = re.search(r'"saleMode"\s*:\s*"([^"]+)"', html)
+                if sale_mode_match and sale_mode_match.group(1).lower() == 'sold':
+                    property_data['listing_status'] = 'sold'
+                    self.log(f"  ⚠ Sold listing detected (saleMode=sold): {url}")
+                else:
+                    property_data['listing_status'] = 'for_sale'
+
                 # Add required fields
                 property_data['listing_url'] = url
                 property_data['scrape_mode'] = 'headless'
@@ -719,16 +728,20 @@ class ParallelSuburbScraper:
             existing_doc = target_collection.find_one({'listing_url': listing_url})
             
             if existing_doc:
-                # Update existing
+                # Update existing — never overwrite pipeline-owned or first-insert-only fields
+                PIPELINE_FIELDS = {
+                    'first_seen',
+                    'watch_article_generated',
+                    'watch_article_path',
+                    'watch_article_generated_at',
+                }
+                update_data = {k: v for k, v in property_data.items() if k not in PIPELINE_FIELDS}
                 update_doc = {
                     '$set': {
-                        **property_data,
+                        **update_data,
                         'last_updated': datetime.now(),
                     }
                 }
-
-                if 'first_seen' in existing_doc:
-                    update_doc['$setOnInsert'] = {'first_seen': existing_doc['first_seen']}
 
                 target_collection.update_one({'listing_url': listing_url}, update_doc)
                 return True

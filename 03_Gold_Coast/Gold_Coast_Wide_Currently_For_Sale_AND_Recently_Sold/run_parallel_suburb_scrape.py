@@ -277,7 +277,7 @@ class ParallelSuburbScraper:
         chrome_options.add_argument('--log-level=3')
         chrome_options.add_experimental_option("excludeSwitches", ["enable-logging", "enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
-        chrome_options.binary_location = "/snap/bin/chromium"  # Use snap Chromium
+        chrome_options.binary_location = os.environ.get('CHROME_BINARY_PATH', '/snap/bin/chromium')
 
         # Retry logic for WebDriver creation with self-healing zombie cleanup
         max_retries = 3
@@ -285,7 +285,7 @@ class ParallelSuburbScraper:
 
         for attempt in range(max_retries):
             try:
-                service = Service("/usr/local/bin/chromedriver")
+                service = Service(os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver'))
                 self.driver = webdriver.Chrome(service=service, options=chrome_options)
 
                 # ✅ CRITICAL: Set timeouts to prevent indefinite hangs

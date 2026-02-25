@@ -133,6 +133,11 @@ PARALLEL_PROPERTIES = 3  # Number of properties to scrape simultaneously per sub
 # Browser restart configuration (prevents memory exhaustion crashes)
 BROWSER_RESTART_INTERVAL = 15  # Restart Chrome every N properties to prevent crashes (reduced for low-memory VM)
 
+# Cosmos DB serverless throttle prevention
+# A 300ms pause before each MongoDB op keeps burst RU/s well under the 5000 RU/s serverless limit.
+# At 3 ops/property this adds ~0.9s per property — negligible vs the 30-40s scrape time per property.
+COSMOS_INTER_OP_DELAY = 0.3  # seconds
+
 
 # Global MongoDB client (one per process, reused for all operations)
 _mongo_client = None
@@ -726,7 +731,10 @@ class ParallelSuburbScraper:
         """
         Execute a MongoDB operation, retrying on Cosmos DB 429 TooManyRequests.
         Reads RetryAfterMs from the error and sleeps that exact duration before retrying.
+        A 300ms inter-op delay (COSMOS_INTER_OP_DELAY) is applied before each call
+        to smooth write bursts and avoid hitting the serverless RU/s limit.
         """
+        time.sleep(COSMOS_INTER_OP_DELAY)
         for attempt in range(max_retries):
             try:
                 return op()

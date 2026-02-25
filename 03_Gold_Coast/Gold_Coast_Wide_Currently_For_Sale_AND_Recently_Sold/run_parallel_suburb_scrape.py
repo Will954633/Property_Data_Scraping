@@ -90,7 +90,7 @@ except ImportError:
     exit(1)
 
 # Import the HTML parser from the existing production system
-sys.path.append('../../07_Undetectable_method/Simple_Method/../00_Production_System/02_Individual_Property_Google_Search')
+sys.path.append('../../07_Undetectable_method/00_Production_System/02_Individual_Property_Google_Search')
 try:
     from html_parser import parse_listing_html, clean_property_data
 except ImportError:

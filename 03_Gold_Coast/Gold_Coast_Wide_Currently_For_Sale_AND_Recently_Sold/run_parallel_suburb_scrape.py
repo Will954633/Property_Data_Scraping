@@ -713,12 +713,22 @@ class ParallelSuburbScraper:
         
         return None
     
+    @staticmethod
+    def _normalize_address_for_gis(street_address: str, suburb: str, postcode: str) -> str:
+        """
+        Build a normalised address string matching the GIS complete_address format.
+        GIS format: "12 GERSHWIN COURT NERANG QLD 4211" (uppercase, no commas)
+        """
+        return f"{street_address} {suburb} QLD {postcode}".upper().strip()
+
     def save_to_mongodb(self, property_data: Dict) -> bool:
         """
         Save property to MongoDB with database routing:
         - Target market suburbs → Gold_Coast_Currently_For_Sale (full document with history tracking)
-        - All other suburbs → Gold_Coast master DB (upsert scraped fields onto existing GIS doc,
-          or insert as new doc if not found)
+        - All other suburbs → Gold_Coast master DB:
+            1. Match on listing_url (same doc scraped previously by this scraper)
+            2. Fallback: match on complete_address against GIS doc (first-time for-sale appearance)
+            3. If no match: insert new doc
         """
         try:
             listing_url = property_data['listing_url']
@@ -739,29 +749,37 @@ class ParallelSuburbScraper:
                 db_label = DATABASE_NAME if is_target_market else MASTER_DATABASE_NAME
                 self.log(f"  Routing '{actual_suburb}' → {db_label}.{collection_name}")
 
+            PIPELINE_FIELDS = {
+                'first_seen',
+                'watch_article_generated',
+                'watch_article_path',
+                'watch_article_generated_at',
+            }
+
+            # --- Primary match: listing_url (previously scraped by this scraper) ---
             existing_doc = target_collection.find_one({'listing_url': listing_url})
 
+            # --- Fallback match for Gold_Coast master DB: GIS complete_address ---
+            if existing_doc is None and not is_target_market:
+                street = property_data.get('street_address', '')
+                suburb_val = property_data.get('suburb', actual_suburb)
+                postcode_val = property_data.get('postcode', '')
+                if street and postcode_val:
+                    norm_addr = self._normalize_address_for_gis(street, suburb_val, postcode_val)
+                    existing_doc = target_collection.find_one({'complete_address': norm_addr})
+                    if existing_doc:
+                        self.log(f"  [Gold_Coast] Matched GIS doc by address: {norm_addr}")
+
             if existing_doc:
-                # Update existing — never overwrite pipeline-owned or first-insert-only fields
-                PIPELINE_FIELDS = {
-                    'first_seen',
-                    'watch_article_generated',
-                    'watch_article_path',
-                    'watch_article_generated_at',
-                }
                 update_data = {k: v for k, v in property_data.items() if k not in PIPELINE_FIELDS}
-                update_doc = {
-                    '$set': {
-                        **update_data,
-                        'last_updated': datetime.now(),
-                    }
-                }
-                target_collection.update_one({'listing_url': listing_url}, update_doc)
+                target_collection.update_one(
+                    {'_id': existing_doc['_id']},
+                    {'$set': {**update_data, 'last_updated': datetime.now()}}
+                )
                 if not is_target_market:
                     self.log(f"  [Gold_Coast] UPDATED _id={existing_doc['_id']} | {collection_name} | {property_data.get('address', listing_url)}")
                 return True
             else:
-                # Insert new
                 property_data['first_seen'] = datetime.now()
                 property_data['last_updated'] = datetime.now()
                 property_data['change_count'] = 0

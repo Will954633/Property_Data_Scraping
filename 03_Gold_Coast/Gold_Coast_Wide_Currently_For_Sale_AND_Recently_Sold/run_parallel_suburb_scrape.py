@@ -74,7 +74,7 @@ if hasattr(sys.stderr, 'reconfigure'):
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 from pymongo import MongoClient, ASCENDING
-from pymongo.errors import DuplicateKeyError
+from pymongo.errors import DuplicateKeyError, OperationFailure
 from bs4 import BeautifulSoup
 import re
 
@@ -721,6 +721,24 @@ class ParallelSuburbScraper:
         """
         return f"{street_address} {suburb} QLD {postcode}".upper().strip()
 
+    @staticmethod
+    def _mongo_op_with_retry(op, max_retries: int = 5):
+        """
+        Execute a MongoDB operation, retrying on Cosmos DB 429 TooManyRequests.
+        Reads RetryAfterMs from the error and sleeps that exact duration before retrying.
+        """
+        for attempt in range(max_retries):
+            try:
+                return op()
+            except OperationFailure as e:
+                if e.code == 16500:  # TooManyRequests
+                    match = re.search(r'RetryAfterMs=(\d+)', str(e))
+                    wait_ms = int(match.group(1)) if match else 1000
+                    time.sleep((wait_ms + 50) / 1000.0)  # +50ms buffer
+                else:
+                    raise
+        raise OperationFailure(f"MongoDB op failed after {max_retries} retries (429)")
+
     def save_to_mongodb(self, property_data: Dict) -> bool:
         """
         Save property to MongoDB with database routing:
@@ -757,7 +775,9 @@ class ParallelSuburbScraper:
             }
 
             # --- Primary match: listing_url (previously scraped by this scraper) ---
-            existing_doc = target_collection.find_one({'listing_url': listing_url})
+            existing_doc = self._mongo_op_with_retry(
+                lambda: target_collection.find_one({'listing_url': listing_url})
+            )
 
             # --- Fallback match for Gold_Coast master DB: GIS complete_address ---
             if existing_doc is None and not is_target_market:
@@ -766,15 +786,19 @@ class ParallelSuburbScraper:
                 postcode_val = property_data.get('postcode', '')
                 if street and postcode_val:
                     norm_addr = self._normalize_address_for_gis(street, suburb_val, postcode_val)
-                    existing_doc = target_collection.find_one({'complete_address': norm_addr})
+                    existing_doc = self._mongo_op_with_retry(
+                        lambda: target_collection.find_one({'complete_address': norm_addr})
+                    )
                     if existing_doc:
                         self.log(f"  [Gold_Coast] Matched GIS doc by address: {norm_addr}")
 
             if existing_doc:
                 update_data = {k: v for k, v in property_data.items() if k not in PIPELINE_FIELDS}
-                target_collection.update_one(
-                    {'_id': existing_doc['_id']},
-                    {'$set': {**update_data, 'last_updated': datetime.now()}}
+                self._mongo_op_with_retry(
+                    lambda: target_collection.update_one(
+                        {'_id': existing_doc['_id']},
+                        {'$set': {**update_data, 'last_updated': datetime.now()}}
+                    )
                 )
                 if not is_target_market:
                     self.log(f"  [Gold_Coast] UPDATED _id={existing_doc['_id']} | {collection_name} | {property_data.get('address', listing_url)}")
@@ -793,7 +817,9 @@ class ParallelSuburbScraper:
                                 'recorded_at': datetime.now()
                             }]
 
-                result = target_collection.insert_one(property_data)
+                result = self._mongo_op_with_retry(
+                    lambda: target_collection.insert_one(property_data)
+                )
                 if not is_target_market:
                     self.log(f"  [Gold_Coast] INSERTED _id={result.inserted_id} | {collection_name} | {property_data.get('address', listing_url)}")
                 return True

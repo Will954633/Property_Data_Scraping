@@ -112,6 +112,14 @@ except ImportError:
 # Configuration
 MONGODB_URI = os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/')
 DATABASE_NAME = 'Gold_Coast_Currently_For_Sale'
+MASTER_DATABASE_NAME = 'Gold_Coast'
+
+# Target market suburbs — these write to Gold_Coast_Currently_For_Sale.
+# All other suburbs upsert into Gold_Coast (the master GIS/cadastral database).
+TARGET_MARKET_SUBURBS = {
+    'robina', 'mudgeeraba', 'varsity lakes', 'reedy creek',
+    'burleigh waters', 'merrimac', 'worongary', 'carrara'
+}
 PAGE_LOAD_WAIT = 5
 SCROLL_WAIT = 1.5
 BETWEEN_PROPERTY_DELAY = 2
@@ -129,16 +137,17 @@ BROWSER_RESTART_INTERVAL = 15  # Restart Chrome every N properties to prevent cr
 # Global MongoDB client (one per process, reused for all operations)
 _mongo_client = None
 _mongo_db = None
+_mongo_master_db = None
 
 
 def get_mongodb_connection():
     """Get or create MongoDB connection (one per process)"""
-    global _mongo_client, _mongo_db
-    
+    global _mongo_client, _mongo_db, _mongo_master_db
+
     if _mongo_client is None:
         max_retries = 3
         retry_delay = 3
-        
+
         for attempt in range(max_retries):
             try:
                 _mongo_client = MongoClient(
@@ -153,7 +162,8 @@ def get_mongodb_connection():
                     retryReads=False
                 )
                 _mongo_db = _mongo_client[DATABASE_NAME]
-                
+                _mongo_master_db = _mongo_client[MASTER_DATABASE_NAME]
+
                 # Test connection
                 _mongo_client.admin.command('ping')
                 break
@@ -163,8 +173,8 @@ def get_mongodb_connection():
                     time.sleep(retry_delay)
                 else:
                     raise Exception(f"MongoDB connection failed after {max_retries} attempts: {e}")
-    
-    return _mongo_client, _mongo_db
+
+    return _mongo_client, _mongo_db, _mongo_master_db
 
 
 def extract_suburb_from_address(address: str) -> Optional[str]:
@@ -216,7 +226,7 @@ class ParallelSuburbScraper:
         
         # Get shared MongoDB connection
         self.log(f"Connecting to MongoDB...")
-        self.mongo_client, self.db = get_mongodb_connection()
+        self.mongo_client, self.db, self.master_db = get_mongodb_connection()
         self.collection = self.db[self.collection_name]
         self.log(f"MongoDB connected - Collection: {self.collection_name}")
         
@@ -705,28 +715,32 @@ class ParallelSuburbScraper:
     
     def save_to_mongodb(self, property_data: Dict) -> bool:
         """
-        Save property to MongoDB.
-
-        CRITICAL FIX: Uses the actual suburb from property_data['suburb'] to determine
-        the correct collection, NOT the search suburb parameter (self.suburb_name).
-
-        This prevents properties like "48 Peach Drive, Robina" from being stored in
-        the "varsity_lakes" collection when found in a Varsity Lakes search.
+        Save property to MongoDB with database routing:
+        - Target market suburbs → Gold_Coast_Currently_For_Sale (full document with history tracking)
+        - All other suburbs → Gold_Coast master DB (upsert scraped fields onto existing GIS doc,
+          or insert as new doc if not found)
         """
         try:
             listing_url = property_data['listing_url']
 
-            # CRITICAL FIX: Determine correct collection from actual suburb, not search parameter
             actual_suburb = property_data.get('suburb', self.suburb_name)
             collection_name = actual_suburb.lower().replace(' ', '_')
-            target_collection = self.db[collection_name]
+            is_target_market = actual_suburb.lower() in TARGET_MARKET_SUBURBS
 
-            # Log if storing in different collection than search suburb
-            if collection_name != self.collection_name:
-                self.log(f"  🔀 Cross-suburb property: Storing in '{collection_name}' collection (search was '{self.collection_name}')")
+            if is_target_market:
+                target_db = self.db
+            else:
+                target_db = self.master_db
+
+            target_collection = target_db[collection_name]
+
+            # Log routing decision when suburb differs from search parameter or goes to master DB
+            if collection_name != self.collection_name or not is_target_market:
+                db_label = DATABASE_NAME if is_target_market else MASTER_DATABASE_NAME
+                self.log(f"  Routing '{actual_suburb}' → {db_label}.{collection_name}")
 
             existing_doc = target_collection.find_one({'listing_url': listing_url})
-            
+
             if existing_doc:
                 # Update existing — never overwrite pipeline-owned or first-insert-only fields
                 PIPELINE_FIELDS = {
@@ -742,7 +756,6 @@ class ParallelSuburbScraper:
                         'last_updated': datetime.now(),
                     }
                 }
-
                 target_collection.update_one({'listing_url': listing_url}, update_doc)
                 return True
             else:
@@ -752,16 +765,17 @@ class ParallelSuburbScraper:
                 property_data['change_count'] = 0
                 property_data['history'] = {}
 
-                for field in MONITORED_FIELDS:
-                    if field in property_data and property_data[field]:
-                        property_data['history'][field] = [{
-                            'value': property_data[field],
-                            'recorded_at': datetime.now()
-                        }]
+                if is_target_market:
+                    for field in MONITORED_FIELDS:
+                        if field in property_data and property_data[field]:
+                            property_data['history'][field] = [{
+                                'value': property_data[field],
+                                'recorded_at': datetime.now()
+                            }]
 
                 target_collection.insert_one(property_data)
                 return True
-        
+
         except Exception as e:
             return False
     

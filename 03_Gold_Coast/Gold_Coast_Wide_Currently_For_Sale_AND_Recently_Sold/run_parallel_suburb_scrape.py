@@ -757,6 +757,8 @@ class ParallelSuburbScraper:
                     }
                 }
                 target_collection.update_one({'listing_url': listing_url}, update_doc)
+                if not is_target_market:
+                    self.log(f"  [Gold_Coast] UPDATED _id={existing_doc['_id']} | {collection_name} | {property_data.get('address', listing_url)}")
                 return True
             else:
                 # Insert new
@@ -773,10 +775,13 @@ class ParallelSuburbScraper:
                                 'recorded_at': datetime.now()
                             }]
 
-                target_collection.insert_one(property_data)
+                result = target_collection.insert_one(property_data)
+                if not is_target_market:
+                    self.log(f"  [Gold_Coast] INSERTED _id={result.inserted_id} | {collection_name} | {property_data.get('address', listing_url)}")
                 return True
 
         except Exception as e:
+            self.log(f"  [save_to_mongodb] ERROR: {e} | {listing_url}")
             return False
     
     def scrape_all_properties(self, urls: List[str]) -> Dict:

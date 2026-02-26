@@ -499,6 +499,7 @@ def extract_images_and_floorplans(html):
     bucket_urls = re.findall(bucket_pattern, html)
 
     for url in bucket_urls:
+        url = url.rstrip('\\')
         # Skip avatars, logos, and non-property assets
         if any(skip in url for skip in ['contact_', 'logo', 'agency', 'searchlogo', 'banner']):
             continue

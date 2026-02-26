@@ -17,18 +17,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # Target market suburbs (collection names in lowercase with underscores)
-# TESTING MODE: Only Robina for rapid feedback
-# To re-enable all suburbs, uncomment the other lines
 TARGET_SUBURBS=(
     "robina"
-    # TESTING: Temporarily disabled - uncomment after testing
-    # "mudgeeraba"
-    # "varsity_lakes"
-    # "reedy_creek"
-    # "burleigh_waters"
-    # "merrimac"
-    # "worongary"
-    # "carrara"
+    "varsity_lakes"
+    "burleigh_waters"
 )
 
 # Process each suburb

@@ -47,13 +47,8 @@ from dotenv import load_dotenv
 DATABASE_NAME = "Gold_Coast_Currently_For_Sale"
 COLLECTIONS   = [
     "robina",
-    "mudgeeraba",
     "varsity_lakes",
-    "carrara",
-    "reedy_creek",
     "burleigh_waters",
-    "merrimac",
-    "worongary",
 ]
 
 GPT_MODEL        = "gpt-5-nano-2025-08-07"

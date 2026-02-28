@@ -747,6 +747,29 @@ class ParallelSuburbScraper:
                     raise
         raise OperationFailure(f"MongoDB op failed after {max_retries} retries (429)")
 
+    def _is_invalid_listing(self, property_data: Dict) -> str:
+        """Check if a listing has an invalid/unmatchable address and should be rejected.
+        Returns reason string if invalid, empty string if OK."""
+        address = property_data.get('address', '')
+        if not address:
+            return 'empty address'
+        # Off-plan with ID prefix: "ID:21169650/25 Lake Orr Drive"
+        if re.match(r'^\s*ID:\d+/', address):
+            return f'off-plan ID prefix: {address}'
+        # Unit type prefix: "Type B/46 Scottsdale Drive"
+        if re.match(r'^\s*Type\s+[A-Za-z]\b', address, re.IGNORECASE):
+            return f'unit type prefix: {address}'
+        # Lot prefix without street number: "Lot 131/40 Majorca Crescent"
+        if re.match(r'^\s*Lot\s+\d+/', address, re.IGNORECASE):
+            return f'lot prefix: {address}'
+        # Generic suburb-only listing: "Robina, QLD 4226 - 2 beds apartment"
+        if re.match(r'^\s*[A-Za-z\s]+,\s*QLD\s+\d{4}\s*[-–]', address):
+            return f'no street address: {address}'
+        # No street number at all (just suburb + postcode)
+        if re.match(r'^\s*[A-Za-z\s]+,\s*QLD\s+\d{4}\s*$', address):
+            return f'suburb-only address: {address}'
+        return ''
+
     def save_to_mongodb(self, property_data: Dict) -> bool:
         """
         Save property to MongoDB with database routing:
@@ -757,6 +780,12 @@ class ParallelSuburbScraper:
             3. If no match: insert new doc
         """
         try:
+            # Reject off-plan and unmatchable listings
+            reject_reason = self._is_invalid_listing(property_data)
+            if reject_reason:
+                self.log(f"  ⛔ REJECTED listing ({reject_reason})")
+                return False
+
             listing_url = property_data['listing_url']
 
             actual_suburb = property_data.get('suburb', self.suburb_name)

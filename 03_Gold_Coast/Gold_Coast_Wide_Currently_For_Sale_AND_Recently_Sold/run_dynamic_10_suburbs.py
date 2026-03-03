@@ -193,7 +193,21 @@ def run_dynamic_scraping(suburbs, max_concurrent=5, parallel_properties=3):
     print(f"\n{'='*80}")
     print("WAITING FOR FINAL PROCESSES TO COMPLETE...")
     print(f"{'='*80}\n")
-    
+
+    # Drain any remaining progress updates from the queue
+    time.sleep(2)  # Brief wait for final events to arrive
+    try:
+        while not progress_queue.empty():
+            progress = progress_queue.get_nowait()
+            suburb = progress['suburb']
+            status = progress['status']
+            data = progress.get('data', {})
+            if suburb not in results_dict:
+                results_dict[suburb] = {}
+            results_dict[suburb][status] = data
+    except:
+        pass
+
     # Final Summary
     total_time = time.time() - start_time
     print("\n" + "=" * 80)

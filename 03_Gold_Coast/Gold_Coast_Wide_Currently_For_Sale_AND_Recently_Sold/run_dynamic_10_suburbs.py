@@ -245,24 +245,38 @@ def main():
                        help='Test with first 10 suburbs')
     parser.add_argument('--all', action='store_true',
                        help='Process all 52 suburbs')
+    parser.add_argument('--suburbs', type=str, default=None,
+                       help='Comma-separated list of suburb names to scrape (e.g. "Robina,Varsity Lakes,Burleigh Waters")')
     parser.add_argument('--max-concurrent', type=int, default=5,
                        help='Maximum concurrent suburbs (default: 5)')
     parser.add_argument('--parallel-properties', type=int, default=3,
                        help='Properties to scrape simultaneously per suburb (default: 3)')
-    
+
     args = parser.parse_args()
-    
+
     # Load suburbs
     all_suburbs = load_suburbs_from_json()
-    
-    if args.test:
+
+    if args.suburbs:
+        # Filter to only the specified suburbs
+        requested = [s.strip() for s in args.suburbs.split(',')]
+        requested_lower = [s.lower() for s in requested]
+        suburbs = [(name, pc) for name, pc in all_suburbs if name.lower() in requested_lower]
+        not_found = [s for s in requested if s.lower() not in [n.lower() for n, _ in all_suburbs]]
+        if not_found:
+            print(f"\n⚠️ Suburbs not found in config: {', '.join(not_found)}", flush=True)
+        if not suburbs:
+            print("\n❌ No matching suburbs found", flush=True)
+            return 1
+        print(f"\n🎯 TARGET MODE: Processing {len(suburbs)} suburbs: {', '.join(n for n,_ in suburbs)}", flush=True)
+    elif args.test:
         suburbs = all_suburbs[:10]
         print(f"\n🧪 TEST MODE: Processing first 10 suburbs")
     elif args.all:
         suburbs = all_suburbs
         print(f"\n🚀 PRODUCTION MODE: Processing all {len(suburbs)} suburbs")
     else:
-        print("\nPlease specify --test or --all")
+        print("\nPlease specify --test, --all, or --suburbs")
         parser.print_help()
         return 1
     

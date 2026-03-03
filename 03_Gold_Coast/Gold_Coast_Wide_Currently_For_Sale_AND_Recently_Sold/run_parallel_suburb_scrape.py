@@ -392,15 +392,24 @@ class ParallelSuburbScraper:
             url = self.build_search_url(page_num)
             
             try:
-                # Load page with timeout protection
-                try:
-                    self.driver.get(url)
-                    time.sleep(PAGE_LOAD_WAIT)
-                except TimeoutException:
-                    self.log(f"Timeout loading search page {page_num}, retrying once...")
-                    time.sleep(5)
-                    self.driver.get(url)
-                    time.sleep(PAGE_LOAD_WAIT)
+                # Load page with timeout protection and retry
+                page_loaded = False
+                for attempt in range(3):
+                    try:
+                        self.driver.get(url)
+                        time.sleep(PAGE_LOAD_WAIT)
+                        page_loaded = True
+                        break
+                    except TimeoutException:
+                        self.log(f"Timeout loading search page {page_num} (attempt {attempt + 1}/3), retrying...")
+                        try:
+                            self.driver.execute_script("window.stop();")
+                        except Exception:
+                            pass
+                        time.sleep(5)
+                if not page_loaded:
+                    self.log(f"Failed to load page {page_num} after 3 attempts, skipping")
+                    break
                 
                 # Scroll to load lazy content
                 for i in range(5):

@@ -58,6 +58,7 @@ import os
 import json
 import re
 import argparse
+import sys
 from datetime import datetime
 from typing import Dict, Optional, List, Tuple
 from multiprocessing import Process, Queue, Manager
@@ -65,6 +66,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 from pymongo import MongoClient, ASCENDING
 from bs4 import BeautifulSoup
+
+try:
+    sys.path.insert(0, '/home/fields/Fields_Orchestrator')
+    from shared.monitor_client import MonitorClient
+    _MONITOR_AVAILABLE = True
+except ImportError:
+    _MONITOR_AVAILABLE = False
 
 
 def normalize_address(address: str) -> str:
@@ -229,11 +237,16 @@ class SoldPropertyMonitor:
             # Use system ChromeDriver (no webdriver-manager)
             service = Service('/usr/bin/chromedriver')
             self.driver = webdriver.Chrome(service=service, options=chrome_options)
+            # Set timeouts to prevent indefinite hangs on slow/blocked pages
+            self.driver.set_page_load_timeout(60)
+            self.driver.implicitly_wait(10)
             self.log("✓ Headless Chrome ready (system ChromeDriver)")
         except FileNotFoundError:
             # Fallback: try without explicit service path
             try:
                 self.driver = webdriver.Chrome(options=chrome_options)
+                self.driver.set_page_load_timeout(60)
+                self.driver.implicitly_wait(10)
                 self.log("✓ Headless Chrome ready (default ChromeDriver)")
             except Exception as e:
                 raise Exception(f"Failed to create WebDriver: {e}")
@@ -594,28 +607,39 @@ class SoldPropertyMonitor:
             listing_url = property_doc.get('listing_url')
             if not listing_url:
                 return None
-            
+
             # Navigate to page using SHARED driver
-            self.driver.get(listing_url)
+            try:
+                self.driver.get(listing_url)
+            except Exception as nav_err:
+                # Page load timeout or network error — log and skip this property
+                err_msg = str(nav_err)[:80]
+                self.log(f"  ⚠ Page load failed ({err_msg}), skipping")
+                # Try to recover the driver for the next property
+                try:
+                    self.driver.execute_script("window.stop();")
+                except Exception:
+                    pass
+                return None
             time.sleep(PAGE_LOAD_WAIT)
-            
+
             # Get final URL (may be redirected)
             final_url = self.driver.current_url
             html = self.driver.page_source
-            
+
             if not html or len(html) < 100:
                 return None
-            
+
             # Check if sold
             is_sold, sold_date_text, sale_price, detection_method = self.check_if_sold(html, final_url)
-            
+
             if is_sold:
                 # Parse sold date
                 sold_date = self.parse_sold_date(sold_date_text) if sold_date_text else None
-                
+
                 # PRESERVE ORIGINAL LISTING PRICE
                 original_listing_price = property_doc.get('price')
-                
+
                 # Add sold information
                 property_doc['sold_status'] = 'sold'
                 property_doc['sold_detection_date'] = datetime.now()
@@ -626,12 +650,13 @@ class SoldPropertyMonitor:
                 property_doc['detection_method'] = detection_method
                 property_doc['url_redirected'] = (final_url != listing_url)
                 property_doc['final_url'] = final_url
-                
+
                 return property_doc
-            
+
             return None
-            
+
         except Exception as e:
+            self.log(f"  ⚠ Monitor error: {str(e)[:80]}")
             return None
     
     def monitor_all_properties(self, property_docs: List[Dict]) -> Dict:
@@ -800,7 +825,16 @@ def main():
                        help='Generate sold properties report')
     
     args = parser.parse_args()
-    
+
+    # Step 103 = target suburbs run, Step 104 = all-suburbs run
+    _process_id = "104" if args.all else "103"
+    _pipeline = "orchestrator_weekly" if args.all else "orchestrator_daily"
+    monitor = MonitorClient(
+        system="orchestrator", pipeline=_pipeline,
+        process_id=_process_id, process_name="Monitor Sold Properties"
+    ) if _MONITOR_AVAILABLE else None
+    if monitor: monitor.start()
+
     if args.report:
         # Generate report
         client = MongoClient(MONGODB_URI)
@@ -999,7 +1033,12 @@ def main():
     print("=" * 80)
     print(f"TOTAL: {total_sold} properties sold out of {total_checked} checked")
     print("=" * 80 + "\n")
-    
+
+    if monitor:
+        monitor.log_metric("properties_checked", total_checked)
+        monitor.log_metric("properties_sold", total_sold)
+        monitor.finish(status="success")
+
     return 0
 
 

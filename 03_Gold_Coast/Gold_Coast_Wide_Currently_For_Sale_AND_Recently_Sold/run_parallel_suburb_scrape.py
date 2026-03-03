@@ -657,6 +657,15 @@ class ParallelSuburbScraper:
                 else:
                     property_data['listing_status'] = 'for_sale'
 
+                # Defensive: catch sold listings Domain still shows with saleMode missing/stale
+                # Price shows "SOLD - $1,845,000" or address starts with "Sold 10 Example St..."
+                if property_data['listing_status'] == 'for_sale':
+                    price_str = property_data.get('price', '') or ''
+                    addr_str = property_data.get('address', '') or ''
+                    if re.match(r'^SOLD', price_str, re.IGNORECASE) or re.match(r'^Sold\s', addr_str):
+                        property_data['listing_status'] = 'sold'
+                        self.log(f"  ⚠ Sold listing detected (price/address text): {url}")
+
                 # Add required fields
                 property_data['listing_url'] = url
                 property_data['scrape_mode'] = 'headless'
@@ -828,6 +837,23 @@ class ParallelSuburbScraper:
                     )
                     if existing_doc:
                         self.log(f"  [Gold_Coast] Matched GIS doc by address: {norm_addr}")
+
+            # --- Guard: don't insert sold properties into the For Sale DB ---
+            # If detected as sold and it's a target market suburb:
+            #   - Existing doc → update listing_status so monitor_sold_properties can move it
+            #   - No existing doc → skip entirely (don't add sold listings to For Sale DB)
+            if is_target_market and property_data.get('listing_status') == 'sold':
+                if existing_doc:
+                    self._mongo_op_with_retry(
+                        lambda: target_collection.update_one(
+                            {'_id': existing_doc['_id']},
+                            {'$set': {'listing_status': 'sold', 'last_updated': datetime.now()}}
+                        )
+                    )
+                    self.log(f"  ⚠ Marked existing For Sale doc as sold (monitor will move it): {property_data.get('address', listing_url)}")
+                else:
+                    self.log(f"  ⚠ Skipping sold listing — not inserting into For Sale DB: {property_data.get('address', listing_url)}")
+                return True
 
             if existing_doc:
                 update_data = {k: v for k, v in property_data.items() if k not in PIPELINE_FIELDS}

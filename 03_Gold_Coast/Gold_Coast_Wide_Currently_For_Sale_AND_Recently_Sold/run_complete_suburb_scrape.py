@@ -55,7 +55,7 @@ except ImportError:
 
 # Configuration
 MONGODB_URI = os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/')
-DATABASE_NAME = 'Gold_Coast_Currently_For_Sale'
+DATABASE_NAME = 'Gold_Coast'  # Unified database (was Gold_Coast_Currently_For_Sale)
 PAGE_LOAD_WAIT = 5
 SCROLL_WAIT = 1.5
 BETWEEN_PROPERTY_DELAY = 2
@@ -193,6 +193,9 @@ class CompleteSuburbScraper:
         chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('--disable-blink-features=AutomationControlled')
         chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument('--disable-software-rasterizer')
+        chrome_options.add_argument('--disable-extensions')
+        chrome_options.add_argument('--js-flags=--max-old-space-size=256')
         chrome_options.add_argument('--window-size=1920,1080')
 
         # Anti-detection

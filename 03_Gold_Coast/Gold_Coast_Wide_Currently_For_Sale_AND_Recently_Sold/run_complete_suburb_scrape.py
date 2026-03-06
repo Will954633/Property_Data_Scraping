@@ -238,6 +238,24 @@ class CompleteSuburbScraper:
 
         return None
 
+    @staticmethod
+    def _is_valid_listing_url(href: str) -> bool:
+        """Reject off-plan/project URLs that don't have a real street address."""
+        slug = href.strip('/').split('/')[-1] if '/' in href else href
+        # Strip trailing listing ID
+        slug_no_id = re.sub(r'-\d{7,10}$', '', slug)
+        # Must have at least 3 segments: street-name-suburb-state-postcode
+        parts = slug_no_id.split('-')
+        if len(parts) < 5:
+            return False
+        # Reject if slug starts with "id-" (off-plan lot identifiers)
+        if slug_no_id.startswith('id-') and re.match(r'^id-\d+', slug_no_id):
+            return False
+        # Reject if slug starts with "type-" (off-plan type designations)
+        if re.match(r'^type-[a-z]-', slug_no_id):
+            return False
+        return True
+
     def extract_listing_urls_from_html(self, html: str) -> List[str]:
         """Extract property listing URLs from HTML"""
         soup = BeautifulSoup(html, 'html.parser')
@@ -250,12 +268,16 @@ class CompleteSuburbScraper:
 
             # Match pattern: /slug-PROPERTYID (7-10 digits at end)
             if re.match(r'^/[\w-]+-\d{7,10}$', href):
+                if not self._is_valid_listing_url(href):
+                    continue
                 full_url = f"https://www.domain.com.au{href}"
                 if full_url not in listing_urls:
                     listing_urls.append(full_url)
 
             # Also match full URLs
             elif 'domain.com.au' in href and re.search(r'-\d{7,10}$', href):
+                if not self._is_valid_listing_url(href):
+                    continue
                 if href not in listing_urls:
                     listing_urls.append(href)
 
@@ -400,8 +422,17 @@ class CompleteSuburbScraper:
         if not property_data.get('address'):
             warnings.append("Missing address")
 
-        # Check 2: Suburb should match address
+        # Check 1b: Address must have a street number (rejects off-plan/generic listings)
         address = property_data.get('address', '')
+        if address and not re.match(r'^\d', address):
+            # Allow unit-style "1/34 ..." but reject "Robina, QLD..." or "Type B/..."
+            warnings.append(f"No street number in address: '{address[:50]}'")
+
+        # Check 1c: Reject duplicate words in street name (e.g. "Drive Drive")
+        if re.search(r'\b(\w{3,})\s+\1\b', address, re.IGNORECASE):
+            warnings.append(f"Duplicate word in address: '{address[:50]}'")
+
+        # Check 2: Suburb should match address
         suburb_field = property_data.get('suburb')
         actual_suburb = extract_suburb_from_address(address)
 
@@ -549,6 +580,12 @@ class CompleteSuburbScraper:
                 print(f"  ⚠ Validation warnings:")
                 for warning in validation_warnings:
                     print(f"     - {warning}")
+
+            # Hard reject: addresses without a street number are off-plan/generic
+            addr_check = property_data.get('address', '')
+            if addr_check and not re.match(r'^\d', addr_check):
+                print(f"  SKIPPED (no street number): {addr_check[:60]}")
+                return None
 
             property_data['data_quality_warnings'] = validation_warnings
             property_data['data_quality_score'] = 1.0 - (len(validation_warnings) * 0.1)

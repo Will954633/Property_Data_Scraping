@@ -52,39 +52,44 @@ def cleanup_zombie_chrome_processes():
     """
     Kill any zombie Chrome/ChromeDriver processes to prevent resource exhaustion.
     This is a self-healing mechanism that runs after each scraping session.
+
+    Uses pkill with broad patterns to catch:
+      - google-chrome / chrome (apt-installed)
+      - chromium (snap-installed, runs as /snap/chromium/...)
+      - chromedriver (both /usr/local/bin and snap)
+      - chrome_crashpad_handler (crash reporter sub-processes)
     """
     print("\n" + "=" * 80, flush=True)
-    print("🧹 CLEANING UP ZOMBIE CHROME PROCESSES", flush=True)
+    print("CLEANING UP ZOMBIE CHROME PROCESSES", flush=True)
     print("=" * 80 + "\n", flush=True)
 
     try:
-        # Count existing processes
-        check_cmd = "ps aux | grep -E 'chrome|chromedriver' | grep -v grep | wc -l"
+        check_cmd = "ps aux | grep -Ei 'chrom(e|ium|edriver|e_crashpad)' | grep -v grep | wc -l"
         result = subprocess.run(check_cmd, shell=True, capture_output=True, text=True)
         zombie_count = int(result.stdout.strip())
 
         if zombie_count > 0:
             print(f"Found {zombie_count} Chrome/ChromeDriver processes", flush=True)
 
-            # Kill all Chrome and ChromeDriver processes
-            kill_cmd = "killall -9 chrome chromedriver 2>/dev/null || true"
-            subprocess.run(kill_cmd, shell=True)
+            # pkill matches process names broadly — covers snap, apt, and manual installs
+            for pattern in ['chromedriver', 'chrome_crashpad', 'chromium', 'chrome']:
+                subprocess.run(['pkill', '-9', '-f', pattern],
+                               capture_output=True, text=True)
 
-            time.sleep(2)
+            time.sleep(3)
 
-            # Verify cleanup
             result = subprocess.run(check_cmd, shell=True, capture_output=True, text=True)
             remaining = int(result.stdout.strip())
 
             if remaining == 0:
-                print(f"✅ Successfully killed {zombie_count} zombie processes", flush=True)
+                print(f"Successfully killed {zombie_count} zombie processes", flush=True)
             else:
-                print(f"⚠️ Killed processes but {remaining} still remain", flush=True)
+                print(f"WARNING: Killed processes but {remaining} still remain", flush=True)
         else:
-            print("✅ No zombie processes found - system is clean", flush=True)
+            print("No zombie processes found - system is clean", flush=True)
 
     except Exception as e:
-        print(f"⚠️ Cleanup warning: {e}", flush=True)
+        print(f"Cleanup warning: {e}", flush=True)
 
     print("\n" + "=" * 80 + "\n", flush=True)
 

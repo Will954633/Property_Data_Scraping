@@ -34,8 +34,8 @@ PERFORMANCE FIX:
 - Expected performance: ~10 properties per minute (vs ~1 property per minute before)
 
 PURPOSE:
-Monitors properties in Gold_Coast_Currently_For_Sale collections (52 suburbs) and detects
-when they've been sold. Moves sold properties to Gold_Coast_Recently_Sold collection.
+Monitors properties in Gold_Coast database (52 suburbs) and detects when they've been sold.
+Updates listing_status to "sold" in-place (no cross-database move).
 
 FEATURES:
 - Headless Chrome operation
@@ -124,23 +124,18 @@ except ImportError:
 
 # Configuration
 MONGODB_URI = os.getenv('MONGODB_URI', 'mongodb://127.0.0.1:27017/')
-DATABASE_NAME = 'Gold_Coast_Currently_For_Sale'
-SOLD_DATABASE_NAME = 'Gold_Coast_Recently_Sold'  # Separate database for sold properties
-MASTER_DATABASE_NAME = 'Gold_Coast'  # Master property database
+DATABASE_NAME = 'Gold_Coast'  # Unified database (was Gold_Coast_Currently_For_Sale)
 PAGE_LOAD_WAIT = 5
 BETWEEN_PROPERTY_DELAY = 2
 
 # Global MongoDB client (one per process)
 _mongo_client = None
 _mongo_db = None
-_sold_db = None
-_sold_collection = None
-_master_db = None
 
 
 def get_mongodb_connection():
     """Get or create MongoDB connection (one per process)"""
-    global _mongo_client, _mongo_db, _sold_db, _sold_collection, _master_db
+    global _mongo_client, _mongo_db
     
     if _mongo_client is None:
         max_retries = 3
@@ -160,8 +155,6 @@ def get_mongodb_connection():
                     retryReads=True
                 )
                 _mongo_db = _mongo_client[DATABASE_NAME]
-                _sold_db = _mongo_client[SOLD_DATABASE_NAME]  # Separate database for sold properties
-                _master_db = _mongo_client[MASTER_DATABASE_NAME]
                 
                 # Test connection
                 _mongo_client.admin.command('ping')
@@ -173,7 +166,7 @@ def get_mongodb_connection():
                 else:
                     raise Exception(f"MongoDB connection failed after {max_retries} attempts: {e}")
     
-    return _mongo_client, _mongo_db, _sold_db, _master_db
+    return _mongo_client, _mongo_db
 
 
 class SoldPropertyMonitor:
@@ -191,25 +184,10 @@ class SoldPropertyMonitor:
         
         # Get shared MongoDB connection
         self.log(f"Connecting to MongoDB...")
-        self.mongo_client, self.db, self.sold_db, self.master_db = get_mongodb_connection()
+        self.mongo_client, self.db = get_mongodb_connection()
         self.collection = self.db[self.collection_name]
-        # Sold collection uses same collection name as for-sale (suburb-specific)
-        self.sold_collection = self.sold_db[self.collection_name]
-        
-        # Create indexes for sold collection (Cosmos DB safe)
-        # NOTE: Cosmos DB doesn't allow unique indexes on collections with existing documents
-        # So we create non-unique indexes instead
-        try:
-            self.sold_collection.create_index([("listing_url", ASCENDING)])
-            self.sold_collection.create_index([("address", ASCENDING)])
-            self.sold_collection.create_index([("sold_detection_date", ASCENDING)])
-            self.sold_collection.create_index([("sold_date", ASCENDING)])
-        except Exception as e:
-            # Indexes may already exist, which is fine
-            self.log(f"Note: Index creation skipped (may already exist): {e}")
-        
-        self.log(f"MongoDB connected - For-sale: {self.collection_name}")
-        self.log(f"Sold database: {SOLD_DATABASE_NAME}.{self.collection_name}")
+
+        self.log(f"MongoDB connected - Database: {DATABASE_NAME}, Collection: {self.collection_name}")
         
         # Setup shared WebDriver for all properties
         self.setup_driver()
@@ -455,38 +433,43 @@ class SoldPropertyMonitor:
         
         return sold_text
     
-    def update_master_property_record(self, property_doc: Dict) -> bool:
-        """Update the master property record in Gold_Coast database with sold information"""
+    def move_to_sold_collection(self, property_doc: Dict) -> bool:
+        """Mark property as sold in-place (update-in-place, no cross-database move)"""
         try:
             address = property_doc.get('address')
-            
-            # Try to find the property in master database by address
-            # The master database uses the collection_name (lowercase with underscores)
-            master_collection = self.master_db[self.collection_name]
-            
-            # ROBUST ADDRESS MATCHING: Normalize addresses for comparison
-            # This handles: case differences, commas ("Varsity, Lakes" vs "VARSITY LAKES"),
-            # unit numbers ("2 36" vs "2/36"), and extra spaces
-            normalized_search_addr = normalize_address(address)
-            
-            # Try to find matching property using normalized address comparison
-            master_property = None
-            for candidate in master_collection.find({}):
-                candidate_addr = candidate.get('complete_address', '')
-                if normalize_address(candidate_addr) == normalized_search_addr:
-                    master_property = candidate
-                    break
-            
-            if not master_property:
-                self.log(f"⚠ No master record found for: {address}")
-                return False
-            
-            # Create the sold transaction record
+
+            # Check if already marked as sold
+            if property_doc.get('listing_status') == 'sold':
+                self.log(f"⚠ Already marked as sold: {address}")
+                return True
+
+            # PRESERVE ORIGINAL LISTING PRICE
+            original_price = property_doc.get('price')
+
+            # CALCULATE DAYS ON MARKET
+            days_on_market = None
+            try:
+                listing_ts = property_doc.get('first_listed_timestamp')
+                sold_date_str = property_doc.get('sold_date')
+                if listing_ts and sold_date_str:
+                    if isinstance(listing_ts, str):
+                        listing_ts = listing_ts.split('T')[0]
+                        listing_dt = datetime.strptime(listing_ts, '%Y-%m-%d')
+                    else:
+                        listing_dt = listing_ts
+                    sold_dt = datetime.strptime(sold_date_str, '%Y-%m-%d')
+                    days_on_market = (sold_dt - listing_dt).days
+                    if days_on_market < 0:
+                        days_on_market = None
+            except Exception:
+                pass
+
+            # Build sold transaction record for sales_history
             sold_transaction = {
                 'listing_date': property_doc.get('first_listed_date'),
                 'listing_timestamp': property_doc.get('first_listed_timestamp'),
-                'days_on_market': property_doc.get('days_on_domain'),
-                'listing_price': property_doc.get('price'),
+                'days_on_market': days_on_market or property_doc.get('days_on_domain'),
+                'listing_price': original_price,
                 'sold_date': property_doc.get('sold_date'),
                 'sold_date_text': property_doc.get('sold_date_text'),
                 'sale_price': property_doc.get('sale_price'),
@@ -504,100 +487,31 @@ class SoldPropertyMonitor:
                 'images': property_doc.get('images', []),
                 'floor_plans': property_doc.get('floor_plans', [])
             }
-            
-            # Update the master property record - append to sales_history array
-            result = master_collection.update_one(
-                {"_id": master_property["_id"]},
+
+            # Update in place: set listing_status to sold + append to sales_history
+            self.collection.update_one(
+                {"_id": property_doc["_id"]},
                 {
-                    "$push": {
-                        "sales_history": sold_transaction
-                    },
                     "$set": {
+                        "listing_status": "sold",
+                        "listing_price": original_price,
+                        "days_on_market": days_on_market,
+                        "moved_to_sold_date": datetime.now(),
                         "last_sold_date": property_doc.get('sold_date'),
                         "last_sale_price": property_doc.get('sale_price'),
                         "last_updated": datetime.now()
+                    },
+                    "$push": {
+                        "sales_history": sold_transaction
                     }
-                },
-                upsert=False  # Don't create if doesn't exist
+                }
             )
-            
-            if result.matched_count > 0:
-                self.log(f"✓ Updated master record for: {address}")
-                return True
-            else:
-                self.log(f"⚠ No master record found for: {address}")
-                return False
-                
-        except Exception as e:
-            self.log(f"Error updating master record: {e}")
-            return False
-    
-    def move_to_sold_collection(self, property_doc: Dict) -> bool:
-        """Move property from suburb collection to sold collection AND update master database"""
-        try:
-            address = property_doc.get('address')
-            listing_url = property_doc.get('listing_url')
-            
-            # Check if already in sold collection
-            existing = self.sold_collection.find_one({"listing_url": listing_url})
-            
-            if existing:
-                self.log(f"⚠ Already in sold collection: {address}")
-                # Remove from for-sale collection
-                self.collection.delete_one({"_id": property_doc["_id"]})
-                return True
-            
-            # PRESERVE ORIGINAL LISTING PRICE
-            # Store the original 'price' field as 'listing_price' before it gets overwritten
-            original_price = property_doc.get('price')
-            if original_price:
-                property_doc['listing_price'] = original_price
 
-            # CALCULATE DAYS ON MARKET
-            # Use first_listed_timestamp and sold_date for accurate calculation
-            days_on_market = None
-            try:
-                listing_ts = property_doc.get('first_listed_timestamp')
-                sold_date_str = property_doc.get('sold_date')
-                if listing_ts and sold_date_str:
-                    if isinstance(listing_ts, str):
-                        listing_ts = listing_ts.split('T')[0]
-                        listing_dt = datetime.strptime(listing_ts, '%Y-%m-%d')
-                    else:
-                        listing_dt = listing_ts
-                    sold_dt = datetime.strptime(sold_date_str, '%Y-%m-%d')
-                    days_on_market = (sold_dt - listing_dt).days
-                    if days_on_market < 0:
-                        days_on_market = None
-            except Exception:
-                pass
-            property_doc['days_on_market'] = days_on_market
-
-            # Add migration metadata
-            property_doc['moved_to_sold_date'] = datetime.now()
-            property_doc['original_collection'] = self.collection_name
-            property_doc['original_suburb'] = self.suburb_name
-            
-            # STEP 1: Insert into sold collection
-            self.sold_collection.insert_one(property_doc)
-            
-            # STEP 2: Update master property record in Gold_Coast database
-            self.update_master_property_record(property_doc)
-            
-            # STEP 3: Remove from for-sale collection
-            self.collection.delete_one({"_id": property_doc["_id"]})
-            
-            self.log(f"✓ Moved to sold collection: {address}")
+            self.log(f"✓ Marked as sold (in-place): {address}")
             return True
-            
+
         except Exception as e:
-            self.log(f"Error moving property: {e}")
-            if "duplicate key error" in str(e):
-                try:
-                    self.collection.delete_one({"_id": property_doc["_id"]})
-                    return True
-                except Exception:
-                    pass
+            self.log(f"Error marking property as sold: {e}")
             return False
     
     def monitor_property(self, property_doc: Dict) -> Optional[Dict]:
@@ -710,8 +624,8 @@ class SoldPropertyMonitor:
         try:
             self.log("Starting sold property monitoring...")
             
-            # Get all properties from collection
-            query = {}
+            # Get only active listings (not cadastral/sold records)
+            query = {"listing_status": "for_sale"}
             if test_mode:
                 property_docs = list(self.collection.find(query).limit(10))
                 self.log(f"TEST MODE: Monitoring first 10 properties")
@@ -730,7 +644,7 @@ class SoldPropertyMonitor:
             # Final summary
             self.update_progress('complete', {
                 'monitoring': result,
-                'remaining_count': self.collection.count_documents({})
+                'remaining_count': self.collection.count_documents({"listing_status": "for_sale"})
             })
             
             self.log("Complete!")
@@ -836,44 +750,43 @@ def main():
     if monitor: monitor.start()
 
     if args.report:
-        # Generate report
+        # Generate report — query Gold_Coast with listing_status: "sold"
         client = MongoClient(MONGODB_URI)
-        sold_db = client[SOLD_DATABASE_NAME]
-        
+        gc_db = client[DATABASE_NAME]
+
         print("\n" + "=" * 80)
         print("SOLD PROPERTIES REPORT")
         print("=" * 80)
-        
-        # Get all collections (suburbs) in sold database
-        collections = sold_db.list_collection_names()
-        
+
+        collections = [c for c in gc_db.list_collection_names()
+                       if not c.startswith('system.') and c not in ('suburb_median_prices', 'suburb_statistics', 'change_detection_snapshots')]
+
         total_sold = 0
         detection_methods = {}
         suburb_counts = {}
-        
-        for coll_name in collections:
-            coll = sold_db[coll_name]
-            count = coll.count_documents({})
+
+        for coll_name in sorted(collections):
+            coll = gc_db[coll_name]
+            count = coll.count_documents({"listing_status": "sold"})
             if count > 0:
                 suburb_counts[coll_name] = count
                 total_sold += count
-                
-                # Count detection methods
-                for prop in coll.find({}):
+
+                for prop in coll.find({"listing_status": "sold"}):
                     method = prop.get('detection_method', 'unknown')
                     detection_methods[method] = detection_methods.get(method, 0) + 1
-        
+
         print(f"\nTotal Sold Properties: {total_sold}")
         print(f"Suburbs with sold properties: {len(suburb_counts)}\n")
-        
+
         print("By Suburb:")
         for suburb, count in sorted(suburb_counts.items(), key=lambda x: x[1], reverse=True):
             print(f"  {suburb}: {count}")
-        
+
         print("\nDetection Methods:")
         for method, count in detection_methods.items():
             print(f"  {method}: {count}")
-        
+
         print("\n" + "=" * 80 + "\n")
         client.close()
         return 0
@@ -904,9 +817,8 @@ def main():
     print(f"\nSuburbs to monitor: {len(suburbs)}")
     for name, postcode in suburbs:
         print(f"  - {name} ({postcode})")
-    print(f"\nFor-Sale Database: {DATABASE_NAME}")
-    print(f"Sold Database: {SOLD_DATABASE_NAME}")
-    print(f"Structure: Each suburb has its own collection in both databases")
+    print(f"\nDatabase: {DATABASE_NAME} (unified — sold properties updated in-place)")
+    print(f"Structure: Each suburb has its own collection, listing_status tracks lifecycle")
     print(f"Max Concurrent: {args.max_concurrent} suburbs")
     print(f"Parallel Properties: {args.parallel_properties} per suburb")
     if args.test:

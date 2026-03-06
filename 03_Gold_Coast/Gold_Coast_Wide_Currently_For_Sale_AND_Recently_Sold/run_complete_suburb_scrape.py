@@ -646,6 +646,17 @@ class CompleteSuburbScraper:
                 if 'first_seen' in existing_doc:
                     update_doc['$setOnInsert'] = {'first_seen': existing_doc['first_seen']}
 
+                # Preserve domain_valuation_at_listing (never overwrite once set)
+                if 'domain_valuation_at_listing' in existing_doc:
+                    update_doc['$set'].pop('domain_valuation_at_listing', None)
+                elif existing_doc.get('scraped_data', {}).get('valuation', {}).get('mid'):
+                    # First time we see a valuation — snapshot it
+                    update_doc['$set']['domain_valuation_at_listing'] = {
+                        **existing_doc['scraped_data']['valuation'],
+                        'captured_at': datetime.now().isoformat(),
+                        'source': 'scraped_data_snapshot'
+                    }
+
                 # Merge listing history
                 if 'listing_history' in existing_doc:
                     existing_history = existing_doc['listing_history']

@@ -44,7 +44,7 @@ from dotenv import load_dotenv
 # ---------------------------------------------------------------------------
 # CONFIGURATION
 # ---------------------------------------------------------------------------
-DATABASE_NAME = "Gold_Coast_Currently_For_Sale"
+DATABASE_NAME = "Gold_Coast"
 COLLECTIONS   = [
     "robina",
     "varsity_lakes",
@@ -109,6 +109,15 @@ maintenance_level: "well_maintained" | "average" | "needs_work" | "poor"
 air_conditioning: "ducted" | "split_system" | "none" | "unknown"
 image_quality: "professional" | "good" | "average" | "poor"
 water_view_type: "none" | "ocean" | "river" | "canal" | "lake" | "bay"
+prestige_tier: "standard" | "elevated" | "prestige" | "ultra_prestige"
+
+PRESTIGE TIER — classify the overall build quality and design calibre visible in the photos:
+  "standard" = Typical suburban home. Builder-grade finishes, standard layouts, basic materials. Brick, tile roof, laminate benchtops, enclosed showers, standard ceiling heights. No standout design intent. This is the vast majority of homes.
+  "elevated" = Above-average home with quality upgrades. May have stone benchtops, good fixtures, renovated kitchen/bathroom, or tasteful cosmetic renovation. Still a conventional design — not architect-designed. Quality is above average but the home does not command a premium beyond its physical features.
+  "prestige" = Architect-designed or builder-prestige home that is visually in a different class. Indicators: bespoke design elements (feature walls, void spaces, custom joinery, statement lighting), premium material palette throughout (herringbone timber, natural stone, timber cladding), frameless glass, high or raked ceilings, seamless indoor-outdoor design with oversized openings, and a cohesive design language across the whole property. The home looks like it belongs in an architectural or lifestyle magazine. These homes typically sell for 50-100% above median for their suburb.
+  "ultra_prestige" = Landmark or trophy home. Multiple signature features: dramatic architectural statement visible from the street, resort-style grounds, bespoke everything, materials and craftsmanship that are clearly in the top 1% (e.g. imported stone, full automation, commercial-grade kitchen). Extremely rare — only 1-2% of properties should receive this rating.
+
+Key distinction: "elevated" is a nice home well-maintained or nicely renovated. "prestige" is a fundamentally different product — the architecture, materials, and design intent place it in a separate market segment where comparable sales from standard homes are irrelevant.
 
 SCORES: All _score fields use integer 1-10:
   10=exceptional/luxury, 8-9=high quality, 6-7=good/well maintained,
@@ -240,6 +249,7 @@ SCORES: All _score fields use integer 1-10:
     "air_conditioning": <air_conditioning>,
     "property_presentation_score": <1-10>,
     "market_appeal_score": <1-10>,
+    "prestige_tier": <prestige_tier>,
     "unique_features": [<string>, ...],
     "negative_features": [<string>, ...],
     "image_quality": <image_quality>,

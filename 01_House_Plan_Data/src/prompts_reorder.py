@@ -9,21 +9,27 @@ Your task is to analyze the provided property images and their descriptions, the
 
 1. Front of property (exterior/street view)
 2. Through the front door (entrance/foyer)
-3. Into the kitchen
-4. Main living area (living room/lounge)
-5. Main bedroom (master bedroom)
-6. Other bedrooms
-7. Laundry
-8. Back yard
-9. Pool (if present)
+3. Kitchen
+4. Dining area
+5. Main living area (living room/lounge)
+6. Main bedroom (master bedroom/ensuite)
+7. Ensuite bathroom
+8. Other bedrooms
+9. Main bathroom
+10. Laundry
+11. Garage
+12. Alfresco / outdoor entertaining
+13. Back yard / garden
+14. Pool (if present)
 
 REQUIREMENTS:
-- Select NO MORE than 15 photos total
+- Select up to 20 photos total
 - Choose photos with the HIGHEST usefulness scores
 - Follow the tour flow as closely as possible based on available photos
 - Skip sections if no relevant photos are available
 - Prioritize high-quality, well-composed images
 - Ensure the tour tells a cohesive story of the property
+- Include at least one photo for EVERY distinct room/area that has a suitable image
 
 For each image in the existing image_analysis array, you have:
 - image_index: The original index
@@ -36,12 +42,17 @@ IMPORTANT MAPPING GUIDELINES:
 - "exterior" images → Front of property
 - "interior" with "entrance", "foyer", "hallway", "entry" → Through front door
 - "kitchen" → Kitchen
-- "living_room", "lounge", "living area" → Main living area
-- "bedroom" with "master", "main" → Main bedroom
+- "dining", "meals", "breakfast" → Dining area
+- "living_room", "lounge", "living area", "family room", "rumpus" → Main living area
+- "bedroom" with "master", "main", "primary" → Main bedroom
+- "ensuite", "en-suite", "master bath" → Ensuite bathroom
 - "bedroom" (other) → Other bedrooms
+- "bathroom", "bath", "shower", "washroom" → Bathroom
 - "laundry" → Laundry
-- "outdoor", "backyard", "back yard", "garden", "patio", "deck" → Back yard
-- "pool" → Pool
+- "garage", "carport", "car space" → Garage
+- "alfresco", "patio", "deck", "pergola", "verandah", "balcony", "outdoor entertaining" → Alfresco
+- "outdoor", "backyard", "back yard", "garden", "yard" → Back yard
+- "pool", "spa" → Pool
 
 Return your analysis as valid JSON with the following structure:
 {
@@ -64,7 +75,7 @@ Return your analysis as valid JSON with the following structure:
       "usefulness_score": <score>,
       "selection_reason": "<why this photo was chosen>"
     }
-    // ... up to 15 photos maximum
+    // ... up to 20 photos maximum
   ],
   "tour_metadata": {
     "total_photos_selected": <count>,
@@ -79,19 +90,25 @@ VALID tour_section VALUES:
 - "front_exterior"
 - "entrance"
 - "kitchen"
+- "dining"
 - "living_area"
 - "main_bedroom"
+- "ensuite"
 - "other_bedroom"
+- "bathroom"
 - "laundry"
+- "garage"
+- "alfresco"
 - "back_yard"
 - "pool"
 
 Remember:
-1. Maximum 15 photos
+1. Maximum 20 photos
 2. Prioritize highest usefulness scores
 3. Follow the tour flow order
 4. Only include photos that exist in the image_analysis array
 5. Each photo should only appear once
+6. Cover as many distinct areas as possible — breadth over depth
 """
 
 def get_photo_reorder_prompt():

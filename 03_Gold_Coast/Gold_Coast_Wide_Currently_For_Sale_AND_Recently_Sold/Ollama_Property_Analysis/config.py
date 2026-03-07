@@ -12,21 +12,18 @@ load_dotenv()
 
 # MongoDB Configuration
 MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
-DATABASE_NAME = "Gold_Coast_Currently_For_Sale"
+DATABASE_NAME = "Gold_Coast"
 COLLECTION_NAME = "properties"
 
-# Target Suburbs - Collection names (must match database exactly: underscores for multi-word suburbs)
-# TESTING MODE: Only Robina for rapid feedback
-# To re-enable all suburbs, uncomment the other lines
+# Target Suburbs - Collection names (must match database exactly)
 TARGET_SUBURBS = [
     "robina",
-    # TESTING: Temporarily disabled - uncomment after testing
-    # "mudgeeraba",
-    # "varsity_lakes",      # Fixed: was "varsity lakes"
-    # "reedy_creek",        # Fixed: was "reedy creek"
-    # "burleigh_waters",    # Fixed: was "burleigh waters"
-    # "merrimac",           # Fixed: was "merimac" (spelling correction)
-    # "worongary"           # Fixed: was "warongary" (spelling correction)
+    "burleigh_waters",
+    "varsity_lakes",
+    "mudgeeraba",
+    "reedy_creek",
+    "merrimac",
+    "worongary",
 ]
 
 # OpenAI Configuration (Primary LLM for all visual analysis)
@@ -49,7 +46,7 @@ RETRY_DELAY = int(os.getenv("RETRY_DELAY", "5"))
 REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "300"))
 
 # Image Processing
-MAX_IMAGES_PER_PROPERTY = int(os.getenv("MAX_IMAGES_PER_PROPERTY", "5"))  # Very conservative for Ollama
+MAX_IMAGES_PER_PROPERTY = int(os.getenv("MAX_IMAGES_PER_PROPERTY", "25"))  # Increased for better tour coverage
 IMAGE_DETAIL_LEVEL = "auto"  # Ollama handles this automatically
 # Process images one at a time to avoid payload size issues
 PROCESS_IMAGES_INDIVIDUALLY = True
@@ -71,7 +68,7 @@ ENABLE_WORKER_LOGS = os.getenv("ENABLE_WORKER_LOGS", "True").lower() == "true"
 ENABLE_PROGRESS_LOG = os.getenv("ENABLE_PROGRESS_LOG", "True").lower() == "true"
 
 # Testing Configuration
-TEST_RUN = os.getenv("TEST_RUN", "True").lower() == "true"
+TEST_RUN = os.getenv("TEST_RUN", "False").lower() == "true"
 MAX_BATCHES = int(os.getenv("MAX_BATCHES", "2"))  # 0 = unlimited, >0 = limit for testing
 
 # Ensure directories exist

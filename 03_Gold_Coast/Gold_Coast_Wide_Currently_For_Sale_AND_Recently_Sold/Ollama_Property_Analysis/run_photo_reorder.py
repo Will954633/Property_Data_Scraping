@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# Last Updated: 23/02/2026 - Production photo reorder for Gold_Coast_Currently_For_Sale
+# Last Updated: 07/03/2026 - Production photo reorder for Gold_Coast (unified DB)
 """
 Production runner for GPT photo reordering.
-Processes properties from Gold_Coast_Currently_For_Sale.[suburb] that have
+Processes properties from Gold_Coast.[suburb] with listing_status='for_sale' that have
 ollama_image_analysis but no photo_tour_order yet.
 
 Usage:
@@ -42,7 +42,7 @@ def process_collection(collection_name: str, workers: int = 2):
     print(f"[{datetime.now():%H:%M:%S}] Starting photo reorder for: {collection_name}")
 
     client = get_mongo_client()
-    col = client['Gold_Coast_Currently_For_Sale'][collection_name]
+    col = client['Gold_Coast'][collection_name]
     gpt = GPTReorderClient()
 
     # Find properties with image analysis but no photo_tour_order
@@ -50,7 +50,7 @@ def process_collection(collection_name: str, workers: int = 2):
     skipped = 0
     errors = 0
 
-    for doc in col.find({}):
+    for doc in col.find({'listing_status': 'for_sale'}):
         # Skip if already has photo_tour_order
         if doc.get('photo_tour_order'):
             skipped += 1

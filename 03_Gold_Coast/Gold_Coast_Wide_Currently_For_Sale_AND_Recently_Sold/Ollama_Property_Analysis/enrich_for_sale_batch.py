@@ -632,12 +632,14 @@ def main():
 
     target_collections = [args.collection] if args.collection else COLLECTIONS
 
+    FS_FILTER = {"listing_status": "for_sale"}
+
     grand_total = grand_todo = 0
     for col_name in target_collections:
         col = db[col_name]
-        total = sum(1 for _ in col.find({}))
-        todo  = sum(1 for d in col.find({}) if not (d.get("processing_status") or {}).get("images_processed"))
-        logger.info(f"  {col_name:<20} total={total}  to_process={todo}")
+        total = col.count_documents(FS_FILTER)
+        todo  = col.count_documents({**FS_FILTER, "processing_status.images_processed": {"$ne": True}})
+        logger.info(f"  {col_name:<20} for_sale={total}  to_process={todo}")
         grand_total += total
         grand_todo  += todo
 
@@ -669,7 +671,7 @@ def main():
         col_count = 0
         col_start = time.time()
 
-        for doc in col.find({}):
+        for doc in col.find(FS_FILTER):
             if args.limit and docs_processed >= args.limit:
                 break
 

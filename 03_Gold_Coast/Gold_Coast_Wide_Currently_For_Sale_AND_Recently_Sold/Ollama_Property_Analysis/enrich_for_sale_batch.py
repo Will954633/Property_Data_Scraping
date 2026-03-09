@@ -51,7 +51,7 @@ COLLECTIONS   = [
     "burleigh_waters",
 ]
 
-GPT_MODEL        = "gpt-5-nano-2025-08-07"
+GPT_MODEL        = "gpt-4o"
 MAX_TOKENS       = 16000
 MAX_PHOTOS       = 20       # cap photos per property
 IMAGE_TIMEOUT    = 15       # seconds per image download

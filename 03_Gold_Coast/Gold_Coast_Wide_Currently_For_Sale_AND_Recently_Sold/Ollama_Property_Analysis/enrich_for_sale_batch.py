@@ -525,6 +525,52 @@ def analyse_floor_plans(client: OpenAI, floor_plan_urls: list) -> dict:
 # PROCESS SINGLE DOCUMENT
 # ---------------------------------------------------------------------------
 
+def detect_water_views_from_description(doc: dict) -> dict:
+    """Detect water views from agent's listing description and features list.
+
+    Agent descriptions always mention water views if they exist — it's a
+    high-value selling point that is never omitted.  This is more reliable
+    than GPT-4o Vision which can confuse pools with water views.
+
+    Returns dict with water_views, water_view_type, water_view_quality_score.
+    """
+    text = (doc.get("agents_description") or "").lower()
+    features = [f.lower() for f in (doc.get("features") or [])]
+    features_text = " ".join(features)
+    combined = text + " " + features_text
+
+    # Patterns that indicate genuine water views
+    view_patterns = [
+        (r'\bocean\s*view', "ocean"),
+        (r'\bsea\s*view', "ocean"),
+        (r'\bbeach\s*view', "ocean"),
+        (r'\briver\s*view', "river"),
+        (r'\briver\s*front', "river"),
+        (r'\bcanal\s*view', "canal"),
+        (r'\bcanal\s*front', "canal"),
+        (r'\blake\s*view', "lake"),
+        (r'\blake\s*front', "lake"),
+        (r'\bbay\s*view', "bay"),
+        (r'\bwater\s*view', "lake"),      # generic "water views" — default to lake for GC suburbs
+        (r'\bwater\s*front', "lake"),
+        (r'\bwaterfront', "lake"),
+    ]
+
+    for pattern, view_type in view_patterns:
+        if re.search(pattern, combined):
+            return {
+                "water_views": True,
+                "water_view_type": view_type,
+                "water_view_quality_score": 7,  # conservative default; agent said it exists
+            }
+
+    return {
+        "water_views": False,
+        "water_view_type": "none",
+        "water_view_quality_score": None,
+    }
+
+
 def process_document(doc: dict, collection, client: OpenAI, logger: logging.Logger) -> dict:
     doc_id = doc["_id"]
     address = doc.get("address", str(doc_id))
@@ -578,6 +624,14 @@ def process_document(doc: dict, collection, client: OpenAI, logger: logging.Logg
         processing_status["internal_floor_area_sqm"] = internal.get("value")
         processing_status["external_floor_area_sqm"] = external.get("value")
         processing_status["total_floor_area_sqm"]    = total.get("value")
+
+    # Override GPT's water_views with description-based detection (more reliable)
+    water = detect_water_views_from_description(doc)
+    if "outdoor" not in photo_result:
+        photo_result["outdoor"] = {}
+    photo_result["outdoor"]["water_views"] = water["water_views"]
+    photo_result["outdoor"]["water_view_type"] = water["water_view_type"]
+    photo_result["outdoor"]["water_view_quality_score"] = water["water_view_quality_score"]
 
     update_set = {
         "property_valuation_data": photo_result,

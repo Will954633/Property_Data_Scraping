@@ -35,7 +35,7 @@ def get_mongo_client():
         os.environ.get('MONGODB_URI') or
         'mongodb://localhost:27017/'
     )
-    return MongoClient(uri, retryWrites=False, tls=True, tlsAllowInvalidCertificates=True)
+    return MongoClient(uri, retryWrites=False, **({"tls": True, "tlsAllowInvalidCertificates": True} if "cosmos.azure.com" in uri else {}))
 
 
 def process_collection(collection_name: str, workers: int = 2):

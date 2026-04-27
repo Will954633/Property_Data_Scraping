@@ -287,14 +287,16 @@ def extract_html_elements(soup):
                     break
     
     # PRIORITY: Extract price from data-testid first (most reliable)
+    # Domain wraps the price in <div data-testid='listing-details__summary-title'>
+    # which contains an empty <span style="font-size:0"> spacer before a nested
+    # <div data-testid='listing-details__listing-summary-title-name'> with the actual text.
+    # Prefer the inner title-name testid; fall back to the wrapper's full text.
     price_elem = soup.find(attrs={'data-testid': 'listing-details__summary-title'})
     if price_elem:
-        # Get only the direct text content of the span, not nested elements
-        price_span = price_elem.find('span')
-        if price_span:
-            data['price'] = price_span.get_text(strip=True)
-        else:
-            data['price'] = price_elem.get_text(strip=True)
+        inner = price_elem.find(attrs={'data-testid': 'listing-details__listing-summary-title-name'})
+        price_text = inner.get_text(strip=True) if inner else price_elem.get_text(strip=True)
+        if price_text:
+            data['price'] = price_text
     
     # Fallback: Look for price in text
     if 'price' not in data:

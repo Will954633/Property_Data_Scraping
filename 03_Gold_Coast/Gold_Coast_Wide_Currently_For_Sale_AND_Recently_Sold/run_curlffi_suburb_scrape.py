@@ -847,6 +847,18 @@ Examples:
         print()
 
     print("=" * 80 + "\n")
+
+    # Fail loudly if every suburb returned zero discovered URLs.
+    # Without this, an Akamai block / proxy outage / DNS issue silently reports
+    # "success" to the orchestrator and stale data sits unnoticed (cf. May 2026
+    # incident where step 101 reported exit 0 for 2 weeks while delivering 0 URLs).
+    total_discovered = sum(len(s.discovered_urls) for s in results.values())
+    if total_discovered == 0 and len(suburbs) > 0:
+        print(f"❌ FATAL: 0 URLs discovered across all {len(suburbs)} suburbs.")
+        print("   Likely cause: upstream block (Akamai), proxy outage, or network issue.")
+        print("   Exiting non-zero so the orchestrator/watchdog can surface this.")
+        return 2
+
     return 0
 
 

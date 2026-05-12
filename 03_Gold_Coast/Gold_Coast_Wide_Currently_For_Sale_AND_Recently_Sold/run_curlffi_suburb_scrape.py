@@ -121,6 +121,65 @@ def get_mongodb_connection():
     return _mongo_client, _mongo_db
 
 
+# ── Canonical suburb whitelist ─────────────────────────────────────────────────
+# Prevents malformed single-word suffixes (e.g. "Heads", "Lakes", "Valley")
+# from creating non-canonical collections.  Keyed by lowercase suffix token.
+SUFFIX_TO_CANONICAL = {
+    'heads': 'Burleigh Heads',
+    'lakes': 'Varsity Lakes',
+    'vale': 'Willow Vale',
+    'valley': 'Tallebudgera Valley',
+    'well': 'Jacobs Well',
+    'waters': 'Burleigh Waters',
+    'beach': 'Mermaid Beach',
+    'pines': 'Pacific Pines',
+    'hills': 'Ormeau Hills',
+    'island': 'Hope Island',
+    'point': 'Paradise Point',
+    'bay': 'Runaway Bay',
+}
+
+# Full list of known Gold Coast suburbs (lowercase) for validation
+CANONICAL_SUBURBS = {
+    'advancetown', 'alberton', 'arundel', 'ashmore', 'austinville',
+    'beechmont', 'benowa', 'biggera waters', 'bilinga', 'bonogin',
+    'broadbeach', 'broadbeach waters', 'bundall', 'burleigh heads',
+    'burleigh waters', 'carrara', 'cedar creek', 'chevron island',
+    'clear island waters', 'coolangatta', 'coombabah', 'coomera',
+    'currumbin', 'currumbin valley', 'currumbin waters', 'elanora',
+    'gaven', 'gilberton', 'gilston', 'guanaba', 'helensvale',
+    'highland park', 'hollywell', 'hope island', 'jacobs well',
+    'kingsholme', 'labrador', 'lower beechmont', 'luscombe',
+    'main beach', 'maudsland', 'mermaid beach', 'mermaid waters',
+    'merrimac', 'miami', 'molendinar', 'mount nathan', 'mudgeeraba',
+    'natural bridge', 'nerang', 'neranwood', 'norwell',
+    'numinbah valley', 'ormeau', 'ormeau hills', 'oxenford',
+    'pacific pines', 'palm beach', 'paradise point', 'parkwood',
+    'pimpama', 'reedy creek', 'robina', 'runaway bay',
+    'south stradbroke', 'southern moreton bay islands', 'southport',
+    'springbrook', 'stapylton', 'steiglitz', 'surfers paradise',
+    'tallai', 'tallebudgera', 'tallebudgera valley', 'tugun',
+    'upper coomera', 'varsity lakes', 'willow vale', 'wongawallan',
+    'woongoolba', 'worongary', 'yatala',
+}
+
+
+def validate_suburb(suburb: str) -> Optional[str]:
+    """Validate and correct a suburb name against the canonical whitelist.
+    Returns the canonical suburb name (title-cased) or None if unrecognised.
+    """
+    if not suburb:
+        return None
+    lower = suburb.strip().lower()
+    # Direct match against canonical set
+    if lower in CANONICAL_SUBURBS:
+        return suburb.strip().title()
+    # Check if it's a known suffix truncation
+    if lower in SUFFIX_TO_CANONICAL:
+        return SUFFIX_TO_CANONICAL[lower]
+    return None
+
+
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 def extract_suburb_from_address(address: str) -> Optional[str]:
@@ -131,7 +190,10 @@ def extract_suburb_from_address(address: str) -> Optional[str]:
         return None
     match = re.search(r',\s*([^,]+),\s*(QLD|NSW|VIC|SA|WA|TAS|NT|ACT)', address, re.IGNORECASE)
     if match:
-        return match.group(1).strip()
+        raw = match.group(1).strip()
+        # Validate against canonical list; if invalid, return None to trigger fallback
+        validated = validate_suburb(raw)
+        return validated if validated else raw
     return None
 
 
@@ -156,18 +218,48 @@ def _mongo_op_with_retry(op, max_retries: int = 5):
     raise OperationFailure(f"MongoDB op failed after {max_retries} retries (429)")
 
 
+_BRIGHTDATA_API_KEY = os.environ.get('BRIGHTDATA_API_KEY')
+_BRIGHTDATA_ZONE = os.environ.get('BRIGHTDATA_ZONE', 'web_unlocker2')
+_BRIGHTDATA_ENDPOINT = 'https://api.brightdata.com/request'
+
+
+def _fetch_via_brightdata(url: str) -> Optional[str]:
+    """Fetch via Bright Data Web Unlocker (solves Akamai/Cloudflare challenges)."""
+    try:
+        resp = cffi_requests.post(
+            _BRIGHTDATA_ENDPOINT,
+            headers={
+                'Content-Type': 'application/json',
+                'Authorization': f'Bearer {_BRIGHTDATA_API_KEY}',
+            },
+            json={'zone': _BRIGHTDATA_ZONE, 'url': url, 'format': 'raw'},
+            timeout=90,
+        )
+        if resp.status_code == 200 and len(resp.text) >= 500:
+            return resp.text
+        return None
+    except Exception:
+        return None
+
+
 def _fetch(url: str, retries: int = 3) -> Optional[str]:
-    """Fetch a URL with curl_cffi, retrying on failure. Returns HTML or None."""
+    """Fetch a URL, retrying on failure. Uses Bright Data Web Unlocker if available, else curl_cffi."""
     for attempt in range(retries):
-        try:
-            resp = cffi_requests.get(url, impersonate="chrome120", timeout=HTTP_TIMEOUT)
-            if resp.status_code == 200:
-                return resp.text
-            if resp.status_code == 404:
-                return None
-            # Transient error — retry
-        except Exception:
-            pass
+        # Path 1: Bright Data Web Unlocker (preferred — solves Akamai bot challenges)
+        if _BRIGHTDATA_API_KEY:
+            html = _fetch_via_brightdata(url)
+            if html:
+                return html
+        else:
+            # Path 2: direct curl_cffi (fallback when no proxy key)
+            try:
+                resp = cffi_requests.get(url, impersonate="chrome120", timeout=HTTP_TIMEOUT)
+                if resp.status_code == 200:
+                    return resp.text
+                if resp.status_code == 404:
+                    return None
+            except Exception:
+                pass
         if attempt < retries - 1:
             time.sleep(3)
     return None
@@ -305,22 +397,41 @@ class CurlCffiSuburbScraper:
     # ── Phase 2: Detail scraping ───────────────────────────────────────────
 
     def _extract_address_from_url(self, url: str) -> str:
+        """Extract address from Domain URL slug, handling multi-word suburbs."""
         path = url.replace('https://www.domain.com.au/', '').replace('http://www.domain.com.au/', '')
         path = re.sub(r'-\d{7,10}$', '', path)
         parts = path.split('-')
-        suburb_idx = -1
+        state_idx = -1
         for i, part in enumerate(parts):
             if part in ('qld', 'nsw', 'vic', 'sa', 'wa', 'tas', 'nt', 'act'):
-                suburb_idx = i - 1
+                state_idx = i
                 break
-        if suburb_idx > 0:
-            street_parts = parts[:suburb_idx]
-            street_address = ' '.join(street_parts).title()
-            suburb = parts[suburb_idx].title()
-            state = parts[suburb_idx + 1].upper() if suburb_idx + 1 < len(parts) else ''
-            postcode_val = parts[suburb_idx + 2] if suburb_idx + 2 < len(parts) else ''
-            return f"{street_address}, {suburb}, {state} {postcode_val}"
-        return ' '.join(parts).title()
+        if state_idx < 1:
+            return ' '.join(parts).title()
+
+        state = parts[state_idx].upper()
+        postcode_val = parts[state_idx + 1] if state_idx + 1 < len(parts) else ''
+
+        # Try matching multi-word suburbs by checking 3-word, 2-word, then 1-word
+        # candidates against the canonical set
+        pre_state = parts[:state_idx]  # everything before QLD
+        suburb = None
+        suburb_words = 0
+        for length in (3, 2, 1):
+            if len(pre_state) >= length:
+                candidate = ' '.join(pre_state[-length:]).lower()
+                if candidate in CANONICAL_SUBURBS:
+                    suburb = ' '.join(pre_state[-length:]).title()
+                    suburb_words = length
+                    break
+        if not suburb:
+            # Fallback: last word before state (original behaviour)
+            suburb = pre_state[-1].title() if pre_state else ''
+            suburb_words = 1
+
+        street_parts = pre_state[:-suburb_words] if suburb_words <= len(pre_state) else []
+        street_address = ' '.join(street_parts).title()
+        return f"{street_address}, {suburb}, {state} {postcode_val}"
 
     def _extract_first_listed_date(self, html: str) -> Dict:
         result = {
@@ -463,10 +574,16 @@ class CurlCffiSuburbScraper:
         property_data['extraction_date'] = datetime.now().isoformat()
         property_data['source'] = 'curlffi_suburb_scraper'
 
-        # ── Suburb routing ──
+        # ── Suburb routing (with canonical validation) ──
         actual_suburb = extract_suburb_from_address(property_data.get('address', ''))
         if actual_suburb:
-            property_data['suburb'] = actual_suburb
+            validated = validate_suburb(actual_suburb)
+            if validated:
+                property_data['suburb'] = validated
+            else:
+                # Unrecognised suburb from address — fall back to scrape target
+                self.log(f"  ⚠ Unrecognised suburb '{actual_suburb}' — using '{self.suburb_name}'")
+                property_data['suburb'] = self.suburb_name
         else:
             property_data['suburb'] = self.suburb_name
 
@@ -549,6 +666,9 @@ class CurlCffiSuburbScraper:
                 if has_blob_images:
                     # Active listing with blob images — preserve them
                     skip_fields |= self.IMAGE_FIELDS
+                if was_already_for_sale and existing_doc.get('first_listed_timestamp'):
+                    # Preserve original listing date — don't overwrite on re-scrape
+                    skip_fields |= {'first_listed_timestamp', 'first_listed_date', 'first_listed_year', 'first_listed_full', 'days_on_domain'}
                 update_data = {k: v for k, v in property_data.items() if k not in skip_fields}
                 update_data['listing_status'] = 'for_sale'
 

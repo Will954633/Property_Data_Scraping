@@ -218,21 +218,24 @@ def _mongo_op_with_retry(op, max_retries: int = 5):
     raise OperationFailure(f"MongoDB op failed after {max_retries} retries (429)")
 
 
-_BRIGHTDATA_API_KEY = os.environ.get('BRIGHTDATA_API_KEY')
-_BRIGHTDATA_ZONE = os.environ.get('BRIGHTDATA_ZONE', 'web_unlocker2')
 _BRIGHTDATA_ENDPOINT = 'https://api.brightdata.com/request'
 
 
 def _fetch_via_brightdata(url: str) -> Optional[str]:
-    """Fetch via Bright Data Web Unlocker (solves Akamai/Cloudflare challenges)."""
+    """Fetch via Bright Data Web Unlocker (solves Akamai/Cloudflare challenges).
+    Reads env at call time so callers can populate it after import."""
+    api_key = os.environ.get('BRIGHTDATA_API_KEY')
+    zone = os.environ.get('BRIGHTDATA_ZONE', 'web_unlocker2')
+    if not api_key:
+        return None
     try:
         resp = cffi_requests.post(
             _BRIGHTDATA_ENDPOINT,
             headers={
                 'Content-Type': 'application/json',
-                'Authorization': f'Bearer {_BRIGHTDATA_API_KEY}',
+                'Authorization': f'Bearer {api_key}',
             },
-            json={'zone': _BRIGHTDATA_ZONE, 'url': url, 'format': 'raw'},
+            json={'zone': zone, 'url': url, 'format': 'raw'},
             timeout=90,
         )
         if resp.status_code == 200 and len(resp.text) >= 500:
@@ -244,9 +247,10 @@ def _fetch_via_brightdata(url: str) -> Optional[str]:
 
 def _fetch(url: str, retries: int = 3) -> Optional[str]:
     """Fetch a URL, retrying on failure. Uses Bright Data Web Unlocker if available, else curl_cffi."""
+    use_unlocker = bool(os.environ.get('BRIGHTDATA_API_KEY'))
     for attempt in range(retries):
         # Path 1: Bright Data Web Unlocker (preferred — solves Akamai bot challenges)
-        if _BRIGHTDATA_API_KEY:
+        if use_unlocker:
             html = _fetch_via_brightdata(url)
             if html:
                 return html

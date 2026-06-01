@@ -5,6 +5,7 @@ Production runner for Ollama property analysis.
 Processes properties from Gold_Coast_Currently_For_Sale database.
 Target suburbs: Robina, Mudgeeraba, Varsity Lakes, Reedy Creek, Burleigh Waters, Merimac, Warongary
 """
+import sys
 import time
 from mongodb_client_multi import MongoDBClientMulti
 from worker_multi import PropertyWorkerMulti
@@ -125,7 +126,18 @@ def main():
 
         # Clean up mongo client after final stats
         mongo_client.close()
-        
+
+        # Surface a wholesale failure: if we attempted work but nothing
+        # succeeded, exit non-zero so the orchestrator marks step 105 failed
+        # rather than silently reporting success (a dict-shaped image payload
+        # once failed every property here for months while exit code stayed 0).
+        if total_failed > 0 and total_successful == 0:
+            logger.error(
+                f"All {total_failed} document(s) failed and none succeeded — "
+                f"exiting non-zero to surface the failure."
+            )
+            sys.exit(1)
+
     except KeyboardInterrupt:
         logger.info("\n\nProcessing interrupted by user")
         mongo_client.close()

@@ -25,29 +25,47 @@ class PropertyWorkerMulti:
         self.properties_processed = 0
         logger.info(f"Worker {worker_id} initialized")
     
+    @staticmethod
+    def _coerce_url_list(items):
+        """Normalize a mixed image payload into a list of URL strings.
+
+        Handles both plain string URLs and dict entries of the form
+        {"url"/"src"/"image_url": "..."} — the scraper switched
+        ``scraped_data.images`` to dict entries, which the old string-only
+        filter silently dropped.
+        """
+        if not isinstance(items, list):
+            return []
+
+        urls = []
+        for item in items:
+            if isinstance(item, str) and item.strip():
+                urls.append(item.strip().rstrip('\\'))
+            elif isinstance(item, dict):
+                for key in ("url", "src", "image_url"):
+                    value = item.get(key)
+                    if isinstance(value, str) and value.strip():
+                        urls.append(value.strip().rstrip('\\'))
+                        break
+        return urls
+
     def _extract_images(self, document):
-        """Extract image URLs from document (supports multiple formats)."""
-        images = []
-        
-        if "scraped_data" in document and "images" in document["scraped_data"]:
-            images = document["scraped_data"]["images"]
-        elif "property_images" in document:
-            images = document["property_images"]
-        elif "images" in document:
-            images = document["images"]
-        
-        if not isinstance(images, list):
-            images = []
-        
-        # Clean URLs - remove trailing backslashes that cause 404 errors
-        cleaned_images = []
-        for url in images:
-            if isinstance(url, str):
-                # Remove trailing backslash
-                cleaned_url = url.rstrip('\\')
-                cleaned_images.append(cleaned_url)
-        
-        return cleaned_images
+        """Extract image URLs from document (supports multiple formats).
+
+        Accumulates across every known source with fallback rather than
+        stopping at the first source whose key exists — a dict-shaped
+        ``scraped_data.images`` previously short-circuited the elif chain
+        and returned no usable URLs even when ``property_images`` was full.
+        """
+        scraped = document.get("scraped_data")
+        scraped_images = scraped.get("images") if isinstance(scraped, dict) else None
+
+        for source in (scraped_images, document.get("property_images"), document.get("images")):
+            cleaned = self._coerce_url_list(source)
+            if cleaned:
+                return cleaned
+
+        return []
     
     def _extract_address(self, document):
         """Extract property address from document."""

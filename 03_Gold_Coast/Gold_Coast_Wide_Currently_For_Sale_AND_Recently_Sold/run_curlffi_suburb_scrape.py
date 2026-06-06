@@ -236,7 +236,7 @@ def _fetch_via_brightdata(url: str) -> Optional[str]:
                 'Authorization': f'Bearer {api_key}',
             },
             json={'zone': zone, 'url': url, 'format': 'raw'},
-            timeout=90,
+            timeout=150,
         )
         if resp.status_code == 200 and len(resp.text) >= 500:
             return resp.text
@@ -321,7 +321,13 @@ class CurlCffiSuburbScraper:
 
     def _create_indexes(self):
         try:
-            self.collection.create_index([("listing_url", ASCENDING)], unique=True)
+            # PARTIAL unique index: only enforce uniqueness on docs whose listing_url
+            # is a string. A plain unique index fails to build (E11000) when multiple
+            # docs have listing_url=null, leaving dedupe-by-URL unenforced.
+            self.collection.create_index(
+                [("listing_url", ASCENDING)], unique=True,
+                partialFilterExpression={"listing_url": {"$type": "string"}},
+            )
             self.collection.create_index([("address", ASCENDING)])
             self.collection.create_index([("last_updated", ASCENDING)])
             self.log("Indexes created/verified")
@@ -348,28 +354,46 @@ class CurlCffiSuburbScraper:
         return None
 
     def _extract_listing_urls(self, html: str) -> List[str]:
+        """Extract listing URLs robustly: primary source is the structured
+        __NEXT_DATA__ JSON (resilient to markup changes); supplemented by anchor
+        hrefs. Domain listing URLs end in a 7-12 digit id, e.g.
+        /23-camberwell-circuit-robina-qld-4226-2020833972."""
+        urls: List[str] = []
+        seen = set()
+
+        def _add(path_or_url: str):
+            p = path_or_url.replace('\\/', '/').split('?')[0]
+            full = p if p.startswith('http') else f"https://www.domain.com.au{p}"
+            if full not in seen:
+                seen.add(full)
+                urls.append(full)
+
+        # Primary: __NEXT_DATA__ listingUrl values (Domain serves all results here)
+        m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+        if m:
+            for u in re.findall(r'"listingUrl":"(\\?/[^"]*?-\d{7,12})"', m.group(1)):
+                _add(u)
+
+        # Supplement: anchor hrefs ending in a listing id (skip search/rent pages)
         soup = BeautifulSoup(html, 'html.parser')
-        urls = []
         for link in soup.find_all('a', href=True):
             href = link['href']
-            if re.match(r'^/[\w-]+-\d{7,10}$', href):
-                full = f"https://www.domain.com.au{href}"
-                if full not in urls:
-                    urls.append(full)
-            elif 'domain.com.au' in href and re.search(r'-\d{7,10}$', href):
-                if href not in urls:
-                    urls.append(href)
+            if '/sale/' in href or '/rent/' in href or '/sold-listings/' in href:
+                continue
+            if re.search(r'/[\w%-]+-\d{7,12}(?:[/?]|$)', href):
+                _add(href)
         return urls
 
     def discover(self):
         """Phase 1: discover all listing URLs via paginated search."""
         self.log("Starting property discovery...")
         all_urls: List[str] = []
+        seen = set()
         page_num = 1
 
         while page_num <= MAX_PAGES:
             url = self._build_search_url(page_num)
-            html = _fetch(url, retries=3)
+            html = _fetch(url, retries=5)  # Web Unlocker is flaky per-request
             if not html:
                 self.log(f"Page {page_num}: Failed to fetch, stopping pagination")
                 break
@@ -380,23 +404,26 @@ class CurlCffiSuburbScraper:
                     self.log(f"Expected property count: {self.expected_count}")
 
             urls = self._extract_listing_urls(html)
-            self.log(f"Page {page_num}: Found {len(urls)} listings")
+            new = [u for u in urls if u not in seen]
+            seen.update(new)
+            all_urls.extend(new)
+            self.log(f"Page {page_num}: {len(urls)} listings ({len(new)} new, {len(all_urls)} total)")
 
-            if len(urls) == 0:
+            # Stop only when a page adds nothing new (true end of results) or we've
+            # reached Domain's stated count — NOT on a low single-page yield, which
+            # was truncating discovery to ~1 page when extraction/fetch under-yielded.
+            if not new:
                 break
-
-            all_urls.extend(urls)
-
-            if len(urls) < MIN_LISTINGS_PER_PAGE:
+            if self.expected_count and len(all_urls) >= self.expected_count:
                 break
 
             page_num += 1
             if page_num <= MAX_PAGES:
                 time.sleep(BETWEEN_PAGE_DELAY)
 
-        # Deduplicate while preserving order
         self.discovered_urls = list(dict.fromkeys(all_urls))
-        self.log(f"Discovery complete: {len(self.discovered_urls)} unique URLs found")
+        exp = self.expected_count if self.expected_count else "?"
+        self.log(f"Discovery complete: {len(self.discovered_urls)} unique URLs found (expected {exp})")
 
     # ── Phase 2: Detail scraping ───────────────────────────────────────────
 

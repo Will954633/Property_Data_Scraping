@@ -67,7 +67,7 @@ MAX_PAGES = 20                  # max discovery pages per suburb
 MIN_LISTINGS_PER_PAGE = 5       # stop paginating when fewer than this
 COSMOS_INTER_OP_DELAY = 0.3     # seconds before each MongoDB op (serverless throttle)
 HTTP_TIMEOUT = 30               # seconds for curl_cffi requests
-MAX_PROPERTY_RETRIES = 3        # retries per property detail fetch
+MAX_PROPERTY_RETRIES = 5        # retries per property detail fetch
 
 MONITORED_FIELDS = ['price', 'inspection_times', 'agents_description']
 
@@ -245,17 +245,32 @@ def _fetch_via_brightdata(url: str) -> Optional[str]:
         return None
 
 
-def _fetch(url: str, retries: int = 3) -> Optional[str]:
-    """Fetch a URL, retrying on failure. Uses Bright Data Web Unlocker if available, else curl_cffi."""
+def _fetch(url: str, retries: int = 5) -> Optional[str]:
+    """Fetch a URL via the hardened shared Bright Data helper, which handles retries,
+    growing backoff, the x-brd-status-code header and Web Unlocker's min_size-502
+    flakiness. The local _fetch_via_brightdata was markedly less reliable on Domain
+    detail pages (≈1/3 success) — the shared helper gets ≈100% on the same URLs.
+    Falls back to the local Web Unlocker / curl_cffi path if the shared module
+    can't be imported."""
+    try:
+        import sys as _sys
+        if '/home/fields/Fields_Orchestrator' not in _sys.path:
+            _sys.path.insert(0, '/home/fields/Fields_Orchestrator')
+        from shared.domain_fetch import fetch_html as _shared_fetch
+        html = _shared_fetch(url, retries=retries, timeout=150)
+        if html:
+            return html
+    except Exception:
+        pass
+
+    # Fallback: local Bright Data Web Unlocker, else direct curl_cffi
     use_unlocker = bool(os.environ.get('BRIGHTDATA_API_KEY'))
     for attempt in range(retries):
-        # Path 1: Bright Data Web Unlocker (preferred — solves Akamai bot challenges)
         if use_unlocker:
             html = _fetch_via_brightdata(url)
             if html:
                 return html
         else:
-            # Path 2: direct curl_cffi (fallback when no proxy key)
             try:
                 resp = cffi_requests.get(url, impersonate="chrome120", timeout=HTTP_TIMEOUT)
                 if resp.status_code == 200:
@@ -265,7 +280,7 @@ def _fetch(url: str, retries: int = 3) -> Optional[str]:
             except Exception:
                 pass
         if attempt < retries - 1:
-            time.sleep(3)
+            time.sleep(min(3 * (attempt + 1), 15))
     return None
 
 

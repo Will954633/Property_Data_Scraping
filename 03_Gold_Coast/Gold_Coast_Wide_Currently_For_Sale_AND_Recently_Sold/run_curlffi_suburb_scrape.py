@@ -308,9 +308,13 @@ class CurlCffiSuburbScraper:
         'image_history',
     }
 
-    def __init__(self, suburb_name: str, postcode: str):
+    def __init__(self, suburb_name: str, postcode: str, full_rescrape: bool = False):
         self.suburb_name = suburb_name
         self.postcode = postcode
+        # When False (default), existing for_sale listings are refreshed cheaply from
+        # the search page (price + last_updated) instead of a full detail re-scrape;
+        # only NEW listings are detail-scraped. Set True for a periodic deep refresh.
+        self.full_rescrape = full_rescrape
         self.suburb_slug = suburb_name.lower().replace(' ', '-') + f"-qld-{postcode}"
         self.collection_name = suburb_name.lower().replace(' ', '_')
 
@@ -324,8 +328,10 @@ class CurlCffiSuburbScraper:
         # Counters
         self.expected_count = None
         self.discovered_urls: List[str] = []
+        self.search_meta: Dict[str, Dict] = {}   # url -> {price} from search page __NEXT_DATA__
         self.successful = 0
         self.failed = 0
+        self.refreshed = 0   # existing listings refreshed cheaply (no detail fetch)
 
     # ── Logging ────────────────────────────────────────────────────────────
 
@@ -399,6 +405,38 @@ class CurlCffiSuburbScraper:
                 _add(href)
         return urls
 
+    def _extract_search_meta(self, html: str) -> Dict[str, Dict]:
+        """Per-listing metadata from the search page __NEXT_DATA__ listingsMap —
+        currently the displayed price text, keyed by full listing URL. Used to
+        refresh existing listings cheaply (price feeds step 115) without a detail
+        fetch. The price text here matches the detail-page price for ~90% of
+        listings and is fresher where it differs."""
+        meta: Dict[str, Dict] = {}
+        m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+        if not m:
+            return meta
+        try:
+            data = json.loads(m.group(1))
+        except Exception:
+            return meta
+
+        def walk(o):
+            if isinstance(o, dict):
+                lm = o.get("listingModel")
+                if isinstance(lm, dict) and lm.get("url") and "price" in lm:
+                    u = lm["url"].replace("\\/", "/").split("?")[0]
+                    full = u if u.startswith("http") else f"https://www.domain.com.au{u}"
+                    price = (lm.get("price") or "").strip()
+                    if price:
+                        meta[full] = {"price": price}
+                for v in o.values():
+                    walk(v)
+            elif isinstance(o, list):
+                for v in o:
+                    walk(v)
+        walk(data)
+        return meta
+
     def discover(self):
         """Phase 1: discover all listing URLs via paginated search."""
         self.log("Starting property discovery...")
@@ -419,6 +457,7 @@ class CurlCffiSuburbScraper:
                     self.log(f"Expected property count: {self.expected_count}")
 
             urls = self._extract_listing_urls(html)
+            self.search_meta.update(self._extract_search_meta(html))
             new = [u for u in urls if u not in seen]
             seen.update(new)
             all_urls.extend(new)
@@ -763,20 +802,63 @@ class CurlCffiSuburbScraper:
 
     # ── Run ─────────────────────────────────────────────────────────────────
 
+    def _refresh_existing(self, url: str, existing: dict) -> bool:
+        """Cheap refresh of an already-known for_sale listing: update the displayed
+        price (from the search page — feeds step 115 price tracking) and bump
+        last_updated to confirm it's still active. No detail fetch. Returns True if
+        the doc was updated."""
+        now = datetime.now()
+        update = {"last_updated": now}
+        new_price = (self.search_meta.get(url) or {}).get("price")
+        if new_price and new_price != (existing.get("price") or "").strip():
+            update["price"] = new_price
+            self.log(f"  ~ price change: {existing.get('price')!r} -> {new_price!r} ({existing.get('address','?')})")
+        elif new_price and not existing.get("price"):
+            update["price"] = new_price
+        try:
+            _mongo_op_with_retry(lambda: self.collection.update_one(
+                {"listing_url": url}, {"$set": update}))
+            return True
+        except Exception as e:
+            self.log(f"  [refresh] ERROR: {e} | {url}")
+            return False
+
     def run(self):
-        """Execute discovery + scraping for this suburb."""
+        """Execute discovery + scraping for this suburb.
+
+        Default (incremental): NEW listings are full-detail-scraped; EXISTING
+        for_sale listings are refreshed cheaply from the search page (price +
+        last_updated) without a detail fetch — ~100x fewer Web Unlocker calls.
+        Use full_rescrape=True for a periodic deep refresh of all listings.
+        """
         self.log("Starting complete suburb scrape...")
 
         # Phase 1
         self.discover()
 
-        # Phase 2
+        # Map of existing for_sale listings (url -> doc) for the new-vs-existing split
+        existing = {}
+        if not self.full_rescrape:
+            for d in _mongo_op_with_retry(lambda: list(self.collection.find(
+                    {"listing_status": "for_sale", "listing_url": {"$exists": True, "$ne": None}},
+                    {"listing_url": 1, "price": 1, "address": 1}))):
+                existing[d["listing_url"]] = d
+
         total = len(self.discovered_urls)
-        self.log(f"Starting property scraping ({total} properties)...")
+        to_detail = [u for u in self.discovered_urls if self.full_rescrape or u not in existing]
+        self.log(f"Scraping: {total} discovered — {len(to_detail)} need detail scrape, "
+                 f"{total - len(to_detail)} existing (cheap refresh)")
 
         for i, url in enumerate(self.discovered_urls, 1):
-            property_data = self.scrape_property(url, i, total)
+            if (not self.full_rescrape) and url in existing:
+                # Existing listing — cheap refresh, no detail fetch
+                if self._refresh_existing(url, existing[url]):
+                    self.refreshed += 1
+                else:
+                    self.failed += 1
+                continue
 
+            property_data = self.scrape_property(url, i, total)
             if property_data:
                 if self.save_to_mongodb(property_data):
                     self.successful += 1
@@ -784,11 +866,10 @@ class CurlCffiSuburbScraper:
                     self.failed += 1
             else:
                 self.failed += 1
+            time.sleep(BETWEEN_PROPERTY_DELAY)
 
-            if i < total:
-                time.sleep(BETWEEN_PROPERTY_DELAY)
-
-        self.log(f"Scraping complete: {self.successful} successful, {self.failed} failed")
+        self.log(f"Scraping complete: {self.successful} new/scraped, "
+                 f"{self.refreshed} refreshed, {self.failed} failed")
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────
@@ -812,6 +893,8 @@ Examples:
     # Kept for CLI compatibility — ignored (no browser to parallelise)
     parser.add_argument('--max-concurrent', type=int, default=1, help=argparse.SUPPRESS)
     parser.add_argument('--parallel-properties', type=int, default=1, help=argparse.SUPPRESS)
+    parser.add_argument('--full-rescrape', action='store_true',
+                        help='Detail-scrape every listing (default: only new ones; existing refreshed cheaply from search page)')
 
     args = parser.parse_args()
 
@@ -868,7 +951,7 @@ Examples:
 
     for name, postcode in suburbs:
         try:
-            scraper = CurlCffiSuburbScraper(name, postcode)
+            scraper = CurlCffiSuburbScraper(name, postcode, full_rescrape=args.full_rescrape)
             scraper.run()
             results[name] = scraper
         except Exception as e:

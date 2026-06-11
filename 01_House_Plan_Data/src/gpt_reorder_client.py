@@ -1,34 +1,55 @@
 """
-GPT client for photo reordering system.
+Claude client for photo reordering system.
+
+Migrated OpenAI → Claude (2026-06-11) via shared/claude_vision.py after OpenAI
+quota exhaustion stalled step 105. The reorder task is text-only (it works from
+per-image descriptions produced by the photo analysis pass, not the images
+themselves), so the migration is a straight chat-call swap. Class name kept as
+GPTReorderClient so run_photo_reorder.py needs no changes.
 """
 import json
+import os
+import sys
 import time
 from pathlib import Path
-from openai import OpenAI
-from config import OPENAI_API_KEY, GPT_REORDER_MODEL, MAX_TOKENS
 from logger import logger
 from prompts_reorder import get_photo_reorder_prompt
 
+# shared/claude_vision.py lives in the orchestrator repo
+_ORCH = "/home/fields/Fields_Orchestrator"
+if _ORCH not in sys.path:
+    sys.path.insert(0, _ORCH)
+if not os.environ.get("ANTHROPIC_API_KEY"):
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(_ORCH, ".env"), override=False)
+
+from shared.claude_vision import vision_text, MODEL_ANALYZE  # noqa: E402
+
+REORDER_SYSTEM_PROMPT = (
+    "You are a real estate photography expert specializing in "
+    "creating optimal virtual property tours."
+)
+
+
 class GPTReorderClient:
-    """Client for interacting with OpenAI GPT API for photo reordering."""
-    
+    """Client for creating photo tour orders via the Claude API."""
+
     def __init__(self):
-        """Initialize OpenAI client."""
-        if not OPENAI_API_KEY:
-            raise ValueError("OPENAI_API_KEY not set in environment variables")
-        
-        self.client = OpenAI(api_key=OPENAI_API_KEY)
-        self.model = GPT_REORDER_MODEL
-        logger.info(f"Initialized GPT Reorder client with model: {self.model}")
-    
+        """Initialize Claude reorder client."""
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            raise ValueError("ANTHROPIC_API_KEY not set in environment variables")
+
+        self.model = os.environ.get("REORDER_CLAUDE_MODEL", MODEL_ANALYZE)
+        logger.info(f"Initialized Claude reorder client with model: {self.model}")
+
     def create_photo_tour_order(self, image_analysis, address):
-        """Create optimal photo tour order using GPT, with chunked fallback.
+        """Create optimal photo tour order, with chunked fallback.
 
         Strategy:
         1. Take the top-N images by usefulness_score (default 20) and try a
-           single GPT call for the whole set.
-        2. If that fails (e.g. empty content / length issues), split the
-           images into 2–3 chunks and call GPT separately for each chunk.
+           single call for the whole set.
+        2. If that fails, split the images into 2–3 chunks and call the model
+           separately for each chunk.
         3. Concatenate the per-chunk tours into a single tour and normalize
            reorder_position.
         """
@@ -56,7 +77,7 @@ class GPTReorderClient:
         limited_images = sorted_images[:max_images_for_prompt]
 
         # 1) Primary attempt: all selected images in one call
-        primary_result = self._call_gpt_for_subset(
+        primary_result = self._call_model_for_subset(
             limited_images,
             address,
             context_label="full-set",
@@ -69,7 +90,7 @@ class GPTReorderClient:
         if num_images <= 8:
             # Very small set; if full-set failed there is little benefit in chunking
             logger.error(
-                "Full-set GPT reordering failed for small image set (%d images); "
+                "Full-set reordering failed for small image set (%d images); "
                 "giving up.",
                 num_images,
             )
@@ -79,7 +100,7 @@ class GPTReorderClient:
         num_chunks = 3 if num_images >= 15 else 2
         chunk_size = max(1, (num_images + num_chunks - 1) // num_chunks)
         logger.warning(
-            "Full-set GPT reordering failed; attempting chunked fallback with %d "
+            "Full-set reordering failed; attempting chunked fallback with %d "
             "chunks (chunk_size=%d)",
             num_chunks,
             chunk_size,
@@ -102,7 +123,7 @@ class GPTReorderClient:
                 num_images,
             )
 
-            chunk_result = self._call_gpt_for_subset(
+            chunk_result = self._call_model_for_subset(
                 chunk,
                 address,
                 context_label=chunk_label,
@@ -153,11 +174,10 @@ class GPTReorderClient:
             },
         }
 
-    def _call_gpt_for_subset(self, images_subset, address, context_label="subset"):
-        """Call GPT for a specific subset of images and parse the JSON response.
+    def _call_model_for_subset(self, images_subset, address, context_label="subset"):
+        """Call Claude for a specific subset of images and parse the JSON response.
 
-        This encapsulates the JSON-mode call and the non-JSON fallback, and
-        returns either a parsed dict with `photo_tour_order` or None on failure.
+        Returns either a parsed dict with `photo_tour_order` or None on failure.
         """
         start_time = time.time()
 
@@ -176,22 +196,15 @@ class GPTReorderClient:
                 f"{desc}\n"
             )
 
-        messages = [
-            {
-                "role": "system",
-                "content": (
-                    "You are a real estate photography expert specializing in "
-                    "creating optimal virtual property tours."
-                ),
-            },
-            {
-                "role": "user",
-                "content": get_photo_reorder_prompt() + "\n\n" + image_data_text,
-            },
-        ]
+        user_prompt = (
+            get_photo_reorder_prompt()
+            + "\n\n"
+            + image_data_text
+            + "\nRespond with ONLY the final JSON object — no commentary, no code fences."
+        )
 
         # DEBUG: write the prompt for this subset to a file so we can inspect
-        # exactly what was sent to GPT for problematic properties.
+        # exactly what was sent for problematic properties.
         try:
             safe_addr = (
                 address.replace("/", "_")
@@ -220,110 +233,31 @@ class GPTReorderClient:
                 e,
             )
 
+        content = None
         try:
-            # Primary attempt: strict JSON mode
-            response = self.client.chat.completions.create(
+            content = vision_text(
+                user_prompt,
+                None,
                 model=self.model,
-                messages=messages,
-                response_format={"type": "json_object"},
+                max_tokens=8000,
+                system=REORDER_SYSTEM_PROMPT,
             )
 
             elapsed_time = time.time() - start_time
             logger.info(
-                "GPT reordering (%s) complete for %s in %.1fs (mode=json_object)",
+                "Claude reordering (%s) complete for %s in %.1fs",
                 context_label,
                 address,
                 elapsed_time,
             )
 
-            content = response.choices[0].message.content
-            finish_reason = getattr(response.choices[0], "finish_reason", None)
-
-            if not content or len(content.strip()) == 0:
-                logger.warning(
-                    "Empty response from GPT for %s (%s) in json_object mode "
-                    "(finish_reason=%s) – will retry without response_format.",
-                    address,
-                    context_label,
-                    finish_reason,
-                )
-
-                # Fallback: retry without response_format and explicitly ask for JSON
-                fallback_messages = messages + [
-                    {
-                        "role": "user",
-                        "content": (
-                            "Your previous answer was truncated. "
-                            "Respond again with ONLY the final JSON object and "
-                            "nothing else (no commentary, no code fences)."
-                        ),
-                    }
-                ]
-                response = self.client.chat.completions.create(
-                    model=self.model,
-                    messages=fallback_messages,
-                )
-                content = response.choices[0].message.content
-                finish_reason = getattr(response.choices[0], "finish_reason", None)
-
-            # After fallback (if any), if still empty, try a final model-level
-            # fallback to gpt-4.1-mini before giving up.
             if not content or len(content.strip()) == 0:
                 logger.error(
-                    "Empty response from GPT for %s (%s) even after fallback "
-                    "(finish_reason=%s)",
-                    address,
-                    context_label,
-                    finish_reason,
-                )
-                logger.error("Full response object: %s", response)
-
-                # Model-level fallback: try a smaller, general chat model that
-                # is less prone to reasoning-only completions.
-                alt_model = "gpt-4.1-mini"
-                logger.info(
-                    "Falling back to alternate model %s for %s (%s)",
-                    alt_model,
+                    "Empty response from Claude for %s (%s)",
                     address,
                     context_label,
                 )
-                try:
-                    alt_response = self.client.chat.completions.create(
-                        model=alt_model,
-                        messages=messages,
-                    )
-                    alt_content = alt_response.choices[0].message.content
-                    alt_finish = getattr(
-                        alt_response.choices[0], "finish_reason", None
-                    )
-                    if not alt_content or len(alt_content.strip()) == 0:
-                        logger.error(
-                            "Alternate model %s also returned empty response "
-                            "for %s (%s) (finish_reason=%s)",
-                            alt_model,
-                            address,
-                            context_label,
-                            alt_finish,
-                        )
-                        logger.error("Alt full response object: %s", alt_response)
-                        return None
-
-                    logger.info(
-                        "Alternate model %s produced a response for %s (%s)",
-                        alt_model,
-                        address,
-                        context_label,
-                    )
-                    content = alt_content
-                except Exception as e:
-                    logger.error(
-                        "Alternate model %s failed for %s (%s): %s",
-                        alt_model,
-                        address,
-                        context_label,
-                        e,
-                    )
-                    return None
+                return None
 
             logger.debug(
                 "Reordering response length for %s: %d characters",
@@ -360,39 +294,39 @@ class GPTReorderClient:
 
         except json.JSONDecodeError as e:
             logger.error(
-                "Failed to parse GPT response as JSON for %s (%s): %s",
+                "Failed to parse Claude response as JSON for %s (%s): %s",
                 address,
                 context_label,
                 e,
             )
             logger.error(
                 "Response content (first 1000 chars): %s",
-                content[:1000] if "content" in locals() and content else "EMPTY",
+                content[:1000] if content else "EMPTY",
             )
             return None
 
         except Exception as e:
             logger.error(
-                "GPT API error for %s (%s): %s", address, context_label, e
+                "Claude API error for %s (%s): %s", address, context_label, e
             )
             return None
 
     def extract_photo_tour_order(self, reorder_result):
         """
-        Extract and validate photo tour order from GPT result.
-        
+        Extract and validate photo tour order from reorder result.
+
         Args:
-            reorder_result: Parsed GPT reorder result
-            
+            reorder_result: Parsed reorder result
+
         Returns:
             List of photos in tour order with reorder_position
         """
         photo_tour = reorder_result.get("photo_tour_order", [])
-        
+
         if not photo_tour:
-            logger.warning("No photo tour order found in GPT response")
+            logger.warning("No photo tour order found in model response")
             return []
-        
+
         # Validate and ensure reorder_position is set correctly
         validated_tour = []
         for i, photo in enumerate(photo_tour, 1):
@@ -400,25 +334,25 @@ class GPTReorderClient:
             # Ensure reorder_position matches the actual position
             validated_photo["reorder_position"] = i
             validated_tour.append(validated_photo)
-        
+
         logger.info(f"Validated tour with {len(validated_tour)} photos")
-        
+
         return validated_tour
-    
+
     def get_tour_metadata(self, reorder_result):
         """
         Extract tour metadata from reorder result.
-        
+
         Args:
-            reorder_result: Parsed GPT reorder result
-            
+            reorder_result: Parsed reorder result
+
         Returns:
             Dictionary of tour metadata
         """
         metadata = reorder_result.get("tour_metadata", {})
-        
+
         # Add extraction metadata
         metadata["model_used"] = self.model
         metadata["created_at"] = time.time()
-        
+
         return metadata

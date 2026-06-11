@@ -1,46 +1,84 @@
-# Last Edit: 20/02/2026, Thursday (Brisbane Time)
-# OpenAI GPT Vision client for property photo analysis.
-# Replaces the former Ollama implementation - same interface, OpenAI backend.
+# Last Edit: 11/06/2026, Thursday (Brisbane Time)
+# Claude (Anthropic) vision client for property photo analysis.
+# Migrated OpenAI gpt-5.4 → Claude via shared/claude_vision.py (2026-06-11):
+# OpenAI quota exhaustion (429 insufficient_quota) had stalled step 105 nightly.
 """
-OpenAI GPT Vision client for property photo analysis.
-Maintains the same interface as the former OllamaClientSingleImage so that
-worker_multi.py requires no changes.
+Claude vision client for property photo analysis.
+Maintains the same interface as the former OllamaClientSingleImage /
+OpenAI implementation so that worker_multi.py requires no changes.
 """
 import json
+import os
+import sys
 import time
-import requests
 import base64
-from config import OPENAI_API_KEY, OPENAI_MODEL, OPENAI_TIMEOUT, MAX_RETRIES, RETRY_DELAY
+from io import BytesIO
+
+import requests
+from PIL import Image
+
+from config import MAX_RETRIES, RETRY_DELAY  # noqa: F401  (kept for interface parity)
 from logger import logger
+
+# shared/claude_vision.py lives in the orchestrator repo
+_ORCH = "/home/fields/Fields_Orchestrator"
+if _ORCH not in sys.path:
+    sys.path.insert(0, _ORCH)
+if not os.environ.get("ANTHROPIC_API_KEY"):
+    # Manual runs from this dir don't inherit the orchestrator env
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(_ORCH, ".env"), override=False)
+
+from shared.claude_vision import vision_text, MODEL_ANALYZE  # noqa: E402
+
+CLAUDE_PHOTO_MODEL = os.environ.get("PHOTO_ANALYSIS_CLAUDE_MODEL", MODEL_ANALYZE)
 
 
 class OllamaClientSingleImage:
-    """Photo analysis client using OpenAI GPT Vision API."""
+    """Photo analysis client using Claude vision (Anthropic API)."""
 
     def __init__(self):
-        self.model = OPENAI_MODEL
-        self.timeout = OPENAI_TIMEOUT
-        self.api_key = OPENAI_API_KEY
-        self.base_url = "https://api.openai.com/v1/chat/completions"
+        self.model = CLAUDE_PHOTO_MODEL
 
-        if not self.api_key:
-            raise ValueError("OPENAI_API_KEY not found in environment variables")
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
 
-        logger.info(f"Initialized OpenAI photo analysis client with model: {self.model}")
+        logger.info(f"Initialized Claude photo analysis client with model: {self.model}")
 
     def _download_and_encode_image(self, image_url):
-        """Download image and return base64 data URI."""
+        """Download image, normalise to JPEG, return base64 (no data-URI prefix)."""
         try:
             response = requests.get(image_url, timeout=30)
             response.raise_for_status()
-            image_data = base64.b64encode(response.content).decode("utf-8")
-            return f"data:image/jpeg;base64,{image_data}"
+            img = Image.open(BytesIO(response.content))
+            if img.mode not in ("RGB", "L"):
+                img = img.convert("RGB")
+            buf = BytesIO()
+            img.save(buf, format="JPEG", quality=90)
+            return base64.b64encode(buf.getvalue()).decode("utf-8")
         except Exception as e:
             logger.error(f"Failed to download image {image_url}: {e}")
             return None
 
+    @staticmethod
+    def _parse_json(content):
+        """Parse model output as JSON, tolerating surrounding prose/fences."""
+        try:
+            return json.loads(content)
+        except (json.JSONDecodeError, TypeError):
+            pass
+        if not content:
+            return None
+        first, last = content.find("{"), content.rfind("}")
+        if first != -1 and last > first:
+            try:
+                return json.loads(content[first:last + 1])
+            except json.JSONDecodeError:
+                return None
+        return None
+
     def _analyze_single_image(self, encoded_image, image_index):
-        """Analyze a single image with OpenAI GPT Vision."""
+        """Analyze a single image with Claude vision."""
         prompt = f"""Analyze this property image (image #{image_index}).
 
 Provide a JSON response with:
@@ -55,41 +93,19 @@ Provide a JSON response with:
 
 Return ONLY valid JSON, no other text."""
 
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.api_key}",
-        }
-
-        payload = {
-            "model": self.model,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": prompt},
-                        {
-                            "type": "image_url",
-                            "image_url": {"url": encoded_image, "detail": "auto"},
-                        },
-                    ],
-                }
-            ],
-            "max_completion_tokens": 1000,
-            "response_format": {"type": "json_object"},
-        }
-
         try:
-            response = requests.post(
-                self.base_url, headers=headers, json=payload, timeout=self.timeout
+            content = vision_text(
+                prompt,
+                ("image/jpeg", encoded_image),
+                model=self.model,
+                max_tokens=1500,
             )
-            response.raise_for_status()
-            content = (
-                response.json()
-                .get("choices", [{}])[0]
-                .get("message", {})
-                .get("content", "")
-            )
-            return json.loads(content)
+            if not content:
+                raise ValueError("Empty response from Claude")
+            result = self._parse_json(content)
+            if result is None:
+                raise ValueError(f"Unparseable JSON response: {content[:200]}")
+            return result
         except Exception as e:
             logger.error(f"Failed to analyze image {image_index}: {e}")
             return None
@@ -154,7 +170,7 @@ Return ONLY valid JSON, no other text."""
             "metadata": {
                 "model_used": self.model,
                 "extracted_at": time.time(),
-                "analysis_engine": "openai",
+                "analysis_engine": "claude",
                 "analysis_method": "single_image_aggregation",
                 "total_images_analyzed": len(image_analyses),
             },

@@ -38,8 +38,42 @@ from pathlib import Path
 import requests
 from PIL import Image
 from pymongo import MongoClient
-from openai import OpenAI
+from pymongo.errors import OperationFailure
 from dotenv import load_dotenv
+
+# Claude vision (migrated from OpenAI gpt-5.4 on 2026-06-11 after quota
+# exhaustion stalled step 108). shared/claude_vision.py lives in the
+# orchestrator repo.
+_ORCH = "/home/fields/Fields_Orchestrator"
+if _ORCH not in sys.path:
+    sys.path.insert(0, _ORCH)
+from shared.claude_vision import vision_text, MODEL_ANALYZE
+
+
+def _cosmos_retry(func, *args, max_retries=5, **kwargs):
+    """Execute a MongoDB operation with Cosmos DB 429 retry logic.
+    Matches shared/ru_guard.py: 5 attempts, broad error detection, exponential backoff.
+    """
+    _RETRY_AFTER_RE = re.compile(r"RetryAfterMs[\":]?\s*(\d+)", re.IGNORECASE)
+    for attempt in range(max_retries):
+        try:
+            return func(*args, **kwargs)
+        except OperationFailure as e:
+            msg = str(e).lower()
+            is_throttled = (
+                getattr(e, 'code', None) == 16500
+                or "toomanyrequests" in msg
+                or "requestratetoolarge" in msg
+                or "429" in msg
+            )
+            if is_throttled and attempt < max_retries - 1:
+                details_str = str(getattr(e, 'details', ''))
+                match = _RETRY_AFTER_RE.search(details_str) or _RETRY_AFTER_RE.search(str(e))
+                wait_ms = int(match.group(1)) if match else 500
+                sleep_s = min(max(0.3, wait_ms / 1000.0 + 0.25), 5.0)
+                time.sleep(sleep_s)
+                continue
+            raise
 
 # ---------------------------------------------------------------------------
 # CONFIGURATION
@@ -51,7 +85,7 @@ COLLECTIONS   = [
     "burleigh_waters",
 ]
 
-GPT_MODEL        = "gpt-4o"
+GPT_MODEL        = os.environ.get("VALUATION_CLAUDE_MODEL", MODEL_ANALYZE)  # Claude (was gpt-5.4)
 MAX_TOKENS       = 16000
 MAX_PHOTOS       = 20       # cap photos per property
 IMAGE_TIMEOUT    = 15       # seconds per image download
@@ -480,24 +514,29 @@ def build_image_content(urls: list) -> list:
 # GPT CALLS
 # ---------------------------------------------------------------------------
 
-def call_gpt(client: OpenAI, system_prompt: str, user_prompt: str, image_content: list) -> dict:
-    messages = [
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": [{"type": "text", "text": user_prompt}] + image_content}
-    ]
-    response = client.chat.completions.create(
+def call_gpt(client, system_prompt: str, user_prompt: str, image_content: list) -> dict:
+    # `client` is unused since the Claude migration (kept for call-site parity).
+    # image_content blocks are the OpenAI-style dicts from build_image_content();
+    # claude_vision unwraps {"image_url": {"url": <data-uri>}} transparently.
+    content = vision_text(
+        user_prompt,
+        image_content,
         model=GPT_MODEL,
-        messages=messages,
-        max_completion_tokens=MAX_TOKENS,
-        response_format={"type": "json_object"}
+        max_tokens=MAX_TOKENS,
+        system=system_prompt,
     )
-    content = response.choices[0].message.content
     if not content or not content.strip():
-        raise ValueError("Empty response from GPT")
-    return json.loads(content)
+        raise ValueError("Empty response from vision model")
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError:
+        first, last = content.find("{"), content.rfind("}")
+        if first != -1 and last > first:
+            return json.loads(content[first:last + 1])
+        raise
 
 
-def analyse_photos(client: OpenAI, photo_urls: list) -> dict:
+def analyse_photos(client, photo_urls: list) -> dict:
     image_content = build_image_content(photo_urls)
     if not image_content:
         raise ValueError("No images could be downloaded")
@@ -509,16 +548,34 @@ def analyse_photos(client: OpenAI, photo_urls: list) -> dict:
     )
 
 
-def analyse_floor_plans(client: OpenAI, floor_plan_urls: list) -> dict:
+def _backfill_room_areas(result: dict) -> dict:
+    """Calculate area = width * length for any room where GPT left area as null."""
+    rooms = result.get("rooms")
+    if not rooms or not isinstance(rooms, list):
+        return result
+    for room in rooms:
+        dims = room.get("dimensions")
+        if not isinstance(dims, dict):
+            continue
+        w = dims.get("width")
+        l = dims.get("length")
+        a = dims.get("area")
+        if w and l and not a:
+            dims["area"] = round(float(w) * float(l), 2)
+    return result
+
+
+def analyse_floor_plans(client, floor_plan_urls: list) -> dict:
     image_content = build_image_content(floor_plan_urls)
     if not image_content:
         raise ValueError("No floor plan images could be downloaded")
-    return call_gpt(
+    result = call_gpt(
         client,
         system_prompt="You are a professional floor plan analyst extracting detailed room dimensions and layout information.",
         user_prompt=FLOOR_PLAN_PROMPT,
         image_content=image_content
     )
+    return _backfill_room_areas(result)
 
 
 # ---------------------------------------------------------------------------
@@ -571,7 +628,7 @@ def detect_water_views_from_description(doc: dict) -> dict:
     }
 
 
-def process_document(doc: dict, collection, client: OpenAI, logger: logging.Logger) -> dict:
+def process_document(doc: dict, collection, client, logger: logging.Logger) -> dict:
     doc_id = doc["_id"]
     address = doc.get("address", str(doc_id))
 
@@ -583,7 +640,7 @@ def process_document(doc: dict, collection, client: OpenAI, logger: logging.Logg
 
     if not photo_urls:
         logger.warning(f"  SKIP (no photos): {address}")
-        collection.update_one({"_id": doc_id}, {"$set": {
+        _cosmos_retry(collection.update_one, {"_id": doc_id}, {"$set": {
             "processing_status": {
                 "images_processed": True,
                 "skipped": True,
@@ -640,7 +697,7 @@ def process_document(doc: dict, collection, client: OpenAI, logger: logging.Logg
     if floor_plan_result:
         update_set["floor_plan_analysis"] = floor_plan_result
 
-    collection.update_one({"_id": doc_id}, {"$set": update_set})
+    _cosmos_retry(collection.update_one, {"_id": doc_id}, {"$set": update_set})
 
     return {
         "success": True,
@@ -662,13 +719,15 @@ def main():
     args = parser.parse_args()
 
     load_dotenv(dotenv_path=".env")
+    if not os.getenv("ANTHROPIC_API_KEY"):
+        # Manual runs from this dir don't inherit the orchestrator env
+        load_dotenv(dotenv_path=os.path.join(_ORCH, ".env"), override=False)
     COSMOS_URI = os.getenv("COSMOS_CONNECTION_STRING")
-    OPENAI_KEY = os.getenv("OPENAI_API_KEY")
 
     if not COSMOS_URI:
         sys.exit("ERROR: COSMOS_CONNECTION_STRING not found in .env")
-    if not OPENAI_KEY:
-        sys.exit("ERROR: OPENAI_API_KEY not found in .env")
+    if not os.getenv("ANTHROPIC_API_KEY"):
+        sys.exit("ERROR: ANTHROPIC_API_KEY not found in environment")
 
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     log_file = LOG_DIR / f"enrich_for_sale_{ts}.log"
@@ -682,7 +741,7 @@ def main():
 
     mongo = MongoClient(COSMOS_URI, serverSelectionTimeoutMS=20000)
     db = mongo[DATABASE_NAME]
-    client = OpenAI(api_key=OPENAI_KEY) if not args.dry_run else None
+    client = "claude" if not args.dry_run else None  # truthy sentinel; calls go via claude_vision
 
     target_collections = [args.collection] if args.collection else COLLECTIONS
 
@@ -691,8 +750,11 @@ def main():
     grand_total = grand_todo = 0
     for col_name in target_collections:
         col = db[col_name]
-        total = col.count_documents(FS_FILTER)
-        todo  = col.count_documents({**FS_FILTER, "processing_status.images_processed": {"$ne": True}})
+        total = _cosmos_retry(col.count_documents, FS_FILTER)
+        todo  = _cosmos_retry(col.count_documents, {**FS_FILTER, "$or": [
+            {"processing_status.images_processed": {"$ne": True}},
+            {"property_valuation_data.condition_summary": {"$exists": False}}
+        ]})
         logger.info(f"  {col_name:<20} for_sale={total}  to_process={todo}")
         grand_total += total
         grand_todo  += todo
@@ -729,10 +791,13 @@ def main():
             if args.limit and docs_processed >= args.limit:
                 break
 
-            # Skip already processed
+            # Skip already processed — but re-process if condition_summary is missing
+            # (stale flag from pre-listing cadastral processing)
             ps = doc.get("processing_status") or {}
             if ps.get("images_processed"):
-                continue
+                pvd = doc.get("property_valuation_data") or {}
+                if pvd.get("condition_summary"):
+                    continue
 
             address = doc.get("address", str(doc["_id"]))
             docs_processed += 1
@@ -770,7 +835,7 @@ def main():
                 run_stats["failed"] += 1
                 run_stats["errors"].append({"address": address, "collection": col_name, "id": str(doc["_id"])})
                 logger.error(f"  ✗ FAILED after {MAX_RETRIES} attempts: {address}")
-                col.update_one({"_id": doc["_id"]}, {"$set": {
+                _cosmos_retry(col.update_one, {"_id": doc["_id"]}, {"$set": {
                     "processing_status.enrichment_failed": True,
                     "processing_status.last_error_at": datetime.now(timezone.utc)
                 }})

@@ -72,6 +72,10 @@ class ClaudeFloorPlanClient:
             if img.mode not in ('RGB', 'L'):
                 img = img.convert('RGB')
 
+            # Bound size for Anthropic's 5MB per-image cap; 2200px keeps
+            # dimension text on plans comfortably legible.
+            img.thumbnail((2200, 2200))
+
             png_buffer = BytesIO()
             img.save(png_buffer, format='PNG')
             png_data = png_buffer.getvalue()

@@ -490,8 +490,11 @@ def url_to_base64(url: str) -> str | None:
         resp = requests.get(url, timeout=IMAGE_TIMEOUT)
         resp.raise_for_status()
         img = Image.open(BytesIO(resp.content)).convert("RGB")
+        # Downscale: 20 full-res photos exceeded Anthropic's 32MB request cap
+        # (HTTP 413). 1280px is ample for condition/feature assessment.
+        img.thumbnail((1280, 1280))
         buf = BytesIO()
-        img.save(buf, format="JPEG", quality=85)
+        img.save(buf, format="JPEG", quality=80)
         encoded = base64.b64encode(buf.getvalue()).decode("utf-8")
         return f"data:image/jpeg;base64,{encoded}"
     except Exception:

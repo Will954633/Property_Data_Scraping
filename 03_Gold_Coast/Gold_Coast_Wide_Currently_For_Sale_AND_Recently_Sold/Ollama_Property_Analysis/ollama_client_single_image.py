@@ -53,6 +53,7 @@ class OllamaClientSingleImage:
             img = Image.open(BytesIO(response.content))
             if img.mode not in ("RGB", "L"):
                 img = img.convert("RGB")
+            img.thumbnail((1568, 1568))  # Anthropic per-image cap is 5MB / ~1568px optimal
             buf = BytesIO()
             img.save(buf, format="JPEG", quality=90)
             return base64.b64encode(buf.getvalue()).decode("utf-8")

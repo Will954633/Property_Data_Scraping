@@ -351,27 +351,28 @@ class OllamaFloorPlanClient:
                     "message": "No floor plan images identified"
                 }
             
-            # Check if we should skip Ollama and go straight to OpenAI
+            # Check if we should skip Ollama and go straight to the primary engine
+            # (Claude since 2026-06-11 — openai_floorplan_client.py was migrated)
             if USE_OPENAI_PRIMARY:
-                logger.info(f"🚀 USE_OPENAI_PRIMARY=True, skipping Ollama and using OpenAI directly for {address}")
+                logger.info(f"🚀 USE_OPENAI_PRIMARY=True, skipping Ollama and using Claude directly for {address}")
                 try:
                     from openai_floorplan_client import OpenAIFloorPlanClient
-                    
-                    openai_client = OpenAIFloorPlanClient()
-                    result = openai_client.analyze_property_floor_plans(floor_plan_urls, address)
+
+                    primary_client = OpenAIFloorPlanClient()
+                    result = primary_client.analyze_property_floor_plans(floor_plan_urls, address)
                     result["ollama_attempts"] = 0
-                    result["primary_engine"] = "openai"
-                    
-                    logger.info(f"✓ Successfully analyzed floor plan(s) with OpenAI (primary) for {address}")
+                    result["primary_engine"] = "claude"
+
+                    logger.info(f"✓ Successfully analyzed floor plan(s) with Claude (primary) for {address}")
                     return result
-                    
-                except Exception as openai_error:
-                    logger.error(f"❌ OpenAI (primary) failed for {address}: {openai_error}")
+
+                except Exception as primary_error:
+                    logger.error(f"❌ Claude (primary) failed for {address}: {primary_error}")
                     return {
                         "has_floor_plan": False,
                         "floor_plans_analyzed": 0,
-                        "error": f"OpenAI primary failed: {openai_error}",
-                        "message": "Floor plan analysis failed (OpenAI primary)",
+                        "error": f"Claude primary failed: {primary_error}",
+                        "message": "Floor plan analysis failed (Claude primary)",
                         "ollama_attempts": 0
                     }
             

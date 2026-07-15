@@ -71,12 +71,13 @@ Provide your analysis in this EXACT JSON format:
 }
 
 INSTRUCTIONS:
-1. Extract ALL room dimensions shown on the floor plan
-2. Count ALL bedrooms (no limit - could be 1, 2, 3, 4, 5, 6+)
-3. Distinguish internal floor area from total floor area
-4. List every room with its dimensions if shown
-5. Use null for missing data
-6. Be accurate and thorough with measurements
+1. Extract ALL room dimensions shown on the floor plan — READ THE TEXT LABELS CAREFULLY
+2. Floor plans often have dimensions printed as "X.X m x Y.Y m - ZZ m2" — transcribe these EXACTLY
+3. Count ALL bedrooms (no limit - could be 1, 2, 3, 4, 5, 6+)
+4. Distinguish internal floor area from total floor area
+5. List every room with its dimensions if shown
+6. Use null for missing data
+7. Be accurate and thorough with measurements
 
 Return ONLY valid JSON, no additional text."""
 

@@ -28,14 +28,14 @@ TARGET_SUBURBS = [
 
 # OpenAI Configuration (Primary LLM for all visual analysis)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5-nano-2025-08-07")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.4-2026-03-05")
 OPENAI_TIMEOUT = 120  # 2 minutes for OpenAI requests
 MAX_TOKENS = 16000
 TEMPERATURE = 0.1  # Low temperature for consistent, factual responses
 
 # Ollama Configuration (DEPRECATED - no longer used)
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-OLLAMA_MODEL = "gpt-5-nano-2025-08-07"  # Unused - OpenAI is primary
+OLLAMA_MODEL = "gpt-5.4-2026-03-05"  # Unused - OpenAI is primary
 OLLAMA_TIMEOUT = 120
 OPENAI_FALLBACK_ENABLED = False
 USE_OPENAI_PRIMARY = True  # Always use OpenAI

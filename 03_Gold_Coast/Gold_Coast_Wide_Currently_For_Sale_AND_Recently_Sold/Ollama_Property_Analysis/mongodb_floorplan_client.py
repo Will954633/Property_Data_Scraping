@@ -5,6 +5,9 @@
 """
 MongoDB client module for floor plan analysis operations.
 """
+import re
+import time
+
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure, OperationFailure
 from datetime import datetime
@@ -53,6 +56,25 @@ class MongoDBFloorPlanClient:
                 {"scraped_data.suburb": {"$in": TARGET_SUBURBS}}
             ]
         }
+
+    def _with_cosmos_retry(self, operation, label, max_attempts=4):
+        """Retry Cosmos reads/writes on 16500 throttling before surfacing failure."""
+        for attempt in range(max_attempts):
+            try:
+                return operation()
+            except OperationFailure as e:
+                is_throttled = getattr(e, "code", None) == 16500 or "TooManyRequests" in str(e) or "429" in str(e)
+                if not is_throttled or attempt == max_attempts - 1:
+                    logger.error(f"{label} failed: {e}")
+                    raise
+                details = str(getattr(e, "details", "") or e)
+                match = re.search(r"RetryAfterMs[\":]?\s*(\d+)", details)
+                retry_ms = int(match.group(1)) if match else 500
+                wait_seconds = min(retry_ms / 1000.0 + 0.25, 5.0)
+                logger.warning(
+                    f"{label} throttled by Cosmos (attempt {attempt + 1}/{max_attempts}), retrying in {wait_seconds:.2f}s"
+                )
+                time.sleep(wait_seconds)
     
     def get_properties_needing_floor_plan_analysis(self):
         """
@@ -116,7 +138,10 @@ class MongoDBFloorPlanClient:
             
             for suburb in TARGET_SUBURBS:
                 collection = self.db[suburb]
-                properties = list(collection.find(query))
+                properties = self._with_cosmos_retry(
+                    lambda coll=collection: list(coll.find(query)),
+                    f"get_properties_needing_floor_plan_analysis[{suburb}]",
+                )
                 
                 if properties:
                     logger.info(f"Found {len(properties)} properties needing floor plan analysis in {suburb}")
@@ -126,9 +151,8 @@ class MongoDBFloorPlanClient:
             
             return all_properties
             
-        except OperationFailure as e:
-            logger.error(f"Failed to get properties needing floor plan analysis: {e}")
-            return []
+        except OperationFailure:
+            raise
     
     def count_properties_needing_floor_plan_analysis(self):
         """
@@ -162,16 +186,18 @@ class MongoDBFloorPlanClient:
             
             for suburb in TARGET_SUBURBS:
                 collection = self.db[suburb]
-                count = collection.count_documents(query)
+                count = self._with_cosmos_retry(
+                    lambda coll=collection: coll.count_documents(query),
+                    f"count_properties_needing_floor_plan_analysis[{suburb}]",
+                )
                 total_count += count
             
             logger.info(f"Properties needing floor plan analysis: {total_count}")
             
             return total_count
             
-        except OperationFailure as e:
-            logger.error(f"Failed to count properties needing floor plan analysis: {e}")
-            return 0
+        except OperationFailure:
+            raise
     
     def update_with_floor_plan_analysis(self, document_id, suburb, floor_plan_analysis, processing_time=None):
         """
@@ -192,7 +218,10 @@ class MongoDBFloorPlanClient:
             collection = self.db[suburb_lower]
             
             # Check if document exists in lowercase collection
-            if collection.count_documents({"_id": document_id}) == 0:
+            if self._with_cosmos_retry(
+                lambda coll=collection: coll.count_documents({"_id": document_id}),
+                f"update_with_floor_plan_analysis.lookup[{suburb_lower}]",
+            ) == 0:
                 # Try original case
                 collection = self.db[suburb]
                 logger.info(f"Using collection name: {suburb} (original case)")
@@ -211,9 +240,12 @@ class MongoDBFloorPlanClient:
                 }
             }
             
-            result = collection.update_one(
-                {"_id": document_id},
-                update_operation
+            result = self._with_cosmos_retry(
+                lambda coll=collection: coll.update_one(
+                    {"_id": document_id},
+                    update_operation
+                ),
+                f"update_with_floor_plan_analysis[{suburb}]",
             )
             
             logger.info(f"Updated document {document_id} in {suburb} with floor plan analysis")
@@ -244,28 +276,37 @@ class MongoDBFloorPlanClient:
                 collection = self.db[suburb]
                 
                 # Total properties in suburb
-                total = collection.count_documents(suburb_query)
+                total = self._with_cosmos_retry(
+                    lambda coll=collection: coll.count_documents(suburb_query),
+                    f"get_floor_plan_stats.total[{suburb}]",
+                )
                 
                 # Properties with floor plan analysis
-                with_analysis = collection.count_documents({
-                    "$and": [
-                        suburb_query,
-                        {"ollama_floor_plan_analysis.has_floor_plan": True}
-                    ]
-                })
+                with_analysis = self._with_cosmos_retry(
+                    lambda coll=collection: coll.count_documents({
+                        "$and": [
+                            suburb_query,
+                            {"ollama_floor_plan_analysis.has_floor_plan": True}
+                        ]
+                    }),
+                    f"get_floor_plan_stats.with_analysis[{suburb}]",
+                )
                 
                 # Properties needing analysis (have ollama_image_analysis but no floor plan analysis)
-                needing_analysis = collection.count_documents({
-                    "$and": [
-                        {"ollama_image_analysis": {"$exists": True, "$ne": []}},
-                        {
-                            "$or": [
-                                {"ollama_floor_plan_analysis": {"$exists": False}},
-                                {"ollama_floor_plan_analysis.has_floor_plan": {"$ne": True}}
-                            ]
-                        }
-                    ]
-                })
+                needing_analysis = self._with_cosmos_retry(
+                    lambda coll=collection: coll.count_documents({
+                        "$and": [
+                            {"ollama_image_analysis": {"$exists": True, "$ne": []}},
+                            {
+                                "$or": [
+                                    {"ollama_floor_plan_analysis": {"$exists": False}},
+                                    {"ollama_floor_plan_analysis.has_floor_plan": {"$ne": True}}
+                                ]
+                            }
+                        ]
+                    }),
+                    f"get_floor_plan_stats.needing_analysis[{suburb}]",
+                )
                 
                 stats["by_suburb"][suburb] = {
                     "total": total,
@@ -280,14 +321,8 @@ class MongoDBFloorPlanClient:
             
             return stats
             
-        except OperationFailure as e:
-            logger.error(f"Failed to get floor plan stats: {e}")
-            return {
-                "by_suburb": {},
-                "total_with_floor_plans": 0,
-                "total_analyzed": 0,
-                "total_needing_analysis": 0
-            }
+        except OperationFailure:
+            raise
     
     def close(self):
         """Close MongoDB connection."""

@@ -13,6 +13,13 @@ from mongodb_reorder_client import MongoDBReorderClient
 from ollama_reorder_client import OllamaReorderClient
 from logger import logger
 
+try:
+    sys.path.insert(0, '/home/fields/Fields_Orchestrator')
+    from shared.monitor_client import MonitorClient
+    _MONITOR_AVAILABLE = True
+except ImportError:
+    _MONITOR_AVAILABLE = False
+
 class OllamaPhotoReorder:
     """Main coordinator for photo reordering."""
     
@@ -226,12 +233,18 @@ class OllamaPhotoReorder:
 
 def main():
     """Main entry point."""
+    monitor = MonitorClient(
+        system="orchestrator", pipeline="orchestrator_daily",
+        process_id="105", process_name="Ollama Photo Reorder"
+    ) if _MONITOR_AVAILABLE else None
+    if monitor: monitor.start()
+
     print("="*60)
     print("OLLAMA PHOTO REORDERING SYSTEM")
     print("="*60)
     print("Creating optimal photo tours for Gold Coast properties")
     print()
-    
+
     # Check for limit argument
     limit = None
     if len(sys.argv) > 1:
@@ -240,19 +253,21 @@ def main():
             print(f"Processing limit: {limit} properties")
         except ValueError:
             print("Invalid limit argument. Processing all properties.")
-    
+
     reorder_system = OllamaPhotoReorder()
     success = reorder_system.run(limit=limit)
-    
+
     if success:
         print("\n" + "="*60)
         print("✓ Photo reordering completed successfully!")
         print("="*60)
+        if monitor: monitor.finish(status="success")
         return 0
     else:
         print("\n" + "="*60)
         print("✗ Processing failed or was interrupted")
         print("="*60)
+        if monitor: monitor.finish(status="failed")
         return 1
 
 if __name__ == "__main__":

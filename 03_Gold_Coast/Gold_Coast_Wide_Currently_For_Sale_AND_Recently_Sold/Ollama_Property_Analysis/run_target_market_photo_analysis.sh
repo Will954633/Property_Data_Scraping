@@ -21,6 +21,9 @@ TARGET_SUBURBS=(
     "robina"
     "varsity_lakes"
     "burleigh_waters"
+    "mudgeeraba"
+    "reedy_creek"
+    "worongary"
 )
 
 # Process each suburb

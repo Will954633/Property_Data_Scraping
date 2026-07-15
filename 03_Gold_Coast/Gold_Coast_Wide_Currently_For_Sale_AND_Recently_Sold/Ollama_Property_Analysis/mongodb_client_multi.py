@@ -49,9 +49,10 @@ class MongoDBClientMulti:
             try:
                 collection = self.db[suburb]
                 
-                # Query for unprocessed documents with images
+                # Query for unprocessed for-sale documents with images
                 query = {
                     "$and": [
+                        {"listing_status": "for_sale"},
                         {
                             "$or": [
                                 {"scraped_data.images": {"$exists": True, "$type": "array", "$ne": []}},
@@ -87,6 +88,7 @@ class MongoDBClientMulti:
                 collection = self.db[suburb]
                 query = {
                     "$and": [
+                        {"listing_status": "for_sale"},
                         {
                             "$or": [
                                 {"scraped_data.images": {"$exists": True, "$type": "array", "$ne": []}},
@@ -111,7 +113,7 @@ class MongoDBClientMulti:
         for suburb in TARGET_SUBURBS:
             try:
                 collection = self.db[suburb]
-                count = collection.count_documents({"ollama_analysis.processed": True})
+                count = collection.count_documents({"listing_status": "for_sale", "ollama_analysis.processed": True})
                 total += count
             except OperationFailure as e:
                 logger.error(f"Failed to count processed documents in {suburb}: {e}")
@@ -178,9 +180,9 @@ class MongoDBClientMulti:
             try:
                 collection = self.db[suburb]
                 
-                total = collection.count_documents({})
-                processed = collection.count_documents({"ollama_analysis.processed": True})
-                water_views = collection.count_documents({"ollama_property_data.outdoor.natural_water_view": True})
+                total = collection.count_documents({"listing_status": "for_sale"})
+                processed = collection.count_documents({"listing_status": "for_sale", "ollama_analysis.processed": True})
+                water_views = collection.count_documents({"listing_status": "for_sale", "ollama_property_data.outdoor.natural_water_view": True})
                 
                 stats["total_documents_in_target_suburbs"] += total
                 stats["processed"] += processed

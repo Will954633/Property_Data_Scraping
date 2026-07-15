@@ -7,10 +7,18 @@ Main script for analyzing floor plans using Ollama Vision API.
 Processes properties from Gold Coast suburbs that have ollama_image_analysis
 but don't have floor plan analysis yet.
 """
+import sys
 import time
 from mongodb_floorplan_client import MongoDBFloorPlanClient
 from ollama_floorplan_client import OllamaFloorPlanClient
 from logger import logger
+
+try:
+    sys.path.insert(0, '/home/fields/Fields_Orchestrator')
+    from shared.monitor_client import MonitorClient
+    _MONITOR_AVAILABLE = True
+except ImportError:
+    _MONITOR_AVAILABLE = False
 
 def get_property_images(property_doc):
     """
@@ -140,6 +148,12 @@ def process_property(property_doc, ollama_client, mongo_client):
 
 def main():
     """Main execution function."""
+    monitor = MonitorClient(
+        system="orchestrator", pipeline="orchestrator_daily",
+        process_id="106", process_name="Ollama Floor Plan Analysis"
+    ) if _MONITOR_AVAILABLE else None
+    if monitor: monitor.start()
+
     logger.info("=" * 80)
     logger.info("OLLAMA FLOOR PLAN ANALYSIS")
     logger.info("=" * 80)
@@ -166,6 +180,7 @@ def main():
     if not properties:
         logger.info("No properties need floor plan analysis!")
         mongo_client.close()
+        if monitor: monitor.finish(status="success")
         return
     
     logger.info(f"Found {len(properties)} properties to process")
@@ -231,6 +246,12 @@ def main():
     # Close connections
     mongo_client.close()
     logger.info("\nFloor plan analysis complete!")
+
+    if monitor:
+        monitor.log_metric("properties_processed", len(properties))
+        monitor.log_metric("floor_plans_found", floor_plans_found)
+        monitor.log_metric("errors", error_count)
+        monitor.finish(status="success" if error_count == 0 else "failed")
 
 if __name__ == "__main__":
     main()

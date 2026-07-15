@@ -757,6 +757,21 @@ class CurlCffiSuburbScraper:
                 update_data = {k: v for k, v in property_data.items() if k not in skip_fields}
                 update_data['listing_status'] = 'for_sale'
 
+                # days_on_domain is time-relative — recompute it from the PRESERVED
+                # first_listed_timestamp on every re-scrape. It was previously in
+                # skip_fields (to protect the original listing date), which froze it
+                # at the value set when the listing first entered the DB — so a home
+                # listed 130 days ago still showed days_on_domain≈0 (V3-DOM-STALE).
+                orig_ts = existing_doc.get('first_listed_timestamp')
+                if orig_ts:
+                    try:
+                        listed = datetime.fromisoformat(str(orig_ts).replace('Z', '+00:00').split('.')[0])
+                        if listed.tzinfo is not None:
+                            listed = listed.replace(tzinfo=None)
+                        update_data['days_on_domain'] = max((datetime.now() - listed).days, 0)
+                    except Exception:
+                        pass
+
                 # Always store the latest scraped image URLs for reference
                 update_data['scraped_property_images'] = property_data.get('property_images', [])
                 update_data['scraped_floor_plans'] = property_data.get('floor_plans', [])

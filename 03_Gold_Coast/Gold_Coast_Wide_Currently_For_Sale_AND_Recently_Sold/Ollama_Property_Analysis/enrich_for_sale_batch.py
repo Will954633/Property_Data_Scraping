@@ -296,6 +296,7 @@ IMPORTANT NOTES:
 - Include one entry per visible bedroom, bathroom, and living area — label them in order (master, bedroom_2, etc.)
 - DO NOT count swimming pools as water views. Water views = ocean, river, canal, lake, bay only.
 - For bedrooms: if you can only see 2 of 4 bedrooms, include 2 entries with visible=true and infer the others with visible=false if clearly present
+- negative_features: list ONLY defects you can actually SEE in the photos (dated finishes, visible damage, worn surfaces, poor presentation, dated layout). NEVER list the ABSENCE of a feature — e.g. "no ensuite", "no garage", "no study", "no pool", "no ... visible" — as a negative. Our photo set is incomplete: a feature that isn't pictured is NOT a feature that is missing. If a feature simply isn't shown in the photos, say nothing about it. Absence of a photo is not evidence of absence.
 - Return ONLY valid JSON, no text outside the JSON object
 """
 

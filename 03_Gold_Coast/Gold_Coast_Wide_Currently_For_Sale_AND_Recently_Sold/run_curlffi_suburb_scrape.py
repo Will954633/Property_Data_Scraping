@@ -64,6 +64,10 @@ except ImportError:
 BETWEEN_PROPERTY_DELAY = 2      # seconds between property fetches
 BETWEEN_PAGE_DELAY = 3          # seconds between discovery pages
 MAX_PAGES = 20                  # max discovery pages per suburb
+PAGE_REFETCH_MAX = 4           # max fetches of the SAME page to reach its full card count
+                               # (Domain renders a variable subset of a page's listing
+                               #  cards per request; we union URLs across fetches until we
+                               #  match the page's authoritative ld+json Residence count)
 MIN_LISTINGS_PER_PAGE = 5       # stop paginating when fewer than this
 COSMOS_INTER_OP_DELAY = 0.3     # seconds before each MongoDB op (serverless throttle)
 HTTP_TIMEOUT = 30               # seconds for curl_cffi requests
@@ -284,6 +288,20 @@ def _fetch(url: str, retries: int = 5) -> Optional[str]:
     return None
 
 
+def _addr_key(text: str):
+    """Canonical (leading-number, street-name) key for matching a listed address
+    against a listing-URL slug or a DB address. Collapses unit/building number
+    runs to their leading token, so "40/170 Bardon Avenue", the slug
+    "40-170-bardon-avenue" and the DB doc "40/170 Bardon Avenue, Burleigh Waters
+    QLD 4220" all key identically. Used by both discovery (URL↔address resolution)
+    and coverage recording (Domain-listed vs in-DB diff)."""
+    t = (text or "").split(',')[0].lower().replace('-', ' ').replace('/', ' ')
+    t = re.sub(r'\bunit\b|\bid:\d+\b', ' ', t)
+    lead = re.match(r'\s*(\d+)', t)
+    street = re.sub(r'^[\s\d]+', '', t).strip()
+    return (lead.group(1) if lead else '', street)
+
+
 # ── Scraper ────────────────────────────────────────────────────────────────────
 
 class CurlCffiSuburbScraper:
@@ -328,6 +346,12 @@ class CurlCffiSuburbScraper:
         # Counters
         self.expected_count = None
         self.discovered_urls: List[str] = []
+        # Every listed address seen in the search results' ld+json (the authoritative
+        # per-page card list). Used to (a) gate discovery completeness per page and
+        # (b) surface the specific addresses we could NOT resolve to a listing URL,
+        # which feed the listing-coverage reconciliation / health board.
+        self.discovered_addresses: set = set()
+        self.unresolved_addresses: set = set()
         self.search_meta: Dict[str, Dict] = {}   # url -> {price} from search page __NEXT_DATA__
         self.successful = 0
         self.failed = 0
@@ -374,36 +398,65 @@ class CurlCffiSuburbScraper:
             return int(m.group(1))
         return None
 
-    def _extract_listing_urls(self, html: str) -> List[str]:
-        """Extract listing URLs robustly: primary source is the structured
-        __NEXT_DATA__ JSON (resilient to markup changes); supplemented by anchor
-        hrefs. Domain listing URLs end in a 7-12 digit id, e.g.
-        /23-camberwell-circuit-robina-qld-4226-2020833972."""
-        urls: List[str] = []
-        seen = set()
+    def _extract_listings(self, html: str):
+        """Extract (listing_urls, addresses) from a search-results page.
 
-        def _add(path_or_url: str):
-            p = path_or_url.replace('\\/', '/').split('?')[0]
-            full = p if p.startswith('http') else f"https://www.domain.com.au{p}"
-            if full not in seen:
-                seen.add(full)
-                urls.append(full)
+        Domain migrated the sale-search page OFF __NEXT_DATA__ (2026-07, verified
+        live) — the old `"listingUrl":"…"` JSON array no longer exists, which
+        silently dropped discovery onto the anchor-href fallback and cost us
+        ~20-32% of core-suburb listings (the "listed home shown as off-market"
+        incident, 6 Joy Avenue). The authoritative per-page source is now the
+        `application/ld+json` array:
+          • @type=Residence  → EVERY card's address (count == pageSize, e.g. 20).
+                               This is stable across fetches → the completeness yardstick.
+          • @type=Event      → auction-listing URLs (a subset).
+        Rendered anchors supply the remaining URLs but UNDER-RENDER intermittently
+        (4→23 across identical requests), so URLs are a UNION of ld+json Event +
+        anchor hrefs; discover() unions these across re-fetches until the URL count
+        reaches the Residence count. Listing URLs end in a 7-12 digit id, e.g.
+        /23-camberwell-circuit-robina-qld-4226-2020833972.
+        """
+        urls: set = set()
+        addresses: set = set()
 
-        # Primary: __NEXT_DATA__ listingUrl values (Domain serves all results here)
-        m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
-        if m:
-            for u in re.findall(r'"listingUrl":"(\\?/[^"]*?-\d{7,12})"', m.group(1)):
-                _add(u)
+        for m in re.finditer(
+            r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S
+        ):
+            try:
+                arr = json.loads(m.group(1))
+            except Exception:
+                continue
+            for it in (arr if isinstance(arr, list) else [arr]):
+                if not isinstance(it, dict):
+                    continue
+                t = it.get("@type")
+                if t == "Residence":
+                    nm = (it.get("name") or "").strip()
+                    if nm:
+                        addresses.add(nm)
+                elif t == "Event":
+                    u = (it.get("url") or "").replace('\\/', '/').split('?')[0]
+                    if re.search(r'-\d{7,12}$', u):
+                        urls.add(u if u.startswith('http') else f"https://www.domain.com.au{u}")
 
-        # Supplement: anchor hrefs ending in a listing id (skip search/rent pages)
+        # Supplement URLs from anchor hrefs ending in a listing id (skip search/rent/
+        # profile pages). Domain returns absolute or relative hrefs.
         soup = BeautifulSoup(html, 'html.parser')
         for link in soup.find_all('a', href=True):
             href = link['href']
-            if '/sale/' in href or '/rent/' in href or '/sold-listings/' in href:
+            if any(s in href for s in ('/sale/', '/rent/', '/sold-listings/', '/suburb-profile/')):
                 continue
-            if re.search(r'/[\w%-]+-\d{7,12}(?:[/?]|$)', href):
-                _add(href)
-        return urls
+            mm = re.search(r'(/[a-z0-9%-]+-(\d{7,12}))(?:[/?]|$)', href.replace('\\/', '/').split('?')[0])
+            if mm:
+                urls.add(f"https://www.domain.com.au{mm.group(1)}")
+
+        # Overflow pages (page > totalPages) inject "nearby" listings from other
+        # suburbs; keep only URLs whose slug carries THIS suburb (…-burleigh-waters-qld-4220-…)
+        # and Residence addresses in THIS suburb, so completeness math stays honest.
+        sub = self.suburb_name.lower()
+        urls = {u for u in urls if f"-{self.suburb_slug}-" in u}
+        addresses = {a for a in addresses if sub in a.lower()}
+        return urls, addresses
 
     def _extract_search_meta(self, html: str) -> Dict[str, Dict]:
         """Per-listing metadata from the search page __NEXT_DATA__ listingsMap —
@@ -438,46 +491,140 @@ class CurlCffiSuburbScraper:
         return meta
 
     def discover(self):
-        """Phase 1: discover all listing URLs via paginated search."""
+        """Phase 1: discover all listing URLs via paginated search.
+
+        Per page we RE-FETCH (up to PAGE_REFETCH_MAX) and union the extracted URLs
+        until they cover that page's authoritative ld+json Residence count — Domain
+        renders a variable subset of cards per request, so a single fetch routinely
+        under-yields. The page's Residence addresses are the completeness target and
+        the source of "unresolved" gaps (a listed address whose URL we never got),
+        which are surfaced for the coverage-reconciliation / health board.
+        """
         self.log("Starting property discovery...")
         all_urls: List[str] = []
         seen = set()
         page_num = 1
+        empty_streak = 0
 
         while page_num <= MAX_PAGES:
             url = self._build_search_url(page_num)
-            html = _fetch(url, retries=5)  # Web Unlocker is flaky per-request
-            if not html:
+
+            page_urls: set = set()
+            page_addrs: set = set()
+            html = None
+            for attempt in range(PAGE_REFETCH_MAX):
+                html = _fetch(url, retries=5)  # shared helper handles per-request flakiness
+                if not html:
+                    continue
+                if page_num == 1 and self.expected_count is None:
+                    self.expected_count = self._extract_property_count(html)
+                    if self.expected_count:
+                        self.log(f"Expected property count: {self.expected_count}")
+                self.search_meta.update(self._extract_search_meta(html))
+                u, a = self._extract_listings(html)
+                page_urls |= u
+                page_addrs |= a
+                # Complete once URLs cover this page's declared card count.
+                if page_addrs and len(page_urls) >= len(page_addrs):
+                    break
+                if attempt < PAGE_REFETCH_MAX - 1:
+                    time.sleep(BETWEEN_PAGE_DELAY)
+
+            if html is None:
                 self.log(f"Page {page_num}: Failed to fetch, stopping pagination")
                 break
 
-            if page_num == 1:
-                self.expected_count = self._extract_property_count(html)
-                if self.expected_count:
-                    self.log(f"Expected property count: {self.expected_count}")
-
-            urls = self._extract_listing_urls(html)
-            self.search_meta.update(self._extract_search_meta(html))
-            new = [u for u in urls if u not in seen]
+            new = [u for u in page_urls if u not in seen]
             seen.update(new)
             all_urls.extend(new)
-            self.log(f"Page {page_num}: {len(urls)} listings ({len(new)} new, {len(all_urls)} total)")
+            self.discovered_addresses |= page_addrs
+            shortfall = max(0, len(page_addrs) - len(page_urls))
+            self.log(
+                f"Page {page_num}: {len(page_urls)} urls / {len(page_addrs)} listed "
+                f"({len(new)} new, {len(all_urls)} total"
+                + (f", {shortfall} unresolved" if shortfall else "") + ")"
+            )
 
-            # Stop only when a page adds nothing new (true end of results) or we've
-            # reached Domain's stated count — NOT on a low single-page yield, which
-            # was truncating discovery to ~1 page when extraction/fetch under-yielded.
-            if not new:
+            # True end of results: a re-fetched page surfaced no listings at all.
+            if not page_addrs and not page_urls:
                 break
+            # Reached Domain's stated count → done.
             if self.expected_count and len(all_urls) >= self.expected_count:
                 break
+            # Two CONSECUTIVE pages that add nothing new → end (guards against overflow
+            # pages echoing earlier results). A single low-yield page no longer stops us
+            # (that was the old truncation bug); the per-page re-fetch has already
+            # maximised this page before we judge it "empty".
+            if not new:
+                empty_streak += 1
+                if empty_streak >= 2:
+                    break
+            else:
+                empty_streak = 0
 
             page_num += 1
             if page_num <= MAX_PAGES:
                 time.sleep(BETWEEN_PAGE_DELAY)
 
         self.discovered_urls = list(dict.fromkeys(all_urls))
+
+        # Addresses Domain lists but we could not resolve to a scrapeable URL — the
+        # residual coverage gap even after re-fetching. Keyed by (leading number,
+        # street name) via _addr_key so unit/building number runs don't create
+        # false gaps regardless of separator style.
+        resolved_keys = set()
+        for u in self.discovered_urls:
+            slug = re.sub(r'-\d{7,12}$', '', u.rstrip('/').split('/')[-1])
+            slug = slug.replace(f'-{self.suburb_slug}', '')
+            resolved_keys.add(_addr_key(slug))
+        self.unresolved_addresses = {
+            a for a in self.discovered_addresses if _addr_key(a) not in resolved_keys
+        }
+
         exp = self.expected_count if self.expected_count else "?"
-        self.log(f"Discovery complete: {len(self.discovered_urls)} unique URLs found (expected {exp})")
+        unres = f", {len(self.unresolved_addresses)} unresolved" if self.unresolved_addresses else ""
+        self.log(
+            f"Discovery complete: {len(self.discovered_urls)} unique URLs found "
+            f"({len(self.discovered_addresses)} listed{unres}, expected {exp})"
+        )
+
+    def record_coverage(self):
+        """Persist this suburb's discovery outcome to system_monitor.listing_coverage
+        so the listing-coverage health board (#1) can show completeness AND the
+        SPECIFIC addresses Domain lists that we still don't hold — the signal that
+        makes the DB trustworthy enough for the on-market redirect to mean
+        something. Best-effort; never raises (must not fail a scrape run)."""
+        try:
+            sm = self.mongo_client["system_monitor"]
+            db_forsale = list(self.collection.find(
+                {"listing_status": "for_sale"},
+                {"address": 1, "complete_address": 1}))
+            db_keys = {_addr_key(d.get("address") or d.get("complete_address") or "")
+                       for d in db_forsale}
+            # Domain lists it, we don't hold it as for_sale → genuine coverage gap
+            # (unresolved URL or a save that failed). This is the actionable list.
+            missing = sorted(a for a in self.discovered_addresses
+                             if _addr_key(a) not in db_keys)
+            sm["listing_coverage"].update_one(
+                {"_id": self.collection_name},
+                {"$set": {
+                    "suburb": self.suburb_name,
+                    "postcode": self.postcode,
+                    "domain_expected": self.expected_count,
+                    "discovered_urls": len(self.discovered_urls),
+                    "listed_addresses": len(self.discovered_addresses),
+                    "in_db_for_sale": len(db_forsale),
+                    "missing_addresses": missing,
+                    "missing_count": len(missing),
+                    "unresolved_addresses": sorted(self.unresolved_addresses),
+                    "updated_at": datetime.utcnow(),
+                }},
+                upsert=True)
+            self.log(f"Coverage recorded: {len(self.discovered_urls)}/"
+                     f"{self.expected_count} discovered, {len(db_forsale)} in DB, "
+                     f"{len(missing)} missing")
+        except Exception as e:
+            self.log(f"⚠ Coverage record failed (non-fatal): {e}")
 
     # ── Phase 2: Detail scraping ───────────────────────────────────────────
 
@@ -968,6 +1115,7 @@ Examples:
         try:
             scraper = CurlCffiSuburbScraper(name, postcode, full_rescrape=args.full_rescrape)
             scraper.run()
+            scraper.record_coverage()  # #1: persist coverage + missing addresses for the health board
             results[name] = scraper
         except Exception as e:
             print(f"[{name}] Fatal error: {e}")
@@ -1002,6 +1150,30 @@ Examples:
         print("   Likely cause: upstream block (Akamai), proxy outage, or network issue.")
         print("   Exiting non-zero so the orchestrator/watchdog can surface this.")
         return 2
+
+    # #1: self-registered heartbeat so the listing-coverage board can never fail
+    # silently (Rule 7). The per-suburb detail lives in system_monitor.listing_coverage
+    # (written by record_coverage above); this single beat proves the reconciliation ran.
+    try:
+        sys.path.insert(0, '/home/fields/Fields_Orchestrator/scripts')
+        from job_status import record_job_result  # type: ignore
+        metrics = {}
+        worst_gap = 0
+        for name, s in results.items():
+            exp = s.expected_count or 0
+            disc = len(s.discovered_urls)
+            gap = max(0, exp - disc)
+            worst_gap = max(worst_gap, gap)
+            metrics[s.collection_name] = {"expected": exp, "discovered": disc, "gap": gap}
+        summary = ", ".join(f"{s.suburb_name} {len(s.discovered_urls)}/{s.expected_count or '?'}"
+                            for s in results.values())
+        record_job_result(
+            "listing_discovery_coverage", "success",
+            detail=f"{summary}"[:250],
+            cadence_hours=24, title="Listing Discovery Coverage",
+            metrics=metrics)
+    except Exception as e:
+        print(f"[coverage] heartbeat failed (non-fatal): {e}")
 
     return 0
 

@@ -28,6 +28,7 @@ if not os.environ.get("ANTHROPIC_API_KEY"):
     load_dotenv(os.path.join(_ORCH, ".env"), override=False)
 
 from shared.claude_vision import vision_text, MODEL_ANALYZE  # noqa: E402
+from shared.blob_storage import to_live_url as _to_live_url  # noqa: E402
 
 CLAUDE_FLOORPLAN_MODEL = os.environ.get("FLOORPLAN_CLAUDE_MODEL", MODEL_ANALYZE)
 
@@ -60,6 +61,10 @@ class ClaudeFloorPlanClient:
         try:
             from PIL import Image
             from io import BytesIO
+
+            # Stored URLs may still point at the retired Azure account (403 "account
+            # is disabled"). Same path, live host — rewrite before fetching.
+            image_url = _to_live_url(image_url)
 
             # Download image
             response = requests.get(image_url, timeout=30)

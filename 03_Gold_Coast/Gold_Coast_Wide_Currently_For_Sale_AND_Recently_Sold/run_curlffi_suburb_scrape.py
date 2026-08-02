@@ -966,9 +966,9 @@ class CurlCffiSuburbScraper:
 
     def _refresh_existing(self, url: str, existing: dict) -> bool:
         """Cheap refresh of an already-known for_sale listing: update the displayed
-        price (from the search page — feeds step 115 price tracking) and bump
-        last_updated to confirm it's still active. No detail fetch. Returns True if
-        the doc was updated."""
+        price (from the search page — feeds step 115 price tracking), recompute
+        days_on_domain, and bump last_updated to confirm it's still active. No
+        detail fetch. Returns True if the doc was updated."""
         now = datetime.now()
         update = {"last_updated": now}
         new_price = (self.search_meta.get(url) or {}).get("price")
@@ -977,6 +977,23 @@ class CurlCffiSuburbScraper:
             self.log(f"  ~ price change: {existing.get('price')!r} -> {new_price!r} ({existing.get('address','?')})")
         elif new_price and not existing.get("price"):
             update["price"] = new_price
+
+        # days_on_domain is TIME-RELATIVE and must be recomputed on every run.
+        # [DOM-ZERO-STALE] The 2026-07-15 recompute was added to save_to_mongodb(),
+        # but the 2026-06-06 incremental change means existing listings never reach
+        # that path — they come here instead. Result: the value was written once at
+        # insert and frozen, so cards showed "0d listed" on weeks-old homes.
+        # first_listed_timestamp is absolute and preserved, so it is the source of truth.
+        orig_ts = existing.get("first_listed_timestamp")
+        if orig_ts:
+            try:
+                listed = datetime.fromisoformat(
+                    str(orig_ts).replace("Z", "+00:00").split(".")[0])
+                if listed.tzinfo is not None:
+                    listed = listed.replace(tzinfo=None)
+                update["days_on_domain"] = max((now - listed).days, 0)
+            except (ValueError, TypeError) as e:
+                self.log(f"  [refresh] bad first_listed_timestamp {orig_ts!r}: {e}")
         try:
             _mongo_op_with_retry(lambda: self.collection.update_one(
                 {"listing_url": url}, {"$set": update}))
@@ -1003,7 +1020,11 @@ class CurlCffiSuburbScraper:
         if not self.full_rescrape:
             for d in _mongo_op_with_retry(lambda: list(self.collection.find(
                     {"listing_status": "for_sale", "listing_url": {"$exists": True, "$ne": None}},
-                    {"listing_url": 1, "price": 1, "address": 1}))):
+                    # first_listed_timestamp is required by _refresh_existing() to
+                    # recompute days_on_domain — without it the recompute silently
+                    # never fires. See [DOM-ZERO-STALE].
+                    {"listing_url": 1, "price": 1, "address": 1,
+                     "first_listed_timestamp": 1}))):
                 existing[d["listing_url"]] = d
 
         total = len(self.discovered_urls)

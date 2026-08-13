@@ -490,8 +490,137 @@ class CurlCffiSuburbScraper:
         walk(data)
         return meta
 
+    def _discover_via_graphql(self) -> bool:
+        """Phase 1 (preferred): discover the whole suburb in ONE request via Domain's
+        own GraphQL backend.
+
+        Why this is the primary path (2026-08-13): the HTML search page broke on
+        2026-08-11 and returned 0 URLs for two consecutive nights ("Page 1: Failed to
+        fetch"), and even when healthy it under-captured — 99-109 URLs against the 121
+        for-sale listings GraphQL reports for Robina. searchListings also costs 1 Web
+        Unlocker request where the HTML path costs up to MAX_PAGES × PAGE_REFETCH_MAX.
+
+        Returns True if it populated discovery state, False to fall through to the
+        HTML path (kept as fallback, not deleted).
+
+        Listing URLs are CONSTRUCTED from address parts rather than returned by the
+        API (SearchListingsResultListing has no seoUrl). That is safe: resolution is
+        driven by the trailing listing id — verified 2026-08-13, a deliberately wrong
+        street-type slug ("...-camberwell-cct-...") still served the correct listing
+        page. The constructed slug is also self-consistent with _addr_key, so the
+        URL↔address reconciliation in _finalise_discovery keys identically.
+        """
+        try:
+            import sys as _sys
+            if '/home/fields/Fields_Orchestrator' not in _sys.path:
+                _sys.path.insert(0, '/home/fields/Fields_Orchestrator')
+            from shared.domain_graphql import search_listings
+        except Exception as e:
+            self.log(f"GraphQL discovery unavailable ({e}) — falling back to HTML")
+            return False
+
+        urls: List[str] = []
+        page = 1
+        try:
+            while page <= MAX_PAGES:
+                res = search_listings(self.suburb_name, 'QLD', str(self.postcode),
+                                      listing_type='Sale', page=page, page_size=200)
+                if not res:
+                    if page == 1:
+                        self.log("GraphQL discovery returned nothing — falling back to HTML")
+                        return False
+                    break
+
+                if self.expected_count is None:
+                    self.expected_count = res.get('totalResults')
+                    if self.expected_count:
+                        self.log(f"Expected property count: {self.expected_count}")
+
+                results = res.get('results') or []
+                if not results:
+                    break
+
+                skipped_no_address = 0
+                for r in results:
+                    lid = r.get('listingId')
+                    addr = r.get('displayableAddress') or {}
+                    street = (addr.get('street') or '').strip()
+                    street_no = (addr.get('streetNumber') or '').strip()
+                    unit_no = (addr.get('unitNumber') or '').strip()
+                    if not lid or not street or not street_no:
+                        # Development projects (propertyType NewApartments) carry a
+                        # fully null address — there is no individual property URL to
+                        # scrape. Counted and logged, never silently dropped.
+                        skipped_no_address += 1
+                        continue
+
+                    # "40/170 Bardon Avenue" — same shape the ld+json path yields, so
+                    # _addr_key collapses unit-number runs identically.
+                    display = f"{unit_no}/{street_no} {street}" if unit_no else f"{street_no} {street}"
+                    self.discovered_addresses.add(display)
+
+                    # Domain uses a pseudo-unit "ID:21160718" for unaddressed apartment
+                    # stock in a building. It must NOT go into the slug: _addr_key
+                    # strips `id:\d+` only WITH its colon, and slugifying turns that
+                    # colon into a dash — so an "ID:" slug keys as ('', 'id 21160718
+                    # 25 lake orr drive') and every such listing reports as a false
+                    # unresolved coverage gap. Uniqueness still comes from the
+                    # trailing listing id.
+                    slug_unit = '' if unit_no.lower().startswith('id:') else unit_no
+                    slug_no = f"{slug_unit}-{street_no}" if slug_unit else street_no
+                    slug = re.sub(r'[^a-z0-9]+', '-', f"{slug_no} {street}".lower()).strip('-')
+                    url = f"https://www.domain.com.au/{slug}-{self.suburb_slug}-{lid}"
+                    urls.append(url)
+
+                    price = ((r.get('priceDetails') or {}).get('displayPrice') or '').strip()
+                    if price:
+                        self.search_meta[url] = {"price": price}
+
+                self.log(f"GraphQL page {page}: {len(results)} listings "
+                         f"({len(urls)} total of {self.expected_count or '?'}"
+                         + (f", {skipped_no_address} projects w/o address skipped"
+                            if skipped_no_address else "") + ")")
+
+                if self.expected_count and len(urls) >= self.expected_count:
+                    break
+                if len(results) < 200:
+                    break
+                page += 1
+
+        except Exception as e:
+            # Mid-flight failure: discard everything rather than merge a half-built
+            # list into the HTML path's state.
+            self.log(f"GraphQL discovery failed ({type(e).__name__}: {e}) — falling back to HTML")
+            self.discovered_addresses.clear()
+            self.search_meta.clear()
+            self.expected_count = None
+            return False
+
+        if not urls:
+            self.log("GraphQL discovery yielded 0 URLs — falling back to HTML")
+            self.discovered_addresses.clear()
+            self.search_meta.clear()
+            self.expected_count = None
+            return False
+
+        self.discovered_urls = list(dict.fromkeys(urls))
+        return True
+
     def discover(self):
-        """Phase 1: discover all listing URLs via paginated search.
+        """Phase 1: discover all listing URLs.
+
+        Tries Domain's GraphQL backend first (one request per suburb, complete
+        results), falling back to the legacy paginated HTML scrape if it is
+        unavailable or yields nothing.
+        """
+        self.log("Starting property discovery...")
+        if self._discover_via_graphql():
+            self._finalise_discovery()
+            return
+        self._discover_via_html()
+
+    def _discover_via_html(self):
+        """Legacy fallback: discover all listing URLs via paginated search.
 
         Per page we RE-FETCH (up to PAGE_REFETCH_MAX) and union the extracted URLs
         until they cover that page's authoritative ld+json Residence count — Domain
@@ -500,7 +629,7 @@ class CurlCffiSuburbScraper:
         the source of "unresolved" gaps (a listed address whose URL we never got),
         which are surfaced for the coverage-reconciliation / health board.
         """
-        self.log("Starting property discovery...")
+        self.log("HTML fallback discovery...")
         all_urls: List[str] = []
         seen = set()
         page_num = 1
@@ -567,7 +696,14 @@ class CurlCffiSuburbScraper:
                 time.sleep(BETWEEN_PAGE_DELAY)
 
         self.discovered_urls = list(dict.fromkeys(all_urls))
+        self._finalise_discovery()
 
+    def _finalise_discovery(self):
+        """Reconcile discovered URLs against listed addresses and log the outcome.
+
+        Shared by both discovery paths so coverage reporting is identical whichever
+        one ran.
+        """
         # Addresses Domain lists but we could not resolve to a scrapeable URL — the
         # residual coverage gap even after re-fetching. Keyed by (leading number,
         # street name) via _addr_key so unit/building number runs don't create

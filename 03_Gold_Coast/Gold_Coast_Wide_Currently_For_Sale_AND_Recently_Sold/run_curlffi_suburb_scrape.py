@@ -1037,6 +1037,10 @@ class CurlCffiSuburbScraper:
                 if was_already_for_sale and existing_doc.get('first_listed_timestamp'):
                     # Preserve original listing date — don't overwrite on re-scrape
                     skip_fields |= {'first_listed_timestamp', 'first_listed_date', 'first_listed_year', 'first_listed_full', 'days_on_domain'}
+                if existing_doc.get('manual_price_override'):
+                    # A human deliberately set `price` for a property we're representing.
+                    # Never let a full re-scrape revert it. (manual_price_override=True)
+                    skip_fields |= {'price'}
                 update_data = {k: v for k, v in property_data.items() if k not in skip_fields}
                 update_data['listing_status'] = 'for_sale'
 
@@ -1108,6 +1112,10 @@ class CurlCffiSuburbScraper:
         now = datetime.now()
         update = {"last_updated": now}
         new_price = (self.search_meta.get(url) or {}).get("price")
+        # Manual price override: a human has set `price` deliberately for a property
+        # we're representing. Never let a scrape revert it. (manual_price_override=True)
+        if existing.get("manual_price_override"):
+            new_price = None
         if new_price and new_price != (existing.get("price") or "").strip():
             update["price"] = new_price
             self.log(f"  ~ price change: {existing.get('price')!r} -> {new_price!r} ({existing.get('address','?')})")

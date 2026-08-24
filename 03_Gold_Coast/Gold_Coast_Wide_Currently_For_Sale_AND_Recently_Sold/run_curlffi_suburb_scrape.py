@@ -1314,6 +1314,23 @@ Examples:
         print(f"❌ FATAL: 0 URLs discovered across all {len(suburbs)} suburbs.")
         print("   Likely cause: upstream block (Akamai), proxy outage, or network issue.")
         print("   Exiting non-zero so the orchestrator/watchdog can surface this.")
+        # Rule 7b heartbeat-ordering fix (REC-ops-003): write the heartbeat BEFORE the
+        # non-zero return, not after. Previously this path returned 2 while the
+        # heartbeat block below never ran, so a HARD OUTAGE (0 URLs — Akamai block /
+        # proxy outage) rendered on the Process Registry as STALE ("may not be firing")
+        # rather than ERROR. Zero discovery where suburbs were requested is a FAILURE,
+        # not "nothing to do" — so record it as an ERROR heartbeat here.
+        try:
+            sys.path.insert(0, '/home/fields/Fields_Orchestrator/scripts')
+            from job_status import record_job_result  # type: ignore
+            record_job_result(
+                "listing_discovery_coverage", "error",
+                detail=(f"0 URLs discovered across all {len(suburbs)} suburbs — "
+                        "likely upstream block (Akamai), proxy outage, or network issue")[:250],
+                cadence_hours=24, title="Listing Discovery Coverage",
+                metrics={"total_discovered": 0, "suburbs_requested": len(suburbs)})
+        except Exception as e:
+            print(f"[coverage] error heartbeat failed (non-fatal): {e}")
         return 2
 
     # #1: self-registered heartbeat so the listing-coverage board can never fail

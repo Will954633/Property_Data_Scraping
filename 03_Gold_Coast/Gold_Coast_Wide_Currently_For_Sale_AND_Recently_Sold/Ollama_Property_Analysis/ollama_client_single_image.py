@@ -47,7 +47,18 @@ class OllamaClientSingleImage:
         logger.info(f"Initialized Claude photo analysis client with model: {self.model}")
 
     def _download_and_encode_image(self, image_url):
-        """Download image, normalise to JPEG, return base64 (no data-URI prefix)."""
+        """Download image, normalise to JPEG, return (base64|None, outcome).
+
+        outcome is one of:
+          "ok"        — downloaded and encoded successfully
+          "gone"      — permanently unrecoverable (HTTP 404/410 after rewrite):
+                        the object does not exist, retrying will never help
+          "transient" — a retryable failure (timeout, connection reset, 5xx,
+                        decode error): may succeed on a later run
+
+        The caller uses this distinction to decide between stub-and-skip
+        (all images "gone") and retry-next-run (any "transient").
+        """
         try:
             # Stored URLs may still point at the retired Azure account
             # (fieldspropertyimages.blob.core.windows.net) which no longer
@@ -57,6 +68,9 @@ class OllamaClientSingleImage:
             # "processed" with zero analysed images.
             image_url = _to_live_url(image_url)
             response = requests.get(image_url, timeout=30)
+            if response.status_code in (404, 410):
+                logger.warning(f"Image permanently gone ({response.status_code}) after rewrite: {image_url}")
+                return None, "gone"
             response.raise_for_status()
             img = Image.open(BytesIO(response.content))
             if img.mode not in ("RGB", "L"):
@@ -64,10 +78,17 @@ class OllamaClientSingleImage:
             img.thumbnail((1568, 1568))  # Anthropic per-image cap is 5MB / ~1568px optimal
             buf = BytesIO()
             img.save(buf, format="JPEG", quality=90)
-            return base64.b64encode(buf.getvalue()).decode("utf-8")
+            return base64.b64encode(buf.getvalue()).decode("utf-8"), "ok"
+        except requests.exceptions.HTTPError as e:
+            code = getattr(getattr(e, "response", None), "status_code", None)
+            if code in (404, 410):
+                logger.warning(f"Image permanently gone ({code}) after rewrite: {image_url}")
+                return None, "gone"
+            logger.error(f"Failed to download image {image_url}: {e}")
+            return None, "transient"
         except Exception as e:
             logger.error(f"Failed to download image {image_url}: {e}")
-            return None
+            return None, "transient"
 
     @staticmethod
     def _parse_json(content):
@@ -126,12 +147,18 @@ Return ONLY valid JSON, no other text."""
 
         start_time = time.time()
         image_analyses = []
+        downloads_gone = 0       # HTTP 404/410 — permanently unrecoverable
+        downloads_transient = 0  # retryable download failures
 
         for idx, url in enumerate(images_to_use):
             logger.info(f"Processing image {idx + 1}/{len(images_to_use)}...")
-            encoded = self._download_and_encode_image(url)
+            encoded, outcome = self._download_and_encode_image(url)
             if not encoded:
-                logger.warning(f"Skipping image {idx} - download failed")
+                if outcome == "gone":
+                    downloads_gone += 1
+                else:
+                    downloads_transient += 1
+                logger.warning(f"Skipping image {idx} - download failed ({outcome})")
                 continue
             analysis = self._analyze_single_image(encoded, idx)
             if analysis:
@@ -149,6 +176,9 @@ Return ONLY valid JSON, no other text."""
             "image_analysis": image_analyses,
             "metadata": {
                 "total_images_analyzed": len(image_analyses),
+                "total_images_attempted": len(images_to_use),
+                "downloads_gone": downloads_gone,
+                "downloads_transient": downloads_transient,
                 "processing_time_seconds": elapsed,
             },
         }

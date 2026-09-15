@@ -30,6 +30,7 @@ if not os.environ.get("ANTHROPIC_API_KEY"):
     load_dotenv(os.path.join(_ORCH, ".env"), override=False)
 
 from shared.claude_vision import vision_text, MODEL_ANALYZE  # noqa: E402
+from shared.blob_storage import to_live_url as _to_live_url  # noqa: E402
 
 CLAUDE_PHOTO_MODEL = os.environ.get("PHOTO_ANALYSIS_CLAUDE_MODEL", MODEL_ANALYZE)
 
@@ -48,6 +49,13 @@ class OllamaClientSingleImage:
     def _download_and_encode_image(self, image_url):
         """Download image, normalise to JPEG, return base64 (no data-URI prefix)."""
         try:
+            # Stored URLs may still point at the retired Azure account
+            # (fieldspropertyimages.blob.core.windows.net) which no longer
+            # resolves (DNS NameResolutionError). Same path, live host — rewrite
+            # before fetching. Mirrors the floor-plan client (openai_floorplan_client.py);
+            # without it these downloads fail silently and the property is marked
+            # "processed" with zero analysed images.
+            image_url = _to_live_url(image_url)
             response = requests.get(image_url, timeout=30)
             response.raise_for_status()
             img = Image.open(BytesIO(response.content))

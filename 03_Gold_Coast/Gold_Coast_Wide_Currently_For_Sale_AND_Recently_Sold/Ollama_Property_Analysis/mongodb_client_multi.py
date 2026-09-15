@@ -158,12 +158,50 @@ class MongoDBClientMulti:
             }
             
             result = collection.update_one({"_id": document_id}, update_operation)
-            
+
             logger.info(f"Updated document {document_id} in {suburb} with Ollama analysis")
             return result
-            
+
         except OperationFailure as e:
             logger.error(f"Failed to update document in {suburb}: {e}")
+            raise
+
+    def mark_stubbed_unrecoverable(self, suburb, document_id, images_attempted, reason="images_unrecoverable"):
+        """Graduate a property out of the unprocessed queue when its images are
+        permanently unrecoverable (every URL returns HTTP 404/410 even after the
+        dead-host rewrite), so it does not re-fail every night.
+
+        Writes a stub with ``ollama_analysis.processed = True`` (which the
+        unprocessed query filters on) plus a ``skipped``/``skip_reason`` marker
+        so the skip is auditable and never mistaken for a real analysis. Mirrors
+        step 106's no-usable-images stub. Distinct from transient failures, which
+        are NOT stubbed (they retry).
+        """
+        try:
+            collection = self.db[suburb]
+            ollama_analysis = {
+                "processed": True,
+                "images_analyzed": 0,
+                "processed_at": datetime.utcnow(),
+                "engine": "claude",
+                "skipped": True,
+                "skip_reason": reason,
+                "image_urls_attempted": images_attempted,
+            }
+            result = collection.update_one(
+                {"_id": document_id},
+                {"$set": {
+                    "ollama_analysis": ollama_analysis,
+                    "ollama_image_analysis": [],
+                }},
+            )
+            logger.warning(
+                f"Stubbed document {document_id} in {suburb}: {images_attempted} image URL(s) "
+                f"all unrecoverable ({reason}) — graduated out of the queue."
+            )
+            return result
+        except OperationFailure as e:
+            logger.error(f"Failed to stub document in {suburb}: {e}")
             raise
     
     def get_processing_stats(self):

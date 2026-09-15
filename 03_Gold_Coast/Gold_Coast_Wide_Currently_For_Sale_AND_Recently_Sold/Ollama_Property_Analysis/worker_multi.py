@@ -9,6 +9,12 @@ from mongodb_client_multi import MongoDBClientMulti
 from logger import logger
 from config import MAX_IMAGES_PER_PROPERTY
 
+# process_document outcomes
+SUCCESS = "success"    # analysed and written
+STUBBED = "stubbed"    # images permanently unrecoverable → graduated out (not a failure)
+FAILED = "failed"      # transient failure → stays in queue for retry
+
+
 class PropertyWorkerMulti:
     """Worker for processing individual property documents across multiple collections."""
     
@@ -96,53 +102,72 @@ class PropertyWorkerMulti:
             document: MongoDB document to process
             
         Returns:
-            True if successful, False otherwise
+            One of SUCCESS / STUBBED / FAILED.
         """
         start_time = time.time()
         document_id = document.get("_id")
         address = self._extract_address(document)
-        
+
         try:
             logger.info(f"Worker {self.worker_id}: Processing {address} ({suburb})")
-            
+
             # Extract images
             image_urls = self._extract_images(document)
-            
+
             if not image_urls:
                 logger.warning(f"Worker {self.worker_id}: No images found for {address}")
-                return False
-            
+                return FAILED
+
             logger.info(f"Worker {self.worker_id}: Found {len(image_urls)} images")
-            
+
             # Analyze with Ollama
             analysis_result = self.ollama_client.analyze_property_images(
                 image_urls,
                 address,
                 max_images=MAX_IMAGES_PER_PROPERTY
             )
-            
+
             # Extract structured data
             image_analysis = self.ollama_client.extract_image_analysis(analysis_result, image_urls)
 
-            # Rule 7b honest-zero: the property HAD image URLs but not one could be
-            # downloaded/analysed (e.g. all URLs point at a dead host, or every
-            # vision call failed). Do NOT write an empty analysis and mark it
-            # "processed" — that graduates it out of the unprocessed queue
-            # permanently with no data and no retry. Treat as a retryable failure
-            # so it stays in the queue; run_production.py surfaces a wholesale
-            # zero-success run as a non-zero exit.
             if not image_analysis:
+                # The property HAD image URLs but zero could be downloaded/analysed.
+                # Distinguish two very different causes (Rule 7b honest-zero):
+                meta = analysis_result.get("metadata", {})
+                attempted = meta.get("total_images_attempted", len(image_urls))
+                gone = meta.get("downloads_gone", 0)
+                transient = meta.get("downloads_transient", 0)
+
+                # (a) Every image is PERMANENTLY gone (HTTP 404/410 even after the
+                #     dead-host rewrite) — retrying can never recover them. Stub
+                #     and graduate it out of the queue so it stops re-failing every
+                #     night (mirrors step 106's no-usable-images stub). Logged +
+                #     counted so it is never a silent-zero.
+                if attempted > 0 and gone == attempted:
+                    self.mongo_client.mark_stubbed_unrecoverable(
+                        suburb, document_id, images_attempted=attempted,
+                        reason="images_unrecoverable",
+                    )
+                    logger.warning(
+                        f"Worker {self.worker_id}: ⊘ Stubbed {address} — all {attempted} "
+                        f"image(s) permanently gone (404/410 after rewrite); graduated out of queue."
+                    )
+                    return STUBBED
+
+                # (b) Otherwise there was at least one retryable failure (timeout /
+                #     5xx / vision-call error, or a mix). Do NOT write an empty
+                #     analysis and mark it processed — keep it in the queue to retry.
                 logger.error(
-                    f"Worker {self.worker_id}: {len(image_urls)} image URL(s) for {address} "
-                    f"but zero were downloadable/analysable — not writing, will retry next run."
+                    f"Worker {self.worker_id}: {len(image_urls)} image URL(s) for {address} but zero "
+                    f"analysable (gone={gone}, transient={transient}) — not writing, will retry next run."
                 )
-                return False
+                return FAILED
 
             property_data = self.ollama_client.extract_property_data(analysis_result)
 
             # Calculate processing time
             processing_time = time.time() - start_time
-            
+
             # Update MongoDB (pass suburb parameter)
             self.mongo_client.update_with_ollama_analysis(
                 suburb,
@@ -152,15 +177,15 @@ class PropertyWorkerMulti:
                 worker_id=self.worker_id,
                 processing_time=processing_time
             )
-            
+
             self.properties_processed += 1
             logger.info(f"Worker {self.worker_id}: Successfully processed {address} ({processing_time:.1f}s)")
-            
-            return True
-            
+
+            return SUCCESS
+
         except Exception as e:
             logger.error(f"Worker {self.worker_id}: Failed to process {address}: {e}")
-            return False
+            return FAILED
     
     def process_batch(self, documents_with_suburbs):
         """
@@ -175,26 +200,34 @@ class PropertyWorkerMulti:
         batch_start = time.time()
         successful = 0
         failed = 0
-        
+        stubbed = 0
+
         for suburb, doc in documents_with_suburbs:
-            if self.process_document(suburb, doc):
+            status = self.process_document(suburb, doc)
+            if status == STUBBED:
+                stubbed += 1
+            elif status == SUCCESS:
                 successful += 1
             else:
                 failed += 1
-        
+
         batch_time = time.time() - batch_start
-        
+
         stats = {
             "worker_id": self.worker_id,
             "total": len(documents_with_suburbs),
             "successful": successful,
             "failed": failed,
+            "stubbed": stubbed,
             "batch_time": batch_time,
             "avg_time_per_property": batch_time / len(documents_with_suburbs) if documents_with_suburbs else 0
         }
-        
-        logger.info(f"Worker {self.worker_id}: Batch complete - {successful}/{len(documents_with_suburbs)} successful ({batch_time:.1f}s)")
-        
+
+        logger.info(
+            f"Worker {self.worker_id}: Batch complete - {successful}/{len(documents_with_suburbs)} successful, "
+            f"{stubbed} stubbed (unrecoverable), {failed} failed ({batch_time:.1f}s)"
+        )
+
         return stats
     
     def close(self):

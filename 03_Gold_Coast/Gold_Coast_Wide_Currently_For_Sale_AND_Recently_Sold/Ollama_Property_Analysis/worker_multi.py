@@ -123,8 +123,23 @@ class PropertyWorkerMulti:
             
             # Extract structured data
             image_analysis = self.ollama_client.extract_image_analysis(analysis_result, image_urls)
+
+            # Rule 7b honest-zero: the property HAD image URLs but not one could be
+            # downloaded/analysed (e.g. all URLs point at a dead host, or every
+            # vision call failed). Do NOT write an empty analysis and mark it
+            # "processed" — that graduates it out of the unprocessed queue
+            # permanently with no data and no retry. Treat as a retryable failure
+            # so it stays in the queue; run_production.py surfaces a wholesale
+            # zero-success run as a non-zero exit.
+            if not image_analysis:
+                logger.error(
+                    f"Worker {self.worker_id}: {len(image_urls)} image URL(s) for {address} "
+                    f"but zero were downloadable/analysable — not writing, will retry next run."
+                )
+                return False
+
             property_data = self.ollama_client.extract_property_data(analysis_result)
-            
+
             # Calculate processing time
             processing_time = time.time() - start_time
             

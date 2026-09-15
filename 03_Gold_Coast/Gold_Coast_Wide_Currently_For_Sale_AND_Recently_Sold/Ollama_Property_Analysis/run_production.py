@@ -81,18 +81,23 @@ def main():
         # Process batches
         total_successful = 0
         total_failed = 0
-        
+        total_stubbed = 0
+
         for batch_num, batch in enumerate(batches, 1):
             logger.info(f"\n--- Processing Batch {batch_num}/{len(batches)} ({len(batch)} documents) ---")
-            
+
             batch_stats = worker.process_batch(batch)
-            
+
             total_successful += batch_stats['successful']
             total_failed += batch_stats['failed']
-            
-            logger.info(f"Batch {batch_num} complete: {batch_stats['successful']} successful, {batch_stats['failed']} failed")
+            total_stubbed += batch_stats.get('stubbed', 0)
+
+            logger.info(
+                f"Batch {batch_num} complete: {batch_stats['successful']} successful, "
+                f"{batch_stats.get('stubbed', 0)} stubbed (unrecoverable), {batch_stats['failed']} failed"
+            )
             logger.info(f"Average time per property: {batch_stats['avg_time_per_property']:.1f}s")
-            logger.info(f"Overall progress: {total_successful + total_failed}/{len(all_documents)} documents processed")
+            logger.info(f"Overall progress: {total_successful + total_stubbed + total_failed}/{len(all_documents)} documents processed")
         
         # Clean up worker only (keep mongo_client open for final stats)
         worker.close()
@@ -103,9 +108,10 @@ def main():
         logger.info("\n" + "=" * 80)
         logger.info("PROCESSING COMPLETE")
         logger.info("=" * 80)
-        logger.info(f"Total documents processed: {total_successful + total_failed}")
+        logger.info(f"Total documents processed: {total_successful + total_stubbed + total_failed}")
         logger.info(f"Successful: {total_successful}")
-        logger.info(f"Failed: {total_failed}")
+        logger.info(f"Stubbed (images permanently unrecoverable, graduated out): {total_stubbed}")
+        logger.info(f"Failed (transient, will retry): {total_failed}")
         logger.info(f"Total time: {elapsed_time:.1f}s ({elapsed_time/60:.1f} minutes)")
         if total_successful > 0:
             logger.info(f"Average time per property: {elapsed_time/total_successful:.1f}s")
